@@ -1,7 +1,7 @@
 # IGV Docs Website
 
 To get started, pull this repo and then:
-- `conda env create -f igv-docs-env.yml` to install the Comda environment with necessary dependencies.
+- `conda env create -f igv-docs-env.yml` to install the Conda environment with necessary dependencies.
 - `conda activate igv-docs` to activate the environment (the exact command might differ for Anaconda).
 - `cd igv-docs`
 - `mkdocs serve` to start the MkDocs live-preview web server.
@@ -22,8 +22,8 @@ the [mkdocs_windmill](https://github.com/gristlabs/mkdocs-windmill/tree/master/m
 extend those as well, as needed.
 
 We have no public site yet.
-- Here is the [test-docs]() website.
-- Here is the [Jenkins Snapshot Doc Website](http://cancerdev/hudson/view/IGV/job/IGV%20Doc%20Website%20SNAPSHOT/) project for building the test 
+- Here is the [test-docs](https://internal.broadinstitute.org/~genepatt/test-docs/igv-docs-site/) website.
+- Here is the [Jenkins Snapshot Doc Website](http://cancerdev/hudson/view/IGV%20Website/job/IGV%20Docs%20Website%20SNAPSHOT/) project for building the test 
 site.  This will auto-build on its own ~5 minutes after any commit to `main`.
 
 [Pandoc](https://pandoc.org/) is also included in the Conda environment.  I've had luck converting our Wiki pages by doing a 
