@@ -26,10 +26,6 @@ We have no public site yet.
 - Here is the [Jenkins Snapshot Doc Website](http://cancerdev/hudson/view/IGV%20Website/job/IGV%20Docs%20Website%20SNAPSHOT/) project for building the test 
 site.  This will auto-build on its own ~5 minutes after any commit to `main`.
 
-[Pandoc](https://pandoc.org/) is also included in the Conda environment.  I've had luck converting our Wiki pages by doing a 
+[Pandoc](https://pandoc.org/) is also included in the Conda environment.  I've had luck converting pages by doing a 
 copy-paste into GDocs, exporting as Word .docx, and then using the following command:
 `pandoc wiki_page.docx -t markdown_phpextra -o wiki_page.md`
-
-The result may still require some editing but should give a good start.  Watch out for headings in particular as MkDocs seems to 
-prefer the use of \# and \#\# markers instead of equal- and dash-underlining.  It definitely gets confused when both styles are 
-present.
