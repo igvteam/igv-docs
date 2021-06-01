@@ -11,16 +11,20 @@ nav:
 - Documentation Home: index.md
 - IGV Home page: 'https://www.igv.org'
 - FAQ: faq.md
-- User Guide: user_guide.md
+- User Guide:
+    - Command Line Options: command_line.md
+    - Batch and Port Commands: batch_commands.md
+    - RNA Structure: rna_structure.md
 - Data Formats: data_formats.md
 - Tutorial: tutorial.md
+- Misc:
+    - Hosting Genomes: hosting_genomes.md
 - Help:
   - IGV Help: help/igv_help.md
 - Release Notes:
   - IGV Desktop  Release Notes:
     - IGV Desktop 2.9.x: release_notes/igv_desktop/IGV_2.9.x.md
-  - igv.js Release Notes:
-    - igv.js 2.7.x: release_notes/igv_js/igv_js_2.7.x.md
+  - igv.js Release Notes: release_notes/igv_js/igv.js_changelog.md
 
 markdown_extensions:
   - toc:
