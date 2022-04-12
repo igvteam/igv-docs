@@ -1,10 +1,10 @@
-<font size=18>igv.js Developer Guide</font>
+<font size=18 color=#546e7a>igv.js Developer Guide</font>
 
 # IGV Browser Object #
 
-## Browser Creation
+## Browser Creation     
 
-The `igv.createBrowser` function is used to create an igv Browser object and insert it into your dom.  The function takes two arguments: (1) The parent element (usually a div); the browser object will be inserted into the DOM as a child of this element, and (2) A configuration object that defines the browser's initial state. 'igv.createBrowser' returns a promise which resolves with the browser upon completion.  The browser object should be saved by the client program for future calls to the API.  
+The `igv.createBrowser` function is used to create an igv Browser object and insert it into your dom.  The function takes two arguments: (1) The parent element (usually a div); the browser object will be inserted into the DOM as a child of this element, and (2) A configuration object that defines the browser's initial state. 'igv.createBrowser' returns a promise which resolves with the browser upon completion.  The browser object should be saved by the client program for future calls to the API. 
 
 The configuration object can be JSON, or a literal object.   In most cases these are equivalent, however configuration options which accept a function can only be specified with an object.
 

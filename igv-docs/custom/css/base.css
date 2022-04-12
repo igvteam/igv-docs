@@ -1,7 +1,36 @@
-body {
+.body {
 	/* HT main page color - made much lighter */
     background-color: white;
 }
+
+
+
+.wm-page-content {
+  max-width: 1050px;
+  position: relative;
+  font-size:16px; /* default is smaller - I think it's too small */
+  
+}
+
+
+h1 {
+    color: #444;
+    font-weight: 400;
+    font-size: 36px; /* was 42 */
+    border-bottom: 1px solid #aaa; /* added this */
+}
+
+
+h2, h4, h5, h6 {
+    color: #444;
+    font-weight: 300;
+}
+
+h3 {
+    color: #444;
+    font-weight: 400;
+}
+
 
 /***********************************************************************
  Top bar
@@ -19,11 +48,6 @@ body {
 
 .wm-top-page {
   overflow: hidden;
-}
-
-.wm-page-content {
-  max-width: 1050px;
-  position: relative;
 }
 
 .wm-page-top-frame { display: none; }
@@ -469,30 +493,6 @@ body {
 }
 
 
-p { font-size: 16px;}
-
-thead { font-size: 16px; }
-
-tbody { font-size: 16px; }
-
-ul { font-size: 16px; }
-
-h1 {
-    color: #444;
-    font-weight: 400;
-    font-size: 36px; /* was 42 */
-    border-bottom: 1px solid #aaa; /* added this */
-}
-
-h2, h4, h5, h6 {
-    color: #444;
-    font-weight: 300;
-}
-
-h3 {
-    color: #444;
-    font-weight: 400;
-}
 
 hr {
     border-top: 1px solid #aaa;
@@ -563,7 +563,7 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 
 .admonition {
     /* padding: 15px; */
-    padding: 5px;
+    padding: 15px;
     margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 4px;
