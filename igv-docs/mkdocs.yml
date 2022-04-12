@@ -9,22 +9,24 @@ theme:
 
 nav:
 - Documentation Home: index.md
-- IGV Home page: 'https://www.igv.org'
-- FAQ: faq.md
-- User Guide:
-    - Command Line Options: command_line.md
-    - Batch and Port Commands: batch_commands.md
-    - RNA Structure: rna_structure.md
+- igv.org: 'https://www.igv.org'
+
+- IGV Desktop Application:
+    - User Guide: IGV/IGV_UserGuide.md
+    - IGV Desktop Release Notes:
+        - IGV Desktop 2.9.x: release_notes/igv_desktop/IGV_2.9.x.md
+        
+- IGV-Web App:
+    - User Guide: IGV-Web/IGV-Web_UserGuide.md
+    
+- igv.js:
+    - Developer Guide: igv.js/igv.js_DeveloperGuide.md
+
+        
 - Data Formats: data_formats.md
-- Tutorial: tutorial.md
-- Misc:
-    - Hosting Genomes: hosting_genomes.md
-- Help:
-  - IGV Help: help/igv_help.md
-- Release Notes:
-  - IGV Desktop  Release Notes:
-    - IGV Desktop 2.9.x: release_notes/igv_desktop/IGV_2.9.x.md
-  - igv.js Release Notes: release_notes/igv_js/igv.js_changelog.md
+- Hosting Genomes: hosting_genomes.md
+- Contact: contact.md
+  
 
 markdown_extensions:
   - toc:
@@ -33,6 +35,7 @@ markdown_extensions:
   - extra
   - sane_lists
   - wikilinks
+  - admonition
 
 extra:
   history_buttons: false

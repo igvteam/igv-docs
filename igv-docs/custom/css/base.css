@@ -1,5 +1,6 @@
 body {
-    background-color: #f8f8f8;
+	/* HT main page color - made much lighter */
+    background-color: white;
 }
 
 /***********************************************************************
@@ -111,7 +112,8 @@ body {
   min-width: 250px;
   max-width: 350px;
   z-index: 1;
-  background-color: #f2f2f2;
+  /* HT toc color - made lighter */
+  background-color: #fafafa;
   border-right: 1px solid #e0e0e0;
   overflow: auto;
   margin-left: 0px;
@@ -466,15 +468,30 @@ body {
   float: right;
 }
 
+
+p { font-size: 16px;}
+
+thead { font-size: 16px; }
+
+tbody { font-size: 16px; }
+
+ul { font-size: 16px; }
+
 h1 {
     color: #444;
     font-weight: 400;
-    font-size: 42px;
+    font-size: 36px; /* was 42 */
+    border-bottom: 1px solid #aaa; /* added this */
 }
 
-h2, h3, h4, h5, h6 {
+h2, h4, h5, h6 {
     color: #444;
     font-weight: 300;
+}
+
+h3 {
+    color: #444;
+    font-weight: 400;
 }
 
 hr {
@@ -483,7 +500,8 @@ hr {
 
 pre, .rst-content tt {
     max-width: 100%;
-    background: #fff;
+    /* background: #fff; */
+    background: #fafafa;
     border: solid 1px #e1e4e5;
     color: #333;
     overflow-x: auto;
@@ -495,7 +513,8 @@ code.code-large, .rst-content tt.code-large {
 
 code {
     padding: 2px 5px;
-    background: #fff;
+    /* background: #fff; */
+    background: #fafafa;
     border: solid 1px #e1e4e5;
     color: #333;
     white-space: pre-wrap;
@@ -508,11 +527,12 @@ pre code {
     white-space: pre;
     word-wrap: normal;
     font-family: monospace,serif;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 a code {
-    color: #2FA4E7;
+    /* color: #2FA4E7; */
+    color: #fafafa
 }
 
 a:hover code, a:focus code {
@@ -542,7 +562,8 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 }
 
 .admonition {
-    padding: 15px;
+    /* padding: 15px; */
+    padding: 5px;
     margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -551,19 +572,22 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 
 .admonition.note { /* csslint allow: adjoining-classes */
     color: #3a87ad;
-    background-color: #d9edf7;
+    /* background-color: #d9edf7; */
+    background-color: white;
     border-color: #bce8f1;
 }
 
 .admonition.warning { /* csslint allow: adjoining-classes */
     color: #c09853;
-    background-color: #fcf8e3;
+    /* background-color: #fcf8e3; */
+    background-color: white;
     border-color: #fbeed5;
 }
 
 .admonition.danger { /* csslint allow: adjoining-classes */
     color: #b94a48;
-    background-color: #f2dede;
+    /* background-color: #f2dede; */
+    background-color: white;
     border-color: #eed3d7;
 }
 
