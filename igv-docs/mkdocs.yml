@@ -9,12 +9,10 @@ theme:
 
 nav:
 - Documentation Home: index.md
-- igv.org: 'https://www.igv.org'
 
 - IGV Desktop Application:
     - User Guide: IGV/IGV_UserGuide.md
-    - IGV Desktop Release Notes:
-        - IGV Desktop 2.9.x: release_notes/igv_desktop/IGV_2.9.x.md
+    - IGV Desktop Release Notes: release_notes/igv_desktop/IGV_2.9.x.md
         
 - IGV-Web App:
     - User Guide: IGV-Web/IGV-Web_UserGuide.md
@@ -26,6 +24,7 @@ nav:
 - Data Formats: data_formats.md
 - Hosting Genomes: hosting_genomes.md
 - Contact: contact.md
+- igv.org: 'https://www.igv.org'
   
 
 markdown_extensions:

@@ -88,6 +88,8 @@ h3 {
   display: inline-block;
   line-height: 16px;
   vertical-align: middle;
+  font-size: 28px; /* new */
+  font-weight: 500; /* new */
 }
 
 .wm-top-logo {
@@ -144,7 +146,8 @@ h3 {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 2rem;
-  transition: margin-left 0.3s;
+  transition: margin-left 0.3s;  
+  font-size: 16px; /* added */
 }
 
 .wm-content-pane {
@@ -266,7 +269,12 @@ h3 {
 .wm-toc-text {
   display: block;
   padding: 4px;
-  cursor: pointer;
+  cursor: pointer;  
+  font-size: 16px; /* added */
+}
+
+.wm-toc-li-child {
+  font-size: 14px; 
 }
 
 .wm-toc-lev1 > .wm-toc-text { padding-left: 14px; }
@@ -563,9 +571,9 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 
 .admonition {
     /* padding: 15px; */
-    padding: 15px;
+    padding: 5px;
     margin-bottom: 20px;
-    border: 1px solid transparent;
+    /*border: 1px solid transparent;*/
     border-radius: 4px;
     text-align: left;
 }

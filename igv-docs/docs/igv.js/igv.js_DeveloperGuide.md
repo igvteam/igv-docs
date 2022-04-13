@@ -1,4 +1,4 @@
-<font size=18 color=#546e7a>igv.js Developer Guide</font>
+<font size=8 color=#546e7a>igv.js DEVELOPER GUIDE</font>
 
 # IGV Browser Object #
 
@@ -53,7 +53,7 @@ genome | String identifier defining genome (e.g. "hg19").  See [Reference Genome
 reference | Object defining reference genome.  See [Reference Genome](Reference-Genome) for details. **Note: One (but only one) of either _genome_ or _reference_ properties must be set.**|
 doubleClickDelay | Maximum between mouse clicks in milliseconds to trigger a double-click | 500
 flanking  | Distance (in bp) to pad sides of gene  on successful search by gene or other annotation. | 1000
-genomeList | **OPTIONAL.**  _Release 2.0.2._   URL to a json file containing an array of genome reference definitions, _or_ an inline json array.  Genomes can be specified from the list by ID with the "genome" property.  Default value is [https://s3.amazonaws.com/igv.org.genomes/genomes.json](https://s3.amazonaws.com/igv.org.genomes/genomes.json) **NOTE: the genomeList is globally shared by all igv browser instances on a page.** |
+genomeList | **OPTIONAL.**  _Release 2.0.2._   URL to a JSON file containing an array of genome reference definitions, _or_ an inline JSON array.  Genomes can be specified from the list by ID with the "genome" property.  Default value is [https://s3.amazonaws.com/igv.org.genomes/genomes.json](https://s3.amazonaws.com/igv.org.genomes/genomes.json) **NOTE: the genomeList is globally shared by all igv browser instances on a page.** |
 locus | Initial genomic location(s).  Either a string or an array of strings.  If an array a viewport is created for each location. | 
 minimumBases | Minimum window size in base pairs when zooming in | 40
 queryParametersSupported | If true support initialization by query parameters. | false
@@ -71,7 +71,7 @@ roi | Array of track-like configuration objects defining regions of interest.  T
 oauthToken | oauth access token |
 apiKey | Google API key.  Optional |
 clientId | Google client ID.  Optional.  |
-genomeList | An array of genome json objects, or url to an array of genome json objects.  If present genomes can be specified by id with the ```genome``` field above.  This list is added to the igv.js default list unless ```loadDefaultGenomes: false``` |
+genomeList | An array of genome JSON objects, or url to an array of genome JSON objects.  If present genomes can be specified by id with the ```genome``` field above.  This list is added to the igv.js default list unless ```loadDefaultGenomes: false``` |
 loadDefaultGenomes | Boolean indicating whether or not the igv.js default genome list should be loaded.  | true 
 nucleotideColors | Color table for nucleotides in sequence an bam tracks.  Object with keys "A", "C", "T", "G", and "N" | 
 showSampleNames | Controls display of sample names for track types that support them (VCF with genotypes, SEG, and MUT) |
@@ -166,26 +166,28 @@ wholeGenomeView | Construct a "whole genome" view from the individual sequences.
 
 After initialization, the browser can be controlled using the functions described below. 
 
-* [loadGenome(config)](#loadgenomeconfig)
-* [loadSessionObject(session)](#loadsessionobjectsession)
-* [loadSession({url})](#loadsessionurl)
-* [loadTrack(config)](#loadtrackconfig)
-* [findTracks(propertyOrFunction, value)](#findtrackspropertyorfunction-value)
-* [removeTrackByName(name)](#removetrackbynamename)
-* [removeTrack(track)](#removetracktrack)
-* [loadROI(configOrArray)](#loadroiconfigorarray)
-* [clearROIs()](#clearrois)
-* [search(symbol)](#searchsymbol)
-* [zoomIn()](#zoomin)
-* [zoomOut()](#zoomout)
-* [currentLoci()](#currentloci)
-* [visibilityChange()](#visibilitychange)
-* [toJSON()](#tojson)
-* [compressedSession()](#compressedsession)
-* [toSVG()](#tosvg)
-* [setCustomCursorGuideMouseHandler(handler)](#setcustomcursorguidemousehandlerhandler)
+* [loadGenome](#loadgenomeconfig)
+* [loadSessionObject](#loadsessionobjectsession)
+* [loadSession](#loadsessionurl)
+* [loadTrack](#loadtrackconfig)
+* [findTracks](#findtrackspropertyorfunction-value)
+* [removeTrackByName](#removetrackbynamename)
+* [removeTrack](#removetracktrack)
+* [loadROI](#loadroiconfigorarray)
+* [clearROIs](#clearrois)
+* [search](#searchsymbol)
+* [zoomIn](#zoomin)
+* [zoomOut](#zoomout)
+* [currentLoci](#currentloci)
+* [visibilityChange](#visibilitychange)
+* [toJSON](#tojson)
+* [compressedSession](#compressedsession)
+* [toSVG](#tosvg)
+* [setCustomCursorGuideMouseHandler](#setcustomcursorguidemousehandlerhandler)
 
-### loadGenome(config) ###
+### loadGenome ###
+
+```loadGenome(config)```
 
 Returns a promise to load a reference genome.  
 See the [Reference Genome]() for more detail on configuration options.
@@ -212,15 +214,21 @@ browser.loadGenome(
 }
 ```
 
-### loadSessionObject(session) ##
+### loadSessionObject ##
+
+```loadSessionObject(session)```
 
 Load a session object, also referred to as a browser configuration object.   See [Browser Creation](Browser-Creation) for more details.   Loading a session will clear the current reference genome and all tracks.
 
-### loadSession(url) ##
+### loadSession ##
 
-Load a session by url, which should point to a valid session json object.  The json is a representation of a browser configuration object described in the [Browser Creation](#BrowserCreation) section, but does not support parameter values not representable as json such as functions and promises.
+```loadSession(url)```
 
-### loadTrack(config) ##
+Load a session by url, which should point to a valid session JSON object.  The JSON is a representation of a browser configuration object described in the [Browser Creation](#BrowserCreation) section, but does not support parameter values not representable as JSON such as functions and promises.
+
+### loadTrack ##
+
+```loadTrack(config)```
 
 Returns a promise to load and configure a track.
 See [Tracks](#tracks) for more detail on configuration options.
@@ -238,15 +246,20 @@ browser.loadTrack({
 })
 ```
 
-### findTracks(propertyOrFunction, value) ##
+### findTracks ##
+```findTracks(propertyOrFunction, value)```
 
-### removeTrackByName(name)  ##
+### removeTrackByName  ##
+```removeTrackByName(name)```
 
 Remove track(s) whose "name" property matches the given name.  
 
-### removeTrack(track) ##
+### removeTrack ##
+```removeTrack(track)```
 
-### loadROI(configOrArray) ##
+### loadROI ##
+
+```loadROI(configOrArray)```
 
 Returns a promise to load an annotation file or array of annotation files to define regions of interest (ROIs).  Regions of interest are overlaid on the genome view across all tracks.  
 
@@ -266,12 +279,16 @@ browser.loadROI([
       }
 ])
 ```
-### clearROIs() ##
+### clearROIs ##
+
+```clearROIs()```
 
 Remove all regions of interest.
 
-### search(symbol) ##
+### search ##
        
+```search(symbol)```
+
 Search by annotation symbol or locus string.
 
 ```
@@ -347,7 +364,9 @@ Convert the browser contents to SVG format. This includes ideogram, ruler, and a
 
 
 
-### setCustomCursorGuideMouseHandler(handler) ##
+### setCustomCursorGuideMouseHandler ##
+
+```setCustomCursorGuideMouseHandler(handler)```
 
 Pass genomic location and mouse location with respect to trackContainer to the provided handler.
 The data is transmitted as the cursor guide is manipulated across the track container.
