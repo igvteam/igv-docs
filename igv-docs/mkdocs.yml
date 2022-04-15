@@ -11,8 +11,8 @@ nav:
 - Documentation Home: index.md
 
 - IGV Desktop Application:
-    - User Guide: IGV/IGV_UserGuide.md
-    - IGV Desktop Release Notes: release_notes/igv_desktop/IGV_2.9.x.md
+    - User Guide: IGV-desktop/IGV_UserGuide.md
+    - Release Notes: IGV-desktop/IGV_release_notes.md
         
 - IGV-Web App:
     - User Guide: IGV-Web/IGV-Web_UserGuide.md
@@ -23,7 +23,6 @@ nav:
         
 - Data Formats: data_formats.md
 - Hosting Genomes: hosting_genomes.md
-- Contact: contact.md
 - igv.org: 'https://www.igv.org'
   
 
