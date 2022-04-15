@@ -44,6 +44,7 @@ h3 {
   margin-bottom: 0px;
   height: 50px;
   z-index: 2;
+  padding-left: 20px; /* added */
 }
 
 .wm-top-page {
@@ -146,8 +147,7 @@ h3 {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 2rem;
-  transition: margin-left 0.3s;  
-  font-size: 16px; /* added */
+  transition: margin-left 0.3s;
 }
 
 .wm-content-pane {
@@ -246,10 +246,12 @@ h3 {
   list-style-type: none;
   line-height: 16px;
   padding-left: 0px;
+  font-size: 16px;
 }
 
 .wm-toctree a, .wm-toctree a:visited, .wm-toctree a:hover, .wm-toctree a:focus {
-  color: #546e7a;
+  /* color: #546e7a; */
+  color: #333;
   text-decoration: none;
   outline: none;
 }
@@ -257,7 +259,8 @@ h3 {
 .wm-toctree-child {
   list-style-type: none;
   line-height: 16px;
-  padding-left: 4px;
+  padding-left: 12px; /* increased from 4px */
+  font-size: 14px 
 }
 
 .wm-toctree-child a, .wm-toctree-child a:visited, .wm-toctree-child a:hover, .wm-toctree-child a:focus {
@@ -269,22 +272,19 @@ h3 {
 .wm-toc-text {
   display: block;
   padding: 4px;
-  cursor: pointer;  
-  font-size: 16px; /* added */
+  cursor: pointer; 
 }
 
-.wm-toc-li-child {
-  font-size: 14px; 
-}
-
-.wm-toc-lev1 > .wm-toc-text { padding-left: 14px; }
+.wm-toc-lev1 > .wm-toc-text { padding-left: 18px; }
+.wm-toc-lev1.wm-toc-opener > .wm-toc-text { padding-left: 5px; }
 .wm-toc-lev2 > .wm-toc-text { padding-left: 28px; }
 .wm-toc-lev3 > .wm-toc-text { padding-left: 42px; }
 .wm-toc-lev4 > .wm-toc-text { padding-left: 56px; }
 .wm-toc-lev5 > .wm-toc-text { padding-left: 70px; }
 .wm-toc-lev6 > .wm-toc-text { padding-left: 84px; }
 
-.wm-toc-lev1 + .wm-page-toc { margin-left: 14px; }
+.wm-toc-lev1 + .wm-page-toc { margin-left: 18px; }
+.wm-toc-lev1.wm-toc-opener > .wm-page-toc { padding-left: 5px; }
 .wm-toc-lev2 + .wm-page-toc { margin-left: 28px; }
 .wm-toc-lev3 + .wm-page-toc { margin-left: 42px; }
 .wm-toc-lev4 + .wm-page-toc { margin-left: 56px; }
@@ -308,18 +308,28 @@ h3 {
   content: "\25BC \FE0E";
 }
 
+
+.wm-toc-lev2  > .wm-toc-text {
+  color: #546e7a !important ;
+  }
+
+/* Not sure this did anything
 .wm-toc-li.wm-current, .wm-toc-li.wm-current:hover {
   background-color: #546e7a;
-  color: white;
+  color: white; 
 }
+*/
 
 .wm-toc-li:hover {
-  background-color: #e0e0e0;
+  background-color: #d0d0d0;
 }
 
-.wm-toc-li.wm-current a {
-  color: white;
+
+.wm-toc-li.wm-current:not(:hover) a {
+  background-color: #e8e8e8;
 }
+
+
 
 .wm-page-toc-text.wm-current:hover, .wm-page-toc-text.wm-current:hover, .wm-toc-li-child.wm-current, .wm-toc-li-child.wm-current:hover {
   background-color: white;
@@ -375,6 +385,7 @@ h3 {
   min-width: 100%;
   height: 100%;
   border: none;
+  padding-left: 60px; /* added */
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {

@@ -1,4 +1,5 @@
-<font size=8 color=#546e7a>igv.js DEVELOPER GUIDE</font>
+<font size=8 color=#546e7a>igv.js Developer Guide</font>
+
 
 # IGV Browser Object #
 
