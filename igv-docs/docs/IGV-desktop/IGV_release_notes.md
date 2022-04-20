@@ -1,4 +1,6 @@
-<font size=8 color=#546e7a>IGV-Desktop Release Notes</font>
+* [IGV 2.11](#igv-211)
+* [IGV 2.12](#igv-212)
+
 
 # IGV 2.11
 

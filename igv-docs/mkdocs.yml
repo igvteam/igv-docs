@@ -17,9 +17,11 @@ nav:
 - IGV-Web App:
     - User Guide: IGV-Web/IGV-Web_UserGuide.md
     
-- igv.js:
-    - Developer Guide: igv.js/igv.js_DeveloperGuide.md
-
+- igv.js JavaScript Component:
+    - Developer Guide: 
+        - IGV Browser Object: igv.js/IGVBrowserObject.md
+        - Browser API: igv.js/BrowserAPI.md
+        - Tracks: igv.js/Tracks.md
         
 - Data Formats: data_formats.md
 - Hosting Genomes: hosting_genomes.md
