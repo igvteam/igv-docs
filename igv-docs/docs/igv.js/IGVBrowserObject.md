@@ -8,36 +8,37 @@ The configuration object can be JSON, or a literal object.   In most cases these
 The example below creates an igv browser initialized with the hg19 reference genome.  
 
 ```JavaScript
-    const options = {
-            genome: "hg19";
-        };
+const options = {
+    genome: "hg19";
+};
 
-         igv.createBrowser(div, options) 
-              .then(function (browser) {
-                   // browser is initialized and can now be used
-               });
+igv.createBrowser(div, options) 
+    .then(function (browser) {
+    // browser is initialized and can now be used
+});
 ```
-!!! note 
-	The global singleton instance "igv.browser" is no longer created by the createBrowser function. If needed this object can be created as follows.
 
-```js
-igv.createBrowser(div, options).
-    then(function (browser) {
+The global singleton instance "igv.browser" is no longer created by the createBrowser function. If needed, this object can be created as follows: 
+	
+```
+    igv.createBrowser(div, options)
+    .then(function (browser) {
         igv.browser = browser;
-   });
-``` 
+   }); 
+```
+
 
 # Browser Removal
 
 To remove an igv browser instance call
 
-```
-igv.removeBrowser(browser)
+```js
+igv.removeBrowser(browser);
 ```
 To remove all igv browsers
 
-```
-igv.removeAllBrowsers()
+```js
+igv.removeAllBrowsers();
 ```
 
 
@@ -77,9 +78,12 @@ showSampleNames | Controls display of sample names for track types that support 
 
 The search object defines a webservice for fetching genomic location given a gene name or other symbol.  The service should return a JSON object with the following structure.  The results array is an array of objects with a chromosome, start, and end field.  The names of these fields are specified in the configuration object.   The end field is optional, if not included end = start + 1.
 
+```JavaScript
     {
       <resultsField> : <array of results>
     }
+```
+
 
 Option  | Description | Default
 ------ | ------- | ------------
@@ -94,7 +98,9 @@ The results array contain objects with chromosome, start, and end fields named a
 
 E.g. a search for TP53 against hg19 using the defaults should look like this:
 
+```js
     [{"chromosome":"chr17","start":7572927,"end":7579912}]
+```
     
 The reference genome must be defined by specifying either the _reference_ object or _genome_ identifier for hosted genomes.  These are mutually exclusive options, do not specify both.
 

@@ -6,7 +6,7 @@
 
 
 .wm-page-content {
-  max-width: 1050px;
+  max-width: 1250px;
   position: relative;
   font-size:16px; /* default is smaller - I think it's too small */
   
@@ -37,7 +37,7 @@ h3 {
  ***********************************************************************/
 
 .navbar {
-  background-color: #546e7a;
+  background-color: #1b7782; /* #546e7a; */
   box-shadow: 0 1.5px 3px rgba(0,0,0,.24), 0 3px 8px rgba(0,0,0,.05);
   border: none;
   border-radius: 0px;
@@ -115,7 +115,7 @@ h3 {
   right: 0px;
   padding: inherit;
   width: 100%;
-  background-color: #546e7a;
+  background-color: #1b7782; /* #546e7a; */
 }
 
 .wm-top-search {
@@ -137,7 +137,7 @@ h3 {
   padding-top: 70px;
   height: 100%;
   min-width: 250px;
-  max-width: 350px;
+  max-width: 330px; /* from 350 */
   z-index: 1;
   /* HT toc color - made lighter */
   background-color: #fafafa;
@@ -153,7 +153,7 @@ h3 {
 .wm-content-pane {
   position: absolute;
   top: 0px;
-  padding-top: 50px;
+  padding-top: 60px; /* increased from 50 */
   height: 100%;
   width: 100%;
   z-index: 0;
@@ -249,12 +249,22 @@ h3 {
   font-size: 16px;
 }
 
-.wm-toctree a, .wm-toctree a:visited, .wm-toctree a:hover, .wm-toctree a:focus {
-  /* color: #546e7a; */
-  color: #333;
+
+.wm-toctree a, .wm-toctree a:visited, .wm-toctree a:hover, .wm-toctree a:focus {  
+  color: #1b7782; /*  #546e7a; */
   text-decoration: none;
   outline: none;
 }
+
+.wm-toc-lev1 > .wm-toc-text  {
+  color: #333 !important;
+}
+
+.wm-toc-opener {
+  color: #333;
+}
+
+
 
 .wm-toctree-child {
   list-style-type: none;
@@ -264,7 +274,7 @@ h3 {
 }
 
 .wm-toctree-child a, .wm-toctree-child a:visited, .wm-toctree-child a:hover, .wm-toctree-child a:focus {
-  color: #546e7a;
+  /* color: #1b7782;  #546e7a; */
   text-decoration: none;
   outline: none;
 }
@@ -277,7 +287,8 @@ h3 {
 
 .wm-toc-lev1 > .wm-toc-text { padding-left: 18px; }
 .wm-toc-lev1.wm-toc-opener > .wm-toc-text { padding-left: 5px; }
-.wm-toc-lev2 > .wm-toc-text { padding-left: 28px; }
+.wm-toc-lev2 > .wm-toc-text { padding-left: 32px; }
+.wm-toc-lev2.wm-toc-opener > .wm-toc-text { padding-left: 18px; } 
 .wm-toc-lev3 > .wm-toc-text { padding-left: 42px; }
 .wm-toc-lev4 > .wm-toc-text { padding-left: 56px; }
 .wm-toc-lev5 > .wm-toc-text { padding-left: 70px; }
@@ -285,7 +296,8 @@ h3 {
 
 .wm-toc-lev1 + .wm-page-toc { margin-left: 18px; }
 .wm-toc-lev1.wm-toc-opener > .wm-page-toc { padding-left: 5px; }
-.wm-toc-lev2 + .wm-page-toc { margin-left: 28px; }
+.wm-toc-lev2 + .wm-page-toc { margin-left: 32px; }
+.wm-toc-lev2. + wm-toc-opener > .wm-toc-text { padding-left: 18px; }
 .wm-toc-lev3 + .wm-page-toc { margin-left: 42px; }
 .wm-toc-lev4 + .wm-page-toc { margin-left: 56px; }
 .wm-toc-lev5 + .wm-page-toc { margin-left: 70px; }
@@ -309,10 +321,6 @@ h3 {
 }
 
 
-.wm-toc-lev2  > .wm-toc-text {
-  color: #546e7a !important ;
-  }
-
 /* Not sure this did anything
 .wm-toc-li.wm-current, .wm-toc-li.wm-current:hover {
   background-color: #546e7a;
@@ -321,7 +329,7 @@ h3 {
 */
 
 .wm-toc-li:hover {
-  background-color: #d0d0d0;
+  background-color: #d0d0d0; 
 }
 
 
@@ -330,14 +338,22 @@ h3 {
 }
 
 
-
 .wm-page-toc-text.wm-current:hover, .wm-page-toc-text.wm-current:hover, .wm-toc-li-child.wm-current, .wm-toc-li-child.wm-current:hover {
+  background-color: white;  /* can't see that this does anything */
+}
+
+.wm-toc-li-child:hover {
+  background-color: white; 
+}
+
+.wm-toc-li-child { /* new */
   background-color: white;
 }
 
-.wm-page-toc-text:hover, .wm-toc-li-child:hover {
-  background-color: white;
+.wm-toc-li-child:hover { /* new */
+  background-color: #d0d0d0;
 }
+
 
 .wm-toc-li-child.wm-current a {
   color: white;
@@ -347,7 +363,7 @@ h3 {
   font-size: 1.2rem;
   line-height: 1.2rem;
   overflow: hidden;
-  border-left: 1px solid #546e7a;
+  border-left: 1px solid #1b7782; /* #546e7a; */
 }
 
 .wm-page-toc-opener > .wm-toc-text::after {
@@ -380,12 +396,16 @@ h3 {
   content: "\25BC";
 }
 
+wm-toc-lev1.wm-toc-text { /* new */
+  color: red !important;
+}
+
 .wm-article {
   width: 1px;
   min-width: 100%;
   height: 100%;
   border: none;
-  padding-left: 60px; /* added */
+  padding-left: 75px; /* added */
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
@@ -425,7 +445,7 @@ h3 {
   display: inline-block;
   max-width: 48%;
   white-space: nowrap;
-  color: #546e7a;
+  color: #1b7782; /* #546e7a; */
   text-align: right;
 }
 
@@ -438,10 +458,11 @@ h3 {
 }
 
 .wm-article-nav > a, .wm-article-nav > a:visited, .wm-article-nav > a:hover, .wm-article-nav > a:focus {
-  color: #546e7a;
+  color: #1b7782; /* #546e7a; */
   text-decoration: none;
   outline: none;
 }
+
 
 /***********************************************************************
  * Dropdown search results
@@ -511,7 +532,9 @@ h3 {
   float: right;
 }
 
-
+.wm-page-content a {
+  color: #1b7782;
+}
 
 hr {
     border-top: 1px solid #aaa;
@@ -547,11 +570,28 @@ pre code {
     word-wrap: normal;
     font-family: monospace,serif;
     font-size: 14px;
+    /* color: green !important; */
 }
+
+
+/* It doesn't do a good job of identifying the following,
+   so keep them the same font color as the rest */
+.hljs-variable, .hljs-built_in, .hljs-keyword, .hljs-number, .hljs-title, .hljs-attribute  {
+  color: #333 !important;  
+  font-weight: normal !important;
+}
+
+/* however, strings are ok (as long as the code is marked as js) */
+.hljs-string {
+  color: purple !important;
+}
+
+
+
 
 a code {
     /* color: #2FA4E7; */
-    color: #fafafa
+    color: #fafafa;
 }
 
 a:hover code, a:focus code {
@@ -581,11 +621,9 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 }
 
 .admonition {
-    /* padding: 15px; */
-    padding: 5px;
+    padding: 10px /* was 15 */;
     margin-bottom: 20px;
-    /*border: 1px solid transparent;*/
-    border-radius: 4px;
+    border: 1px solid transparent;
     text-align: left;
 }
 
@@ -613,4 +651,5 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 .admonition-title {
     font-weight: bold;
     text-align: left;
+    margin-bottom: 0px; /* new */
 }

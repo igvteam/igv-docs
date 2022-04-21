@@ -98,7 +98,7 @@ Remove track(s) whose "name" property matches the given name.
 
 Returns a promise to load an annotation file or array of annotation files to define regions of interest (ROIs).  Regions of interest are overlaid on the genome view across all tracks.  
 
-```
+```js
 browser.loadROI([
      {
         name: 'ROI set 1',
@@ -135,7 +135,7 @@ Additionally, one or more annotation tracks can be used to back the "search" fun
 
 The search function can also be passed an explicit location,  for example
 ```
-   browser.search('chr10:1000-2000')
+   browser.search('chr10:1000-2000');
 ```
 
 This function returns ```true``` if the symbol was found, ```false``` otherwise.
@@ -176,7 +176,7 @@ Return the current state of the browser as a JSON object.  This object can be lo
 ```
    const json = browser.toJSON();
 
-   browser.loadSessionObject(json)
+   browser.loadSessionObject(json);
 
 ```
 
@@ -185,7 +185,7 @@ Return the current state of the browser as a JSON object.  This object can be lo
 Return a compressed, encoded, string representing the current browser state.   This string can be used to load the session on any page hosting an igv.js instance with a url of the form
 
 ```
-https://myhost/mypage?sessionURL=blob:<compressed session string>
+https://myhost/mypage?sessionURL=blob:<compressed sessionstring>
 ```
 
 Note to reinstate the session ```queryParametersSupported``` must be set to true in the igv.js configuration.
