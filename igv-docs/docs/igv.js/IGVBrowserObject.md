@@ -18,7 +18,8 @@ igv.createBrowser(div, options)
 });
 ```
 
-The global singleton instance "igv.browser" is no longer created by the createBrowser function. If needed, this object can be created as follows: 
+!!! tip " "
+    The global singleton instance "igv.browser" is no longer created by the createBrowser function. If needed, this object can be created as follows: 
 	
 ```
     igv.createBrowser(div, options)
@@ -30,7 +31,7 @@ The global singleton instance "igv.browser" is no longer created by the createBr
 
 # Browser Removal
 
-To remove an igv browser instance call
+To remove an igv browser instance, call
 
 ```js
 igv.removeBrowser(browser);

@@ -252,8 +252,8 @@ option   | Parameter to sort by.  One of 'BASE', 'STRAND', 'INSERT_SIZE', 'MATE_
 tag      | Tag name to sort by.  Include only if option = 'TAG |   
 direction | Sort directions.  ASC = ascending, DESC = descending | "ASC"
 
-!!! note 
-    Prior to release 2.7.0, the "position" property was named "locus", and 'BASE' was named 'NUCELOTIDE'
+!!! tip " " 
+    Prior to release 2.7.0, the ```position``` property was named ```locus```, and ```BASE``` was named ```NUCELOTIDE```
 
 ### Example: BAM file on Google Cloud Storage
 

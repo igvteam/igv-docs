@@ -2,32 +2,33 @@
 
 IGV-Web is a web application for exploring genomic datasets. Data can be loaded directly from a user’s local file system, or via URL from web servers and cloud providers. The application runs only in the web browser and no data is ever uploaded to the host site.
 
-IGV-Web is developed by the same team that develops the IGV desktop application. Links to all versions of IGV can be found at <https://igv.org>.
-
-!!! note "For Developers:"
+!!! note "Note for developers:"
     IGV-Web is implemented using igv.js, our JavaScript component for embedding IGV in web pages. All IGV code is open source and available at <https://github.com/igvteam>
 
 # Quick Start
 
-### 1. Open the IGV-Web app
+## 1. Open the IGV-Web app
 
 In a [web browser](#supported-browsers), navigate to <https://igv.org/app>.   
 
-> **Note:** Make sure that popups are not disabled in your web browser as some features rely on them. For example, loading tracks and genomes from files in Google Drive may pop up a login window.
+!!! tip " "
+	Make sure that popups are not disabled in your web browser as some features rely on them. For example, loading tracks and genomes from files in Google Drive may pop up a login window.
 
-### 2. Load a reference genome
+## 2. Load a reference genome
 IGV displays data mapped to the genomic coordinates of a reference genome. When the IGV-Web page first loads, it will load the default reference genome **hg19**. To load a different genome, click on the `Genome` dropdown menu and either select from the list of pre-defined genomes, or use one of the options to load a genome sequence file that you specify.
 
-> **Note:** You must first load the reference genome, before loading data tracks. Switching genomes will clear out any loaded tracks.
+!!! tip " " 
+    You must first load the reference genome, before loading data tracks. Switching genomes will clear out any loaded tracks.
 
 
-#### Selecting a pre-defined genome
+### Selecting a pre-defined genome
 
 The available pre-defined genomes are listed in the menu. If you select any of these genomes, a corresponding gene annotation track will also be loaded.
 
-> Note: The menu includes the complete list of available pre-defined genomes. Unlike IGV-Desktop, there is no `More...` entry at the bottom of the menu to access a longer list.
+!!! tip " "
+    The menu includes the complete list of available pre-defined genomes. Unlike IGV-Desktop, there is no `More...` entry at the bottom of the menu to access a longer list.
 
-#### Loading a genome sequence file
+### Loading a genome sequence file
 
 If you have an indexed FASTA file of your reference genome sequence, you can load it using one of the options in the top part of the menu: 
 
@@ -38,23 +39,26 @@ If you have an indexed FASTA file of your reference genome sequence, you can loa
 
 Selecting the `URL` option will present a dialog where you enter the full web link URL to the FASTA file and to the corresponding index file. For the other options, both the FASTA file and the index file must be selected from the file chooser that pops up.
 
-> **Note:** A FASTA file only has the sequence data and IGV cannot display the cytoband ideogram in the chromosome ruler or automatically load a corresponding gene annotation track. You can load a gene annotation file directly via the `Tracks` menu.
+!!! tip " "
+    A FASTA file only has the sequence data and IGV cannot display the cytoband ideogram in the chromosome ruler or automatically load a corresponding gene annotation track. You can load a gene annotation file directly via the `Tracks` menu.
 
 You will be prompted to sign into a Google account if you select the `Google Drive` option, and a [Dropbox](https://www.dropbox.com) account is needed for the `Dropbox` option. 
 
-> **Developers:** Another option is to create and load a .json genome file, which can include references to a cytoband file and a default gene annotation track. See the [igv.js developer documentation](https://github.com/igvteam/igv.js/wiki) for details on creating a reference genome object in JSON format.
+!!! note "Note for developers:"
+    Another option is to create and load a .json genome file, which can include references to a cytoband file and a default gene annotation track. See the [igv.js developer documentation](https://github.com/igvteam/igv.js/wiki) for details on creating a reference genome object in JSON format.
 
-### 3. Load data tracks
+## 3. Load data tracks
 
 To load data and genomic annotations, click on the `Tracks` dropdown menu and either select from the selection of pre-defined tracks or choose one of the options to load files that you specify.
 
-#### Selecting a pre-defined track
+### Selecting a pre-defined track
 
 Categories of available pre-defined tracks are listed in the menu. Clicking on a category will open a list of datasets. For example, if `ENCODE` is one of the menu items, clicking on it will bring up a list of datasets available from the ENCODE data portal (Encyclopedia of DNA Elements, <https://www.encodeproject.org>). 
 
-> **Note:** The set of pre-defined tracks presented in the menu varies depending on the current reference genome. Some genomes do not come with any pre-defined tracks. 
+!!! tip " "
+    The set of pre-defined tracks presented in the menu varies depending on the current reference genome. Some genomes do not come with any pre-defined tracks. 
 
-#### Loading a track file
+### Loading a track file
 
 To load track data from a file, use one of the options in the top part of the menu: 
 
@@ -65,15 +69,17 @@ To load track data from a file, use one of the options in the top part of the me
 
 Selecting the `URL` option will present a dialog where you enter the full web link URL to one data file and the corresponding index file, if there is one. For the other options, a file chooser pops up and you can select files for mulitple tracks, along with the corresponding index files. 
 
-> **Note:** For indexed files, e.g. BAM files, you must explicitly select the index file along with the data file. If you also use IGV-Desktop, you may be used to IGV automatically finding and loading the index file. This is not always possible from a web browser, so the behavior is different in IGV-Web.
+!!! tip " " 
+    For indexed files, e.g. BAM files, you must explicitly select the index file along with the data file. If you also use IGV-Desktop, you may be used to IGV automatically finding and loading the index file. This is not always possible from a web browser, so the behavior is different in IGV-Web.
 
 You will be prompted to sign into a Google account if you select the `Google Drive` option, and a [Dropbox](https://www.dropbox.com) account is needed for the `Dropbox` option. 
 
 See information on supported [file types](./fileFormats.html). 
 
-> **Note:** Make sure to load only data files that correspond to the current reference genome. In general, a genomic data file does not include information about the genome it aligns to, which means IGV cannot automatically check if they match.
+!!! tip " " 
+    Make sure to load only data files that correspond to the current reference genome. In general, a genomic data file does not include information about the genome it aligns to, which means IGV cannot automatically check if they match.
 
-### 4. Navigate
+## 4. Navigate
 
 IGV-Web provides several navigation controls for specifying the genomic region to view. A ruler indicating the extent of the current region is displayed below the toolbar, and the size of the region and its genomic coordinates are displayed in the toolbar.
 
@@ -94,8 +100,7 @@ IGV-Web provides several navigation controls for specifying the genomic region t
 	* Close a panel by clicking on the **X** on the right edge of its ruler.
  
 * **Zoom and pan.** 
-	* Use the zoom slider or the **+** and **-** buttons on the right end of the toolbar to zoom in and out. In multi-locus view, this will affect all the panels. *The zoom controls are not available in whole-genome view*.
-	> **Note:** If your browser window is narrow, the **+** and **-** buttons appear without the slider widget.
+	* Use the zoom slider or the **+** and **-** buttons on the right end of the toolbar to zoom in and out. In multi-locus view, this will affect all the panels. _**NOTE:** (1) If your browser window is narrow, the **+** and **-** buttons appear without the slider widget. (2) The zoom controls are not available in whole-genome view._
 	 
 	* Double-click in any of the data tracks to zoom in one level. The new view will be centered on the point where you clicked.
 	
@@ -116,7 +121,8 @@ When you load a track it will be added to the bottom of the IGV track panel. To 
 
 To remove a track from the IGV browser, click on the gear icon to the right of the track and select `Remove track` from the menu that pops up. 
 
-> **Note:** Removing a track does not just hide the track. If you want to show it again you must reload the data file.  
+!!! tip " "
+    Removing a track does not just hide the track. If you want to show it again you must reload the data file.  
 
 Loading a new reference genome will also delete all loaded data tracks. Refreshing the IGV-Web page in the browser will delete all loaded data and reset to the default reference genome. Or, if you launched IGV-Web from a shared URL or browser bookmark, refreshing the page will go back to the initial session state defined by the URL or bookmark. 
 
@@ -157,7 +163,8 @@ The track gear menu provides two different options for expanding the display to 
 ![](./images/GenesExpanded.png)
 ![](./images/GenesSquished.png)
 
-> **Note:** Changing the display mode does not affect the track height. A scrollbar will be added to the track if it is too short to display all the lines. To increase or decrease the track height, select `Set track height` from the gear menu.  
+!!! tip " "
+    Changing the display mode does not affect the track height. A scrollbar will be added to the track if it is too short to display all the lines. To increase or decrease the track height, select `Set track height` from the gear menu.  
 
 
 
@@ -166,7 +173,8 @@ IGV-Web has a number of options for saving the state of your IGV session: you ca
 
 Be aware that the saved state of an IGV session includes pointers to the data files for any loaded tracks. So to fully restore the state, you must have access to the same files that were loaded when the IGV session was saved.
 
-> **Note:** Due to security restrictions on web browsers, if you loaded any files from the local file system, IGV cannot automatically load them for you when you restore the session **even if you run the session in the same environment on the same computer** where you saved the session. 
+!!! tip " "
+    Due to security restrictions on web browsers, if you loaded any files from the local file system, IGV cannot automatically load them for you when you restore the session **even if you run the session in the same environment on the same computer** where you saved the session. 
 
 
 ## Session files
@@ -183,7 +191,7 @@ To restore a session from a saved file, click on the `Session` dropdown menu and
 
 Selecting the `URL` option will present a dialog to enter the full web link URL to the session file. For the other options, a file chooser pops up. If you select the `Google Drive` option, you will be prompted to sign into a Google account, and a [Dropbox](https://www.dropbox.com) account is needed for the `Dropbox` option. 
 
-#### ***Session files from IGV-Desktop***
+### ***Session files from IGV-Desktop***
 Session files that were saved in the Java desktop version of IGV can also be loaded into IGV-Web via the `Session` dropdown menu. However, IGV-Desktop supports more features and file types than the IGV-Web app, and so the session may not be completely restored. Also note that session files saved in IGV-Web currently cannot be loaded into IGV-Desktop.
 
 ## Bookmarks

@@ -188,7 +188,8 @@ Return a compressed, encoded, string representing the current browser state.   T
 https://myhost/mypage?sessionURL=blob:<compressed sessionstring>
 ```
 
-Note to reinstate the session ```queryParametersSupported``` must be set to true in the igv.js configuration.
+!!! tip " "
+    To reinstate the session ```queryParametersSupported``` must be set to true in the igv.js configuration.
 
 ## toSVG ##
 

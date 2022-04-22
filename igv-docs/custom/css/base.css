@@ -16,7 +16,8 @@
 h1 {
     color: #444;
     font-weight: 400;
-    font-size: 36px; /* was 42 */
+    font-size: 34px; /* was 42 */
+    margin-top: 30px; /* was 20 */
     border-bottom: 1px solid #aaa; /* added this */
 }
 
@@ -543,7 +544,7 @@ hr {
 pre, .rst-content tt {
     max-width: 100%;
     /* background: #fff; */
-    background: #fafafa;
+    background: #f8f8f8; 
     border: solid 1px #e1e4e5;
     color: #333;
     overflow-x: auto;
@@ -556,7 +557,7 @@ code.code-large, .rst-content tt.code-large {
 code {
     padding: 2px 5px;
     /* background: #fff; */
-    background: #fafafa;
+    background: #f5fffe; /* #f8f8f8; */
     border: solid 1px #e1e4e5;
     color: #333;
     white-space: pre-wrap;
@@ -570,7 +571,6 @@ pre code {
     word-wrap: normal;
     font-family: monospace,serif;
     font-size: 14px;
-    /* color: green !important; */
 }
 
 
@@ -621,32 +621,53 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 }
 
 .admonition {
-    padding: 10px /* was 15 */;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
+    /* padding: 10px; */ /* was 15 */;
+    padding-left: 12px;
+    padding-bottom: 0px;
+    padding-top: 2px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    /* border: 1px solid transparent; */
+    border-left: 5px solid;
     text-align: left;
 }
 
+/* NOT SPECIFIED YET: there are more admonition classes (e.g. warning) than specified here. 
+   They will just appear black */
+   
 .admonition.note { /* csslint allow: adjoining-classes */
-    color: #3a87ad;
+    color: #333; /* #16ab4b; */ /* #3a87ad; */
     /* background-color: #d9edf7; */
     background-color: white;
-    border-color: #bce8f1;
+    border-color: #6ec46e; /* #4fc94f; */ /* #2AB27B; */ /* #9ed9c3; */ /* #bce8f1; */
 }
 
-.admonition.warning { /* csslint allow: adjoining-classes */
-    color: #c09853;
+.admonition.note > .admonition-title {
+  color: #49a349;
+}
+
+.admonition.tip { /* csslint allow: adjoining-classes */
+    color:  #333; /* #c09853; */
     /* background-color: #fcf8e3; */
     background-color: white;
-    border-color: #fbeed5;
+    border-color: #edc542; /* #FFB74D; */ /* #c09853; */ /* #fbeed5; */
+}
+
+.admonition.tip > .admonition-title {
+  color: #d6af2d;
 }
 
 .admonition.danger { /* csslint allow: adjoining-classes */
-    color: #b94a48;
+    color: #333; /* #EE5350; */ /* #b94a48; */
     /* background-color: #f2dede; */
     background-color: white;
-    border-color: #eed3d7;
+    border-color: #cf5b59; /* #EE5350; */ /* #eed3d7; */
 }
+
+.admonition.danger > .admonition-title {
+  color: #bd3f3c;
+}
+
 
 .admonition-title {
     font-weight: bold;
