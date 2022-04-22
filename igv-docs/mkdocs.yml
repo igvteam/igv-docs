@@ -17,7 +17,7 @@ nav:
 - IGV-Web App:
     - User Guide: IGV-Web/IGV-Web_UserGuide.md
     
-- igv.js JavaScript Component:
+- igv.js:
     - Developer Guide: 
         - IGV Browser Object: igv.js/IGVBrowserObject.md
         - Browser API: igv.js/BrowserAPI.md
