@@ -9,6 +9,7 @@ theme:
 
 nav:
 - Documentation Home: index.md
+- Navigation: navigation.md
 - RNA Structure: rna_structure.md
 - Data Formats: data_formats.md
 - Advanced:
