@@ -84,10 +84,10 @@ See information on supported [file types](./fileFormats.html).
 IGV-Web provides several navigation controls for specifying the genomic region to view. A ruler indicating the extent of the current region is displayed below the toolbar, and the size of the region and its genomic coordinates are displayed in the toolbar.
 
 * **Select a chromosome.** The chromosome dropdown menu in the toolbar includes an entry for every chromosome or contig in the current reference genome. Selecting a chromosome from the menu will set the view to include the whole chromosome. The ruler also includes a cytoband ideogram if you selected one of the pre-defined reference genomes.
-![](./images/ToolbarRulerChr1_2.png)
+![](images/ToolbarRulerChr1_2.png)
 
 * **Select chromosome "all"**. At the top of the list of chromosomes in the dropdown menu there is also the special entry `all` to view the whole genome, with all the chromosomes layed out side-by-side. Or you can enter `all` in the text box where the genomic coordinates are displayed.
-![](./images/ToolbarRulerChrAll_2.png)   
+![](images/ToolbarRulerChrAll_2.png)   
 	* Clicking on a chromosome in the whole-genome ruler will set the view to that chromosome, just like selecting the chromosome from the dropdown menu.
 
 * **Enter genomic coordinates.** In the text box where the genomic coordinates are displayed, you can type the coordinates of the region you want to view (e.g. *chr17:41,195,312-41,278,500*). The thousands separator is optional, but the chromosome name is required. 
@@ -95,7 +95,7 @@ IGV-Web provides several navigation controls for specifying the genomic region t
 * **Search by gene name.** In the text box where the genomic coordinates are displayed, type the name of a gene (e.g. *BRCA1*) and hit return or click on the magnifying glass. IGV will look up the genomic coordinates for that gene and set the viewing region accordingly. *Currently supported for human and mouse genomes only.*
 
 * **Enter multiple loci.** In the text box, you can enter multiple regions by gene name, genomic coordinates, or a mixture of the two, separated by spaces (e.g. *BRCA2 BRCA2 KRAS*). This will split up the IGV view into multiple panels and display the regions side-by-side, each with its own ruler. 
-![](./images/ToolbarRulerMultilocus_2.png)   
+![](images/ToolbarRulerMultilocus_2.png)   
 	* Clicking on the genomic coordinates above the ruler of any of the panels will change the view to only that region.
 	* Close a panel by clicking on the **X** on the right edge of its ruler.
  
@@ -113,7 +113,7 @@ IGV-Web provides several navigation controls for specifying the genomic region t
 
 # More about tracks
 
-![](./images/Track.png)
+![](images/Track.png)
 
 
 ## Moving and deleting tracks
@@ -137,9 +137,9 @@ Right-clicking on a data track brings up a popup menu with actions you can perfo
 ## Sequence track
 
 When zoomed in sufficiently, the reference genome sequence track appears just below the chromosome ruler. Depending on the zoom level, the sequence is represented by colored bars: 
-![](./images/SequenceBlocks.png) 
+![](images/SequenceBlocks.png) 
 or colored letters: 
-![](./images/SequenceLetters.png)
+![](images/SequenceLetters.png)
 with adenine (A) in green, cytosine (C) in blue, guanine (G) in yellow, and thymine (T) in red.
 
 The gear menu for sequence tracks includes two options:
@@ -147,7 +147,7 @@ The gear menu for sequence tracks includes two options:
 * **Strand direction.** Initially, the forward / positive strand is displayed. Click on `Reverse` to flip to the reverse / negative strand. Click on `Forward` to change it back.
 
 * **Sequence translation.** Click on `Three-frame Translate` to display a 3-band track that shows a 3-frame translation of the amino acid sequence for the corresponding nucleotide sequence. The translation is shown for the current strand. Amino acids are displayed as blocks colored in alternating shades of gray. Methionines are colored green, and all stop codons are colored red. When you zoom all the way in, the amino acid symbols will appear. Click on `Close Translation` to collapse the track to display the sequence only.
-![](./images/Sequence3FrameTranslate.png)
+![](images/Sequence3FrameTranslate.png)
 
 The sequence track cannot be removed, but it can be dragged to a different position, just like any other track.
 
@@ -158,10 +158,10 @@ If you load a reference genome from the list of hosted genomes provided in the `
 When you load a data track, it will be positioned just above this gene annotation track. So by default, the gene annotations are always displayed at the bottom. You can however move the gene annotation track at any time by dragging it to a different position, just like any other track. 
 
 By default, the annotations are displayed in a compact mode, where overlapping transcripts are collapsed into a single line:
-![](./images/GenesCollapsed.png)
+![](images/GenesCollapsed.png)
 The track gear menu provides two different options for expanding the display to show the overlapping features on separate lines: 
-![](./images/GenesExpanded.png)
-![](./images/GenesSquished.png)
+![](images/GenesExpanded.png)
+![](images/GenesSquished.png)
 
 !!! tip " "
     Changing the display mode does not affect the track height. A scrollbar will be added to the track if it is too short to display all the lines. To increase or decrease the track height, select `Set track height` from the gear menu.  

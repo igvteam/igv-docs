@@ -1,4 +1,6 @@
 **/*~
-/gsea-docs/site
+/igv-docs/site
+/igvjs-docs/site
+/webapp-docs/site
 .project
 /.idea/

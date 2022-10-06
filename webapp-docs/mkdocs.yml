@@ -9,13 +9,9 @@ theme:
 
 nav:
 - Documentation Home: index.md
-- RNA Structure: rna_structure.md
-- Data Formats: data_formats.md
-- Advanced:
-  - Command Line: advanced/command_line.md
-  - Batch Commands: advanced/batch_commands.md
-  - Hosting Genomes: advanced/hosting_genomes.md
-- Release Notes: release_notes.md
+
+- igv.org: 'https://www.igv.org'
+  
 
 markdown_extensions:
   - toc:

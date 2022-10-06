@@ -3,8 +3,12 @@
 To get started, pull this repo and then:
 - `conda env create -f igv-docs-env.yml` to install the Conda environment with necessary dependencies.
 - `conda activate igv-docs` to activate the environment (the exact command might differ for Anaconda).
-- `cd igv-docs`
+-  cd to one of the sub project directories
+  - `cd igv-docs`
+  - `cd webapp-docs`
+  - `cd igvjs-docs` 
 - `mkdocs serve` to start the MkDocs live-preview web server.
+  - NOTE: Note: if you get an error concerning ```jinja2``` try the following `pip install jinja2==3.0.0`
 
 Note: you might prefer `conda config --set auto_activate_base false`
 
