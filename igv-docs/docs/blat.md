@@ -64,3 +64,64 @@ same region contains a hit for **example c**, a BLAT search done with an exon fe
 higher alignment score than ROI2, its _Blat_ feature is shaded darker.
 
 ![](img/SL_BLAT2-3_2015-04-01.png)
+
+
+### Customizing BLAT
+
+By default, a public service hosted at UCSC is used, and BLAT support is limited to IGV reference genomes that are 
+derived from UCSC's hosted set.  This can be customized in IGV's advanced preferences to use another BLAT service, 
+or a locally executable command line program that returns BLAT-like results.
+
+To change the default BLAT service,  open the advanced preferences in IGV by selecting 
+_View > Preferences > Advanced_, and edit the "Blat url".  The value is a string template with placeholders for the 
+search sequence and genome ID:  ```$SEQUENCE``` and ```$DB```.  These values are substituted at runtime.  The default 
+value is
+
+```
+https://genome.ucsc.edu/cgi-bin/hgBlat?userSeq=$SEQUENCE&type=DNA&db=$DB&output=json
+```
+
+Output from the web service or command line program should be JSON containing a "blat" property at the top level, 
+followed by an array of PSL records representing the alignments.   Each PSL record is represented as a JSON array.   
+An example is given below. Details of the PSL format is available at [UCSC](http://genome.ucsc.edu/FAQ/FAQformat#format2).   
+If configuring a local command line program, the output should be written to STDOUT.
+
+
+
+```json
+{
+    "blat" : [
+        [33,1,0,0,0,0,0,0,"+","YourSeq",40,0,34,"chr1",249250621,155161117,155161151,1, 34,0,155161117],
+        [33,1,0,0,0,0,0,0,"+","YourSeq",40,0,34,"chr1",249250621,155161255,155161289,1, 34,0,155161255],
+        [33,1,0,0,0,0,0,0,"+","YourSeq",40,0,34,"chr1",249250621,155161315,155161349,1, 34,0,155161315],
+        [33,1,0,0,0,0,0,0,"+","YourSeq",40,0,34,"chr1",249250621,155161435,155161469,1, 34,0,155161435],
+        [33,1,0,0,0,0,0,0,"+","YourSeq",40,0,34,"chr1",249250621,155161495,155161529,1, 34,0,155161495]
+    ]
+}
+
+```
+
+An example of configuring a command line BLAT shell script, written for Linux and Mac systems, is given below.  This 
+script takes the search sequence and database ID as arguments, and simply calls the UCSC service referenced above and 
+diverts the output to STDOUT.
+
+The script, testBlat.sh:
+
+```bash
+#!/bin/bash
+wget -q -O - --no-check-certificate "https://genome.ucsc.edu/cgi-bin/hgBlat?userSeq=$1&type=DNA&db=$2&output=json"
+```
+
+To use the script, set the "Blat url" IGV preference to:
+
+```
+testBlat.sh $SEQUENCE $DB
+```
+
+
+
+
+
+
+
+
