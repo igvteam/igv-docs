@@ -10,6 +10,13 @@ theme:
 nav:
 - Documentation Home: index.md
 - Navigation: navigation.md
+- Tracks:
+    - Alignments:
+        - Insert Size: alignments/insert_size.md
+        - Pair Orientation: alignments/pair_orientation.md
+        - Bisulfite Sequencing: alignments/bisulfite.md
+        - Splice Junctions: alignments/splice_junctions.md
+        - Sashimi Plot: alignments/sashimi.md
 - RNA Structure: rna_structure.md
 - Data Formats: data_formats.md
 - Advanced:
