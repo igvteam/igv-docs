@@ -18,7 +18,6 @@ nav:
         - Splice Junctions: alignments/splice_junctions.md
         - Sashimi Plot: alignments/sashimi.md
 - RNA Structure: rna_structure.md
-- Data Formats: data_formats.md
 - Advanced:
   - Command Line: advanced/command_line.md
   - Batch Commands: advanced/batch_commands.md
