@@ -15,6 +15,8 @@ nav:
 - Sessions: sessions.md
 - Sample Information: sample_attributes.md
 - Tracks:
+    - Sequence: tracks/sequence.md
+    - Annotations: tracks/annotations.md
     - Alignments:
         - Insert Size: tracks/alignments/insert_size.md
         - Pair Orientation: tracks/alignments/pair_orientation.md
@@ -24,6 +26,8 @@ nav:
         - Sashimi Plot: tracks/alignments/sashimi.md
     - Variants (VCF): tracks/vcf.md
     - Mutations (MAF) : tracks/maf.md
+    - Segmented Copy Number: tracks/seg.md
+    - GWAS: tracks/gwas.md
     - RNA Structure: rna_structure.md
 - Tools:
     - Batch Scripting: tools/batch.md
@@ -31,8 +35,11 @@ nav:
     - IGV Tools: tools/igvtools_ui.md
     - Motif Finder: tools/motif_finder.md
 - Advanced:
+  - Authentication: advanced/oauth.md
   - Command Line: advanced/command_line.md
   - Hosting Genomes: advanced/hosting_genomes.md
+  - Port Commands: advanced/port.md
+  - HTML Links: advanced/links.md
 - Release Notes: release_notes.md
 
 markdown_extensions:

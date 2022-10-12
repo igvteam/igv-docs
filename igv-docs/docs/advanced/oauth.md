@@ -1,0 +1,1 @@
+Some words on oAuth -- neccessity of port listener, configuring custom provider.  google & amazon notes
