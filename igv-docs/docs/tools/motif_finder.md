@@ -32,10 +32,10 @@ the reference genome.
 Example
 -------
 
-![](img/FindMotifDialog.png)
+![](../img/FindMotifDialog.png)
 
 Since we entered a short sequence, it gets a large number of hits. Looking at the results directly upstream of the gene
 GBP4, we see a match on the postive strand and two on the negative strand. Note that by default, the search result
 tracks are displayed in _Expanded_ mode, so you can see overlapping matches.
 
-![](img/MotifResults.png)
+![](../img/MotifResults.png)

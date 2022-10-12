@@ -18,7 +18,7 @@ So base modifications with probability 0% are solid blue, base modifications wit
 Red bases indicate probability of 5-Methylcytosine (5mC) modification > 50%, blue indicate probability of 5mC
 modification < 50%.
 
-![](../img/5mC.png)
+![](../../img/5mC.png)
 
-![](../img/5mC_zoomedin.png)
+![](../../img/5mC_zoomedin.png)
 

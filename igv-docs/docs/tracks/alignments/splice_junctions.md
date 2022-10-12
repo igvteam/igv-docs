@@ -2,7 +2,7 @@ IGV supplements each alignment track with (1) a coverage track and (2) if select
 
 When enabled, IGV dynamically computes the junctions track from alignment data. The junctions track displays arcs connecting alignment blocks from a single read.  For RNA data these connections normally arise from splice junctions, thus the name _**Splice Junction Track**_.
 
-![](../img/splice_junctions_1.png)
+![](../../img/splice_junctions_1.png)
 
 Each splice junction is represented by an arc from the beginning to the end of the junction.
 
@@ -17,7 +17,7 @@ Hovering the mouse over or clicking on a junction will **display coverage inform
 *   Read depth for each end of the junction is displayed. For the red junction below, starting flank depth is 109 reads and ending flank depth is at 6606 reads.
 *   Other details for a given junction's three hover elements are the same.
 
-![](../img/junctionshover.png)  ![](../img/junctionsautoscale4.png)
+![](../../img/junctionshover.png)  ![](../../img/junctionsautoscale4.png)
 
 #### Right-click pop-up menu options for Junction tracks
 
@@ -38,7 +38,7 @@ Menu options are as detailed for the [Feature tracks menu](http://www.broadinsti
 *   Enter _SLC25A3_ in the search bar to see an instance where the third exon is differentially spliced for the two tissues (**Screenshot** 2015.4.15).
     *   Here we have colored alignments by XS tag. The library was unstranded, and XS tag values were assigned to reads crossing junctions (in pink) using a predefined transcriptome index.
 
-![](../img/SLC25A3_XS_colored_2015-04-15%2013.06.09.png)
+![](../../img/SLC25A3_XS_colored_2015-04-15%2013.06.09.png)
 
 Enable junctions view for .bed files
 ------------------------------------

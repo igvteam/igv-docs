@@ -29,7 +29,7 @@ When bisulfite sequence tracks are initially loaded, default coloring of mismatc
 
 Because not all mode matching sites are biologically relevant in the context of methylation, bisulfite experiments compare changes in methylation between a control sample and the variable. When comparing two samples, a change in methylation status will be marked by a difference in color for a given site. Red to blue indicates loss of methylation, or hypomethylation; blue to red indicates increased protection by methylation, or hypermethylation, as shown for the tumor sample in the **screenshot** below which visualizes data from Berman _et al_ (2012).
 
-![](../img/BermanNatGenet2011%202015-02-11%2014.31.21.png)
+![](../../img/BermanNatGenet2011%202015-02-11%2014.31.21.png)
 
 ### Bisulfite sequencing (BS-Seq) identifies sites of DNA methylation
 
@@ -51,7 +51,7 @@ Multiple techniques are used to distinguish 5-hmeC from 5-meC. Of relevance to c
 
 The following **figure** diagrams the nucleotide conversions that occur for a methylated versus unmethylated locus during bisulfite conversion and PCR, and IGV's corresponding coloring of these sites in CG bisulfite mode.
 
-![](../img/SL_IGV_bisulfiteflow2.png)
+![](../../img/SL_IGV_bisulfiteflow2.png)
 
 For a given DNA fragment, four strands arise after treatment and PCR amplification. These are the original top strand (OT), the original bottom strand (OB), and strands which are complementary to OT and OB  (CTOT and CTOB). IGV visualizes reads in one direction, and for the given direction reads from the opposite strand are automatically displayed as the reverse complement. Therefore, OT and CTOT reads are displayed in the reference-forward direction (gray) while OB and CTOB reads are displayed in the reverse direction (sage) and are differentially colored as indicated.
 
@@ -71,7 +71,7 @@ The additional IGV color modes--**HCG**, **GCH**, and **WCG** (**diagram**)--are
     *   In addition, 93.4% of GCG trinucleotides have a **GCH** within 20 bp (and half of these within 5 bp) from which nucleosome occupancy information can be derived.
 *   Authors use **WCG** instead of **HCG** in certain calculations to exclude off-target activity of _M.CviPI_ on CCG sites.
 
-![](../img/SL_IGV_bisulfite_sm.png)
+![](../../img/SL_IGV_bisulfite_sm.png)
 
 ### References
 

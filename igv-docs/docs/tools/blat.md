@@ -1,21 +1,23 @@
-You can do a [BLAT](http://en.wikipedia.org/wiki/BLAT_%28bioinformatics%29) (BLAST-like Alignment Tool) search from a _
-user-specified sequence,_ _feature_, _alignment_, or _region of interest,_ of a sequence up to 8 kb in length.
+
+IGV supports  [BLAT](http://en.wikipedia.org/wiki/BLAT_%28bioinformatics%29) (BLAST-like Alignment Tool) for on-the-fly 
+alignment of query sequences up to 8 kb in length.  Query sequencs can be user defined, a read sequence from an alignment, 
+or taken from a region of the target (reference) genome defined by a  _feature_  or _region of interest_.
 
 * **User-specified sequence:** Select _BLAT_ from the _Tools_ menu in the main menubar, and enter the sequence.
 * **Features:** Right-click on the feature in the track and select _Blat sequence_ from the pop-up menu. The BLAT input
   sequence is the section of the reference genome defined by the feature start and end bounds.
 * **Alignments:** Right-click on the aligned read and select _Blat read sequence_ from the pop-up menu. Note that in
   this case, the BLAT input sequence is the read sequence. It is _not_ the sequence of the reference genome where the
-  read was aligned.
+  read was aligned.  Options to BLAT soft clips are presented if soft clips are present of sufficient length.
 * **Regions of Interest (ROI):**
-  After [creating a region of interest](http://www.broadinstitute.org/software/igv/regionsofinterest), click on the
+  After [creating a region of interest](../roi.md), click on the
   region's red bar and select _Blat sequence_ from the pop-up menu. The BLAT input sequence is the sequence of the
   reference genome defined by the region bounds.
 
-The default search engine is the BLAT server hosted at
-the [UCSC Genome Browser](https://genome.ucsc.edu/cgi-bin/hgBlat?command=start). UCSC's BLAT search supports most UCSC
-derived genomes including human and mouse genomes. Change to use a different BLAT server
-in [Advanced Preferences](http://software.broadinstitute.org/software/igv/Preferences#Advanced).
+The default search engine is the BLAT server hosted at 
+the [UCSC Genome Browser](https://genome.ucsc.edu/cgi-bin/hgBlat). UCSC's BLAT search supports most UCSC
+derived genomes including human and mouse genomes.  See below fo instructions on specifying a custom BLAT server,
+or configurint a command-line BLAT tool.
 
 #### BLAT Feature Track
 
@@ -40,14 +42,14 @@ page.
 * _Expanded_ or _Collapsed_ views of the _Blat_ feature track labels the search feature _YourSeq_. You cannot alter this
   label but can rename the feature track.
 
-![](img/SL_BLAT1b_2015-04-01.png)
+![](../img/SL_BLAT1b_2015-04-01.png)
 
 #### BLAT Results Panel
 
 Results are presented in a new window that displays the query sequence, location of hits, match score, and other metrics
 as shown in the **Screenshot** (2015.04.01). Hits are listed in descending order of alignment score.
 
-![](img/Screenshot%202015-04-01%2015.41.18.png)
+![](../img/Screenshot%202015-04-01%2015.41.18.png)
 
 For the example hit highlighted in the **Screenshot** above, the original search sequence is returned as the top hit.
 The read used in the search was an aligned RNA-Seq read spanning an intron (**example b**), which the BLAT results show
@@ -63,7 +65,7 @@ Screenshot** below) navigates the view away from chromosome 19 to the hit locus 
 same region contains a hit for **example c**, a BLAT search done with an exon feature. Because the exon feature has a
 higher alignment score than ROI2, its _Blat_ feature is shaded darker.
 
-![](img/SL_BLAT2-3_2015-04-01.png)
+![](../img/SL_BLAT2-3_2015-04-01.png)
 
 
 ### Customizing BLAT

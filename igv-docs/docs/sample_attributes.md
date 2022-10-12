@@ -1,5 +1,5 @@
 Attributes can be associated with tracks and used for filtering, sorting, and grouping data. By default all tracks have 
-at least 3 attributes: Data File, Data Type, and Name. To display additional attributes, [load a sample attribute file](sample_info). 
+at least 3 attributes: Data File, Data Type, and Name. To display additional attributes, [load a sample attribute file](../sample_info). 
 IGV displays attribute names and values in the attributes panel.
 
 Color-Coded Attribute Values

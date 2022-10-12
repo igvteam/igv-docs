@@ -17,7 +17,7 @@ The Sashimi plot is displayed in a separate window. The coverage for each alignm
 
 Static images of Sashimi plots can also be generated outside IGV with sashimi\_plot, a Python tool which is part of the [MISO](http://hollywood.mit.edu/burgelab/miso/) package. Read more about sashimi\_plot [here](http://miso.readthedocs.io/en/fastmiso/sashimi.html).
 
-#### ![](../img/SL_Sashimi1.png)
+#### ![](../../img/SL_Sashimi1.png)
 
 Popup Menu Options
 ------------------

@@ -16,7 +16,7 @@ _igvtools.bat_ (command-line version for Windows)
 _igvtools\_gui.bat (_GUI version for Windows)
 
 Once the GUI version has been launched, the commands and options are the same as when
-you [run igvtools from the IGV interface](http://software.broadinstitute.org/software/igv/igvtools_gui).
+you [run igvtools from the IGV interface](igvtools_ui.md).
 
 The general form of the command-line version is:
 

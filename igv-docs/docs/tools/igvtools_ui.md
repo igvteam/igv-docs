@@ -41,7 +41,7 @@ coverage for alignment files and counting hits in Chip-seq experiments. By defau
 as a bar chart when loaded into IGV. To display feature intensity in IGV, the density must be computed with this option,
 and the resulting file must be named _<feature track filename>.tdf_.
 
-![](img/igvtools_gui_count.jpg)
+![](../img/igvtools_gui_count.jpg)
 
 Select:
 
@@ -68,7 +68,7 @@ This command does not take an output file argument. Instead, the filename is gen
 alignments) or ".idx" (for features) to the input filename as IGV relies on this naming convention to find the index .
 The input file must be sorted by start position (see the _Sort_ tool, below).
 
-![](img/igvtools_gui_index.jpg)
+![](../img/igvtools_gui_index.jpg)
 
 Select the _Input File_. Supported file formats are .sam, .bam, .aligned, .vcf, .psl, and .bed.
 
@@ -77,7 +77,7 @@ Sort
 
 _Sort_ sorts the input file by start position.
 
-![](img/igvtools_gui_sort.jpg)
+![](../img/igvtools_gui_sort.jpg)
 
 Select:
 
