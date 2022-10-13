@@ -40,6 +40,8 @@ nav:
   - Hosting Genomes: advanced/hosting_genomes.md
   - Port Commands: advanced/port.md
   - HTML Links: advanced/links.md
+- File Formats:
+  - Track Line: files/track_line.md
 - Release Notes: release_notes.md
 
 markdown_extensions:

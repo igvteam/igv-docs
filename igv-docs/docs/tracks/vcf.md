@@ -2,6 +2,11 @@ VCF stands for Variant Call Format, and this file format is used by the 1000 Gen
 structural genetic variants. The format is further described on
 the [1000 Genomes project Web site](http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/VCF%20%28Variant%20Call%20Format%29%20version%204.0/encoding-structural-variants)
 .
+A consistent color scheme is used in the variant display row, which is the top row, for files with or without geneotypes.
+
+* blue - minor allele frequency/fraction is known from annotation or genotype data
+* grey - minor allele frequency is not known
+* red - height is proportional to minor allele frequency
 
 Viewing a VCF File with Genotypes
 ---------------------------------
