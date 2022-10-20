@@ -66,6 +66,8 @@ snapshot | filename    | Saves a snapshot of the IGV window to an image file. If
 sort | option locus direction| Sorts alignment or segmented copy number tracks. See below for valid option values. If supplied, the locus option can define a single position for alignments, or a range for copy number. If absent sorting will be based on the center position of the region in view for alignment tracks, or the average over the entire region in view for segmented copy number. If ```direction``` is specified and equal to ```reverse``` sort order is reversed. Locus must be specified if ```direction``` is specified.
 squish | trackName |    Squish a given trackName. trackName is optional, and if it is not supplied all annotation tracks are squished.
 viewaspairs | trackName |    Set the display mode for an alignment track to "View as pairs". trackName is optional.
+setAccessToken | token host | Set an access token to be used in an ```Authorization: bearer" header for all requests to host.  If host is omitted token is used for all requests.  Since release 2.14.2
+clearAccessTokens | | Clears all access tokens.  Since release 2.14.2
 
 ### ColorBy option values
 
