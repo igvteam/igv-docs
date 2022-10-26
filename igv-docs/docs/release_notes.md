@@ -1,7 +1,107 @@
-
+* [IGV 2.14.x](#igv-214x)
+* [IGV 2.13.x](#igv-213x)
 * [IGV 2.12.x](#igv-212x)
 * [IGV 2.11.x](#igv-211x)
 
+# IGV 2.15.x
+
+## IGV 2.15.0
+
+**New Features**:
+
+* Allow setting access tokens for specific hosts from batch scripts.  [Git Issue 1199](https://github.com/igvteam/igv/issues/1110)
+* Option to explicitly set maximum splice coverage from Splice Junction Track.  [Git Issue 1015](https://github.com/igvteam/igv/issues/1015)
+
+**Updates and bug fixes**
+
+* Change "mut" file parsing to assume 1-based coordinates by default.  [Git Issue 1226](https://github.com/igvteam/igv/issues/1226)
+* Use ID attribute for feature info links if ID is explicitly set.  Fixes regression introduced post release 2.12.3.  [Git issue 1232](https://github.com/igvteam/igv/issues/1232)
+* Bug fix: Images not saved from Sashimi plots [Git Issue 1214](https://github.com/igvteam/igv/issues/1110)
+
+# IGV 2.14.x
+
+## IGV 2.14.1, released September 2022
+
+**Updates and bug fixes**:
+
+*   Improvements to alignment sorting.
+*   New coloring option for alignments with base modification: "Color by base modification (all C)". Color Cytosine bases by most probable modification when specified by MM/ML tags.
+*   Bug fix: Issues with alignment option "Color by base modification (5mC)" in the presence of "5hmC" modifications.
+*   Bug fix: View as pairs broken if combined with "Color by ZMW".
+
+## IGV 2.14.0, released August 2022
+
+**New options for displaying sequence alignments**:
+
+*   Color by base modification (5mC) specified with MM/ML tags in the BAM file. For more details, see https://github.com/igvteam/igv/wiki/5mC-coloring-mode.
+
+*   Shade by mapping quality. (Git Issue [1110](https://github.com/igvteam/igv/issues/1110))
+
+*   Group by mapping quality. (Git Issue [1112](https://github.com/igvteam/igv/issues/1112))
+
+*   Sort by aligned read length. (Git Issue [1159](https://github.com/igvteam/igv/issues/1159))
+
+*   When grouping alignments by an attribute, the display order of the groups can now be reversed by selecting _Group alignments by > Reverse group sorting_ in the right-click popup menu.  (Git Issue [#1106](https://github.com/igvteam/igv/issues/1106))
+
+**Other updates and bug fixes:**
+
+*   The IGV application no longer checks to for new versions. (Git Issue [#1117](https://github.com/igvteam/igv/issues/1117))
+
+*   Bug fix: Combined data tracks could not be generated via _Tools > Combine Tracks_ or restored from previously saved sessions.
+
+*   Bug fix: Tracks generated via the BLAT and Motif finder tools were not being restored when a saved session file was loaded.
+
+*   Bug fix: Sashimi plots displayed a maximum of one sample.
+
+*   Bug fix: Saved _.png_ images displayed a black background with black text for alignment track group labels. A white background is now used to match the onscreen appearance. (Git Issue [#1172](https://github.com/igvteam/igv/issues/1172))
+
+*   Bug fix: TDF files failed to load via URL when the URL had a query string. (Git Issue [#1168](https://github.com/igvteam/igv/issues/1168))
+
+
+# IGV 2.13.x
+
+## IGV 2.13.2, released July 2022
+
+This release fixes a problem with Sashimi plots - they were not displaying any splice junctions, only the annotation track.
+
+## IGV 2.13.1, released June 2022
+
+This release includes the following improvements and fixes:
+
+*   Major performance improvement for CRAM files (htsjdk 3.0).
+
+*   CSI indexes can now be loaded from URLs (htsjdk 3.0).  (Git Issue [#843](https://github.com/igvteam/igv/issues/843))
+
+*   New menu item for feature tracks to specify the feature property to use for the displayed name.  (Git Issue [#1089](https://github.com/igvteam/igv/issues/1089))
+
+*   Improved support for BigBed files; extra fields are now included in the popup text.
+
+*   _Group-by-strand_ now works for feature tracks in collapsed mode.  (Git Issue [#1151](https://github.com/igvteam/igv/issues/1151))
+
+*   Prevent jumping beyond the end of the chromosome.  (Git Issue [#1150](https://github.com/igvteam/igv/issues/1150))
+
+
+
+## IGV 2.13.0, released May 2022
+
+This release includes the following improvements and fixes:
+
+*   Support for Amazon AWS default credentials. This enables loading data from AWS S3 using s3:// URLs if Amazon credentials can be found in the default credential chain as described in AWS documentation [here](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html). In addition, if default credentials are found, the default region chain will be searched as described in AWS documentation [here](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-region-selection.html). Cognito configuration, as described at [https://umccr.org/blog/igv-amazon-frontend-setup/](https://umccr.org/blog/igv-amazon-frontend-setup/), will take precedence over default credentials.
+
+*   Support for [bigGenePred file format](https://genome.ucsc.edu/goldenPath/help/bigGenePred.html) (Git Issue [#1130](https://github.com/igvteam/igv/issues/1130))
+
+*   Support for [bigNarrowPeak file format](https://genome.ucsc.edu/goldenPath/help/bigNarrowPeak.html).
+
+*   Improved support for jumping to the next/previous feature in a selected feature track (using the "f" and "b" keys).
+    *   The feature is now centered in the view.
+    *   A preference can now be set to automatically zoom the view to fit the feature to the window, with optional up- and downstream padding. Go to the _General_ tab in _View > Preferences_ to set this preference.
+    *   A bug has been fixed where typing an "f" or "b" into text fields (e.g. the locus search box) was interepreted as a feature jump if a feature track was selected. (Git Issue [#1122](https://github.com/igvteam/igv/issues/1122))
+
+*   Support for handling a trailing "." or "?" character in the SAM tag MM (modified bases). (Git Issue [#1131](https://github.com/igvteam/igv/issues/1131))
+
+*   Support for GWAS files with "NA" in the p-value column, e.g. some files produced by new versions of PLINK. (Git Issue [#11](https://github.com/igvteam/igv/pull/1139)[27](https://github.com/igvteam/igv/issues/1127))
+
+*   When loading session files that included the _showGenotypes_ property for a VCF track, the track would be displayed without the genotypes even when the property was set to "true". This has now been fixed.
 
 # IGV 2.12.x
 
