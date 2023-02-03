@@ -18,7 +18,7 @@ position on the scale on the left is associated with its _P_ value.
 
 ![](../img/igv_gwas_popup.jpg)
 
-GWAS Pop-up Menu
+GWAS Pop-up Menu
 ----------------
 
 The following commands appear in the pop-up menu for GWAS tracks:

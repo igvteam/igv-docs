@@ -24,7 +24,7 @@ Define by mouse
 
 On the tool bar, click the Define a Region of Interest icon:
 
-![](img/images/icon_region_of_interest.jpg)
+![](img/icon_region_of_interest.jpg)
 
 In the data panel, single click the start of the region and then the end of the region. Do **NOT** click and drag. IGV
 displays lines delimiting the region of interest for the first and second click, then marks the region in red under the

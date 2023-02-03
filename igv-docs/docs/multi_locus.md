@@ -4,11 +4,11 @@ By default, IGV displays one contigous genomic region, but multiple loci can als
 
 or
 
-*   Selecting and viewing multiple _regions of interest_ in the [Region Navigator](http://software.broadinstitute.org/software/igv/regionsofinterest).
+*   Selecting and viewing multiple _regions of interest_ in the [Region Navigator](http://software.broadinstitute.org/software/igv/regionsofinterest).
 
 or
 
-*   Right-clicking on a paired alignment of a BAM track and selecting _View mate in split screen_
+*   Right-clicking on a paired alignment of a BAM track and selecting _View mate in split screen_
 
 or
 

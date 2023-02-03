@@ -21,7 +21,7 @@ In a deletion a section of DNA is absent in the subject genome compared to the r
 
 When pairs from a section of DNA spanning the deletion are aligned to the genome the inferred insert size will be larger than expected.  This is due to the deleted section of the genome, not present in the subject.  Schematically this can be visualized as follows:
 
-![](../img/del_refvssubject.jpg)
+![](../../img/del_refvssubject.jpg)
 
 So in the case of a deletion, the inferred insert size is GREATER THAN the expected insert size.   In IGV such an event might look like the following.
 

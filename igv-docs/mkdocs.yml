@@ -18,6 +18,7 @@ nav:
     - Sequence: tracks/sequence.md
     - Annotations: tracks/annotations.md
     - Alignments:
+        - Viewing Alignments: tracks/alignments/viewing_alignments.md
         - Insert Size: tracks/alignments/insert_size.md
         - Pair Orientation: tracks/alignments/pair_orientation.md
         - Bisulfite Sequencing: tracks/alignments/bisulfite.md
@@ -28,7 +29,7 @@ nav:
     - Mutations (MAF) : tracks/maf.md
     - Segmented Copy Number: tracks/seg.md
     - GWAS: tracks/gwas.md
-    - RNA Structure: rna_structure.md
+    - RNA Structure: tracks/rna_structure.md
 - Tools:
     - Batch Scripting: tools/batch.md
     - BLAT: tools/blat.md
@@ -40,9 +41,13 @@ nav:
   - Hosting Genomes: advanced/hosting_genomes.md
   - Port Commands: advanced/port.md
   - HTML Links: advanced/links.md
+  - Command Line: command_line.md
+  - IGV Tools: tools/igvtools_cl.md
 - File Formats:
   - Track Line: files/track_line.md
+  - Sample Info: sample_info.md
 - Release Notes: release_notes.md
+
 
 markdown_extensions:
   - toc:
