@@ -252,17 +252,9 @@ h3 {
 
 
 .wm-toctree a, .wm-toctree a:visited, .wm-toctree a:hover, .wm-toctree a:focus {  
-  color: #397280; /* #1b7782; */ /*  #546e7a; */
+  color: #333; /* #397280;*/ /* #1b7782; */ /*  #546e7a; */
   text-decoration: none;
   outline: none;
-}
-
-.wm-toc-lev1 > .wm-toc-text  {
-  color: #333 !important;
-}
-
-.wm-toc-opener {
-  color: #333;
 }
 
 
@@ -286,23 +278,13 @@ h3 {
   cursor: pointer; 
 }
 
-.wm-toc-lev1 > .wm-toc-text { padding-left: 18px; }
-.wm-toc-lev1.wm-toc-opener > .wm-toc-text { padding-left: 5px; }
-.wm-toc-lev2 > .wm-toc-text { padding-left: 32px; }
-.wm-toc-lev2.wm-toc-opener > .wm-toc-text { padding-left: 18px; } 
-.wm-toc-lev3 > .wm-toc-text { padding-left: 42px; }
-.wm-toc-lev4 > .wm-toc-text { padding-left: 56px; }
-.wm-toc-lev5 > .wm-toc-text { padding-left: 70px; }
-.wm-toc-lev6 > .wm-toc-text { padding-left: 84px; }
 
-.wm-toc-lev1 + .wm-page-toc { margin-left: 18px; }
-.wm-toc-lev1.wm-toc-opener > .wm-page-toc { padding-left: 5px; }
-.wm-toc-lev2 + .wm-page-toc { margin-left: 32px; }
-.wm-toc-lev2. + wm-toc-opener > .wm-toc-text { padding-left: 18px; }
-.wm-toc-lev3 + .wm-page-toc { margin-left: 42px; }
-.wm-toc-lev4 + .wm-page-toc { margin-left: 56px; }
-.wm-toc-lev5 + .wm-page-toc { margin-left: 70px; }
-.wm-toc-lev6 + .wm-page-toc { margin-left: 84px; }
+.wm-toc-lev1 > .wm-toc-text { padding-left: 15px; }
+.wm-toc-lev1.wm-toc-opener > .wm-toc-text { padding-left: 0px; }
+.wm-toc-lev2 > .wm-toc-text { padding-left: 14px; }
+.wm-toc-lev2.wm-toc-opener > .wm-toc-text { padding-left: 0px; }
+.wm-toc-lev3 > .wm-toc-text { padding-left: 10px; }
+
 
 .wm-toc-li-nested {
   padding: 0px;
@@ -317,20 +299,25 @@ h3 {
   width: 14px;
 }
 
+.wm-toc-lev3.wm-toc-opener.wm-toc-open > .wm-toc-text::before {
+  content: "\25BC \FE0E";
+}
+
+.wm-toc-lev3.wm-toc-opener > .wm-toc-text::before {
+  content: "\25B6 \FE0E";
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 8px;
+  width: 14px;
+}
+
 .wm-toc-opener.wm-toc-open > .wm-toc-text::before {
   content: "\25BC \FE0E";
 }
 
 
-/* Not sure this did anything
-.wm-toc-li.wm-current, .wm-toc-li.wm-current:hover {
-  background-color: #546e7a;
-  color: white; 
-}
-*/
-
 .wm-toc-li:hover {
-  background-color: #d0d0d0; 
+  background-color: #e8e8e8; 
 }
 
 
@@ -339,62 +326,68 @@ h3 {
 }
 
 
+.wm-toc-opener:hover {
+  background-color: #fafafa;
+}
+.wm-toc-opener {
+ color: #397280;
+}
+
+
+
 .wm-page-toc-text.wm-current:hover, .wm-page-toc-text.wm-current:hover, .wm-toc-li-child.wm-current, .wm-toc-li-child.wm-current:hover {
   background-color: white;  /* can't see that this does anything */
 }
 
-.wm-toc-li-child:hover {
-  background-color: white; 
-}
+ 
 
-.wm-toc-li-child { /* new */
-  background-color: white;
-}
-
-.wm-toc-li-child:hover { /* new */
-  background-color: #d0d0d0;
-}
-
-
-.wm-toc-li-child.wm-current a {
-  color: white;
-}
-
-.wm-toc-li-nested.wm-page-toc {
+.wm-toc-li-nested {
   font-size: 1.2rem;
   line-height: 1.2rem;
   overflow: hidden;
+  padding-left: 16px; /*40px;*/ 
   border-left: 1px solid #397280; /* #1b7782; */ /* #546e7a; */
 }
 
-.wm-page-toc-opener > .wm-toc-text::after {
-  content: "\25C4";
-  display: inline-block;
-  float: right;
-  vertical-align: middle;
-  font-size: 8px;
+.wm-toctree-child { 
+  background-color: #fafafa;
 }
 
 .wm-page-toc-opener.wm-page-toc-open > .wm-toc-text::after {
-  content: "\25BC";
+  content: "\25BC \FE0E";
+  color: #397280;
+}
+
+.wm-page-toc-opener > .wm-toc-text::after {
+  content: "\25B6 ";
+  color: #397280;
+  display: inline-block;
+  float: right;
+  font-size: 8px;
+  width: 14px;
 }
 
 .wm-page-toc-text {
   padding: 2px 2px 2px 1rem;
   display: block;
   cursor: pointer;
+  font-size: 15px;
+  background-color: #fafafa;
 }
 
 .wm-page-toc-text.wm-toc-text::after {
   content: "\25C4";
+  color: #397280;
   display: inline-block;
   float: right;
   vertical-align: middle;
   font-size: 8px;
+  width: 14px;
 }
 
 .wm-page-toc-text.wm-page-toc-open.wm-toc-text::after {
   content: "\25BC";
+  color: #397280;
 }
 
 wm-toc-lev1.wm-toc-text { /* new */
