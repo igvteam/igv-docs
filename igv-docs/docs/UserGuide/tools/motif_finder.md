@@ -1,5 +1,4 @@
-Motif Finder
-------------
+# How to run the Motif Finder
 
 Search for a particular nucleotide sequence in the reference genome. The results are displayed as features in two new
 tracks. By default, the results from the positive strand are displayed in blue, and results from the negative strand in
@@ -29,8 +28,7 @@ Steps:
 3. Enter names for the feature tracks that will show where the sequence matches the positive and negative strands of
 the reference genome.
 
-Example
--------
+# Example
 
 ![](../img/FindMotifDialog.png)
 

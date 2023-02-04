@@ -1,4 +1,4 @@
-site_name: 'IGV Documentation'
+site_name: 'IGV Desktop Application'
 
 theme: 
   name: 'windmill'
@@ -8,45 +8,50 @@ theme:
   include_search_page: true
 
 nav:
-- Documentation Home: index.md
-- Navigation: navigation.md
-- Multilocus: multi_locus.md
-- Regions of Interest: roi.md
-- Sessions: sessions.md
-- Sample Information: sample_attributes.md
-- Tracks:
-    - Sequence: tracks/sequence.md
-    - Annotations: tracks/annotations.md
-    - Alignments:
-        - Viewing Alignments: tracks/alignments/viewing_alignments.md
-        - Insert Size: tracks/alignments/insert_size.md
-        - Pair Orientation: tracks/alignments/pair_orientation.md
-        - Bisulfite Sequencing: tracks/alignments/bisulfite.md
-        - Base Modifications: tracks/alignments/5mc.md
-        - Splice Junctions: tracks/alignments/splice_junctions.md
-        - Sashimi Plot: tracks/alignments/sashimi.md
-    - Variants (VCF): tracks/vcf.md
-    - Mutations (MAF) : tracks/maf.md
-    - Segmented Copy Number: tracks/seg.md
-    - GWAS: tracks/gwas.md
-    - RNA Structure: tracks/rna_structure.md
-- Tools:
-    - Batch Scripting: tools/batch.md
-    - BLAT: tools/blat.md
-    - IGV Tools: tools/igvtools_ui.md
-    - Motif Finder: tools/motif_finder.md
-- Advanced:
-  - Authentication: advanced/oauth.md
-  - Command Line: advanced/command_line.md
-  - Hosting Genomes: advanced/hosting_genomes.md
-  - Port Commands: advanced/port.md
-  - HTML Links: advanced/links.md
-  - Command Line: command_line.md
-  - IGV Tools: tools/igvtools_cl.md
-- File Formats:
-  - Track Line: files/track_line.md
-  - Sample Info: sample_info.md
-- Release Notes: release_notes.md
+- IGV Desktop Application: index.md
+
+- User Guide: 
+    - IGV Basics: UserGuide/IGVbasics.md
+    - Reference Genome: UserGuide/reference_genome.md
+    - Tracks and Data Types:
+        - Numeric Data: UserGuide/tracks/numeric_data.md
+        - Annotations: UserGuide/tracks/annotations.md
+        - Alignments:
+            - Basics: UserGuide/tracks/alignments/viewing_alignments.md
+            - Insert Size: UserGuide/tracks/alignments/insert_size.md
+            - Pair Orientation: UserGuide/tracks/alignments/pair_orientation.md
+            - Bisulfite Sequencing: UserGuide/tracks/alignments/bisulfite.md
+            - Base Modifications: UserGuide/tracks/alignments/5mc.md
+            - Splice Junctions: UserGuide/tracks/alignments/splice_junctions.md
+            - Sashimi Plot: UserGuide/tracks/alignments/sashimi.md
+        - Variants (VCF): UserGuide/tracks/vcf.md
+        - Mutations (MAF) : UserGuide/tracks/maf.md
+        - Segmented Copy Number: UserGuide/tracks/seg.md
+        - GWAS: UserGuide/tracks/gwas.md
+        - RNA Structure: UserGuide/tracks/rna_structure.md
+    - Navigating the View: UserGuide/navigation.md
+    - Sessions: UserGuide/sessions.md
+    - Sample Attributes: UserGuide/sample_attributes.md
+    - Preferences: UserGuide/preferences.md
+    - Saving Images: UserGuide/saving_images.md
+    - Tools Menu:
+        - Batch Scripts: UserGuide/tools/batch.md
+        - igvtools: UserGuide/tools/igvtools_ui.md
+        - Motif Finder: UserGuide/tools/motif_finder.md
+        - BLAT: UserGuide/tools/blat.md
+        - Combining Tracks: UserGuide/tools/combine_tracks.md
+    - Advanced:
+      - External Control of IGV: UserGuide/advanced/external_control.md
+      - Command line usage: UserGuide/advanced/command_line.md
+      - Authentication: UserGuide/advanced/oauth.md
+      - Hosting Genomes: UserGuide/advanced/hosting_genomes.md
+    
+- Release Notes: 
+    - 2.15.x: ReleaseNotes/2.15.x.md
+    - 2.14.x: ReleaseNotes/2.14.x.md
+    - 2.13.x: ReleaseNotes/2.13.x.md
+    - 2.12.x: ReleaseNotes/2.12.x.md
+    - 2.11.x: ReleaseNotes/2.11.x.md
 
 
 markdown_extensions:

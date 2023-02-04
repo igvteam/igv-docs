@@ -1,4 +1,4 @@
-# Hosting reference genomes on your own server.
+
 
 There are many ways to create the required files, this is just one.  In this example we'll host a single genome, human hg38.
 

@@ -1,3 +1,5 @@
+# How to run a tool
+
 Select _Tools>Run igvtools_ to open the igvtools window. This window allows you to run the _toTDF, Count, Sort,_ and _
 Index_ tools:
 
@@ -9,13 +11,13 @@ Index_ tools:
 Information about the run will appear in the _Messages_ box. Note that if you exit the IGV application, any tool that is
 in progress will be terminated.
 
-toTDF
------
+# toTDF
+
 
 The _toTDF_ tool converts a sorted data input file to a binary tiled data (.tdf) file. Use this tool to pre-process
 large datasets for improved IGV performance.
 
-![](/img/igvtools_gui_toTDF.png)
+![](../img/igvtools_gui_toTDF.png)
 
 Select:
 
@@ -33,8 +35,7 @@ Options you can change include:
   preprocessing .gct files. The .bed file should contain 4 columns: chr start end name (where name is the probe name in
   the .gct file).
 
-Count
------
+# Count
 
 _Count_ computes average feature density over a specified window size across the genome. Common usages include computing
 coverage for alignment files and counting hits in Chip-seq experiments. By default, the resulting file will be displayed
@@ -58,8 +59,7 @@ Options you can change include:
   is the default, but you can also select _Min_, _Max_, or _Median_, as well as percentiles of the data.
 * _Window Size:_ specifies the window size over which coverage is averaged, in base pairs; default is 25 bp
 
-Index
------
+# Index
 
 This command creates an index for an alignment file or a feature file. Index files are required for loading alignment
 files into IGV, and can significantly improve performance for large feature files. Note that you do not directly load
@@ -72,8 +72,7 @@ The input file must be sorted by start position (see the _Sort_ tool, below).
 
 Select the _Input File_. Supported file formats are .sam, .bam, .aligned, .vcf, .psl, and .bed.
 
-Sort
-----
+# Sort
 
 _Sort_ sorts the input file by start position.
 

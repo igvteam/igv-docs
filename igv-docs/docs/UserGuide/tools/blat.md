@@ -1,4 +1,6 @@
 
+# How to run BLAT
+
 IGV supports  [BLAT](http://en.wikipedia.org/wiki/BLAT_%28bioinformatics%29) (BLAST-like Alignment Tool) for on-the-fly 
 alignment of query sequences up to 8 kb in length.  Query sequencs can be user defined, a read sequence from an alignment, 
 or taken from a region of the target (reference) genome defined by a  _feature_  or _region of interest_.
@@ -19,7 +21,9 @@ the [UCSC Genome Browser](https://genome.ucsc.edu/cgi-bin/hgBlat). UCSC's BLAT s
 derived genomes including human and mouse genomes.  See below fo instructions on specifying a custom BLAT server,
 or configurint a command-line BLAT tool.
 
-#### BLAT Feature Track
+# BLAT results
+
+## Feature track
 
 Each query sequence appears as a new _Blat_ feature track in the lower panel of IGV's display. The **Screenshot** (
 2015.04.01) shows five different _Blat_ feature tracks for the following sequences:
@@ -44,7 +48,7 @@ page.
 
 ![](../img/SL_BLAT1b_2015-04-01.png)
 
-#### BLAT Results Panel
+## Results panel
 
 Results are presented in a new window that displays the query sequence, location of hits, match score, and other metrics
 as shown in the **Screenshot** (2015.04.01). Hits are listed in descending order of alignment score.
@@ -68,7 +72,7 @@ higher alignment score than ROI2, its _Blat_ feature is shaded darker.
 ![](../img/SL_BLAT2-3_2015-04-01.png)
 
 
-### Customizing BLAT
+# Customizing BLAT
 
 By default, a public service hosted at UCSC is used, and BLAT support is limited to IGV reference genomes that are 
 derived from UCSC's hosted set.  This can be customized in IGV's advanced preferences to use another BLAT service, 

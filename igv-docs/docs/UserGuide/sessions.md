@@ -1,5 +1,5 @@
-Saving and Restoring
---------------------
+# Saving and Restoring Sessions
+
 
 You can save the current state of an IGV session to a named session file. You can use that file to restore the IGV
 session yourself or share it with colleagues, as long as they have access to the session file and any data files that
@@ -18,18 +18,19 @@ To restore a saved session:
 2. In the Open Session window, select a session file and click _OK_. IGV ends the current session and restores the saved
    session.
 
-Session File
-------------
+To reload a previously loaded session:
 
-### IGV Version 1.5 and Greater
+# Session File Format
 
-##### Overview
+## IGV Version 1.5 and Greater
+
+### Overview
 
 Sessions are an integral part of IGV, allowing users to share their data and views with other users simply and
 accurately. Session files describe the session in XML. If you wish to manually create or edit a session file, use the
 information below to better understand the components of each session file.
 
-##### Session XML Hierarchy
+### Session XML Hierarchy
 
 *   <Session>
     *   <Resources>
@@ -38,7 +39,7 @@ information below to better understand the components of each session file.
         *   <Track>
             *   <DataRange>
 
-##### Description of Session Components
+### Description of Session Components
 
 Required - These elements are required in a session file. All session files must follow XML standards.
 
@@ -80,48 +81,29 @@ data and visual style choices.
     * minimum=
     * type=
 
-##### Session Example
+### Example Session File
 
 The XML below is an example of a simple Session created by IGV
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-
 <Global genome="hg18" locus="All" version="3">
-
-<Resources>
-
-<Resource url="http://genome.cse.ucsc.edu/cgi-bin/hgTrackUi?g=rnaGene" label="RNA Genes" name="RNA Genes" path="http://www.broadinstitute.org/igvdata/annotations/hg18/rna\_genes.bed"/>
-
-<Resource url="http://genome.cse.ucsc.edu/cgi-bin/hgTrackUi?g=wgRna" label="sno/miRNA" name="sno/miRNA" path="http://www.broadinstitute.org/igvdata/annotations/hg18/sno\_mirna.bed"/>
-
-</Resources>
-
-<Panel height="445" name="DataPanel" width="1000">
-
-<Track color="0,0,178" colorScale="ContinuousColorScale;0.0;20.0;255,255,255;0,0,178" displayName="Non coding RNA" expand="false" height="45" id="http://www.broadinstitute.org/igvdata/annotations/hg18/rna\_genes.bed" name="RNA Genes" renderer="BASIC\_FEATURE" visible="true" windowFunction="count">
-
-<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="20.0" minimum="0.0" type="LINEAR"/>
-
-</Track>
-
-<Track color="0,0,178" colorScale="ContinuousColorScale;0.0;20.0;255,255,255;0,0,178" displayName="sno miRNA" expand="false" height="45" id="http://www.broadinstitute.org/igvdata/annotations/hg18/sno\_mirna.bed" name="sno/miRNA" renderer="BASIC\_FEATURE" visible="true" windowFunction="count">
-
-<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="20.0" minimum="0.0" type="LINEAR"/>
-
-</Track>
-
-</Panel>
-
-<Panel height="65" name="FeaturePanel" width="1000">
-
-<Track color="0,0,178" colorScale="ContinuousColorScale;0.0;20.0;255,255,255;0,0,178" displayName="RefSeq genes" expand="false" height="30" id="Genes" name="Genes" renderer="BASIC\_FEATURE" visible="true" windowFunction="count">
-
-<DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="20.0" minimum="0.0" type="LINEAR"/>
-
-</Track>
-
-</Panel>
-
+  <Resources>
+    <Resource url="http://genome.cse.ucsc.edu/cgi-bin/hgTrackUi?g=rnaGene" label="RNA Genes" name="RNA Genes" path="http://www.broadinstitute.org/igvdata/annotations/hg18/rna\_genes.bed"/>
+    <Resource url="http://genome.cse.ucsc.edu/cgi-bin/hgTrackUi?g=wgRna" label="sno/miRNA" name="sno/miRNA" path="http://www.broadinstitute.org/igvdata/annotations/hg18/sno\_mirna.bed"/>
+  </Resources>
+  <Panel height="445" name="DataPanel" width="1000">
+    <Track color="0,0,178" colorScale="ContinuousColorScale;0.0;20.0;255,255,255;0,0,178" displayName="Non coding RNA" expand="false" height="45" id="http://www.broadinstitute.org/igvdata/annotations/hg18/rna\_genes.bed" name="RNA Genes" renderer="BASIC\_FEATURE" visible="true" windowFunction="count">
+      <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="20.0" minimum="0.0" type="LINEAR"/>
+    </Track>
+    <Track color="0,0,178" colorScale="ContinuousColorScale;0.0;20.0;255,255,255;0,0,178" displayName="sno miRNA" expand="false" height="45" id="http://www.broadinstitute.org/igvdata/annotations/hg18/sno\_mirna.bed" name="sno/miRNA" renderer="BASIC\_FEATURE" visible="true" windowFunction="count">
+      <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="20.0" minimum="0.0" type="LINEAR"/>
+    </Track>
+  </Panel>
+  <Panel height="65" name="FeaturePanel" width="1000">
+    <Track color="0,0,178" colorScale="ContinuousColorScale;0.0;20.0;255,255,255;0,0,178" displayName="RefSeq genes" expand="false" height="30" id="Genes" name="Genes" renderer="BASIC\_FEATURE" visible="true" windowFunction="count">
+      <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="20.0" minimum="0.0" type="LINEAR"/>
+    </Track>
+  </Panel>
 </Global>
 ```

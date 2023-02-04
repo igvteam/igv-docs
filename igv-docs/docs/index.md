@@ -3,7 +3,7 @@
 * Contact
 * How to cite
 
-![IGV banner](img/banner.png)
+![IGV banner](banner.png)
 
 Overview
 --------
