@@ -9,6 +9,8 @@ To get started, pull this repo and then:
     - `cd igvjs-docs` 
 - `mkdocs serve` to start the MkDocs live-preview web server.
     -  Note: if you get an error concerning ```jinja2``` try the following `pip install jinja2==3.0.0`
+    
+- `mkdocs build` to build the static site. A subdirectory named `site` will be created.
 
 Note: you might prefer `conda config --set auto_activate_base false`
 
