@@ -1,10 +1,10 @@
+# How to run a script
 As of version 1.5, a user can load a text file to execute a series of sequential tasks by using _Tools>Run Batch Script_
 . The user loads a TXT file that contains a list of commands, one per line, that will be run by IGV. Arguments are
 delimited by spaces (NOTE_: not tabs_). Lines beginning with # or // are are skipped.  See below for a
 complete list of batch commands.
 
-Example
--------
+# Example script
 
 new  
 genome hg18  
@@ -31,7 +31,7 @@ The example script does the following:
 4. Sorts, collapses, and then takes a snapshot of the screen.
 5. Repeats these steps for other loci.
 
-### Commands
+# Script commands
 
 Command    | Parameters | Description
 ------- | ----------- | ----------
@@ -69,7 +69,7 @@ viewaspairs | trackName |    Set the display mode for an alignment track to "Vie
 setAccessToken | token host | Set an access token to be used in an ```Authorization: bearer" header for all requests to host.  If host is omitted token is used for all requests.  Since release 2.14.2
 clearAccessTokens | | Clears all access tokens.  Since release 2.14.2
 
-### ColorBy option values
+## ColorBy option values
 
 * BISULFITE
 * FIRST_OF_PAIR_STRAND
@@ -89,7 +89,7 @@ clearAccessTokens | | Clears all access tokens.  Since release 2.14.2
 * YC_TAG
 * ZMW
 
-### Group option values
+## Group option values
 
 * ALIGNED_READ_LENGTH
 * BASE_AT_POS <locus>
@@ -110,14 +110,14 @@ clearAccessTokens | | Clears all access tokens.  Since release 2.14.2
 * TAG
 * ZMW
 
-### Sort option values
+## Sort option values
 
-#### Segmented copy number
+### Segmented copy number
 
 * AMPLIFICATION
 * DELETION
 
-#### Alignments
+### Alignments
 
 * BASE
 * FIRSTOFPAIRSTRAND
