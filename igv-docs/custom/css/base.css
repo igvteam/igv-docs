@@ -279,7 +279,7 @@ h3 {
 }
 
 
-.wm-toc-lev1 > .wm-toc-text { padding-left: 15px; }
+.wm-toc-lev1 > .wm-toc-text { padding-left: 15px; padding-top: 10px;}
 .wm-toc-lev1.wm-toc-opener > .wm-toc-text { padding-left: 0px; }
 .wm-toc-lev2 > .wm-toc-text { padding-left: 14px; }
 .wm-toc-lev2.wm-toc-opener > .wm-toc-text { padding-left: 0px; }
