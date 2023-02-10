@@ -1,12 +1,7 @@
-* About IGV with some general info about IGV and its history
-* Overview of the doc on this site
-* Contact
-* How to cite
 
 ![IGV banner](img/banner.png)
 
-Overview
---------
+# Overview
 
 The **Integrative Genomics Viewer (IGV)** is a high-performance, easy-to-use, interactive tool for the visual
 exploration of genomic data. It supports flexible integration of all the common types of genomic data and metadata,
@@ -21,41 +16,37 @@ IGV is available in multiple forms, including:
 This site is focused on the IGV desktop application. See **[https://igv.org](https://igv.org )** for links to all forms
 of IGV.
 
-Download IGV
-------------
+# Usage license and source code
+
+IGV is completely open for anyone to use under an [MIT open-source license](https://github.com/igvteam/igv/blob/master/license.txt).
 
 
-Download the IGV desktop application and igvtools.
-
-Note that the IGV-Web application at [https://igv.org/app](https://igv.org/app) runs in a web browser and requires no
-downloads. Click on the Help link in the app for more information.
+The source code repository for the IGV desktop application is hosted on GitHub at [https://github.com/igvteam/igv](https://github.com/igvteam/igv).
 
 
-Citing IGV
-----------
+# Citing IGV
 
 To cite your use of IGV in your publication, please reference one or more of:
 
-James T. Robinson, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell Guttman, Eric S. Lander, Gad Getz, Jill P.
-Mesirov. [**Integrative Genomics
+James T. Robinson, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell Guttman, Eric S. Lander, Gad Getz, Jill P.Mesirov. <br>
+[**Integrative Genomics
 Viewer**. Nature Biotechnology 29, 24–26 (2011)](http://www.nature.com/nbt/journal/v29/n1/abs/nbt.1754.html). (Free PMC
 article [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3346182/)).
 
-Helga Thorvaldsdóttir, James T. Robinson, Jill P. Mesirov**.**    
+Helga Thorvaldsdóttir, James T. Robinson, Jill P. Mesirov. <br>
 [**Integrative Genomics Viewer (IGV): high-performance genomics data visualization and
 exploration**. Briefings in Bioinformatics 14, 178-192 (2013)](https://academic.oup.com/bib/article/14/2/178/208453/Integrative-Genomics-Viewer-IGV-high-performance?searchresult=1)
 .
 
-James T. Robinson, Helga Thorvaldsdóttir, Aaron M. Wenger, Ahmet Zehir, Jill P. Mesirov. [**Variant Review with the
+James T. Robinson, Helga Thorvaldsdóttir, Aaron M. Wenger, Ahmet Zehir, Jill P. Mesirov. <br>[**Variant Review with the
 Integrative Genomics Viewer (IGV)
 .** Cancer Research 77(21) 31-34 (2017)](http://cancerres.aacrjournals.org/content/77/21/e31.long).
 
-James T. Robinson, Helga Thorvaldsdóttir, Douglass Turner, Jill P. Mesirov. [**igv.js: an embeddable JavaScript
-implementation of the Integrative Genomics Viewer (
-IGV)**. bioRxiv 2020.05.03075499](https://www.biorxiv.org/content/10.1101/2020.05.03.075499v1).
+James T. Robinson, Helga Thorvaldsdóttir, Douglass Turner, Jill P. Mesirov. <br>
+[**igv.js: an embeddable JavaScript implementation of the Integrative Genomics Viewer (IGV)**, Bioinformatics, 39(1) (2023), btac830](https://doi.org/10.1093/bioinformatics/btac830).
+ 
 
-Funding
--------
+# Funding
 
 Development of IGV has been supported by funding from the [National Cancer Institute (NCI)](http://cancer.gov) of
 the [National Institutes of Health](https://www.nih.gov),
