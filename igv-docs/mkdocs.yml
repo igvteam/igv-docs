@@ -52,6 +52,8 @@ nav:
     - 2.13.x: ReleaseNotes/2.13.x.md
     - 2.12.x: ReleaseNotes/2.12.x.md
     - 2.11.x: ReleaseNotes/2.11.x.md
+    
+- Download IGV: downloadPage.md
 
 
 markdown_extensions:
