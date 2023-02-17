@@ -1,20 +1,33 @@
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> External control of IGV </p>
+
+
+This section describes how a running IGV application can be controlled through a sequence of commands.
+
+
+# Batch scripts
+
+A user running the IGV application can load a text file to execute a series of commands by selecting *Run Batch Script* from the *Tools* menu. See [Batch scripts in the Tools Menu](../tools/batch.md) for further details.
+
 # Port commands
 
-IGV can optionally listen for http requests over a port. By default the port number is 60151, this can be changed (or the port disabled)
-int the Advanced tab of the Preferences window.
+IGV can optionally listen for commands over a port. By default the port number is 60151. The port number can be changed and the port listening can be disabled in the *Advanced* tab of the *Preferences* window. 
 
-**Note:**  IGV will write a response back to the port socket upon completion of each command. It is good practice to
-read this response before sending the next command. Failure to do so can overflow the socket buffer and cause IGV to
-freeze. See the example below for the recommended pattern.
+The port commands are the same as the batch script commands. See [Batch scripts in the Tools Menu](../tools/batch.md) for a full list.
 
-## Commands
+!!! note " "
+    The IGV application must already be running. There is no command to launch IGV.
 
-See [Batch Scripting](../tools/batch.md) for the complete list of commands.
+!!! note " "
+    IGV will write a response back to the port socket upon completion of each command. It is good practice to read this response before sending the next command. Failure to do so can overflow the socket buffer and cause IGV to freeze. See the example below for the recommended pattern.
 
-## Example
+### Example
 
-Example java code:
+An example of a Java code snippet that sends IGV commands to the listener port:
 
+```
 Socket socket = new Socket("127.0.0.1", 60151);  
 PrintWriter out = new PrintWriter(socket.getOutputStream(), true);  
 BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -27,40 +40,47 @@ out.println("genome hg18");
 response = in.readLine();  
 System.out.println(response);
 
-out.println("goto chr1:65,827,301");  
-//out.println("goto chr1:65,839,697");  
+out.println("goto chr1:65,827,301");   
 response = in.readLine();  
 System.out.println(response);
 
-out.println("snapshotDirectory /screenshots");  
+out.println("snapshotDirectory/screenshots");  
 response = in.readLine();  
 System.out.println(response);
 
 out.println("snapshot");  
 response = in.readLine();  
 System.out.println(response);
+```
 
-# HTML Links
+# HTML links
 
 Data and session files can be loaded into IGV from a web browser or other application supporting hyperlinks. This makes
-use of the listener port.  **To use this option you must enable the port listener on the Advanced tab of the Preferences
-window, accessed from the View menu.**   Links can be created to load data or jump to a locus as follows.
+use of the listener port.  By default the port number is 60151. The port number can be changed and the port listening can be disabled in the *Advanced* tab of the *Preferences* window. 
 
-http://localhost:_port_/load?file=_URL_&locus=_locus_&genome=_genome&_merge_\=\[__true|false\]&_name_\=name_
+Links can be created to set the reference genome, load data, or jump to a specified locus as follows.
 
-http://localhost:_port_/goto?locus=_locus_
+
+http://localhost:_PORT_/load?file=_URL_&locus=_LOCUS_&genome=_GENOME_&merge=\[_true_|_false_\]&name=_NAME_
+
+http://localhost:_PORT_/goto?locus=_LOCUS_
+
 
 * The **_file_** parameter value can be a URL or a comma-delimited list of URLs to most IGV-supported data file types (
   exceptions listed below), or a session file.
 * The **_merge_** parameter (optional) controls whether or not the loaded data is merged with the existing IGV session,
-  or a loaded into a new session. If false, any data currently loaded will be unloaded after clicking this link. The
-  default value is true. The **_merge_** paramater is ignored if loading a session; loading a session will alway unload
-  the previous session.
+  or a loaded into a new session. 
+    * If _true_, the data specified in the link will be added to the existing IGV session. This is the default behavior if the parameter is not specified.
+    * If _false_, any data currently loaded will be unloaded after clicking the link.  
+    * If _ask_, a dialog will pop up to ask the user whether or not to unload the current session before loading new tracks. (Available as of IGV 2.15.4)
 * The **_name_** parameter (optional) specifies a name or names for the track. If multiple tracks are loaded as a
   comma-delimited list, the name parameter value should also be a comma-delimited list of the same size. The _**name**_
   parameter is ignored if loading a session.
 
-## Examples:
+!!! note " "
+    The IGV application must already be running. The links will not launch IGV. 
+
+### Examples
 
 [http://localhost:60151/load?file=http://www.broadinstitute.org/igvdata/annotations/hg18/conservation/pi.12mer.wig.tdf&locus=egfr&genome=hg18](http://localhost:60151/load?file=http://www.broadinstitute.org/igvdata/annotations/hg18/conservation/pi.12mer.wig.tdf&locus=egfr&genome=hg18)
 
@@ -68,7 +88,4 @@ http://localhost:_port_/goto?locus=_locus_
 
 [http://localhost:60151/goto?locus=egfr](http://localhost:60151/goto?locus=egfr)
 
-# Batch scripts
 
-As of version 1.5, a user can load a text file to execute a series of sequential tasks by using Tools>Run Batch Script. The user loads a TXT file that contains a list of commands, one per line, that will be run by IGV. Arguments are delimited by spaces (NOTE: not tabs). Lines beginning with # or // are are skipped. 
-See [Batch Scripts in the Tools Menu](../tools/batch.md) for further details.

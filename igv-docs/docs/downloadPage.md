@@ -11,6 +11,7 @@
 !!! tip "About log4j:" 
     IGV versions 2.4.1 - 2.11.6 used log4j2 code that is subject to the log4jShell vulnerability. We recommend using version 2.11.9 (or later), which removed all dependencies on log4j.
 
+**What's New:** See the [Release Notes](ReleaseNotes/2.15.x.md) for what's new in each IGV release.  
 
 
 [![MacApp with java](img/DownloadYMacWithJava.png){height=90}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_MacApp_2.16.0_WithJava.zip) [![MacApp no java](img/DownloadYMacNoJava.png){height=90}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_MacApp_2.16.0.zip) 

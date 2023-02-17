@@ -12,7 +12,7 @@ or taken from a region of the target (reference) genome defined by a  _feature_ 
   this case, the BLAT input sequence is the read sequence. It is _not_ the sequence of the reference genome where the
   read was aligned.  Options to BLAT soft clips are presented if soft clips are present of sufficient length.
 * **Regions of Interest (ROI):**
-  After [creating a region of interest](../roi.md), click on the
+  After [creating a region of interest](../../navigation/#regions-of-interest), click on the
   region's red bar and select _Blat sequence_ from the pop-up menu. The BLAT input sequence is the sequence of the
   reference genome defined by the region bounds.
 

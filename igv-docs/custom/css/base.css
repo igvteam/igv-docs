@@ -12,25 +12,50 @@
   
 }
 
+.page-title {
+	color: #397280;
+	font-size: 40px;
+	font-weight: 500;
+	}
+
 
 h1 {
     color: #444;
-    font-weight: 400;
-    font-size: 34px; /* was 42 */
+    font-weight: 500;
+    font-size: 30px; /* was 42, then 34 */
     margin-top: 30px; /* was 20 */
-    border-bottom: 1px solid #aaa; /* added this */
+    border-bottom: 1px solid #444; /* added this aaa */
 }
 
-
-h2, h4, h5, h6 {
+h2 {
     color: #444;
-    font-weight: 300;
+    font-weight: 410;
+    font-size: 26px; /* was 30 */   
+    border-bottom: 1px solid #ccc; /* added this */
+   
 }
 
 h3 {
     color: #444;
-    font-weight: 400;
+    font-weight: 410;
+    font-size: 24px;
 }
+
+h4 {
+    color: #333; /* some color as body text */
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: underline;
+    text-decoration-color: #888;
+}
+
+/* h5 and h6 are exactly the same - I'm assuming we won't go below 5 - HT */
+h5, h6 {
+    color: #333; /* some color as body text */
+    font-size: 15px; /* same size as body text */
+    font-weight: 560;
+}
+
 
 
 /***********************************************************************

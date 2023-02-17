@@ -1,6 +1,9 @@
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Hosting genomes </p>
 
-
-There are many ways to create the required files, this is just one.  In this example we'll host a single genome, human hg38.
+This section describes how you can host your own copy of the IGV-hosted reference genomes. There are many ways to create the required files, this is just one.  In this example we'll host a single genome, human hg38.
 
 1. Download the IGV genome list from  [https://s3.amazonaws.com/igv.org.genomes/genomes.txt](https://s3.amazonaws.com/igv.org.genomes/genomes.txt)
 
@@ -38,7 +41,6 @@ rm hg38.genome
 ```
 
 7. Open or view ('cat') the property.txt file
-
 ```
 fasta=true
 fastaDirectory=false

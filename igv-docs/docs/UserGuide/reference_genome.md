@@ -1,5 +1,10 @@
 
-# Loading the reference genome
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Reference genome </p>
+
+# Loading the genome
 # Hosted genomes
 # Other genomes
 # Managing the genome menu
@@ -20,7 +25,7 @@ not completely standardised, and depends on the creator of the genome sequence. 
 on Bioinformatics StackExchange (see for
 example [response #11 on this thread](https://bioinformatics.stackexchange.com/a/231)).
 
-![](../img/SL_IGVsequencetrackzoomsm2015-04-01.png)
+![](img/SL_IGVsequencetrackzoomsm2015-04-01.png)
 
 ### Flipping the Strand
 
@@ -29,7 +34,7 @@ the sequence and the arrow are only displayed when zoomed in to a sufficiently s
 
 * Alternatively, right-click on _Sequence_ track to select _Flip strand_ from the pop-up menu.
 
-![](../img/FlipStrand1.png)
+![](img/FlipStrand1.png)
 
 The direction of the arrow indicates which strand is currently displayed. An arrow pointing left indicates that the
 negative strand is showing. This strand will show the complement nucleotides and reverse complement translations.
@@ -44,7 +49,7 @@ the amino acid sequence for the corresponding nucleotide sequence. The translati
   as an image. Specify the image file format by setting the filename extension in the file save dialog to .png, .jpeg,
   .jpg, or .svg.
 
-![](../img/ThreeFrameTranslation.png)
+![](img/ThreeFrameTranslation.png)
 
 Amino acids are displayed as blocks colored in alternating shades of gray. Methionines are colored green, and all stop
 codons are colored red. When you zoom all the way in, the amino acid symbols will appear.

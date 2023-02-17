@@ -1,10 +1,7 @@
-
-Using a file to define
-Viewing multiple regions
-Regions of interest
-Defining regions of interest
-Viewing regions of  interest
-
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Navigating the view </p>
 
 # Zoom in and out
 
@@ -30,7 +27,7 @@ To zoom in and out on a chromosome:
 | Click and drag on the genome ruler to select an area to which to zoom |
 
 
-# Scroll and Pan
+# Scroll and pan
 
 
 | Vertical scroll of data tracks |  Horizontal pan across the genome \* |
@@ -118,7 +115,7 @@ Panels can be rearranged by drag and drop.  Click on the white header bar at th
 
 ![](img/genelist_rearrangecol.jpg)
 
-## Changing the View in a Panel
+## Changing the view in a panel
 
 The zoom slider in the toolbar is disabled in multi-locus view. However, you can double-click in a panel to zoom in the view in that panel (or alt-click to zoom out). Click-dragging will also pan the view in the panel.
 
@@ -126,7 +123,7 @@ To return to the original view of the locus specified, right-click the name head
 
 To return to the normal single-locus view, double-click the name header at the top of any of the panels, or right-click in a header and select _Switch to standard view_.
 
-## Sorting Tracks by Panel
+## Sorting tracks by panel
 
 Right-click in the panel header to bring up the sort menu. This menu will vary depending on data type.
 
@@ -136,8 +133,7 @@ The following image illustrates what happens if you select _Sort by amplificati
 
 ![](img/genelist_sortbyamp.jpg)
 
-Gene Lists
-----------
+## Gene lists
 
 To view a gene list or define a new one, select _Regions >Gene Lists..._.
 
@@ -150,9 +146,8 @@ This opens a window for selecting an existing list or creating a new list.
 
 To view an existing gene list in multi-locus view, select a name in the _List_ column of any _Group_ and click _View_. IGV informs you of items that cannot be mapped to the current reference genome and continues on to display loci with matches.
 
-![](img/genelist_select_2.jpg)
-
-## My Gene Lists
+![](img/genelist_select_2.jpg)l
+### My gene Lists
 
 You can click _Import_ to upload a text file containing your own gene list. Load lists of genes or loci in [GMT](http://www.broadinstitute.org/cancer/software/genepattern/file-formats-guide#GMT), [GRP](http://www.broadinstitute.org/cancer/software/genepattern/file-formats-guide#GRP) and [BED](http://www.broadinstitute.org/software/igv/BED) format. For example, find and download GMT files from the [Molecular Signatures Database](http://www.broadinstitute.org/gsea/msigdb/index.jsp).
 
@@ -172,11 +167,12 @@ in red below the ruler. Hovering the mouse over this red region displays lines t
 Clicking on the red highlight pops up a menu for options that include sorting by various data-specific metrics and
 copying to the clipboard or BLAT searching the corresponding reference sequence (**Screenshot** 2015.05.05).
 
+![](img/SL_IGV_ROI_BLAT2015-05-05%2016.25.58.png)
+
 * View a session's ROIs in the _Region Navigator_ under the _Regions_ menu. The _Region Navigator_'s list is editable,
   sortable and as the name indicates, navigable.
     * Navigate to a single locus or view multiple loci in split
-      panes ([multi-locus view](multi_locus.md)) by selecting them and
-      clicking _View_.
+      panes by selecting them and clicking _View_.
     * Distinguish overlapping ROIs using the _Region Navigator_.
     * Enter a short description for each ROI viewable in the _Region Navigator_.
 * Defined ROIs persist within an IGV session. 
@@ -185,9 +181,6 @@ copying to the clipboard or BLAT searching the corresponding reference sequence 
 
 This page outlines three ways to define a region of interest--(1) by mouse, (2) by keyboard shortcut, and (3) by using
 the _Region Navigator._ The fourth section describes right-click menu options.
-
-![](img/SL_IGV_ROI_BLAT2015-05-05%2016.25.58.png)
-
 ## Define by mouse
 
 On the tool bar, click the Define a Region of Interest icon:
@@ -209,7 +202,7 @@ Display the region of interest to fill the entire view and press _Control_ \+ _R
 * The entire ruler view will be marked red.
 * Does not work to select multiple regions at once in split-panes.
 
-## Region Navigator
+## Region navigator
 
 To open the Region Navigator select _Regions>Region Navigator_ from the menu bar. The _Region Navigator_ lists defined
 regions of interest (ROI) in a sortable table as shown in the **Screenshot** (2015.05.06).

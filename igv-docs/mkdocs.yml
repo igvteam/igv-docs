@@ -38,13 +38,16 @@ nav:
         - Motif finder: UserGuide/tools/motif_finder.md
         - BLAT: UserGuide/tools/blat.md
         - Combining tracks: UserGuide/tools/combine_tracks.md
-    - Advanced:
+    - Advanced:    
+      - IGV from the command line: UserGuide/advanced/command_line.md
       - External control of IGV: UserGuide/advanced/external_control.md
-      - Command line usage: UserGuide/advanced/command_line.md
       - Authentication: UserGuide/advanced/oauth.md
       - Hosting genomes: UserGuide/advanced/hosting_genomes.md
     
 - Tutorial Videos: http://www.youtube.com/channel/UCb5W5WqauDOwubZHb-IA_rA
+
+
+- Download IGV: downloadPage.md
 
 - Release Notes: 
     - 2.15.x: ReleaseNotes/2.15.x.md
@@ -53,8 +56,6 @@ nav:
     - 2.12.x: ReleaseNotes/2.12.x.md
     - 2.11.x: ReleaseNotes/2.11.x.md
     
-- Download IGV: downloadPage.md
-
 - https://igv.org: https://igv.org
 
 markdown_extensions:
