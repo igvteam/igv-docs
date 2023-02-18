@@ -13,21 +13,21 @@ IGV session.
 
 To save a session:
 
-* Click _File>Save Session_.
+* Click _**File > Save Session**_.
 * Use the _Save Session_ window that pops up to select a target directory and file name for the new session file.
 
 To restore a saved session:
 
-* Click _File>Open Session_.
-* Use the _Open Session_ window to select a session file. IGV ends the current session and restores the saved session.
+* Click _**File > Open Session**_.
+* Use the _Open Session_ window that pops up to select a session file. IGV ends the current session and restores the saved session.
 
 To reload a previously loaded session:
 
-* Click _File>Reload Session_.
+* Click _**File  > Reload Sessio**n_.
 
 To clear the current session: 
 
-* Click _File>New Session_. This removes all data tracks and resets the view, but does not change the reference genome.
+* Click _**File > New Session**_. This removes all data tracks and resets the view, but does not change the reference genome.
 
 
 # Session file format

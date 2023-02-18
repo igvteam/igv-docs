@@ -9,11 +9,11 @@ This section describes how a running IGV application can be controlled through a
 
 # Batch scripts
 
-A user running the IGV application can load a text file to execute a series of commands by selecting *Run Batch Script* from the *Tools* menu. See [Batch scripts in the Tools Menu](../tools/batch.md) for further details.
+A user running the IGV application can load a text file to execute a series of commands by selecting ***Run Batch Script*** from the ***Tools*** menu. See [Batch scripts in the Tools Menu](../tools/batch.md) for further details.
 
 # Port commands
 
-IGV can optionally listen for commands over a port. By default the port number is 60151. The port number can be changed and the port listening can be disabled in the *Advanced* tab of the *Preferences* window. 
+IGV can optionally listen for commands over a port. By default the port number is 60151. The port number can be changed and the port listening can be disabled in the ***Advanced*** tab of the ***View > Preferences*** window. 
 
 The port commands are the same as the batch script commands. See [Batch scripts in the Tools Menu](../tools/batch.md) for a full list.
 
@@ -56,7 +56,7 @@ System.out.println(response);
 # HTML links
 
 Data and session files can be loaded into IGV from a web browser or other application supporting hyperlinks. This makes
-use of the listener port.  By default the port number is 60151. The port number can be changed and the port listening can be disabled in the *Advanced* tab of the *Preferences* window. 
+use of the listener port.  By default the port number is 60151. The port number can be changed and the port listening can be disabled in the ***Advanced*** tab of the ***View > Preferences*** window. 
 
 Links can be created to set the reference genome, load data, or jump to a specified locus as follows.
 

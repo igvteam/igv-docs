@@ -4,7 +4,7 @@ The page title should not go in the menu
 -->
 <p class="page-title"> IGV from the command line </p>
 
-The [_Download IGV_](../../downloadPage.md) page includes an option to download IGV along with scripts for launching it on the command line, as well as the igvtools utilities. 
+The [Download IGV](../../downloadPage.md) page includes an option to download a version of IGV that includes scripts for launching it on the command line, as well as launching the igvtools utilities. 
 
 # The IGV application
 

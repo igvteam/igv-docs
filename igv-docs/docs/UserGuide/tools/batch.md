@@ -8,7 +8,7 @@ Batch scripts are used to automatically execute a series of IGV commands.
 
 ## How to run a batch script
 
-You can load a text file that contains a series of commands for IGV to execute by using _Tools>Run Batch Script_. 
+Select _**Tools > Run Batch Script**_ to load a text file that contains a series of commands for IGV to execute. 
 
 ## Example script
 
@@ -72,7 +72,7 @@ sort | option locus direction| Sorts alignment or segmented copy number tracks. 
 squish | trackName |    Squish a given trackName. trackName is optional, and if it is not supplied all annotation tracks are squished.
 viewaspairs | trackName |    Set the display mode for an alignment track to "View as pairs". trackName is optional.
 setAccessToken | token host | Set an access token to be used in an ```Authorization: bearer" header for all requests to host.  If host is omitted token is used for all requests.  (Since IGV 2.14.2)
-clearAccessTokens | | Clears all access tokens.  Since release 2.14.2
+clearAccessTokens | | Clears all access tokens.  (Since IGV 2.14.2)
 
 ### ColorBy option values
 
