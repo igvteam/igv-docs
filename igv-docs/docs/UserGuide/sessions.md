@@ -1,89 +1,100 @@
-# Saving and Restoring Sessions
-
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Sessions </p>
 
 You can save the current state of an IGV session to a named session file. You can use that file to restore the IGV
-session yourself or share it with colleagues, as long as they have access to the session file and any data files that
+session yourself or share it with colleagues, as long as they also have access to any data files that
 were loaded when the session file was saved. For example, if the data files are loaded into IGV from a shared directory
 and the IGV session file is saved to that shared directory, anyone with access to the directory can restore the saved
 IGV session.
 
+# Saving and using sessions
+
 To save a session:
 
-1. Click _File>Save Session_.
-2. In the Save Session window, select a directory and session file name and click _OK_.
+* Click _**File > Save Session**_.
+* Use the _Save Session_ window that pops up to select a target directory and file name for the new session file.
 
 To restore a saved session:
 
-1. Click _File>Open Session_.
-2. In the Open Session window, select a session file and click _OK_. IGV ends the current session and restores the saved
-   session.
+* Click _**File > Open Session**_.
+* Use the _Open Session_ window that pops up to select a session file. IGV ends the current session and restores the saved session.
 
 To reload a previously loaded session:
 
-# Session File Format
+* Click _**File  > Reload Sessio**n_.
 
-## IGV Version 1.5 and Greater
+To clear the current session: 
 
-### Overview
+* Click _**File > New Session**_. This removes all data tracks and resets the view, but does not change the reference genome.
 
-Sessions are an integral part of IGV, allowing users to share their data and views with other users simply and
-accurately. Session files describe the session in XML. If you wish to manually create or edit a session file, use the
+
+# Session file format
+
+!!! note " "  
+    The following description is for IGV version 2.1 and greater
+
+
+ Session files describe the session in XML. If you wish to manually create or edit a session file, use the
 information below to better understand the components of each session file.
 
-### Session XML Hierarchy
+### Session XML hierarchy
 
-*   <Session>
-    *   <Resources>
-        *   <Resource>
-    *   <Panel>
-        *   <Track>
-            *   <DataRange>
+```
+<Session>
+     <Resources>
+          <Resource>
+     <Panel>
+          <Track>
+              <DataRange>
+```
 
-### Description of Session Components
+### Session components
+#### Required
+These elements are required in a session file. All session files must follow XML standards.
 
-Required - These elements are required in a session file. All session files must follow XML standards.
-
-* <Session>: Contains information about the general state of IGV when the session was saved
-    * genome= The genome id.
-        * _**New - IGV 2.1or later only**_. A file path or URL to an indexed fasta or .genome file can be used in place
+* _**<Session\>**_ Contains information about the general state of IGV when the session was saved
+    * _genome_ = The genome id.
+        * A file path or URL to an indexed fasta or .genome file can be used in place
           of the genome id. The path can be absolute or relative to the parent directory of the session file.
-    * locus= The genomic range selected when the session was saved
-    * version= The session version (this must equal '3')
-* <Resources>: An enclosing element for all Resource elements
-* <Resource>: Contains the location and other important information for your data files; for instance, a Resource could
-  be a DAS server, BED file, or sequence alignment
-    * name= The name of the track for single track files
-    * path= The path or URL to the track file
-    * index= An option path or URL to an index file
-    * url= An optional url to associate with features of the track
+    * _locus_ = The genomic range selected when the session was saved
+    * _version_ = The session version (this must equal '3')
+* _**<Resources\>**_ An enclosing element for all Resource elements
+* _**<Resource\>**_ Contains the location and other important information for your data files
+    * _name_ = The name of the track for single track files
+    * _path_ = The file path or URL to the track file
+    * _index_ = An optional path or URL to an index file
+    * _url_ = An optional URL to associate with features of the track
 
-Optional - These elements are optional in a session file and are added by IGV to help determine the placement of the
+#### Optional 
+These elements are optional in a session file and are added by IGV to help determine the placement of the
 data and visual style choices.
 
-* <Panel>: Contains information about the placement of Tracks in the visual panels
-    * name= The display name for the Panel
-    * height= The default height for the Panel
-    * width= The default width for the Panel
-* <Track>: Details information about every track in a session
-    * color= The default color for the data in the track
-    * expand= Whether the track is expanded or not
-    * height= The default height of the track
-    * id= The id assigned by IGV to this track
-    * name= The display name for the track
-    * renderer= The renderer to be used with this Track (non-default)
-    * visible= Whether the track is visible or loaded in the background
-    * windowFunction= The function to be used when displaying data
-* <DataRange>: A set of attributes used to determine the look of the Panel
-    * baseline=
-    * drawbaseline=
-    * flipAxis=
-    * maximum=
-    * minimum=
-    * type=
+* _**<Panel\>**_ Contains information about the placement of Tracks in the visual panels
+    * _name_ = The display name for the Panel
+    * _height_ = The default height for the Panel
+    * _width_ = The default width for the Panel
+* **<Track\>** Details information about every track in a session
+    * _color_ = The default color for the data in the track
+    * _expand_ = Whether the track is expanded or not
+    * _height_ = The default height of the track
+    * _id_ = The id assigned by IGV to this track
+    * _name_ = The display name for the track
+    * _renderer_  = The renderer to be used with this Track (non-default)
+    * _visible_ = Whether the track is visible or loaded in the background
+    * _windowFunction_ = The function to be used when displaying data
+* _**<DataRange\>**_ A set of attributes used to determine the look of the Panel
+    * _baseline_ =
+    * _drawbaseline_ =
+    * _flipAxis_ =
+    * _maximum_ =
+    * _minimum_ =
+    * _type_ =
 
-### Example Session File
+### Example session file
 
-The XML below is an example of a simple Session created by IGV
+The XML below is an example of a simple session created by IGV.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>

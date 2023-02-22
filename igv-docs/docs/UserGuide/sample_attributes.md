@@ -1,9 +1,13 @@
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Sample attributes </p>
+
 Attributes can be associated with tracks and used for filtering, sorting, and grouping data. By default all tracks have 
 at least 3 attributes: Data File, Data Type, and Name. To display additional attributes, [load a sample attribute file](../sample_info). 
 IGV displays attribute names and values in the attributes panel.
 
-Color-Coded Attribute Values
-----------------------------
+## Color-coded attribute values
 
 IGV uses color-coded blocks to represent the attribute values.
 
@@ -15,8 +19,7 @@ IGV uses color-coded blocks to represent the attribute values.
 
 ![](img/attributes.jpg)
 
-Showing and Hiding Attributes
------------------------------
+## Showing and hiding Aattributes
 
 To show or hide selected attributes:
 
