@@ -13,7 +13,8 @@ nav:
 
 - User Guide: 
     - IGV basics: UserGuide/IGVbasics.md
-    - Reference genome: UserGuide/reference_genome.md
+    - Reference genome: UserGuide/reference_genome.md  
+    - Navigating the view: UserGuide/navigation.md
     - Tracks and Data Types:
         - Numeric data: UserGuide/tracks/numeric_data.md
         - Features and gene annotations: UserGuide/tracks/annotations.md
@@ -27,9 +28,9 @@ nav:
         - Segmented copy number: UserGuide/tracks/seg.md
         - GWAS: UserGuide/tracks/gwas.md
         - RNA structure: UserGuide/tracks/rna_structure.md
-    - Navigating the view: UserGuide/navigation.md
-    - Sessions: UserGuide/sessions.md
     - Sample attributes: UserGuide/sample_attributes.md
+    - Regions: UserGuide/regions.md
+    - Sessions: UserGuide/sessions.md
     - Preferences: UserGuide/preferences.md
     - Saving images: UserGuide/saving_images.md
     - Tools Menu:

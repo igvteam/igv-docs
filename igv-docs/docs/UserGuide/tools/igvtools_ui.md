@@ -19,6 +19,9 @@ Information about the run will appear in the _Messages_ box at the bottom of the
 !!! danger " " 
     If you exit the IGV application, any tool that is in progress will be terminated.
 
+!!! note " "
+    You can also run the igvtools utilities from the command line, as described [here](../../advanced/command_line).
+
 ## toTDF
 
 
