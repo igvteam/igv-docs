@@ -1,4 +1,9 @@
 
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> About IGV </p>
+
 ![IGV banner](img/banner.png)
 
 # Overview
@@ -15,6 +20,10 @@ IGV is available in multiple forms, including:
 
 This site is focused on the IGV desktop application. See **[https://igv.org](https://igv.org )** for links to all forms
 of IGV.
+
+# IGV website
+
+[https://igv.org](https://igv.org)
 
 # Usage license and source code
 

@@ -141,7 +141,7 @@ To **exit multi-locus view**:
 
 
 
-### Controling the view within a panel
+### Controling the view in a panel
 
 To **zoom** the view:
 
@@ -169,6 +169,6 @@ Right-click in the panel header to bring up the sort menu. This menu will vary d
 
 ![](img/genelist_sortpopup.jpg)
 
-The following image illustrates what happens if you select _Sort by amplification_ in the KRAS panel.
+The following image illustrates what happens if you select _Sort by amplification_ in the KRAS panel. All the tracks are sorted by the value in the KRAS panel. Note that each panel displays the same tracks, so the display will change in all the panels.
 
 ![](img/genelist_sortbyamp.jpg)
