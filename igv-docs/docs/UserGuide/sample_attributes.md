@@ -1,7 +1,7 @@
 <!---
 The page title should not go in the menu
 -->
-<p class="page-title"> Sample attributes </p>
+<p class="page-title"> Sample attributes</p>
 
 Attributes can be associated with tracks and used for filtering, sorting, and grouping data. By default all tracks have 
 at least 3 attributes: Data File, Data Type, and Name. To display additional attributes, [load a sample attribute file](../sample_info). 
@@ -19,15 +19,17 @@ IGV uses color-coded blocks to represent the attribute values.
 
 ![](img/attributes.jpg)
 
-## Showing and hiding Aattributes
+## Showing and hiding Attributes
 
 To show or hide selected attributes:
 
-1.  Click _View>Select Attributes to Show_. IGV displays a list of attributes.
+1.  Click _**View>Select Attributes to Show**_. IGV displays a list of attributes.
 2.  Select (or clear) an attribute’s check box to show (or hide) the attribute.
-3.  Click _OK_. IGV updates the display to show only the selected attributes.
+3.  Click _**OK**_. IGV updates the display to show only the selected attributes.
 
 To show or hide all attributes:
 
-*   Click _View>Show Attribute Display_ to toggle the setting. A check mark next to the menu item indicates that the attribute panel is displayed. No check mark indicates that it is hidden. The attribute panel is hiddent by default.  
-    **Tip:** This is a persistent setting. Toggling the menu item also toggles the corresponding setting on the General tab of the [Preferences window](<?php echo base_path(); ?>Preferences) and vice versa.
+*   Click _**View>Show Attribute Display**_ to toggle the setting. A check mark next to the menu item indicates that the attribute panel is displayed. No check mark indicates that it is hidden. The attribute panel is hiddent by default. 
+
+!!! note " "  
+    This is a persistent setting. Toggling the menu item also toggles the corresponding setting on the General tab of the [Preferences window](<?php echo base_path(); ?>Preferences) and vice versa.

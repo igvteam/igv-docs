@@ -451,9 +451,9 @@ wm-toc-lev1.wm-toc-text { /* new */
   padding: 4px;
   line-height: 1.428571429;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #eee;
   border-radius: 4px;
-  margin: 20px auto 30px auto;
+  margin: 10px auto 15px auto;
 }
 
 .wm-page-content a {
