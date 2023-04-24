@@ -1,3 +1,8 @@
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Variants (VCF) </p>
+
 VCF stands for Variant Call Format, and this file format is used by the 1000 Genomes project to encode SNPs and other
 structural genetic variants. The format is further described on
 the [1000 Genomes project Web site](http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/VCF%20%28Variant%20Call%20Format%29%20version%204.0/encoding-structural-variants)
@@ -8,8 +13,7 @@ A consistent color scheme is used in the variant display row, which is the top r
 * grey - minor allele frequency is not known
 * red - height is proportional to minor allele frequency
 
-Viewing a VCF File with Genotypes
----------------------------------
+# VCF files with genotypes
 
 [![](../img/vcfwgenotypes.jpg)](../img/vcfwgenotypes.jpg)
 
@@ -58,8 +62,7 @@ change the height of the rows in the window provided.
 
 ![](../img/vcf_squishedrowht.jpg)
 
-Viewing a VCF File Without Genotypes
-------------------------------------
+# VCF files without genotypes
 
 If you open a VCF file that does not contain genotypes data, the view will be different, displaying only the bars
 marking the calls, as shown below.
