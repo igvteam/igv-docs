@@ -1,3 +1,8 @@
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> RNA-seq data </p>
+
 # Splice junction track
 
 IGV supplements each alignment track with (1) a coverage track and (2) if selected in the [Alignment Preferences panel](Preferences#Alignments), a default splice junctions track. This page describes the default junctions track as well as independently loaded junctions data in the standard [.bed](BED) format. See [Sashimi Plot](http://www.broadinstitute.org/software/igv/Sashimi) for how to derive and manipulate interactive junction visualizations within IGV.

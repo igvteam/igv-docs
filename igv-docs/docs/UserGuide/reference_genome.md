@@ -2,7 +2,7 @@
 <!---
 The page title should not go in the menu
 -->
-<p class="page-title"> The reference genome </p>
+<p class="page-title"> Reference genome </p>
 
 IGV requires a reference genome. It serves as the "coordinate system" for displaying the tracks. 
 

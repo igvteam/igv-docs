@@ -13,13 +13,13 @@ nav:
 - Quick Start: QuickStart.md
 
 - User Guide:    
-    - The reference genome: UserGuide/reference_genome.md  
+    - Reference genome: UserGuide/reference_genome.md  
     - Navigating the view: UserGuide/navigation.md
     - Tracks and Data Types:
         - Numeric data: UserGuide/tracks/numeric_data.md
         - Features and gene annotations: UserGuide/tracks/annotations.md
         - Alignments:
-            - Basics: UserGuide/tracks/alignments/viewing_alignments_basics.md
+            - Alignment track basics: UserGuide/tracks/alignments/viewing_alignments_basics.md
             - Paired-end alignments: UserGuide/tracks/alignments/paired_end_alignments.md
             - RNA-seq data: UserGuide/tracks/alignments/rna_seq.md
             - Methylation data: UserGuide/tracks/alignments/methylation.md
@@ -51,11 +51,15 @@ nav:
 - Download: DownloadPage.md
 
 - Release Notes: 
+    - 2.16.x: ReleaseNotes/2.16.x.md 
     - 2.15.x: ReleaseNotes/2.15.x.md
     - 2.14.x: ReleaseNotes/2.14.x.md
     - 2.13.x: ReleaseNotes/2.13.x.md
     - 2.12.x: ReleaseNotes/2.12.x.md
     - 2.11.x: ReleaseNotes/2.11.x.md
+    - 2.10.x: ReleaseNotes/2.10.x.md
+    - 2.9.x: ReleaseNotes/2.9.x.md
+    - 2.8.x: ReleaseNotes/2.8.x.md
 
 - Getting Help: GettingHelp.md
 

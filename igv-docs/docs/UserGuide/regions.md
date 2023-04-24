@@ -1,3 +1,8 @@
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Regions </p>
+
 # Regions of Interest
 
 Regions of interest (ROI) are intervals defined by the user using one of the methods described below. ROIs are marked

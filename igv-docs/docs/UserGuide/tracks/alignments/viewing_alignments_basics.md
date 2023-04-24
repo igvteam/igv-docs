@@ -1,4 +1,9 @@
 
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Alignment track basics </p>
+
 # File formats
 
 Aligned reads from sequencing can be loaded into IGV in the [BAM](<?php echo base_path(); ?>BAM) format, [SAM](<?php echo base_path(); ?>SAM) format, or [CRAM](http://<?php echo base_path(); ?>CRAM) format.
@@ -8,11 +13,11 @@ Both BAM and SAM files are described on the Samtools project page [http://www.ht
 IGV requires that BAM and CRAM files have an associated index file.
 
 *   The main data file must include the _.bam_ or ._cram_ extension.
-*   The index file should have the same filename but with the _.bai_ or ._crai_ extension. For example, the index file for test-xyz.bam would be named test-xyz.bam.bai, or alternatively test-xyz.bai.
+*   The index file should have the same filename but with the _.bai_ or ._crai_ extension. For example, the index file for _test-xyz.bam_ would be named _test-xyz.bam.bai_, or alternatively _test-xyz.bai_.
 *   When loading by URL, the URL to both the data file and the index file should be specified.
 *   When loading by file, IGV automatically searches for the index file within the same directory as the data file.
 
-If you receive a .bam file from a sequencing facility, you will usually also get the corresponding index file. If you need to create the index yourself, there are multiple tools available for indexing BAM files, including [igvtools](http://software.broadinstitute.org/software/igv/igvtools), the [samtools](http://www.htslib.org) package, and the [Picard.SortSam](http://www.broadinstitute.org/cancer/software/genepattern/modules/docs/Picard.SortSam/4) module in [GenePattern](http://www.broadinstitute.org/cancer/software/genepattern/).
+If you receive a .bam file from a sequencing facility, you will usually also get the corresponding index file. If you need to create the index yourself, there are multiple tools available for indexing BAM files, including [igvtools](../../tools/igvtools_ui.md), the [samtools](http://www.htslib.org) package, and the [Picard.SortSam](http://www.broadinstitute.org/cancer/software/genepattern/modules/docs/Picard.SortSam/4) module in [GenePattern](http://www.broadinstitute.org/cancer/software/genepattern/).
 
 # Tracks
 
@@ -20,7 +25,7 @@ Loading an alignment file creates up to 3 associated tracks:
 
 *   Coverage Track to view depth of coverage
 *   Alignment Track to view individual aligned reads
-*   Splice Junction Track which provides an alternative view of reads spanning splice junctions
+*   Splice Junction Track which provides an alternative view of RNA-seq reads spanning splice junctions (see the section on [RNA-seq data](rna_seq.md)) 
 
 By default the Alignment and Coverage tracks are initially displayed. This setting can be altered from the Alignments tab of the Preferences window.  Also, showing or hiding individual tracks can be controlled with track popup menus.
 
