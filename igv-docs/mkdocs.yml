@@ -16,7 +16,7 @@ nav:
     - Reference genome: UserGuide/reference_genome.md  
     - Navigating the view: UserGuide/navigation.md
     - Tracks and Data Types:
-        - Numeric data: UserGuide/tracks/numeric_data.md
+        - Quantitative data: UserGuide/tracks/quantitative_data.md
         - Features and gene annotations: UserGuide/tracks/annotations.md
         - Alignments:
             - Alignment track basics: UserGuide/tracks/alignments/viewing_alignments_basics.md

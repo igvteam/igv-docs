@@ -14,7 +14,7 @@ To view the **whole genome**
 
 - Select _**All**_ from the chromosome dropdown menu; or
 
-- Type _All_ into the locus search box
+- Type _All_ into the locus search box, which is next to the chromosome dropdown menu
 
 The screenshot below shows a whole genome view with segmented copy number data. In the area below the tool bar, the tick marks indicate the chromomosome boundaries, and each chromosome is labeled.
 

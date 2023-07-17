@@ -7,7 +7,7 @@ The page title should not go in the menu
 
 ### 1. Download and launch IGV
 
-The IGV desktop application is a Java program that runs on your computer. To run IGV, go to the [**Download IGV** page](../downloadPage.md) and download the installer that is appropriate for your system. 
+The IGV desktop application is a Java program that runs on your computer. To run IGV, go to the [**Download** page](DownloadPage.md) and download the installer that is appropriate for your system. 
 
 When you first launch IGV, it will create a folder named **igv** in your user's home folder. In this folder, IGV will store:
 
@@ -19,7 +19,7 @@ When you first launch IGV, it will create a folder named **igv** in your user's 
     IGV is also available as a web application that runs in a web browser and requires no downloads. See [https://igv.org/app](https://igv.org/app). Click on the Help link in the app for more information about using IGV-Web. 
 
 ### 2. Load a reference genome
-IGV displays data mapped to the genomic coordinates of a reference genome. The datasets you load must correspond to the same reference genome as the one you have loaded into IGV; and so it is important you load the correct one. When you first launch the IGV application, it will load the default reference genome (as of this writing **hg19**). See the section on [Reference genomes](reference_genome.md) for details on how to switch to a different reference genome. You can either select one of IGV's hosted genomes or provide your own genome files. When you re-launch IGV, it will load the reference genome you were using when you last closed down the IGV application.
+IGV displays data mapped to the genomic coordinates of a reference genome. The datasets you load must correspond to the same reference genome as the one you have loaded into IGV; and so it is important you load the correct one. When you first launch the IGV application, it will load the default reference genome (as of this writing **hg19**). See the section on [Reference genomes](UserGuide/reference_genome.md) for details on how to switch to a different reference genome. You can either select one of IGV's hosted genomes or provide your own genome files. When you re-launch IGV, it will load the reference genome you were using when you last closed down the IGV application.
 
 !!! tip " "
     You must first load the desired reference genome, before loading data tracks. Switching genomes will clear out any loaded tracks.
