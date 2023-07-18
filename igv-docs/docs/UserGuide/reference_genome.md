@@ -34,7 +34,7 @@ This will pop up a window with the full list of hosted genomes. If you find your
 
 ### Other genomes
 
-If you have the FASTA file for the sequence of your reference genome of interest, it can be loaded by clicking on ***Genomes > Load Genome from File*** or ***Genomes > Load Genome from URL***. In this case, the gene annotations will not be loaded automatically, but if you have the gene annotation file, it can be loaded like any other data file via the ***Files > Load from*** menus. To automatically load gene annotations, as well as an optional cytoband file, you can create a genome JSON file as described **TBD**. 
+If you have the FASTA file for the sequence of your reference genome of interest, it can be loaded by clicking on ***Genomes > Load Genome from File*** or ***Genomes > Load Genome from URL***. In this case, the gene annotations will not be loaded automatically, but if you have the gene annotation file, it can be loaded like any other data file via the ***Files > Load from*** menus. To automatically load gene annotations, as well as an optional cytoband file, you can create a genome JSON file as described in the [File Formats: Genomes](../FileFormats/Genomes.md) section. 
 
 FASTA files can be plain text or block gzipped, and must be indexed with a .fai as defined by the Samtools suite (www.htslib.org). If the file is plain text (not block gzipped) and not indexed, IGV will attempt to index it.  IGV remembers the location of the FASTA file and the file will appear in the genome dropdown menu. 
 

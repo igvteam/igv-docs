@@ -6,24 +6,24 @@ The page title should not go in the menu
 
 ## chrom.sizes
 
-igvtools uses chrom.sizes files to define the chromosome lengths for a given genome.    The file format is tab delimited, first column is chromosome name and second is its length.  There can be more columns present, but they are ignored.  Files should be named as follows:
+igvtools uses chrom.sizes files to define the chromosome lengths for a given genome.    The file format is tab delimited, first column is chromosome name and second is its length.  There can be more columns present, but they are ignored.  Files should be named as follows:
 
-   <genomdID>.chrom.sizes
+   <genomdID>.chrom.sizes
 
-For example,  hg18.chrom.sizes.
+For example,  hg18.chrom.sizes.
 
 ## Cytoband
 
 The Cytoband file format is used to 
-
-* define the chromosome ideograms for a reference genome, or 
+  
+* define the chromosome ideograms for a reference genome, or 
 * create a cytoband track (as of version 2.11.0).
 
-A cytoband file is a five-column tab-delimited text file. Each row of the file describes the position of a cytogenetic band. The columns in the file match the columns of the [cytoBand table](http://genome.ucsc.edu/cgi-bin/hgTables?db=hg38&hgta_group=map&hgta_track=cytoBand&hgta_table=cytoBand&hgta_doSchema=describe+table+schema) in the database underlying the UCSC Genome Browser.  These files are downloadable from the UCSC website as "cytoBandIdeo.txt.gz" for many genome assemblies, for example https://hgdownload.cse.ucsc.edu/goldenPath/hg38/database/cytoBandIdeo.txt.gz
+A cytoband file is a five-column tab-delimited text file. Each row of the file describes the position of a cytogenetic band. The columns in the file match the columns of the [cytoBand table](http://genome.ucsc.edu/cgi-bin/hgTables?db=hg38&hgta_group=map&hgta_track=cytoBand&hgta_table=cytoBand&hgta_doSchema=describe+table+schema) in the database underlying the UCSC Genome Browser.  These files are downloadable from the UCSC website as "cytoBandIdeo.txt.gz" for many genome assemblies, for example https://hgdownload.cse.ucsc.edu/goldenPath/hg38/database/cytoBandIdeo.txt.gz
 
-The Cytoband file format is used to define the chromosome ideograms for a reference genome, and/or as of version 2.11.0 to create a cytoband track.
+The Cytoband file format is used to define the chromosome ideograms for a reference genome, and/or as of version 2.11.0 to create a cytoband track.
 
-A cytoband file is a five-column tab-delimited text file. Each row of the file describes the position of a cytogenetic band. The columns in the file match the columns of the [cytoBand table](http://genome.ucsc.edu/cgi-bin/hgTables?db=hg38&hgta_group=map&hgta_track=cytoBand&hgta_table=cytoBand&hgta_doSchema=describe+table+schema) in the database underlying the UCSC Genome Browser.  These files are downloadable from the UCSC website as "cytoBandIdeo.txt.gz" for many genome assemblies, for example https://hgdownload.cse.ucsc.edu/goldenPath/hg38/database/cytoBandIdeo.txt.gz
+A cytoband file is a five-column tab-delimited text file. Each row of the file describes the position of a cytogenetic band. The columns in the file match the columns of the [cytoBand table](http://genome.ucsc.edu/cgi-bin/hgTables?db=hg38&hgta_group=map&hgta_track=cytoBand&hgta_table=cytoBand&hgta_doSchema=describe+table+schema) in the database underlying the UCSC Genome Browser.  These files are downloadable from the UCSC website as "cytoBandIdeo.txt.gz" for many genome assemblies, for example https://hgdownload.cse.ucsc.edu/goldenPath/hg38/database/cytoBandIdeo.txt.gz
 
 <table class="general" width="100%">
 	<tbody>
@@ -99,7 +99,7 @@ A FASTA file is a text file. Each sequence begins with a single-line description
 
 FASTA files can be loaded directly from the **_Genome_** menu or can be referred to in a JSON file that contains a reference genome specification.
 
-## Reference genome specification in JSON format
+## IGV reference genome (JSON)
 
 As of release 2.11.0 reference genomes can be specified and loaded as JSON files.  The previous ".genome" format is now considered deprecated.  The format is a json form of the "reference" object description from igv.js, described [here](https://github.com/igvteam/igv.js/wiki/Reference-Genome).  For IGV use required properties include id, name, and fastaURL.  All other properties are optional.  An example of a complete json description for the GRCh38 assembly is given below.
 
@@ -112,11 +112,9 @@ Key differences with respect to the ".genome" format are
 
 Fields ending with "url" can contain local file paths.  These paths can be absolute or relative to the location of the genome (.json) file.
 
-### Example:
+**Example: Human GRCh38 with 2 annotation tracks**
 
-Human GRCh38 with 2 annotation tracks
-
-**Required fields are ```id```,```name```, ```fastaURL```, ```indexURL```.**   All other fields are optional.
+Required fields are ```id```,```name```, ```fastaURL```, ```indexURL```.   All other fields are optional.
 
 ```json
 {
@@ -169,7 +167,7 @@ Human GRCh38 with 2 annotation tracks
 
 ```
 
-### File paths
+**File paths**
 
 URL properties (all fields that end with ```url```) can be absolute or relative file paths.  Relative paths are interpreted as relative to the location of the genome json file.   For example, the following definition presumes an annotation file ```chr22.genes.gtf.gz``` in the same directory as the json file.
 
@@ -193,9 +191,7 @@ hg19_local_annotations.json
 ```
 
 
-
-
-### Genome with hidden annotation track
+**Genome with hidden annotation track**
 
 In the example below an annotation file containing protein coding genes from Gencode is loaded to support searching by Gencode gene identifiers.  
 
@@ -220,5 +216,3 @@ In the example below an annotation file containing protein coding genes from Gen
   ]
 }
 ```
-
-
