@@ -24,9 +24,9 @@ IGV displays data mapped to the genomic coordinates of a reference genome. The d
 !!! tip " "
     You must first load the desired reference genome, before loading data tracks. Switching genomes will clear out any loaded tracks.
 
-### 3. Load data tracks
+### 3. Load data
 
-To load data and genomic annotations
+Data and genome annotations are loaded via the File menu.
 See information on supported [file types](./fileFormats.html). 
 
 TBD Included information about loading data (local files, URLs, google cloud, aws, indexed files, where does the data come from / go)
