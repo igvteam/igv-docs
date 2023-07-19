@@ -15,7 +15,7 @@ For example,  hg18.chrom.sizes.
 ## Cytoband
 
 The Cytoband file format is used to 
-
+  
 * define the chromosome ideograms for a reference genome, or 
 * create a cytoband track (as of version 2.11.0).
 
@@ -190,6 +190,7 @@ hg19_local_annotations.json
 }
 ```
 
+
 **Genome with hidden annotation track**
 
 In the example below an annotation file containing protein coding genes from Gencode is loaded to support searching by Gencode gene identifiers.  
@@ -215,4 +216,3 @@ In the example below an annotation file containing protein coding genes from Gen
   ]
 }
 ```
-
