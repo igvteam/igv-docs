@@ -8,7 +8,7 @@ The page title should not go in the menu
 
 igvtools uses chrom.sizes files to define the chromosome lengths for a given genome.    The file format is tab delimited, first column is chromosome name and second is its length.  There can be more columns present, but they are ignored.  Files should be named as follows:
 
-   <genomdID>.chrom.sizes
+```<genomdID>.chrom.sizes```
 
 For example,  hg18.chrom.sizes.
 
@@ -101,7 +101,7 @@ FASTA files can be loaded directly from the **_Genome_** menu or can be referred
 
 ## IGV reference genome (JSON)
 
-As of release 2.11.0 reference genomes can be specified and loaded as JSON files.  The previous ".genome" format is now considered deprecated.  The format is a json form of the "reference" object description from igv.js, described [here](https://github.com/igvteam/igv.js/wiki/Reference-Genome).  For IGV use required properties include id, name, and fastaURL.  All other properties are optional.  An example of a complete json description for the GRCh38 assembly is given below.
+As of release 2.11.0 reference genomes can be specified and loaded as JSON files.  The previous ".genome" format is now considered deprecated.  The format is a json form of the "reference" object description from igv.js, described [here](https://github.com/igvteam/igv.js/wiki/Reference-Genome).  For IGV use, required properties include ```id```, ```name```, and ```fastaURL```.  All other properties are optional.  An example of a complete json description for the GRCh38 assembly is given below.
 
 Key differences with respect to the ".genome" format are
 

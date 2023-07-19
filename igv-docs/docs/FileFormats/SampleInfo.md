@@ -4,29 +4,9 @@ The page title should not go in the menu
 -->
 <p class="page-title">File Formats: Sample Info (Attributes)</p>
 
-## Sample Info (Attributes)
+Sample information files includes Attributes files, Sample Mapping files, Attribute Color files, and files that combine information. These are tab-delimited text files with extension .txt. You load them as you would data files, via the _File m_enu. IGV can load multiple sample information files per session. When loaded into IGV, attributes display in a separate color-coded panel between sample names and tracks (see [Sample Attributes](../UserGuide/sample_attributes.md)). 
 
-Sample information files includes Attributes files, Sample Mapping files, Attribute Color files, and files that combine information. These are tab-delimited text files with extension .txt. You load them as you would data files, via the _File m_enu. IGV can load multiple sample information files per session. 
-
-When loaded into IGV, attributes display in a separate color-coded panel between sample names and tracks. See [Sample Attributes](https://software.broadinstitute.org/software/igv/DisplayOptionsAttributes) and [Sorting, Grouping, and Filtering](https://software.broadinstitute.org/software/igv/SortGroupFilter) for more information on displaying attributes and using attributes to manipulate tracks. IGV automatically assigns colors and heatmaps to attribute data values and what it determines are data ranges.
-
-This page has the following sections.
-
-*   [Overview of sample information file types](#overview)
-*   [Attributes files](#attributesfile) include descriptive information such as annotations or metadata for tracks.
-*   [Sample Mapping files](#samplemappingfile) match sample identifiers across datasets.
-*   Optionally assign specific [Attribute Colors](#Colors), including heatmap ranges.
-
-Sample information files allow integrating diverse data tracks from the same sample or patient.
-
-*   Tracks can be grouped based on the value of an attribute from the sample information file, such as a patient identifier. See the example in the [Attributes files](#attributesfile) section.
-*   Similarly, use to annotate VCF sample rows with metadata and allow grouping.
-
-### Overview of sample information file types
-
-Consider your data visualization needs as the various sample information sets allow for different features of IGV. The **decision tree table** below matches use cases to the Sample Information file types.
-
-**Attribute, mapping, and color information may be in separate files,** i.e. in Attributes files, Mapping files, and Color files, **or in a single Sample Information file.**
+Attribute, mapping, and color information may be in **separate files,** i.e. in Attributes files, Mapping files, and Color files, **or in a single Sample Information file.**
 
 *   To save all three types of information in a single file, list attributes first, then mapping, and then color.
     *   Between the information types, separate sections with row headers _#sampleMapping_ and _#colors_.
@@ -79,18 +59,13 @@ When loading attributes for datasets where sample names are identical across fil
 	</tbody>
 </table>
 
-### Attributes
+## Attributes
 
 An Attributes file lists track identifiers in the first column and attributes in subsequent columns with a single header row. IGV matches the track identifiers in a data file with the track identifiers in the Attributes file.
 
-*   Example 1: [exampleSampleInfo.txt](http://www.broadinstitute.org/igvdata/exampleFiles/exampleSampleInfo.txt)
-*   Example 2: [BLCA\_ClinicalAttributes.txt](https://dm.genomespace.org/datamanager/file/Home/Public/SpaceCadet/IGV%20Sample%20Information%20Files/BLCA_ClinicalAttributes.txt)
+*   Example 1: [example_sampleinfo.txt](ExampleFiles/example_sampleinfo.txt)
 
-For example, load the second example file on top of IGV hg19's _CopyNumber: \[genome\_wide\_snp\_6\_\_broad\]._ This data is found in the hosted server data _The Cancer Genome Atlas_\>_TCGA Broad GDAC>Firehose Standard Data_\>_Broad Firehose Standard Data Run: 2015\_02\_04_\>_BLCA-TP._ Applying attributes to the data file allows sorting by copy number for the 22q13:32 loci _and_ the pathology.M.stage attribute as shown in the **Screenshot** (2015.03.05) below.
-
-![](img/SL_IGV_loadattributes2015-03-05%2012.55.51.png)
-
-#### Acceptable variations to the Attributes file
+**Acceptable variations to the Attributes file:**
 
 So long as the first row contains attribute labels and the first column sample names, the remaining rows may contain information pertaining to samples in any data type and be organized in any way.
 
@@ -104,11 +79,11 @@ In the case of different data sets with different sample names from the same ind
  	
 * For multiple attributes files, duplicate the entire file and open each to modify sample names for the differentially named datasets as needed.
 
-### Sample Mapping
+## Sample Mapping
 
-A Sample Mapping section begins with the line #sampleMapping and maps track identifers to sample identifiers.  It is useful in cases where these identifiers might differ.   For example, one might map the track identifier  "foo.bam" to sample identifier  "foo\_sample".     The format is 2 col
+A Sample Mapping section begins with the line #sampleMapping and maps track identifers to sample identifiers.  It is useful in cases where these identifiers might differ.   For example, one might map the track identifier  "foo.bam" to sample identifier  "foo\_sample".     The format is 2 column tab delimited, the first column is the track identifier, second the sample identifier.
 
-### Attribute Colors
+## Attribute Colors
 
 By default, IGV randomly assigns colors to the attribute values. You can optionally specify the colors for attribute values in RGB format for a specific label, a specific value, or as a heatmap scale for numeric columns in monocolor or in two-color heatmap for specified ranges. Customize colors using either a separate Attribute Colors file or by adding a colors section to the end of a Sample Information file. Colors information is tab-delimited with three or four columns as shown in the example below.
 <table align="center" border="1" cellpadding="1" cellspacing="1" height="38" width="700">

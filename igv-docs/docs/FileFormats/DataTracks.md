@@ -6,7 +6,7 @@ The page title should not go in the menu
 
 ## BAM
 
-To load a set of BAM files merged into a single track see [Merged BAM File](https://software.broadinstitute.org/software/igv/merged_BAMs).
+To load a set of BAM files merged into a single track see [Merged BAM File](#merged-bam-file).
 
 A BAM file (.bam) is the binary version of a SAM file.  A SAM file (.sam) is a tab-delimited text file that contains sequence alignment data.   These formats are described on the SAM Tools web site: [http://samtools.github.io/hts-specs/](http://samtools.github.io/hts-specs/). 
 
@@ -17,8 +17,8 @@ BAM, rather than SAM, is the recommended format for IGV. Starting with IGV 2.0.1
 *   The index files must have the same base file name and must reside in the same directory as the file that it indexes.
     *   For example, the index file for test-xyz.bam would be named test-xyz.bam.bai or test-xyz.bai. 
 
-*   Multiple tools are available for sorting and indexing BAM files, including [igvtools](http://software.broadinstitute.org/software/igv/igvtools), the [samtools](http://www.htslib.org) package, and in [GenePattern](http://www.broadinstitute.org/cancer/software/genepattern/).  The GenePattern module for sorting and indexing is [Picard.SortSam](http://www.broadinstitute.org/cancer/software/genepattern/modules/docs/Picard.SortSam/4).
-*   SAM files can be sorted and indexed using [igvtools](http://software.broadinstitute.org/software/igv/igvtools). _**Note: The .SAI index is an IGV format, and it does not work with samtools or any other application.**_
+*   Multiple tools are available for sorting and indexing BAM files, including [igvtools](../UserGuide/tools/igvtools_ui.md), the [samtools](http://www.htslib.org) package, and in [GenePattern](http://www.broadinstitute.org/cancer/software/genepattern/).  The GenePattern module for sorting and indexing is [Picard.SortSam](http://www.broadinstitute.org/cancer/software/genepattern/modules/docs/Picard.SortSam/4).
+*   SAM files can be sorted and indexed using [igvtools](../UserGuide/tools/igvtools_ui.md). _**Note: The .SAI index is an IGV format, and it does not work with samtools or any other application.**_
 
 **Chromosome names:** Chromosome names must be consistent between the selected reference genome and the SAM/BAM data files. For convenience, IGV equates chromosome numbers and names of the form chr# (e.g., 1 and chr1 are equivalent).
 
@@ -34,7 +34,7 @@ IGV does not currently support multiple track lines in a single BED file  
 
 **Zero-based index:** Start and end positions are identified using a zero-based index. The end position is excluded. For example, setting start-end to 1-2 describes exactly one base, the second base in the sequence.
 
-**Display settings:** To modify IGV's default display settings for the BED data, include a [track line](<?php echo base_path(); ?>TrackLine) in the file.
+**Display settings:** To modify IGV's default display settings for the BED data, include a [track line](#track-lines) in the file.
 
 **GFF tag option:** By adding a #gffTags line to the beginning of a .bed file, you can add GFF3-style attributes to the _Name_ field (column 4) of a BED file which are displayed in the popup text. 
 
@@ -51,13 +51,13 @@ Recognized Extension: .bedgraph
 
 ## bigBed
 
-The bigBed format stores annotation items that can either be simple, or a linked collection of exons, much as [BED](https://software.broadinstitute.org/software/igv/BED) files do. BigBed files are created initially from BED type files, using the UCSC program bedToBigBed. The resulting bigBed files are in an indexed binary format. The main advantage of the bigBed files is that only the portions of the files needed to display a particular region are transferred, so for large data sets bigBed is considerably faster than regular BED files.
+The bigBed format stores annotation items that can either be simple, or a linked collection of exons, much as [BED](#bed) files do. BigBed files are created initially from BED type files, using the UCSC program bedToBigBed. The resulting bigBed files are in an indexed binary format. The main advantage of the bigBed files is that only the portions of the files needed to display a particular region are transferred, so for large data sets bigBed is considerably faster than regular BED files.
 
 Go [here](http://genome.ucsc.edu/goldenPath/help/bigBed.html) for more information on bigBed format.
 
 ## bigWig
 
-The bigWig format is for display of dense, continuous data that will be displayed as a graph. BigWig files are created initially from [WIG](https://software.broadinstitute.org/software/igv/WIG) type files, using the UCSC program wigToBigWig. Alternatively, bigWig files can be created from [bedGraph](https://software.broadinstitute.org/software/igv/bedgraph) files, using the UCSC program bedGraphToBigWig. In either case, the resulting bigWig files are in an indexed binary format. The main advantage of the bigWig files is that only the portions of the files needed to display a particular region are transferred, so for large data sets bigWig is considerably faster than regular WIG files.
+The bigWig format is for display of dense, continuous data that will be displayed as a graph. BigWig files are created initially from [WIG](#wig) type files, using the UCSC program wigToBigWig. Alternatively, bigWig files can be created from [bedGraph](#bedgraph) files, using the UCSC program bedGraphToBigWig. In either case, the resulting bigWig files are in an indexed binary format. The main advantage of the bigWig files is that only the portions of the files needed to display a particular region are transferred, so for large data sets bigWig is considerably faster than regular WIG files.
 
 See [here](http://genome.ucsc.edu/goldenPath/help/bigWig.html) for more information on the bigWig format.
 
@@ -197,11 +197,11 @@ A broadPeak (.broadPeak) file is used by the ENCODE project to provide called re
 
 A SEG file (segmented data; .seg or .cbs) is a tab-delimited text file that lists loci and associated numeric values.
 
-See [SEG](<?php echo base_path(); ?>SEG) for details.
+See [SEG](#seg) for details.
 
 ## Chemical Reactivity Probing Profiles
 
-IGV supports importing chemical reactivity probing profiles from SHAPE or MAP files. After choosing a file to import, the user will be prompted to select the applicable chromosome and optional strand and starting position. IGV will then create a .wig file ([WIG format](https://software.broadinstitute.org/software/igv/WIG)) and load it.
+IGV supports importing chemical reactivity probing profiles from SHAPE or MAP files. After choosing a file to import, the user will be prompted to select the applicable chromosome and optional strand and starting position. IGV will then create a .wig file ([WIG format](#wig)) and load it.
 
 ### SHAPE format
 
@@ -210,42 +210,85 @@ The SHAPE format (.shape) is a tab-deliminated text file with two columns and no
 *   1st column: 1-based nucleotide position
 *   2nd column: chemical reactivity value, or -999 to indicate positions with no data
 
-**Example file:** [example.shape](/software/igv/sites/cancerinformatics.org.igv/files/example.shape)
+**Example file:** 
+```
+1	-999.000000
+2	-999.000000
+3	-999.000000
+4	-999.000000
+5	-999.000000
+6	0.051832
+7	-0.668888
+8	0.177740
+9	-0.136181
+10	0.083320
+11	-999.000000
+12	-999.000000
+13	-0.102030
+14	-0.056842
+15	0.170690
+16	0.203813
+```
 
 ### MAP format
 
 The MAP format (.map) is output by the SHAPE-MaP software pipeline _[ShapeMapper](http://www.chem.unc.edu/rna/software.html)_. The .map format is identical to the .shape format, with the addition of a third column containing standard error estimates and a fourth column containing the nucleotide sequence. These additional columns are currently ignored by IGV.
 
-**Example file:** [example.map](/software/igv/sites/cancerinformatics.org.igv/files/example.map)
+**Example file:** 
+```
+1	-999.000000	0.000000	G
+2	-999.000000	0.000000	G
+3	-999.000000	0.000000	T
+4	-999.000000	0.000000	C
+5	-999.000000	0.000000	T
+6	0.051832	0.056355	C
+7	-0.668888	0.886105	T
+8	0.177740	0.202396	C
+9	-0.136181	0.192588	T
+10	0.083320	0.079208	G
+11	-999.000000	0.000000	G
+12	-999.000000	0.000000	T
+13	-0.102030	0.144292	T
+14	-0.056842	0.210304	A
+15	0.170690	0.067038	G
+16	0.203813	0.111248	A
+```
+
 
 ## CN
 
-A CN file (.cn) is a tab-delimited text file that contains copy number data. The CN file format is described on the GenePattern web site: [http://www.broadinstitute.org/cancer/software/genepattern/gp\_guides/file-formats/sections/cn](http://www.broadinstitute.org/cancer/software/genepattern/gp_guides/file-formats/sections/cn).
+A CN file (.cn) is a tab-delimited text file that contains copy number data. The CN file format is described on the [GenePattern web site](https://www.genepattern.org/file-formats-guide#CN).
 
 **Zero-based index:** Physical positions are identified using a zero-based index.
 
 **Display settings:** To modify IGV's default display settings for the CN data, include a [track line](<?php echo base_path(); ?>TrackLine) in the file.
 
-Example: [mynah.sorted.cn](http://www.genepattern.org/tutorial/linkedFiles/mynah.sorted.cn)
+Example: [mynah.sorted.cn](https://www.genepattern.org/tutorial/linkedFiles/mynah.sorted.cn)
 
 **Does IGV assume log2(ratio) or absolute values for copy number?**
- IGV looks for the presence of negative numbers.  If it finds them, it assumes that the data is log2(tumor/normal).  If it does not find negative numbers, it assumes that the values are absolute, with 2 as the center.  These assumptions are used to set the heatmap legend; the legend can, however, be changed manually under the _View_\> _Color Legends_. Instructions are found in the [Color Legends](https://software.broadinstitute.org/software/igv/ColorLegend) section of the user guide.
+ IGV looks for the presence of negative numbers.  If it finds them, it assumes that the data is log2(tumor/normal).  If it does not find negative numbers, it assumes that the values are absolute, with 2 as the center.  These assumptions are used to set the heatmap legend; the legend can, however, be changed manually under the _View_\> _Color Legends_. 
 
  For data with negative numbers, IGV defaults to a blue-to-red scale that corresponds to copy numbers from -1.5 to 1.5. Both deletions and amplifications can have continuous valued numbers represented by shading.
 
+## CRAM
+
+CRAM files are used to store aligned sequence data. The specification can be found at [http://samtools.github.io/hts-specs/CRAMv3.pdf](http://samtools.github.io/hts-specs/CRAMv3.pdf). 
+
+A corresponding index file is required. By convention, the index file name should be the same as the data file name, with “.crai” appended. For example, if the data file is named example_xyz.cram, the index file should be named example_xyz.cram.crai or example_xyz.crai.
+
 ## GCT
 
-A GCT file (.gct) is a tab-delimited text file that contains gene expression data. The GCT file format is described on the GenePattern web site: [http://www.broadinstitute.org/cancer/software/genepattern/gp\_guides/file-formats/sections/gct](http://www.broadinstitute.org/cancer/software/genepattern/gp_guides/file-formats/sections/gct).
+A GCT file (.gct) is a tab-delimited text file that contains gene expression data. The GCT file format is described on the [GenePattern web site](https://www.genepattern.org/file-formats-guide#GCT).
 
 The GCT format is used for gene expression and RNAi data.
 
-Example: [example.gct](<?php echo base_path(); ?>sites/cancerinformatics.org.igv/files/linked_files/example.gct)
+Example: [allaml.dataset.gct](https://www.genepattern.org/tutorial/linkedFiles/allaml.dataset.gct)
 
 ### Gene Expression Data 
 
-Before IGV can display gene expression data, it must map the probes named in the file to genomic locations. Unless you specify loci for a probe in the file, IGV uses annotations and mapping files to look up the locations. For information on how gene expression data is mapped, see [Genomic Locations for Probes](<?php echo base_path(); ?>ExpressionData#GenomicLocations).
+Before IGV can display gene expression data, it must map the probes named in the file to genomic locations. 
 
-To specify loci for a probe in the file, enter the data into the second column as follows:
+To specify loci for a probe in the GCT file, enter the data into the second column as follows:
 
 <table class="general" width="100%">
 	<tbody>
@@ -284,17 +327,46 @@ To specify loci for a probe in the file, enter the data into the second column a
 	</tbody>
 </table>
 
+Unless you specify loci for a probe in the file, IGV uses annotations and mapping files to look up the locations. Data is displayed for all of the probes that can be mapped to genomic locations. If none of the probes in the file can be mapped, an error message is displayed.
+
+IGV determines the genomic locations for probes as follows:
+
+1.  If you use the delimiters |@ and | to specify the probe loci in the GCT file as described above, IGV uses the specified loci. Otherwise, it goes to the next step.
+2.  IGV searches all loaded annotation tracks for each probe. (This is the same as entering the ID in the first column \[the Name column\] of the file into the search box on the IGV tool bar and clicking _Go_.) If a probe is found, IGV displays the data at that location. Otherwise, it goes to the next step.
+3.  IGV searches its probe mapping files for each probe. If a probe is found, IGV determines the probe locus and displays the data at that location. Otherwise, it goes to the next step.
+4.  IGV uses its gene mapping files] to map each probe ID to a gene symbol, determines the gene locus, and displays the data at that location.
+
+**Probe Mapping Files:**
+
+Probe mapping files map probe identifiers to chromosomal locations. They are compiled from source files provided by Affymetrix, Agilent, and Illumina. The Affymetrix and Agilent mapping files are split by species due to their large size. Separate mapping files are provided for human, mouse, and other (non-mouse, non-human) species. Human probe identifiers are mapped to hg18. Depending on the vendor, mouse probe identifiers are mapped to mm9 (Affymetrix), mm5 (Agilent) or mm8 (Illumina).
+
+Following are links to the probe mapping files:
+
+*   [http://data.broadinstitute.org/igvdata/probes/affy/affy\_human\_mappings.txt.gz](http://data.broadinstitute.org/igvdata/probes/affy/affy_human_mappings.txt.gz)
+*   [http://data.broadinstitute.org/igvdata/probes/affy/affy\_mouse\_mappings.txt.gz](http://data.broadinstitute.org/igvdata/probes/affy/affy_mouse_mappings.txt.gz)
+*   [http://data.broadinstitute.org/igvdata/probes/affy/affy\_other\_mappings.txt.gz](http://data.broadinstitute.org/igvdata/probes/affy/affy_other_mappings.txt.gz)
+*   [http://data.broadinstitute.org/igvdata/probes/agilent/agilent\_human\_mappings.txt.gz](http://data.broadinstitute.org/igvdata/probes/agilent/agilent_human_mappings.txt.gz)
+*   [http://data.broadinstitute.org/igvdata/probes/agilent/agilent\_mouse\_mappings.txt.gz](http://data.broadinstitute.org/igvdata/probes/agilent/agilent_mouse_mappings.txt.gz)
+*   [http://data.broadinstitute.org/igvdata/probes/agilent/agilent\_other\_mappings.txt.gz](http://data.broadinstitute.org/igvdata/probes/agilent/agilent_other_mappings.txt.gz)
+*   [http://data.broadinstitute.org/igvdata/probes/illumina/illumina\_allMappings.txt.gz](http://data.broadinstitute.org/igvdata/probes/illumina/illumina_allMappings.txt.gz)
+
+**Gene Mapping Files:**
+
+Gene mapping files map probe identifiers to gene identifiers. Following are links to the gene mapping files:
+
+*   [http://data.broadinstitute.org/igvdata/probes/affy/affy\_probe\_gene\_mapping.txt.gz](http://data.broadinstitute.org/igvdata/probes/affy/affy_probe_gene_mapping.txt.gz)
+*   [http://data.broadinstitute.org/igvdata/probes/agilent/agilent\_probe\_gene\_mapping.txt.gz](http://data.broadinstitute.org/igvdata/probes/agilent/agilent_probe_gene_mapping.txt.gz)
+*   [http://data.broadinstitute.org/igvdata/probes/illumina/illumina\_probe\_gene\_mapping.txt.gz](http://data.broadinstitute.org/igvdata/probes/illumina/illumina_probe_gene_mapping.txt.gz)
+
+**Sources for the Mapping Files:**
+
+The probe and gene mapping files are compiled from source files provided by Affymetrix, Agilent, and Illumina. A list of the source files is available at [http://data.broadinstitute.org/igvdata/probes/data\_sources\_for\_mapping.txt](http://data.broadinstitute.org/igvdata/probes/data_sources_for_mapping.txt).
+
 ### RNAi Data
 
 GCT files for RNAi data must use the .rnai.gct extension.
 
-To display the RNAi data, IGV maps the hairpin names to gene names, determines the gene locus, and displays the data at that location. The hairpin-to-gene mappings used by IGV are based on work published by Luo, Cheung, Subramanian et al. (PNAS, 2008, 105:51:20380-20385) and available at [http://broadinstitute.org/cancer/software/rnai/data/Luo\_Cheung\_Subramanian\_PNAS\_2008.chip](http://broadinstitute.org/cancer/software/rnai/data/Luo_Cheung_Subramanian_PNAS_2008.chip). The mappings used by IGV are different only where a gene name has been modified to match one used in a genome on the genome server.
-
-## CRAM
-
-CRAM files are used to store aligned sequence data. The specification can be found at http://samtools.github.io/hts-specs/CRAMv3.pdf. 
-
-A corresponding index file is required. By convention, the index file name should be the same as the data file name, with “.crai” appended. For example, if the data file is named example_xyz.cram, the index file should be named example_xyz.cram.crai or example_xyz.crai.
+To display the RNAi data, IGV maps the hairpin names to gene names, determines the gene locus, and displays the data at that location. The hairpin-to-gene mappings used by IGV are based on work published by Luo, Cheung, Subramanian et al. (PNAS, 2008, 105:51:20380-20385). The mappings used by IGV are different only where a gene name has been modified to match one used in a genome on the genome server.
 
 ## genePred
 
@@ -338,13 +410,13 @@ Several variations of the genePred table format are described in the FAQ titled 
 
 A General Feature Format (GFF) file is a simple tab-delimited text file for describing genomic features. There are several slightly but significantly different GFF file formats. IGV supports the GFF2, GFF3 and GTF file formats.
 
-*   GFF2 files must have a .gff file extension for IGV. See the Wellcome Trust Sanger Institute web site ([http://www.sanger.ac.uk/Software/formats/GFF/GFF\_Spec.shtml](http://www.sanger.ac.uk/Software/formats/GFF/GFF_Spec.shtml)) for a description of the GFF2 file format.
+*   GFF2 files must have a .gff file extension for IGV. See the Wellcome Trust Sanger Institute web site ([https://ensembl.org/info/website/upload/gff.html](https://ensembl.org/info/website/upload/gff.html)) for a description of the GFF2 file format.
 *   GFF3 files must have a .gff3 file extension for IGV. See the Sequence Ontology Project (SO) web site ([http://www.sequenceontology.org/gff3.shtml](http://www.sequenceontology.org/gff3.shtml)) for a description of the GFF3 file format.
 *   GTF files must have a .gtf file extension for IGV. See the Computational Genomics Laboratory web site ([http://mblab.wustl.edu/GTF2.html](http://mblab.wustl.edu/GTF2.html)) for a description of the GTF file format.
 
 **One-based index:** Start and end positions are identified using a one-based index. The end position is included. For example, setting start-end to 1-2 describes two bases, the first and second in the sequence.
 
-**Display settings:** To modify IGV's default display settings for the .gff or .gff3 data, include a [track line](<?php echo base_path(); ?>TrackLine) in the file.
+**Display settings:** To modify IGV's default display settings for the .gff or .gff3 data, include a [track line](#track-lines) in the file.
 
 **Feature display name:** To override the default setting for which field is used to label the features in the IGV track, add the following line to the file:
 
@@ -365,9 +437,9 @@ A GISTIC file (.gistic) is the Gistic Scores File output from the GenePattern GI
 
 IGV displays GISTIC deletion scores as a blue line and amplification scores as a red line:
 
-![](img/gistictrack.png)
+![](../img/gistictrack.png)
 
-Example: [scores.gistic](<?php echo base_path(); ?>sites/cancerinformatics.org.igv/files/linked_files/scores.gp_gistic.gistic.txt)
+Example: [scores.gistic](ExampleFiles/scores.gistic)
 
 <table class="general" width="100%">
 	<thead>
@@ -429,16 +501,6 @@ Example: [scores.gistic](<?php echo base_path(); ?>sites/cancerinformatics.org.i
 		</tr>
 	</tbody>
 </table>
-
-## Goby
-
-Goby is an NGS data management framework designed to facilitate the implementation of efficient data analysis pipelines. It provides  efficient file formats to store NGS data and intermediary analysis results.
-
-IGV 2.0.4 renders Goby alignments with lines connecting parts of reads that span exon-exon junctions. Alignments with splicing information can be generated for RNA-Seq data with GSNAP compiled with Goby support. Splicing information is automatically detected when present and displayed. See example [here](http://campagnelab.org/software/goby/tutorials/displaying-splicing-information/).
-
-IGV supports Goby coverage data .counts files.
-
-For more information on these file formats, see the [Goby NGS Framework Web site](http://campagnelab.org/software/goby/)
 
 ## GWAS
 
@@ -514,12 +576,12 @@ For example:
 </table>
 **Zero-based index:** Start and end positions are identified using a zero-based index. The end position is excluded. For example, setting start-end to 1-2 describes exactly one base, the second base in the sequence.
 
-**Data must be grouped by chromosome and within each chromosome group sorted by start position:** The [igvtools](<?php echo base_path(); ?>igvtools) package package can be used to sort .igv files.
+**Data must be grouped by chromosome and within each chromosome group sorted by start position:** [igvtools](../UserGuide/tools/igvtools_ui.md) can be used to sort .igv files.
 
 Display settings**:** IGV displays IGV file data using default display settings. To modify the default display settings for the  data, you can:
 
-*   Include a [type line](<?php echo base_path(); ?>TypeLine) in the file to make IGV use the display settings for a different data type.
-*   Include a [track line](<?php echo base_path(); ?>TrackLine) in the file.
+*   Include a [type line](#type-lines) in the file to make IGV use the display settings for a different data type.
+*   Include a [track line](#track-lines) in the file.
 
 ### Custom columns
 
@@ -589,7 +651,7 @@ An LOH file (.loh) is a copy number file that contains "loss of heterozygosity" 
 
 Numbers that fall between these values represent the probability of LOH. IGV treats the values as a continuum and colors them according to the heatmap scale set for the LOH track.
 
-**Display settings:** To modify IGV's default display settings for the LOH data, include a [track line](<?php echo base_path(); ?>TrackLine) in the file.
+**Display settings:** To modify IGV's default display settings for the LOH data, include a [track line](#track-lines) in the file.
 
 ## MAF (Multiple Alignment Format)
 
@@ -625,7 +687,7 @@ A PSL file (.psl) is a tab-delimited text file that represents alignments, and a
 
 ## RES
 
-A RES file (.res) is a tab-delimited text file that contains gene expression data. The GCT and RES files are the same, except that the RES file format contains labels for each gene's absent (A) versus present (P) calls as generated by Affymetrix's GeneChip software. The RES file format is described on the GenePattern web site: [http://www.broadinstitute.org/cancer/software/genepattern/gp\_guides/file-formats/sections/res](http://www.broadinstitute.org/cancer/software/genepattern/gp_guides/file-formats/sections/res). See GCT File Format for a discussion of how IGV determines the loci for the gene expression data.
+A RES file (.res) is a tab-delimited text file that contains gene expression data. The GCT and RES files are the same, except that the RES file format contains labels for each gene's absent (A) versus present (P) calls as generated by Affymetrix's GeneChip software. The RES file format is described on the [GenePattern web site](https://www.genepattern.org/file-formats-guide#RES). See GCT File Format for a discussion of how IGV determines the loci for the gene expression data.
 
 ## RNA Secondary Structure Formats
 
@@ -639,7 +701,7 @@ _Example header line:_  color: 51 114 38 High-probability basepairs
 
 **Paired Ranges.** Each tab-delimited line in the rest of the file describes a single arc. The first field is the name of the associated IGV chromosome. The last field is a zero-based integer index indicating the arc color (from the colors listed in the header). The second through fifth fields are the 1-based inclusive nucleotide coordinates of paired ranges (a helix, if this is an RNA structure).
 
-**Example BP file**: [example.bp](/software/igv/sites/cancerinformatics.org.igv/files/example.bp)
+**Example BP file**: [example.bp](ExampleFiles/example.bp)
 
 The following RNA secondary structure formats can be imported into IGV and converted to the .bp format. After choosing a file to import, the user will be prompted to select the applicable chromosome and optional strand and starting position. IGV will then create a .bp file and load it.
 
@@ -665,7 +727,7 @@ The CT format (.ct) is used by software packages such as _[RNAstructure](http://
 
 Only the first structure in a CT file will be imported by IGV. CT files with additional headers (often starting with the # character) are currently not supported.
 
-**Example CT file:** [example.ct](/software/igv/sites/cancerinformatics.org.igv/files/example.ct)
+**Example CT file:** [example.ct](ExampleFiles/example.ct)
 
 ### DP (dot plot or pairing probability) 
 
@@ -683,13 +745,13 @@ Upon import, IGV colors pairs above 80% probability dark green. Pairs between 30
 
 ### Other
 
-IGV also supports [viewing RNA secondary structures in BED](https://software.broadinstitute.org/software/igv/node/284) format.
+IGV also supports [viewing RNA secondary structures in BED](../UserGuide/tracks/rna_structure.md) format.
 
 ## SAM
 
 For detailed specifications, we refer you to the September 2014 article titled [_Sequence Alignment/Map Format Specification_](http://samtools.github.io/hts-specs/SAMv1.pdf) by the SAM/BAM Format Specification Working Group, and the [Samtools site.](http://www.htslib.org)
 
-For information on the related binary version of SAM, see [BAM](https://software.broadinstitute.org/software/igv/BAM).
+For information on the related binary version of SAM, see [BAM](#bam).
 
 The citation for the 2009 Bioinformatics paper introducing the SAM format follows:
 
@@ -701,15 +763,15 @@ A SEG file (segmented data; .seg or .cbs) is a tab-delimited text file that list
 
 The segmented data file format is the output of the Circular Binary Segmentation algorithm (Olshen et al., 2004).
 
-Example: [example.seg](<?php echo base_path(); ?>sites/cancerinformatics.org.igv/files/linked_files/example.seg)
+Example: [example.seg](ExampleFiles/example.seg)
 
-**Display settings:** IGV displays segmented data files using the default track display settings for the copy number data type (see [Default Display](<?php echo base_path(); ?>DefaultDisplay)). To have IGV use the display settings for a different data type, include a [type line](<?php echo base_path(); ?>TypeLine) in the segmented data file.
+**Display settings:** SEG files can include a [type line](#type-lines) to set display settings.
 
 ## TDF
 
 A tiled data file (TDF) file (.tdf) is a binary file that contains data that has been preprocessed for faster display in IGV.
 
-Generate TDF files by using the [igvtools](<?php echo base_path(); ?>igvtools) package (toTDF command).
+Generate TDF files by using the [igvtools](../UserGuide/tools/igvtools_ui.md) **toTDF** command.
 
 ## Track Lines
 
@@ -926,9 +988,9 @@ _**Note: IGV does not currently support multiple track lines in a single file.
 	</tbody>
 </table>
 
-## Type Line
+## Type Lines
 
-When IGV loads a data file, it uses the file extension to determine the file format, the file format to determine the data type, and the data type to determine the default display options (see [Default Display](<?php echo base_path(); ?>DefaultDisplay)). In the IGV and  segmented (SEG, CBS) file formats, you can use a #type line to override the default data type and thus the default display options. For example, the IGV file format has a default data type of 'Other' and, therefore, the data in file is displayed using a blue bar chart with an autoscaled data range. By adding a #type line to the IGV file, you can indicate that the file contains gene expression data; in which case, the data will be displayed using a blue-to-red heatmap with the data range set from -1.5 to 1.5.
+When IGV loads a data file, it uses the file extension to determine the file format, the file format to determine the data type, and the data type to determine the default display options. In the IGV and segmented (SEG, CBS) file formats, you can use a #type line to override the default data type and thus the default display options. For example, the IGV file format has a default data type of 'Other' and, therefore, the data in file is displayed using a blue bar chart with an autoscaled data range. By adding a #type line to the IGV file, you can indicate that the file contains gene expression data; in which case, the data will be displayed using a blue-to-red heatmap with the data range set from -1.5 to 1.5.
 
 The ```#type``` must be the first line in the file. It has the following format:
 
@@ -938,16 +1000,16 @@ The ```#type``` must be the first line in the file. It has the following format:
 
 where _data-type_ is one of the following (these values are case-sensitive): COPY\_NUMBER, GENE\_EXPRESSION, CHIP, DNA\_METHYLATION, ALLELE\_SPECIFIC\_COPY\_NUMBER, LOH, RNAI
 
-The selected data type determines the display settings (see [Default Display](<?php echo base_path(); ?>DefaultDisplay)).
+The selected data type determines the display settings.
 
 ## VCF
 
-VCF stands for Variant Call Format, and it is used by the 1000 Genomes project to encode structural genetic variants. See [Viewing Variants](https://software.broadinstitute.org/software/igv/viewing_variants) for example IGV visualizations of mutation and VCF files.
+VCF stands for Variant Call Format, and it is used by the 1000 Genomes project to encode structural genetic variants. 
 
 *   Variant calls include SNPs, indels, and genomic rearrangements.
 *   Samples may also be annotated with attribute information, including pedigree and family information. IGV uses these annotatations to group, sort, and filter samples, e.g. to group samples by population group.
 
-A consistent color sheme is used in the variant display row, which is the top row, for files with or without geneotypes.
+A consistent color scheme is used in the variant display row, which is the top row, for files with or without geneotypes.
 
 *   **blue** - minor allele frequency/fraction is known from annotation or genotype data
     
@@ -1019,7 +1081,7 @@ Genotype data are given for three samples, two of which are phased and the third
 
 A WIG file (.wig) is a text file that defines either a feature or data track. It must have a .wig file extension for IGV to read it as a wiggle file. The WIG file format is described on the UCSC Genome Bioinformatics web site: [http://genome.ucsc.edu/FAQ/FAQformat](http://genome.ucsc.edu/FAQ/FAQformat).
 
-For faster loading, convert WIG files to [bigWig format](https://software.broadinstitute.org/software/igv/bigwig). Alternatively, convert to [TDF format](https://software.broadinstitute.org/software/igv/TDF) using [IGVTools](https://software.broadinstitute.org/software/igv/igvtools_gui).
+For faster loading, convert WIG files to [bigWig format](#bigwig). Alternatively, convert to [TDF format](#tdf) using [igvtools](../UserGuide/tools/igvtools_ui.md).
 
 **Notes;**
 
