@@ -6,7 +6,7 @@ dependencies:
   - python=3.8.6
   - mkdocs=1.1.2
   - mkdocs-markdownextradata-plugin=0.2.0
-  - pandoc=2.11.3.1
+  - pandoc
   - pip=20.3.3
   - pip:
     - mkdocs-windmill==1.0.4

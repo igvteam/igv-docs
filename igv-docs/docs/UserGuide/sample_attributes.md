@@ -4,7 +4,7 @@ The page title should not go in the menu
 <p class="page-title"> Sample attributes</p>
 
 Attributes can be associated with tracks and used for filtering, sorting, and grouping data. By default all tracks have 
-at least 3 attributes: Data File, Data Type, and Name. To display additional attributes, [load a sample attribute file](../sample_info). 
+at least 3 attributes: Data File, Data Type, and Name. To display additional attributes, [load a sample attribute file](../FileFormats/SampleInfo.md). 
 IGV displays attribute names and values in the attributes panel.
 
 ## Color-coded attribute values
@@ -29,7 +29,7 @@ To show or hide selected attributes:
 
 To show or hide all attributes:
 
-*   Click _**View>Show Attribute Display**_ to toggle the setting. A check mark next to the menu item indicates that the attribute panel is displayed. No check mark indicates that it is hidden. The attribute panel is hiddent by default. 
+*   Click _**View>Show Attribute Display**_ to toggle the setting. A check mark next to the menu item indicates that the attribute panel is displayed. No check mark indicates that it is hidden. The attribute panel is hidden by default. 
 
 !!! note " "  
-    This is a persistent setting. Toggling the menu item also toggles the corresponding setting on the General tab of the [Preferences window](<?php echo base_path(); ?>Preferences) and vice versa.
+    This is a persistent setting. Toggling the menu item also toggles the corresponding setting on the General tab of the _**View > Preferences**_ window and vice versa.
