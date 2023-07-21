@@ -4,3 +4,5 @@
 /webapp-docs/site
 .project
 /.idea/
+**/.DS_Store
+igv-docs/custom/.DS_Store

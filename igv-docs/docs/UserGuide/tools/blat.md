@@ -18,8 +18,8 @@ There are several options for running a BLAT query depending on the source of th
     * If soft clips are displayed and are of sufficient length, the popup menu will also include options to BLAT the soft-clipped sequence.
 * **Reference sequence defined by a feature** 
     * Right-click on a feature in a feature track and select _BLAT sequence_ from the popup menu. The BLAT input sequence is the section of the reference genome defined by the feature start and end bounds.
-* **Reference sequence definded by a region of interest (ROI)**
-    * After [creating a region of interest](../../navigation/#regions-of-interest), click on the
+* **Reference sequence defined by a region of interest (ROI)**
+    * After [creating a region of interest](../../regions), click on the
   region's red bar and select _BLAT sequence_ from the popup menu. The BLAT input sequence is the section of the
   reference genome defined by the region bounds.
 

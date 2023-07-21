@@ -20,7 +20,7 @@ The screenshot below shows a whole genome view with segmented copy number data. 
 
 ![Whole genome view](img/wholegenome_withsegdata.png)
 
-To view a **whole chromosme**:
+To view a **whole chromosome**:
 
 - Click on one of the chromosome labels in the whole-genome view; or
 
@@ -86,14 +86,14 @@ To **navigate between features** in a feature track (e.g., gene track, BED, or G
 
     *   Press ```Ctrl+b``` or just ```b``` to jump backward to the previous feature.
 
-    By default, IGV positions the start of the next (or previous) feature at the center of the display and keeps the zoom level the same. Settings in _**View > Prefences > General**_ can be changed to instead center the view on the feature and zoom in/out to a level that exactly fits the feature plus some optional padding on either side.
+    By default, IGV positions the start of the next (or previous) feature at the center of the display and keeps the zoom level the same. Settings in _**View > Preferences > General**_ can be changed to instead center the view on the feature and zoom in/out to a level that exactly fits the feature plus some optional padding on either side.
 
 !!! tip "Tip"
     To easily navigate between loci of particular interest to you, create a *non*-indexed BED file of those loci and provide meaningful names to each one. Once you've loaded that file, you can enter the names into the search box or jump to the next/previous locus using the `f` and `b` keys. 
 
 # View multiple regions
 
-By default, IGV displays one contigous genomic region, but multiple regions can also be displayed side-by-side in split panels. All the panels in this muli-locus view display the same set of tracks. 
+By default, IGV displays one contiguous genomic region, but multiple regions can also be displayed side-by-side in split panels. All the panels in this multi-locus view display the same set of tracks. 
 
 ### Managing the panels
 

@@ -31,8 +31,8 @@ nav:
     - Sample attributes: UserGuide/sample_attributes.md
     - Regions: UserGuide/regions.md
     - Sessions: UserGuide/sessions.md
-    - User preferences: UserGuide/preferences.md
     - Saving images: UserGuide/saving_images.md
+    - User preferences: UserGuide/preferences.md
     - Tools Menu:
         - Batch scripts: UserGuide/tools/batch.md
         - igvtools: UserGuide/tools/igvtools_ui.md

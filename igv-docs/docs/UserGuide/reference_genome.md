@@ -57,12 +57,12 @@ To remove a genome from the IGV menu:
 When zoomed in sufficiently, the reference genome _**Sequence**_ track appears at the top of the lower panel above the corresponding _Genes_ track, if any, in the IGV display. The sequence is represented by
 colored bars or colored letters, depending on zoom level, with adenine in green, cytosine in blue, guanine in yellow,
 and thymine in red (**A**, **C**, **G**, **T**). TBD To change this default nucleotide coloring scheme see
-the [Modify the prefs.properties file](http://www.broadinstitute.org/software/igv/prefs.properties) page.
+the [User preferences](preferences.md) page.
 
-IGV displays the sequence of bases as they appear in the FASTA file for the reference genome. In addtion to the upper
+IGV displays the sequence of bases as they appear in the FASTA file for the reference genome. In addition to the upper
 case letters A, C, G, and T, you may see lower case letters for these bases, and also N/n. Lower case letters often
-mark repeated regions, and N/n may represent ambigous nucleotides. However, the convention for the use of case and N, is
-not completely standardised, and depends on the creator of the genome sequence.
+mark repeated regions, and N/n may represent ambiguous nucleotides. However, the convention for the use of case and N, is
+not completely standardized, and depends on the creator of the genome sequence.
 
 ![](img/SL_IGVsequencetrackzoomsm2015-04-01.png)
 
