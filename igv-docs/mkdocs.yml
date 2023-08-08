@@ -22,7 +22,8 @@ nav:
             - Alignment track basics: UserGuide/tracks/alignments/viewing_alignments_basics.md
             - Paired-end alignments: UserGuide/tracks/alignments/paired_end_alignments.md
             - RNA-seq data: UserGuide/tracks/alignments/rna_seq.md
-            - Methylation data: UserGuide/tracks/alignments/methylation.md
+            - Bisulfite sequencing: UserGuide/tracks/alignments/bisulfite_sequencing.md
+            - Base modifications:  UserGuide/tracks/alignments/base_modifications.md
         - Variants (VCF): UserGuide/tracks/vcf.md
         - Mutations (MAF) : UserGuide/tracks/maf.md
         - Segmented copy number: UserGuide/tracks/seg.md
