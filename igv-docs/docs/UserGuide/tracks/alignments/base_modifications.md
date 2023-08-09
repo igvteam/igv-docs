@@ -17,37 +17,43 @@ DNA strand  is assumed to be the strand of the read marked first-in-pair.
 
 ![](../../img/basemods/mismatch.png)
 
-3. Base modifications are indicated by color, with a distinct color assigned to each modification type.  These colors 
+4. Base modifications are indicated by color, with a distinct color assigned to each modification type.  These colors 
 are settable in user preferences.
 
-4. Two modes are provided for coloring base modifications, `Monocolor` and `2-Color`.    Both modes compare likelihood
+5. Two modes are provided for coloring base modifications, monocolor and 2-Color.    Both modes compare likelihood
 of modification with a user-settable threshold, `0.5` (50%) by default, and color the base if likelihood exceeds the 
 threshold.   In the case of multiple modifications of a single base, the modification with the highest likelihood is 
-used to assign color if that likelihood exceeds the `threshold`,   If no modification likelihood exceeds the `threshold` 
-the base remains uncolored (gray)
+used to assign color if that likelihood exceeds the threshold,   If no modification likelihood exceeds the threshold 
+the base remains uncolored.
 
 **Monocolor**
 
-This coloring mode highlights the presence of a modification exceeding the threshold, if any,  by its assigned color, 
-with alpha transparency used to indicate the liklelihood of the modification as reported with the ML tag.     
+This coloring mode highlights the presence of a modification exceeding the threshold, if any,  by its assigned color. 
+Alpha transparency used to indicate the liklelihood of the modification as reported with the ML tag.  Default colors
+are show below.
 
+![](../../img/basemods/mod_colors.png)
 
 **2-Color**
 
-This  mode extends the monocolor scheme by assigning a color for the unmodified state, `blue` by default.   The likelihood of 
-no-modification is taken as 1 - (sum of all modification likelhoods).  For example, a base with likelihood of 
-5hmC = 30%,  5mC = 10%, would be assigned a likelihood of no modification of 60%.
+This  mode extends the monocolor scheme by assigning a color for the unmodified base, blue by default.   The likelihood of 
+no modification is taken as 1 - (sum of all modification likelhoods).  For example, a base with likelihoods of 
+5hmC = 30% and 5mC = 10%, would be assigned a likelihood of no modification of 60%.
 As in mono-color mode, color is assigned based on the modification with highest likelihood, with the addition of
-`unmodified` as a possible state.  This mode gives equal emphasis to
+no modification (`unmodified`) as a possible state.  This mode gives equal emphasis to
 modified and unmodified bases.  If no modification (including `unmodifed`) exceeds the threshold the 
-base remains uncolored.  This is possible when 2 or more modification likelihoods are recorded for a single base.
+base remain uncolored.  
 
 Visualization of 5-Methylcytosine (5mC) modifications in this mode is consistent with visualization of methylation from
 [bisulfite sequencing](./bisulfite_sequencing.md), making experiments from the two technologies comparable.  
 
-The color representing the unmodified base can be set on the **Base Mods** tab of the prefeneces page.  Settings are
-available for each canonical base, A,C,T, and G.
+The color representing the unmodified base can be set on the **Base Mods** tab of the prefeneces page, and can be
+customized for each canonical base (A,C,T, and G).  
 
+
+**Coverage Track**
+
+TODO
 
 
 **Example screenshots**
@@ -60,4 +66,3 @@ available for each canonical base, A,C,T, and G.
 
 
 
-## Coverage track
