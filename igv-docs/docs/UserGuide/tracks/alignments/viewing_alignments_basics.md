@@ -8,8 +8,6 @@ The page title should not go in the menu
 
 Aligned reads from sequencing can be loaded into IGV in the [BAM](<?php echo base_path(); ?>BAM) format, [SAM](<?php echo base_path(); ?>SAM) format, or [CRAM](http://<?php echo base_path(); ?>CRAM) format.
 
-Both BAM and SAM files are described on the Samtools project page [http://www.htslib.org](http://www.htslib.org) and in the 2014 article titled [_Sequence Alignment/Map Format Specification_](http://samtools.github.io/hts-specs/SAMv1.pdf) by the SAM/BAM Format Specification Working Group.
-
 IGV requires that BAM and CRAM files have an associated index file.
 
 *   The main data file must include the _.bam_ or ._cram_ extension.
