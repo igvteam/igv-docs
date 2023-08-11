@@ -49,15 +49,36 @@ To remove a genome from the IGV menu:
 
 !!! tip " "
     You cannot remove the genome that is currently being used in the IGV window.
+    
+    
+# Creating a chromosome name alias file
+
+One of the common causes for a data loading failure is a mismatch in chromosome names between the data file and the reference genome it is being viewed against.  
+
+One workaround is to create a tab delimited "alias" file to specify alternate names for a chromosome. For instance, the first 2 lines of an alias file might look like this:
+
+```
+chr1 <tab> 1 <tab> CM000663.2 <tab> NC_000001.11
+chr2 <tab> 2 <tab> CM000664.2 <tab> NC_000002.12
+```
+
+Name the file with the pattern `<genome iD>_alias.tab`,  for example, **hg38_alias.tab**.  Place this file in the IGV **genomes** directory. The default location is `<user home>/igv/genomes`, but it can be changed in *View > Preferences > Advanced.*
+
+!!! tip " "
+    Certain well-known aliases are built into IGV and do not require an alias file.  These include mappings that involve adding or removing the prefix `chr` to the name, for example IGV treats chromosomes named **1** and **chr1** as the same chromosome. Also, NCBI identifiers that start with `gi|` are automatically mapped.
 
 # Viewing the reference genome tracks
+
+## Gene annotation track
+The IGV hosted genomes include a default gene annotation track. It is displayed the same way as any other [feature/annotation track](tracks/annotations.md) that is loaded into IGV.
 
 ## Sequence track
 
 When zoomed in sufficiently, the reference genome _**Sequence**_ track appears at the top of the lower panel above the corresponding _Genes_ track, if any, in the IGV display. The sequence is represented by
-colored bars or colored letters, depending on zoom level, with adenine in green, cytosine in blue, guanine in yellow,
-and thymine in red (**A**, **C**, **G**, **T**). TBD To change this default nucleotide coloring scheme see
-the [User preferences](preferences.md) page.
+colored bars or colored letters, depending on zoom level, with adenine (A) in green, cytosine (C) in blue, guanine (G) in yellow, and thymine (T) in red. 
+<!---
+TBD describe how to change the default colors
+-->
 
 IGV displays the sequence of bases as they appear in the FASTA file for the reference genome. In addition to the upper
 case letters A, C, G, and T, you may see lower case letters for these bases, and also N/n. Lower case letters often
@@ -92,5 +113,3 @@ codons are colored red. When you zoom all the way in, the amino acid symbols wil
 
 You can toggle the display of this translation track by clicking once, anywhere in the sequence or translation track, or
 by toggling _**Show Translation**_ in the track popup menu.
-## Gene annotation track
-The IGV hosted genomes include a default gene annotation track. It is displayed the same way as any other [feature/annotation track](tracks/annotations.md) that is loaded into IGV.

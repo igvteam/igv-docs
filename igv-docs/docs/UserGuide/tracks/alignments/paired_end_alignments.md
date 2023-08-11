@@ -1,3 +1,8 @@
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Paired-end alignments </p>
+
 # Viewing paired-end alignments
 
 ## View as pairs

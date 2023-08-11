@@ -1,3 +1,8 @@
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Features and gene annotations </p>
+
 # TBD More general stuff about viewing annotations as in our workshops
 
 
@@ -26,7 +31,7 @@ This feature is similar to feature jumping. To feature-jump, you select a featur
 Ctrl-B for back. To exon-jump, you select a feature track and press SHIFT-Ctrl-F to center the next exon in your view,
 SHIFT-Ctrl-B to move back one exon.
 
-# GFF style tags for BED files
+# GFF style tags for BED files
 
 
 The "name" field (column 4) of a BED file can contain GFF3 style key-value attribute tags by specifying "gffTags=on" on

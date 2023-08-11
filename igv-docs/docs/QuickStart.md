@@ -26,23 +26,20 @@ IGV displays data mapped to the genomic coordinates of a reference genome. The d
 
 ### 3. Load data
 
-Data and genome annotations are loaded via the File menu.
-See information on supported [file types](./fileFormats.html). 
+Data and genome annotations are loaded via the *File* menu, from the local file system, via URL, or from a hosted IGV server. See the section on [Loading and removing data](UserGuide/loading_data.md) for the details. 
 
-TBD Included information about loading data (local files, URLs, google cloud, aws, indexed files, where does the data come from / go)
-
-How to access/set track options (right-click menu)
+The data files are displayed as horizontal tracks stacked on top of the reference genome. The display attributes of the tracks depend on the data type. IGV determines the data type based on the filename extension of the file that was loaded. See [File Formats](../FileFormats/DataTracks.md) for information about the file formats IGV accepts for data tracks and the ***Tracks and Data Types*** section of the  ***User Guide*** describes the attributes of the various track types.
 
 !!! tip " " 
-    Make sure to load only data files that correspond to the current reference genome. In general, a genomic data file does not include information about the genome it aligns to, which means IGV cannot automatically check if they match.
+    Make sure to load only data files that correspond to the current reference genome. In general, a genomic data file does not include information about the particular genome assembly it was aligned to, which means IGV cannot automatically check if they match.
 
 ### 4. Navigate
 
-IGV-Web provides several navigation controls for specifying the genomic region to view. A ruler indicating the extent of the current region is displayed below the toolbar, and the size of the region and its genomic coordinates are displayed in the toolbar.
+IGV-Web provides several navigation controls for specifying the genomic region to view. A ruler indicating the extent of the current region is displayed below the toolbar, and the size of the region and its genomic coordinates are displayed in the toolbar. See [Navigating the view](UserGuide/navigation.md) for details.
 
+### 5. Save the IGV view
 
-# What's missing?
+Saving a [session](UserGuide/sessions.md) file will allow you to **save the state of your current IGV view** so you can reproduce it at another time and continue where you left off. The data files themselves are not stored in the session, but rather the information needed to reload them. You can also share session files with others, as long as they also have access to the same data files.
 
-* The IGV window? Maybe put it under Navigate?
-*  Setting user preferences 
-*  Session?
+Select *File > Save PNG image...* or *File > Save SVG image...* to **create a static image** of the IGV window. Alternatively, you can create an image of only selected tracks via the track pop-up menu.
+

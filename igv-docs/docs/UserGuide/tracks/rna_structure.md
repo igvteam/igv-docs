@@ -1,4 +1,9 @@
 
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> RNA structure </p>
+
 IGV can be used to visualize RNA secondary structures in arcs connecting base pairs (the linear format). Alternative
 structures, where one nucleotide is involved in more than one base pair, and pseudo knots, where arcs cross, can be
 accommodated.

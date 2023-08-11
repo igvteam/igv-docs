@@ -1,4 +1,9 @@
 
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Segmented copy number (SEG) </p>
+
 Display Notes
 -------------
 

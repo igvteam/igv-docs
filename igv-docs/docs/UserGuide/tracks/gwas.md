@@ -1,3 +1,8 @@
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> GWAS </p>
+
 IGV can display genome-wide association study (GWAS)  data as a "manhattan plot", color-coded by chromosome. Data
 formats are described [here](<?php echo base_path(); ?>GWAS).
 
