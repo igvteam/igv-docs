@@ -50,7 +50,7 @@ Track names are displayed in a panel to the left the track data, and to the left
 
 * To **resize the name panel**, select *View > Set Name Panel Width...*
 
-By default, tracks are assigned names based on the **name** sample attribute. To change which sample attribute is used to define the **default track name**:
+By default, tracks are assigned names based on the **name** sample attribute. If you have loaded additional [sample attributes](../sample_attributes.md), you can use a different attribute to define the **default track name**:
 
 *   Enter the sample attribute name in the field *Sample attribute key for track names* in *View > Preferences > Tracks*.
 

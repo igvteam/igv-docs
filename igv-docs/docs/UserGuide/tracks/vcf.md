@@ -3,10 +3,10 @@ The page title should not go in the menu
 -->
 <p class="page-title"> Variants (VCF) </p>
 
-VCF stands for Variant Call Format, and this file format is used by the 1000 Genomes project to encode SNPs and other
-structural genetic variants. The format is further described on
-the [1000 Genomes project Web site](http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/VCF%20%28Variant%20Call%20Format%29%20version%204.0/encoding-structural-variants)
-.
+VCF, which stands for Variant Call Format, is a standardized text file format used for representing SNP, indel, and structural variation calls. The full specification of the format can be found at [https://samtools.github.io/hts-specs](https://samtools.github.io/hts-specs).
+
+In addition to the variant calls, VCF files can include genotype information for the samples underlying the calls.
+
 A consistent color scheme is used in the variant display row, which is the top row, for files with or without geneotypes.
 
 * blue - minor allele frequency/fraction is known from annotation or genotype data

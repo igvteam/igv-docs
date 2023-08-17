@@ -36,7 +36,7 @@ IGV does not currently support multiple track lines in a single BED file  
 
 **Display settings:** To modify IGV's default display settings for the BED data, include a [track line](#track-lines) in the file.
 
-**GFF tag option:** By adding a #gffTags line to the beginning of a .bed file, you can add GFF3-style attributes to the _Name_ field (column 4) of a BED file which are displayed in the popup text. 
+**GFF tag option:** By adding a #gffTags line to the beginning of a .bed file, you can add GFF3-style attributes to the _Name_ field (column 4) of a BED file which are displayed in the mouse hover popup text. 
 
 *   The GFF _Name_ property will become the display name of the feature.
 *   You must URL encode spaces and other whitespace (e.g. replace space with %20).  This is not a requirement of gff3, rather required because bed files are whitespace delimited.

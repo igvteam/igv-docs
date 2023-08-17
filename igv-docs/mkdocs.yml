@@ -18,8 +18,8 @@ nav:
     - Navigating the view: UserGuide/navigation.md
     - Tracks and Data Types:
         - Track attributes: UserGuide/tracks/track_attributes.md
+        - Genome annotations: UserGuide/tracks/annotations.md
         - Quantitative data: UserGuide/tracks/quantitative_data.md
-        - Features and gene annotations: UserGuide/tracks/annotations.md
         - Alignments:
             - Alignment track basics: UserGuide/tracks/alignments/viewing_alignments_basics.md
             - Paired-end alignments: UserGuide/tracks/alignments/paired_end_alignments.md
