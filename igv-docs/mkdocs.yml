@@ -27,7 +27,6 @@ nav:
             - Bisulfite sequencing: UserGuide/tracks/alignments/bisulfite_sequencing.md
             - Base modifications:  UserGuide/tracks/alignments/base_modifications.md
         - Variants (VCF): UserGuide/tracks/vcf.md
-        - Mutations (MAF) : UserGuide/tracks/maf.md
         - Segmented copy number: UserGuide/tracks/seg.md
         - GWAS: UserGuide/tracks/gwas.md
         - RNA structure: UserGuide/tracks/rna_structure.md
