@@ -26,7 +26,6 @@ nav:
             - RNA-seq data: UserGuide/tracks/alignments/rna_seq.md
             - Methylation data: UserGuide/tracks/alignments/methylation.md
         - Variants (VCF): UserGuide/tracks/vcf.md
-        - Mutations (MAF) : UserGuide/tracks/maf.md
         - Segmented copy number: UserGuide/tracks/seg.md
         - GWAS: UserGuide/tracks/gwas.md
         - RNA structure: UserGuide/tracks/rna_structure.md

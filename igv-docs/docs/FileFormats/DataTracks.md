@@ -1004,42 +1004,21 @@ The selected data type determines the display settings.
 
 ## VCF
 
-VCF stands for Variant Call Format, and it is used by the 1000 Genomes project to encode structural genetic variants. 
-
-*   Variant calls include SNPs, indels, and genomic rearrangements.
-*   Samples may also be annotated with attribute information, including pedigree and family information. IGV uses these annotatations to group, sort, and filter samples, e.g. to group samples by population group.
-
-A consistent color scheme is used in the variant display row, which is the top row, for files with or without geneotypes.
-
-*   **blue** - minor allele frequency/fraction is known from annotation or genotype data
-    
-*   **grey** - minor allele frequency is not known
-    
-*   **red** - height is proportional to minor allele frequency
-    
+VCF, which stands for Variant Call Format, is a standardized text file format used for representing SNP, indel, and structural variation calls. The full specification of the format can be found at [https://samtools.github.io/hts-specs](https://samtools.github.io/hts-specs). IGV supports VCF version 4.
 
 Required Extensions: .vcf, .vcf.gz
 
-If the file is gzipped (ends with .vcf.gz), it must have an accompanying Tabix index (see below).
+**Indexing**:
 
-**Requirements**
+VCF files are not required to be indexed, but the whole file will then be loaded into IGV memory, which is not recommended for larger files.
 
-IGV supports VCF Version 4.
+VCF files can be indexed with *[igvtools](../UserGuide/tools/igvtools_ui.md)* or *Tabix*:
 
-VCF data files must be indexed for viewing in IGV, either by using igvtools or by using Tabix. 
+*   **igvtools** can be run from the command line or IGV itself (_Tools > Run igvtools..._)  After launching, choose the _Index_ command and browse to your .vcf file. The index file (.idx) will be created in the same directory as the .vcf file. _igvtools_ also sorts .vcf files.
 
-*   **igvtools** can be run from the command line or IGV itself (_Tools>Run igvtools..._)  After launching, choose the _Index_ command and browse to your .vcf file. The index file (.idx) will be created in the same directory as the .vcf file.
-    *   _igvtools_ also sorts .vcf files.
-*   **Tabix** creates a .tbi file.  Tabix, including [documentation](http://samtools.sourceforge.net/tabix.shtml), is available from the [SamTools](http://samtools.sourceforge.net/tabix.shtml) Web site.  
-  
-**VCF Specification**
+*   **Tabix** is used to index gzipped files (ending with .vcf.gz); it creates a .tbi file.  Tabix, including [documentation](http://samtools.sourceforge.net/tabix.shtml), is available from the [SamTools](http://samtools.sourceforge.net/tabix.shtml) website.  
 
-*   The v4.0 specifications: [http://www.1000genomes.org/wiki/doku.php?id=1000\_genomes:analysis:vcf4.0](http://www.1000genomes.org/wiki/doku.php?id=1000_genomes:analysis:vcf4.0)
-*   v4.1 specifications: [http://samtools.github.io/hts-specs/VCFv4.1.pdf](http://samtools.github.io/hts-specs/VCFv4.1.pdf)
-*   v4.2 specifications: [http://samtools.github.io/hts-specs/VCFv4.2.pdf](http://samtools.github.io/hts-specs/VCFv4.2.pdf)  
-
-
-Example V.4.0 File:
+**Example V.4.0 File:**
 
 ```
 ##fileformat=VCFv4.0  
@@ -1067,7 +1046,7 @@ Example V.4.0 File:
 20 1234567 microsat1 GTCT G,GTACT 50 PASS NS=3;DP=9;AA=G GT:GQ:DP 0/1:35:4 0/2:17:2 1/1:40:3
 ```
 
-**This example shows in order:**
+This example shows in order:
 
 *   A good, simple SNP
 *   A possible SNP that has been filtered out because its quality is below 10
