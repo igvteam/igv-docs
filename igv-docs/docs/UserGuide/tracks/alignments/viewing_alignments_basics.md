@@ -159,16 +159,6 @@ All the values for the display of base mismatches are **user-settable**:
 
 ## Indels
 
-**Insertions** with respect to the reference genome are indicated with a purple `I`. When sufficiently zoomed in, insertions larger than one base are labeled with the size on a purple background. Hover over the insertion symbol to view the inserted bases.
-
-In the following example, the upper screenshot shows five insertions at a zoom level where only the plain `I` can be shown. In the lower screenshot, the view has been zoomed in and we can see that each of the insertions is two bases long.
-
-![](../../img/insertion-i.png){width=300} <br>
-![](../../img/insertion-number.png){width=750}
-
-To **disable labeling** the insertions with numbers, uncheck the box *Label indels > threshold* in the *Alignments* tab of the *View > Preferences* window.
-
-Alternatively, you can **change the size threshold** above which insertions are labeled by setting the number in the *Label threshold (bases)* field. For example, in the above example, setting the value for *Label threshold (bases)* to 2 (or any number larger than 2) would have the effect of displaying all the insertions in the lower screenshot as the purple `I` without the number.
 
 <!---
 TBD insertion markers
@@ -178,7 +168,33 @@ TBD insertion markers
 
 ![](../../img/aligndeletions_0.jpg)
 
-To suppress the display of **any small indel** (insertion or deletion) in a particular track, right-click on the track and select *Hide small indels*, and then select *Small indel threshold...* to specify the size threshold for "small". Any indels smaller than the threshold number are not displayed. For example to hide all the two-base insertions in the above example, the threshold must be set to 3 or more.  
+**Insertions** with respect to the reference genome are indicated with a purple `I`. Click on the insertion symbol (or hover over it if you have changed the pop-up text behavior) to view the inserted bases. 
+
+![](../../img/insertion-i.png){width=300}
+
+When sufficiently zoomed in, indels (deletions and insertions) larger than one base are by default **labeled with their size**. The following example shows a zoomed in view of the above insertions and we can see they are each 2-bases.
+
+![](../../img/insertion-number.png){width=750}
+
+To **disable labeling** the indel size, uncheck the box *Label indels > threshold* in the *Alignments* tab of the *View > Preferences* window.
+
+Alternatively, you can **change the size threshold** above which indels are labeled by setting the number in the *Label threshold (bases)* field. For example, in the above example, setting the value for *Label threshold (bases)* to 2 (or any number larger than 2) would have the effect of displaying the insertions in the lower screenshot as the purple `I` without the number even when zoomed in.
+
+To **suppress** the display of **small indels** (insertions and deletions):
+
+* To hide the indels in a track, right-click on the track and select *Hide small indels*, and then select *Small indel threshold...* to specify the size threshold for "small". 
+
+* To hide the indels in all tracks, check the box *Hide indels > threshold* and set the *Indel size threshold (bases)* value in the *Alignments* of *View > Preferences*.
+
+Any indels smaller than the threshold number are not displayed. For example to hide all the two-base insertions in the above example, the threshold must be set to 3 or more.  
+
+!!! note " "
+    Controling indel preferences is **different in third gen** alignment tracks. 
+
+    * One-base indels are hidden by default (vs. shown by default for other experiment types). To show all indels or to change the size threshold for hidden indels in third gen alignments, the values must be set in the *Third Gen* tab of *View > Preferences* (not the *Alignments* tab).
+    
+    * Indels larger than one base are labeled by default, which is the same as for other experiment types, but changing the values must be done in the *Third Gen* tab of *View > Preferences* (not the *Alignments* tab).
+
 
 ## Read mapping quality
 
@@ -252,7 +268,7 @@ In areas of deep read coverage, by default the **reads are downsampled**, i.e. n
 *   Sampling window size; default 50 bases
 *   Maximum number of reads per window; default 100
 
-To change the defaults, set the values in the *Downsampling* section of the *Alignments* tab in the *View > Preferences* window. 
+To change the defaults, set the values in the *Downsampling* section of the *Alignments* tab in the *View > Preferences* window. Note that 3rd gen tracks are not downsampled by default; it can be enabled in the *Third Gen* tab.
 
 !!! tip " "
     If your file has deep coverage and you want to be able to see more of the reads, try decreasing the [visibilty window](#visibility-window) before you disable or decrease the downsampling. The narrower window will help keep the memory usage down.
