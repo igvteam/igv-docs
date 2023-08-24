@@ -21,7 +21,7 @@ nav:
         - Genome annotations: UserGuide/tracks/annotations.md
         - Quantitative data: UserGuide/tracks/quantitative_data.md
         - Alignments:
-            - Alignment track basics: UserGuide/tracks/alignments/viewing_alignments_basics.md
+            - Alignments basics: UserGuide/tracks/alignments/viewing_alignments_basics.md
             - Paired-end alignments: UserGuide/tracks/alignments/paired_end_alignments.md
             - RNA-seq data: UserGuide/tracks/alignments/rna_seq.md
             - Methylation data: UserGuide/tracks/alignments/methylation.md

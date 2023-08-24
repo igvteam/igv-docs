@@ -12,8 +12,8 @@ Many of the track attributes are also user settable:
 
 To **set a attribute value for a specific track**, right-click on the track (either in the data panel or the track name) to bring up a pop-up menu that is specific to the track type.
 
-!!! note " "
-    Some attributes can be set on multiple tracks at the same time. First, select all the tracks and then right click on one of them to bring up the pop-up menu. You can select multiple tracks either by using the normal multi-select mouse actions (e.g. CTRL-click on Windows; CMD-click on Mac) or by clicking an attribute in the [sample attribute panel](../sample_attributes.md) to select all tracks tagged with that attribute value.
+!!! tip " "
+    Some attributes can be set on multiple tracks at the same time. First, select all the tracks and then right click on one of them to bring up the pop-up menu. You can select multiple tracks either by using the normal multi-select mouse actions (e.g. `Ctrl-click` on Windows; `Cmd-click` on MacOS) or by clicking an attribute in the [sample attribute panel](../sample_attributes.md) to select all tracks tagged with that attribute value.
    
 Select *View > Preferences* to **change the default value for an attribute** for a particular track type. Not all default values are user settable.
 
@@ -58,10 +58,10 @@ To set a track name to a **specific string**:
 
 *   Right-click the track, then select _Rename Track..._ in the pop-up menu.
 
-!!! tip " "
+!!! note " "
     You can only rename one track at a time. 
     
-!!! note " " 
+!!! tip " " 
     Name changes will be preserved if you save a [session](../../sessions).
     
 

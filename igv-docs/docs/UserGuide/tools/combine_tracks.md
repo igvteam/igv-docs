@@ -3,9 +3,9 @@ The page title should not go in the menu
 -->
 <p class="page-title"> Combining tracks </p>
 
-# How to combine tracks
-
 The data from two quantative data tracks can be combined into one track using arithmetic operations on the data values.
+
+# How to combine tracks
 
 1. Select two tracks by using the normal multi-select mouse actions (e.g. `Ctrl-click` on Windows; `Cmd-click` on MacOS).
  
