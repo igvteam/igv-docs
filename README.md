@@ -27,12 +27,3 @@ folder); the files there override the matching ones from the template.  The full
 the [mkdocs_windmill](https://github.com/gristlabs/mkdocs-windmill/tree/master/mkdocs_windmill) sub-folder of that repo.  We can copy over and
 extend those as well, as needed.
 
-We have no public site yet.
-- Here is the [test-docs](https://internal.broadinstitute.org/~genepatt/test-docs/igv-docs-site/) website.
-- Here is the [Jenkins Snapshot Doc Website](https://jenkins-mesirov.broadinstitute.org/jenkins/view/IGV/job/IGV%20Doc%20Website%20SNAPSHOT/) project for building the test 
-site.  This will auto-build on its own ~5 minutes after any commit to `main`. You have to be on the Broad VPN.
-
-[Pandoc](https://pandoc.org/) is also included in the Conda environment.  David had luck converting the GSEA pages by doing a 
-copy-paste into GDocs, exporting as Word .docx, and then using the following command:
-`pandoc wiki_page.docx -t markdown_phpextra -o wiki_page.md`
-A good starting point for the IGV user guide would be start with the HTML expert from the Drupal site.
