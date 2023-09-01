@@ -16,7 +16,7 @@ Each **variant call** in the VCF file is displayed as a bar at the variant's loc
 [![](../img/vcfwgenotypes.jpg)](../img/vcfwgenotypes.jpg)
 -->
 
-In addition to variant calls, VCF files can optionally include **genotypes**. If they are included in the file, genotypes are displayed below the variant calls. Each row represents the genotypes of a singe sample, and the sample names are displayed in the name panel to the left of the data. 
+In addition to variant calls, VCF files can optionally include **genotypes**. If they are included in the file, genotypes are displayed below the variant calls. Each row represents the genotypes of a single sample, and the sample names are displayed in the name panel to the left of the data. 
 
 ![](../img/vcf-genotypes.png)
 
@@ -52,7 +52,7 @@ Loading a [**sample attribute file**](../../FileFormats/SampleInfo.md) alongside
 
 VCF tracks have three **display mode** options: . 
 
-* `Collapsed` : All variant calls are displyed in one row and the genotypes are not displayed.
+* `Collapsed` : All variant calls are displayed in one row and the genotypes are not displayed.
 
 * `Expanded` : Uses multiple rows to display the variant calls in order to make tightly packed calls easier to distinguish and all the genotypes are displayed. The examples above are *Expanded*, which is the default.
 
@@ -65,7 +65,7 @@ To **hide the genotypes** in *Expanded* or *Squished* mode, unselect *Show Genot
 
 # Color schemes
 
-The **variant calls** can be colored by `Allele Frequency` which is an annotation provided in the VCF file, or by `Allele Fraction` which is similar to allele frequency, but is based on the specific samples in the VCF file as opposed to an annotation. 
+The **variant calls** can be colored by `Allele Frequency` which is an annotation provided in the VCF file, or by `Allele Fraction` which is similar to allele frequency but is based on the specific samples in the VCF file as opposed to an annotation. 
 
 The variant call bars are rendered using two colors, one for the reference allele and one for the alternate allele, and the height of each section represents the frequency or fraction. By default, the variant call colors are red and blue:
 

@@ -23,7 +23,7 @@ IGV uses color-coded blocks to represent the attribute values. If two samples ha
 
 To show or hide **selected** attributes:
 
-* Select _View > Select Attributes to Show..._ to see the list of attributes. Check (or clear) an attribute’s check box to show (or hide) the attribute.
+* Select _View > Select Attributes to Show..._ to see the list of attributes. Check (or clear) an attribute's check box to show (or hide) the attribute.
 
 To show or hide **all** attributes:
 

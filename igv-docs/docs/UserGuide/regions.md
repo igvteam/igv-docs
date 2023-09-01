@@ -163,7 +163,7 @@ To view an existing gene list in multi-locus view, select a name in the _List_ 
 
 ## My gene Lists
 
-You can click _Import_ to upload a text file containing your own gene list. Load lists of genes or loci in [GMT](https://genepattern.org/file-formats-guide#GMT), [GRP](https://genepattern.org/file-formats-guide#GRP) or [BED](../../FileFormats/DataTracks.md) format. For example, find and download GMT files from the [Molecular Signatures Database (MSigDB)](https://msigdb.org).
+You can click _Import_ to upload a text file containing your own gene list. Load lists of genes or loci in [GMT](https://genepattern.org/file-formats-guide#GMT), [GRP](https://genepattern.org/file-formats-guide#GRP) or [BED](../FileFormats/DataTracks.md) format. For example, find and download GMT files from the [Molecular Signatures Database (MSigDB)](https://msigdb.org).
 
 You can also click _New_ to create a new gene list. This opens a dialog in which you can enter a name, description, and your list of genes or regions.
 

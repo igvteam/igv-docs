@@ -38,7 +38,7 @@ To remove **all** tracks:
 
 To remove **specific** tracks, do one of the following:
 
-*   Right-click on a track (either in the data data panel or the track name) and select _Remove Tracks_ in the pop-up menu.
+*   Right-click on a track (either in the data panel or the track name) and select _Remove Tracks_ in the pop-up menu.
 *   Select multiple tracks and then right-click on one of the selected tracks and select _Remove Tracks_ in the pop-up menu. You can select multiple tracks either by using the normal multi-select mouse actions (e.g. CTRL-click on Windows; CMD-click on Mac) or by clicking a sample attribute value to select all tracks tagged with that attribute value.
 
  

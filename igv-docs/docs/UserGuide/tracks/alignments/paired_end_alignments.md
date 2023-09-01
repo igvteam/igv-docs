@@ -7,118 +7,71 @@ The page title should not go in the menu
 
 ## View as pairs
 
-By default, IGV displays reads individually because they pack compactly. Select _View as pairs_ from the right-click menu to display pairs together with a line joining the ends as shown in the image below. The hover element details (2) are also displayed either for a single read in **normal view (left)** or for a pair of reads in **paired reads view (right)**.
+By default, IGV displays paired-end alignments individually because they pack compactly. Select _View as pairs_ from the right-click menu to display pairs together with a line joining the ends. 
 
-![](../../img/paired-unpaired.png) ![](../../img/paired-paired.png)
+In the following two screenshots, the alignments of one pair are shown in pink. The upper screenshot displays the track in the default packed mode; in the lower screen shot the alignments are displayed as connected pairs. 
+    
+![](../../img/paired-packed.png) 
 
-## Colors
+![](../../img/paired-aspairs.png)
 
-IGV colors paired-end alignments in two ways.
+!!! tip " "
+    To highlight an alignment and its paired mate in the same color, `Ctrl-click` on one of the alignments (`Cmd-click` on MacOS). The colors are arbitrary but unique to each pair. Repeating the click on either alignment will clear the color. Or select *Clear selections* from the track's pop-up menu to clear the highlight color from all alignments in the track.
 
-*   Interactively by user selection as shown in the purple highlighted reads marked by (1) in the images above, and
-*   That deviate from expectations as marked by (3) in the image above.
 
-![](../../img/callout_1.jpg)
+When viewed as pairs, clicking on an alignment (or hovering over it if the pop-text behavior has been set to *On hover*) will display the read details for both the alignment and its mate.  
 
-Control+click (Mac: Command+click) a read to outline the read and its paired mate in the same color. Colors are arbitrary but unique to each pair. A black outline indicates that the selected read has no mate.
-
-*   Control+click (Command+click) either read to clear the outline.
-*   Right-click and select _Go to Mate Region_ to jump to the paired mate.
-    *   If the paired reads have a large insert size, the paired mate will not be highlighted. Turn on the Color by insert size and pair orientation option from the popup menu to confirm as described below.
-*   Right-click and select _Clear Selections_ to clear all outlines.
-
-Outlined paired reads are preserved when switched to _View as pairs_ option. However, outlining reads only works in the unpaired view and not in the paired view.
-
-![](../../img/callout_2.jpg)
-
-Hover over or click a read to view information about the read, including the location of its paired mate.
-
-![](../../img/callout_3.jpg)
-
-IGV colors (1) paired end reads with inferred insert size smaller or larger than expected; (2) read with mate that is aligned to a different chromosome; (3) paired-end alignments with deviant pair orientation. Note that coloring by insert size is a feature designed originally for DNA alignments _against the genome_. It is based on set base pair values or computed from the size distribution of a library.
-
-*   See [Interpreting Color by Insert Size](http://www.broadinstitute.org/software/igv/interpreting_insert_size) for more detail.
-    *   Blue is for inserts that are smaller than expected
-    *   Red is for inserts that are larger than expected.
-    *   Inter-chromosomal rearrangements are color-coded by chromosome.
-*   See [Interpreting Color by Pair Orientation](http://www.broadinstitute.org/software/igv/interpreting_pair_orientations) for more detail.
-    *   Shades of green, teal, and dark blue show structural events of inversions, duplications, and translocations.
-    *   Color assignments depend on sequencing platform.
-*   Other _Color by_ options are described in the alignment track [pop-up menu](<?php echo base_path(); ?>PopupMenus#AlignmentTrack) options
-
-Translocations on the same chromosome can be detected by color-coding for pair orientation, whereas translocations between two chromosomes can be detected by coloring by insert size. See both by selecting the _Color alignments by>_ _insert size and pair orientation_ option.
+![](../../img/pair-info-paired.png)
 
 ## Split screen view
 
-Split screen views can be invoked on-the-fly from paired-end alignment tracks. Right-click over an alignment and select _View mate region_ _in split screen_ from the drop-down list. If the alignment clicked over does not have a mapped mate this option will be grayed out. You can select this option for mutliple alignments and view multiple panels side by side.
+Split screen views can be invoked on the fly from paired-end alignment tracks. Right-click over an alignment and select _View mate region in split screen_ from the pop-up menu. If the alignment does not have a mapped mate this option will be grayed out. Both alignments will be highlighted in color so you can more easily see the mate in the second panel.
 
-To return to a normal single screen view, right-click on the locus name at the top of the panel you wish to keep and select _Switch to standard view_. Alternatively, double-click the locus name.
+![](../../img/viewmate-splitscreen.png)
 
-You can control the view of each panel independently. Pan by click-dragging in the panel;  double-click to zoom in and alt-click to zoom out.
+You can select this option again for additional alignments and view multiple panels side by side. See the section on [viewing multiple regions](../../../navigation/#viewing-multiple-regions) for details on how to control the view.
 
-![](../../img/NGS_splitmenu.jpg)
-
-![](../../img/NGS_split.jpg)
 
 # Detecting structural variants
 
-IGV uses color and other visual markers to highlight potential genetic alterations in reads against a reference sequence. Genetic alternations include single nucleotide variations, structural variations, and aneuploidy. Structural variations include insertions, deletions, inversions, tandem duplications, translocations, and other more complex rearrangements. Interpretation of some of these variations are discussed briefy in this section and the next. [Interpreting Color by Insert Size](http://www.broadinstitute.org/software/igv/interpreting_insert_size) and [Interpreting Color by Pair Orientation](http://www.broadinstitute.org/software/igv/interpreting_pair_orientations) give more detailed explaination of read colors.
+Paired-end sequencing can yield evidence of structural variants such as insertions, duplications, translocations, and inversions. IGV can **detect anomalies found in the alignment of the paired reads** that might indicate putative structural variants. In particular, the expected distance between the two aligned reads of a pair and their relative orientation is known. When the actual values differ from the expected values, color is used to call out the anomalies. This is the default color mode for alignments, but you can choose to color alignments by a number of different attributes via the right-click pop-up menu.
 
-An additional factor to take into consideration when judging potential genetic alterations is quality of reads and quality of mapping. IGV uses transparency to indicate quality.
+!!! note " "
+    If you see a pattern of many alignments colored the same way, it may be evidence of a structural variant. Seeing just a small sampling of colored alignments, with no systematic pattern, is less likely to indicate a variant.
 
-*   For RNA-Seq, [TopHat](http://ccb.jhu.edu/software/tophat/index.shtml) outputs separate insertions.bed and deletions.bed files which IGV will load as separate tracks.
-*   In addition to the .[BED](http://www.broadinstitute.org/software/igv/BED) format, the .[VCF](http://www.broadinstitute.org/software/igv/VCF) format file displays structural variation.
-
-Colors and transparency are used at two levels within alignments: (1) for mapped reads, and (2) for individual bases within reads.
-
-
-**Color**
-
-**Transparency**
-
-**mapped reads**
-
-see [Paired-End Alignments](#paired) section
-
-mapping quality
-
-**individual bases**
-
-Mismatched bases
-
-read quality (phred) score
+<!---
+TBD Add a description of insert size and pair orientation, e.g. from our workshop
+-->
 
 ## Insert size
 
-Coloring by insert size is for DNA alignments and is not designed to indicate RNA-Seq paired read mate distances. It is based on set base pair values or computed from the size distribution of a library against the reference genome as defined in the [Alignment Preferences Panel](http://www.broadinstitute.org/software/igv/Preferences#Alignments).
+The expected (or *inferred*) insert size can be computed on the fly from the size distribution found in the loaded file (the default), or it can be specified as a specific size range in base pairs. The default insert size options can be changed for **all** tracks in the *Alignments* and *RNA* tabs of *View > Preferences*. To change the options for **one** track, select *Set insert size options* from the track's right-click pop-up menu.
 
-The inferred insert size can be used to detect structural variants, such as:
+The insert size color scheme is:
 
-*   deletions
-*   insertions
-*   inter-chromosomal rearrangements
 
-IGV uses color coding to flag anomalous insert sizes. When you select _Color alignments_\>_by insert size_ in the popup menu, the default coloring scheme is:
+* Larger than expected insert size: Both reads are red ![](../../img/insert_lrgr.jpg)
 
-*   ![](../../img/insert_lrgr.jpg) for an inferred insert size that is larger than expected (possible evidence of a deletion)
-*   ![](../../img/insert_smlr.jpg) for an inferred insert size that is smaller than expected (possible evidence of an insertion)
-*   ![](../../img/chromosomecolors.jpg) for paired end reads that are coded by the chromosome on which their mates can be found
+* Smaller than expected insert size: Both reads are blue ![](../../img/insert_smlr.jpg)
+
+* Pairs aligned to different chromosomes: Each read is colored by the chromosome of its mate  ![](../../img/chromosomecolors.jpg)
+
+The insert size can be used to detect *deletions, insertions,* and *inter-chromosomal rearrangements*
 
 ### Deletions
 
-In a deletion a section of DNA is absent in the subject genome compared to the reference genome.
+In a deletion, a section of DNA is absent in the subject genome compared to the reference genome.
 
 ![](../../img/deletion.jpg)
 
-When pairs from a section of DNA spanning the deletion are aligned to the genome the inferred insert size will be larger than expected.  This is due to the deleted section of the genome, not present in the subject.  Schematically this can be visualized as follows:
+When pairs from a section of DNA spanning the deletion are aligned to the reference genome the **inferred insert size will be larger than expected**.  This is due to the deleted section of the genome, not present in the subject.  Schematically this can be visualized as follows, with the pairs of dark blue arrows representing the paired reads.
 
 ![](../../img/del_refvssubject.jpg)
 
-So in the case of a deletion, the inferred insert size is GREATER THAN the expected insert size.   In IGV such an event might look like the following.
+When the inferred insert size is larger than expected, both reads of the pair are **colored red**, as shown in the following example, where the two ends of a deletion are shown in split-screen view. 
 
 ![](../../img/del_multiple.jpg)
 
-Reads that are colored red have larger than expected inferred sizes, and therefore indicate possible deletions.
 
 ### Insertions
 
@@ -126,43 +79,43 @@ In the case of an insertion, a section of DNA is present in the subject genome t
 
 ![](../../img/insert.jpg)
 
-The effect on distance between aligned pairs is opposite in the case of a deletion; the "inferred insert size" is smaller than expected.
+The effect on distance between aligned pairs is opposite in the case of a deletion; the **inferred insert size is smaller than expected**.
 
 ![](../../img/insert_refvssubject.jpg)
 
-The maximum size of an insertion detectable by insert size anomaly is limited by the size of the fragments.  They must be long enough to span the insertion and include sequences on both ends that are mapped to the reference.  The maximum detectable size is approximately equal to:
+When the inferred insert size is smaller than expected, both reads of the pair are **colored blue**.
 
-fragment length - (2x read length)
+!!! note " "
+    The maximum size of an insertion detectable by insert size anomaly is limited by the size of the sequenced fragments. They must be long enough to span the insertion and include sequences on both ends that are mapped to the reference. Therefore, third-gen long read sequencing is able detect longer insertions than pair-end sequencing of shorter fragments.   
 
-Detection of this event is therefore more likely with larger fragment libraries, such as Illumina mate-pair (not paired-end) and SOLID.
+### Inter-chromosomal fusions
 
-![](../../img/insert_multiple.jpg)
+In the case of an inter-chromosomal fusion, a section of DNA on one chromosome of the subject genome is fused with a section of DNA on another chromosome. Chromosomes 1 and 6 are used as an example in the following schematics.
 
-In the example above reads that are colored blue have smaller than expected inferred sizes, and therefore indicate insertions.
+![](../../img/interchromosomal.png){width=420}
 
-### Inter-chromosomal rearrangement
+When a sequenced pair from a fragment of the subject's DNA that spans the fusion is aligned to the reference genome, **each read will be mapped to different chromosomes**.  
 
-IGV codes inserts for inter-chromosomal rearrangements.  For instance, in this case, one end is on chromosome 1 and the other is on chromosome 6.
+![](../../img/interchromosomal-refvssubject.png){width=420}
 
-![](../../img/interchromosomal.jpg)
+In this case, each read is **colored by the chromosome of its mate** (see color scheme [above](#insert-size)). 
+
+The following example shows a split-screen view of two alignment tracks, one is a tumor sample and the other is a matched normal sample. The left panel displays a region of chromosome 1 and the right panel displays a region of chromosome 6. In the tumor sample track, a large number of reads on chromosome 1 are colored brown (the chromosome 6 color) because their mates aligned to chromosome 6. Similarly, their mates on chromosome 6 are colored blue (the chromosome 1 color). Note that the reads in the normal sample are grey, which means the rearrangement is only found in the tumor.
+
+
+![](../../img/interchromosomal-example.jpg)
 
 ## Pair orientation
 
-The orientation of paired reads can be used to detect structural events including:
-
-*   inversions
-*   duplications
-*   translocations
-
-By selecting _Color alignments>by pair orientation_, you can flag anomalous pair orientations in IGV.
+The orientation of paired reads can be used to detect *inversions*, *duplications*, and *translocations* on the same chromosome.
 
 Orientation is defined in terms of read-strand: left versus right, and first read versus second read of a pair.
 
 ![](../../img/readpairorientations.jpg)
 
-_(figure courtesy of Bob Handsaker)_
+_(Figure courtesy of Bob Handsaker)_
 
-These categories only apply where both mates map to the same chromosome.
+The schematics in the following sections assume the Illumina paired-end sequencing convention.
 
 ### Inversions
 
@@ -209,7 +162,7 @@ IGV will display this rearrangement as shown below.
 
 ### Translocation on the same chromosome
 
-When a large section of DNA is removed from one location and inserted elsewhere, that is a translocation.
+When a large section of DNA is removed from one location and inserted elsewhere, this is called a translocation.
 
 ![](../../img/translocation.jpg)
 

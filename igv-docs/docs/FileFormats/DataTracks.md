@@ -205,7 +205,7 @@ IGV supports importing chemical reactivity probing profiles from SHAPE or MAP fi
 
 ### SHAPE format
 
-The SHAPE format (.shape) is a tab-deliminated text file with two columns and no header.
+The SHAPE format (.shape) is a tab-delimited text file with two columns and no header.
 
 *   1st column: 1-based nucleotide position
 *   2nd column: chemical reactivity value, or -999 to indicate positions with no data
@@ -679,7 +679,7 @@ gs://genomics-public-data/platinum-genomes/bam/NA12878\_S1.bam
 
 ## narrowPeak
 
-A narrowPeak (.narrowPeak) file is used by the ENCODE project to provide called peaks of signal enrichement based on pooled, normalized (interpreted) data. It is a BED 6+4 format. See the [UCSC web site for more detail](http://genome.ucsc.edu/FAQ/FAQformat.html#format12) on this format.
+A narrowPeak (.narrowPeak) file is used by the ENCODE project to provide called peaks of signal enrichment based on pooled, normalized (interpreted) data. It is a BED 6+4 format. See the [UCSC web site for more detail](http://genome.ucsc.edu/FAQ/FAQformat.html#format12) on this format.
 
 ## PSL
 
@@ -697,7 +697,7 @@ A BP file (.bp) is text file format that describes connections between ranges of
 
 **File Header.** A file begins with any number of header lines listing all arc colors and associated labels. Each of these lines are tab-delimited, and must begin with "color", followed by the red, green, and blue color components 0-255, followed by an optional text label which will be shown in the track menu color legend. Arc colors will be rendered in listed order (i.e. the last listed color will be drawn on top). Track lines are not currently supported for this file type.
 
-_Example header line:_  color: 51 114 38 High-probability basepairs
+_Example header line:_  color: 51 114 38 High-probability base pairs
 
 **Paired Ranges.** Each tab-delimited line in the rest of the file describes a single arc. The first field is the name of the associated IGV chromosome. The last field is a zero-based integer index indicating the arc color (from the colors listed in the header). The second through fifth fields are the 1-based inclusive nucleotide coordinates of paired ranges (a helix, if this is an RNA structure).
 
@@ -707,7 +707,7 @@ The following RNA secondary structure formats can be imported into IGV and conve
 
 ### DB (dot bracket)
 
-DB (dot bracket) format (.db, .dbn) is a plain text format that can encode secondory structure. Lines beginning with **\>** or **#** are currently ignored. Nucleotide sequence is currently ignored.
+DB (dot bracket) format (.db, .dbn) is a plain text format that can encode secondary structure. Lines beginning with **\>** or **#** are currently ignored. Nucleotide sequence is currently ignored.
 
 **Secondary structure notation:**
 
@@ -759,7 +759,7 @@ Li H.\*, Handsaker B.\*, Wysoker A., Fennell T., Ruan J., Homer N., Marth G., Ab
 
 ## SEG
 
-A SEG file (segmented data; .seg or .cbs) is a tab-delimited text file that lists loci and associated numeric values. The first row contains column headings and each subsequent row contains a locus and an associated numeric value. IGV ignores the column headings. It reads the first four columns as track name, chromosome, start location, and end location. It reads the last column as the numeric value for that locus (if the value is non-numeric, IGV ignores the row). IGV ignores all other columns.
+A SEG file (segmented data; .seg or .cbs) is a tab-delimited text file that lists loci and associated numeric values. The first row contains column headings, and each subsequent row contains a locus and an associated numeric value. IGV ignores the column headings. It reads the first four columns as track name, chromosome, start location, and end location. It reads the last column as the numeric value for that locus (if the value is non-numeric, IGV ignores the row). IGV ignores all other columns.
 
 The segmented data file format is the output of the Circular Binary Segmentation algorithm (Olshen et al., 2004).
 

@@ -3,7 +3,7 @@ The page title should not go in the menu
 -->
 <p class="page-title"> Combining tracks </p>
 
-The data from two quantative data tracks can be combined into one track using arithmetic operations on the data values.
+The data from two quantitative data tracks can be combined into one track using arithmetic operations on the data values.
 
 # How to combine tracks
 

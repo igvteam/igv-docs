@@ -4,7 +4,7 @@ The page title should not go in the menu
 -->
 <p class="page-title"> IGV from the command line </p>
 
-From the [Download IGV](../../DownloadPage.md) page you can download a version of IGV that includes scripts for launching the [IGV application](#igv-application) and the *[igvtools](#igvtools)* utillites from the command line. 
+From the [Download IGV](../../DownloadPage.md) page you can download a version of IGV that includes scripts for launching the [IGV application](#igv-application) and the *[igvtools](#igvtools)* utilities from the command line. 
 
 # IGV application
 
@@ -87,7 +87,7 @@ Recognized tools, options, arguments, and file types are described below.
 
 #### Memory settings
 
-The igvtools scripts allocate a fixed amount of memory. If this is more than the amoount available on your platform, you
+The igvtools scripts allocate a fixed amount of memory. If this is more than the amount available on your platform, you
 will get an error along the lines of "Could not start the Virtual Machine". If this happens you will need to edit the
 scripts to reduce the amount of memory requested, or use the option to start igvtools directly with Java (see below). The memory is set via a ```-Xmx```
 parameter. For example  ```-Xmx1500m```requests 1500 MB,  ```-Xmx1g``` requests 1 gigabyte.
@@ -194,7 +194,7 @@ igvtools count [options] [inputFile] [outputFile] [genome]
     * The output filename must end in .tdf or ".wig", or be the special string "stdout". To indicate that you want to output both a .tdf and a .wig file, list both output filenames as a single string, separated by a comma with no other delimiters. If the output file is named "stdout" the output will be written to the standard output stream in .wig format.
 
 * **genome** 
-    * A genome id or path to a [.chrom.sizes](http://www.broadinstitute.org/software/igv/chromSizes) or .genome file.
+    * A genome id or path to a .chrom.sizes or .genome file.
 
     * Default is hg18.
 
@@ -264,7 +264,7 @@ igvtools toTDF [options] [inputFile] [outputFile] [genome]
 
     * ```-z num``` Specifies the maximum zoom level to precompute. The default value is 7 and is sufficient for most files. To reduce file size at the expense of IGV performance this value can be reduced.
 
-    * ```-f list``` A comma delimited list specifying window functions to use when reducing the data to precomputed tiles. Possible values are min, max, and mean. By default only the mean is calculated.
+    * ```-f list``` A comma delimited list specifying window functions to use when reducing the data to precomputed tiles. Possible values are min, max, and mean. By default, only the mean is calculated.
 
     * ```-p file``` Specifies a .bed file to be used to map probe identifiers to locations. This option is useful when preprocessing .gct files. The .bed file should contain 4 columns: chr start end name where name is the probe name in the .gct file.
 

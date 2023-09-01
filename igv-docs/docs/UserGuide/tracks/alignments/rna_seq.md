@@ -3,94 +3,128 @@ The page title should not go in the menu
 -->
 <p class="page-title"> RNA-seq data </p>
 
+This section covers unique features of RNA-seq alignment tracks. See [Alignments basics](viewing_alignments_basics.md) for general features that also apply to RNA-seq tracks.
+
+# RNA-seq alignments
+
+With RNA sequencing, an individual read may span a splice junction, so when the data are aligned back to the full reference genome, a single alignment can be split into segments separated by potentially very long gaps. These reads are displayed as blocks connected by a thin blue line.
+
+The following two screenshots show RNA-seq alignments. 
+
+* The upper screenshot shows a ~8,000 bp region of an RNA-seq alignment track and a blue RefGene track. 
+* The lower screenshot shows the data from the red box superimposed on the upper screenshot. The view is zoomed in to ~260 bp and individual reads are visible. One split read has been highlighted in red to make it stand out. You can `Ctrl-click` a read (or `Cmd-click` on MacOS) to highlight it with color. 
+
+![](../../img/alignments-rnaseq-zoomedout-withbox.png)
+
+![](../../img/alignments-rnaseq-zoomedin-selection.png)
+
 # Splice junction track
 
-IGV supplements each alignment track with (1) a coverage track and (2) if selected in the [Alignment Preferences panel](Preferences#Alignments), a default splice junctions track. This page describes the default junctions track as well as independently loaded junctions data in the standard [.bed](BED) format. See [Sashimi Plot](http://www.broadinstitute.org/software/igv/Sashimi) for how to derive and manipulate interactive junction visualizations within IGV.
+By default, IGV dynamically computes a splice junction track from RNA-seq alignments. The track displays arcs connecting the alignment blocks from split reads.
 
-When enabled, IGV dynamically computes the junctions track from alignment data. The junctions track displays arcs connecting alignment blocks from a single read.  For RNA data these connections normally arise from splice junctions, thus the name _**Splice Junction Track**_.
+*   When available, the `XS` tag provided by the alignment is used to determine **strandedness**. If the tag is missing, strandedness is inferred from the read strand. For paired-end data the strand of the alignment marked `first in pair` is used.
 
-![](../../img/splice_junctions_1.png)
+    *   Junctions from the **forward** strand are colored **red** and extend above the center line.
 
-Each splice junction is represented by an arc from the beginning to the end of the junction.
+    *   Junctions from the **reverse** strand are **blue** and extend below the center line.
 
-*   When available, IGV uses the "XS" tag provided by the alignment to determine strandedness. If missing, strandeness is inferred from the read strand. For paired-end data the strand of the alignment marked "first in pair" is used.
-*   Junctions from the + strand are colored red and extend above the center line.
-*   Junctions from the – strand are blue and extend below the center line.
-*   The height of the arc, and its thickness, are proportional to the depth of read coverage up to 50 reads (first image).
-    *   Display a more proportionate representation by selecting _Autoscale_ from the right-click menu (second image).
+*   The height and thickness of the arc are proportional to the **depth of read coverage** up to 50 reads. To display a more proportionate representation, select _Autoscale_ from the right-click menu. 
+ 
+The following example shows the splice junction track created from the alignments in the example above.
 
-Hovering the mouse over or clicking on a junction will **display coverage information**. The first screenshot shows multiple coverage detail panels for each three components of two splice junctions on opposite strands.
+![](../../img/splicejunctions-liver.png)
 
-*   Read depth for each end of the junction is displayed. For the red junction below, starting flank depth is 109 reads and ending flank depth is at 6606 reads.
-*   Other details for a given junction's three hover elements are the same.
+To **see the details of a junction**, click on the junction (or hovering over it if the popup text behavior has been changed).
 
-![](../../img/junctionshover.png)  ![](../../img/junctionsautoscale4.png)
+By default, all junctions are displayed together in *Collapsed* mode. To get a **better view of overlapping junctions**, change the display mode to *Expanded* in the right-click pop-up menu.
 
-## Pop-up menu options 
+![](../../img/splicejunctions-expanded.png)
 
-Menu options are as detailed for the [Feature tracks menu](http://www.broadinstitute.org/software/igv/PopupMenus#FeatureTrack) with the following additions or differences.
+To **export the junctions** currently in view to a BED file, right-click on the track and select *Export Features...* from the pop-up menu. 
+ 
+# Junction files
 
-| **Command** | **Description** |
-| ------- | -------- |
-| Collapsed <br/> Expanded </br> Squished | Tracks are collapsed by default. The expanded mode breaks up the junctions track to multiple junctions tracks to minimize visual overlap. IGV does not interpret isoform information. |
-| Autoscale | The height of the arc, and its thickness, are proportional to the depth of read coverage. <ul><li>By default, all junctions with more than 50 reads have the same thickness.</li><li>Select _Autoscale_ to display a more proportionate representation.</li></ul> |
-| Sashimi Plot | Displays junctions information for regions within the current IGV view in a new panel with additional options. See [Sashimi Plot](http://www.broadinstitute.org/software/igv/Sashimi) for details. |
-| Export Features | Download junctions track from IGV as a [.bed](BED) file. |
+A BED file containing splice junction data can be loaded independently of alignments. The display is exactly the same as the dynamic junctions track described above. 
 
-## Example 
+The junctions BED format:
 
-This example demonstrates differential splicing
+* Is derived from the `junctions.bed` file produced by the [TopHat](http://ccb.jhu.edu/software/tophat/index.shtml) program.
 
-*   Start IGV and make sure _Show junction track_ is checked in the _Alignment Preferences panel_ and the _Visibility range threshold_ is set to 500.
-*   Load the _Human hg19_ genome.
-*   Select _File_ > _Load from Server_. In the popup window, select _Tutorials_ > _RNA-Seq (Body Map)_ > _Heart_ and _Liver_.
-*   Enter _SLC25A3_ in the search bar to see an instance where the third exon is differentially spliced for the two tissues (**Screenshot** 2015.4.15).
-    *   Here we have colored alignments by XS tag. The library was unstranded, and XS tag values were assigned to reads crossing junctions (in pink) using a predefined transcriptome index.
+* Must include a **track line** that specifies either `name=junctions` or `graphType=junctions`.
 
-![](../../img/SLC25A3_XS_colored_2015-04-15%2013.06.09.png)
+* The `score` field is used to indicate depth of coverage.
 
-## Junctions view for BED files
-
-The splice junction view  can also be loaded indpendent of alignments by using a modified bed format,  derived from the "junctions.bed" file produced by the [TopHat](http://tophat.cbcb.umd.edu/) program. Display details are as described in the section above.
-
-*   This view is enabled by including a track line that specifies either _name=junctions_ or _graphType=junctions_.
-*   TopHat's "junctions.bed" file includes a track line specifying _name=junctions_ by default, so no action is required for these files.
-
-Junction files should be in the standard [.bed](<?php echo base_path(); ?>BED) format.  The _score_ field is used to indicate depth of coverage.
+The BED file exported from a splice junctions track (as described above) is in the required BED format.
 
 # Sashimi plots
 
-Sashimi plots visualize splice junctions from aligned RNA-seq data and a gene annotation track. IGV displays the Sashimi plot in a separate window and allows for more manipulations of the plots than the [junctions track](http://www.broadinstitute.org/software/igv/splice_junctions).
+Sashimi plots provide an alternate visualization of splice junctions from RNA-seq alignment tracks. The Sashimi plot is displayed in a separate window and allows for more manipulations of the plots than the junctions track.
 
-1.  To view a Sashimi plot of your alignment data, first zoom out the view to contain the entire region of interest as scrolling and zooming in the Sashimi plot will be limited to this initial region.
+To **view a Sashimi plot**:
+
+1. First zoom out the view to contain the entire region of interest, as scrolling and zooming in the Sashimi plot will be limited to this initial region.
+
 2.  Right click on the alignment track to bring up the pop-up menu, and select _Sashimi Plot_.
-3.  Select one feature track to serve as the annotation.
-    1.  If there is only one possible feature track, e.g., the default RefSeq genes track loaded with the reference genome, then it is automatically loaded.
-    2.  If you loaded additional feature tracks, IGV presents a dialog for you to select one for the new plot.
-4.  IGV prompts you to select which alignment tracks you would like to view as Sashimi plots. Select any number and press OK.
 
-The Sashimi plot is displayed in a separate window. The coverage for each alignment track is plotted as a bar graph. Arcs representing splice junctions connect exons. Arcs display the number of reads split across the junction (junction depth). Genomic coordinates and the gene annotation track are shown below the junction tracks.
+3.  Select a genome annotation track to serve as the reference annotation in the Sashimi plot. If there is only one possible track, e.g., the default RefSeq Genes track loaded with the reference genome, then it is automatically selected for the plot. If multiple feature tracks have been loaded into the IGV view, you will be presented with a dialog to select one.
 
-*   Hovering the mouse over each of the exons in the feature annotation track displays additional information in a yellow tooltip.
-*   Zoom in using the + button at top, and scroll by click-dragging the panel.
-*   To view only those junctions which overlap a particular exon, select that exon by clicking on it.
-    *   Multiple exons can be selected using ctrl + <click> and they will be highlighted as white boxes.
-    *   To clear selections, click on a blank area of the annotations section of the panel.
+4. Select one or more RNA-seq alignment tracks to include in the Sashimi plot. If there is only in the IGV view, it is automatically selected for the plot, otherwise you will be presented with a dialog to select one or more.
 
-Static images of Sashimi plots can also be generated outside IGV with sashimi\_plot, a Python tool which is part of the [MISO](http://hollywood.mit.edu/burgelab/miso/) package. Read more about sashimi\_plot [here](http://miso.readthedocs.io/en/fastmiso/sashimi.html).
+The coverage for each alignment track is plotted as a bar graph. Arcs representing splice junctions connect exons. Arcs display the number of reads split across the junction (junction depth). Genomic coordinates and the genome annotation track are shown below the bar graphs.
 
 ![](../../img/SL_Sashimi1.png)
 
-## Popup menu options
+To **navigate** within the plot window, use the `+` and `-` buttons at the top to zoom in and out, and click-drag in the panel to pan across the genome.
+
+To view only junctions that **overlap a particular exon**:
+
+* Select that exon in the genome annotation track by clicking on it.
+* Multiple exons can be selected using `Ctrl-click` on Windows and `Cmd-click` on MacOS.
+* Selected exons will be displayed as hollow with a white background.
+*   To clear selections, click on a blank area of the annotations track.
+
+Right-clicking in the bar graph area will bring up a **pop-up menu** with the following options to control the display of the junction tracks:
+
+*Set Junction Coverage Min*
+
+* Set the minimum junction depth to include in the display of the clicked track.
+
+*Set Junction Coverage Max*
+
+ * The thickness of each junction arc in the clicked track will be proportional to the coverage, up to this value. 
+
+*Show Exon Coverage Data*
+
+* Toggle the display of exon coverage in the clicked track. Exon coverage is initially displayed by default.
+
+*Set Exon Coverage Max*
+
+  * Despite the name, this command is for setting both the min and max values of the exon coverage display in the clicked track.
+  * An option is provided to choose between a log scale and linear (the default).
+
+*Set Color*
+
+  * Change the color of the clicked track.
+
+*Text*, *Circle*, *None* 
+
+  * Set the style for displaying junction depth for the junction arcs in **all** tracks.
+  * *Text* is the default and displays the depth as a number in the center of the arc. 
+  * *Circle* replaces the text with a solid circle amenable to labeling. 
+  * *None* removes all labels.
+
+*Combine Strands*, *Forward Strand*, *Reverse Strand*
+
+  * A junction's strandedness is determined by the alignment file `XS` tag value for the split read. If the tag is missing, strandedness is inferred from the read strand. For paired-end data the strand of the alignment marked `first in pair` is used.
+  * *Combine Strands* is default and shows both + and – strand junctions.
+  * *Forward Strand* displays only + strand junctions.
+  * *Reverse Strand* displays only – strand junctions. 
+  * Applied to **all** tracks.
+
+*Save PNG Image*, *Save SVG Image*
+
+  * Save the whole Sashimi plot to an image file, either PNG or SVG.
 
 
-| **Command**                                                                        | **Description**                                                                                                                                                                                                                                                                                                                                                                     |
-|------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-| Set Exon Coverage Max                                                              | <ul><li>Set the minimum and maximum data range for the track to display. </li><li>Option to log scale. </li><li>Data range is shown in brackets in the top left of each track. </li><li>This option can be set on individual tracks.</li></ul>                                                                                                                                      |
-| Set Junction Coverage Min                                                          | <ul><li>Set minimum junction depth to include in the display.</li><li>This option can be set on individual tracks.</li></ul>                                                                                                                                                                                                                                                        |
-| Set Junction Coverage Max                                                          | <lu><li>The thickness of each junction line will be proportional to the coverage, up to this value.</li><li>This option can be set on individual tracks.                                                                                                                                                                                                                            |
-| Set Color                                                                          | <ul><li>Change the color of the track.</li><li>This option can be set on individual tracks.</li></ul>                                                                                                                                                                                                                                                                               |
-| Show Exon Coverage Data                                                            | <ul><li>Selected by default.</li><li>Deselect to remove exon coverage data and data track range labels.</li></ul>                                                                                                                                                                                                                                                                   |
-| <ul><li>Text</li><li>Circle</li><li>None</li></ul>                                 | <ul><li>_Text_ is default and displays the junction depth in text number for each arc, as shown in the screenshot above.</li><li>_Circle_ replaces the text with a solid circle amenable to labeling.</li><li> _None_ removes all labels.</li></ul>                                                                                                                                 |
-| <ul><li>Combine Strands </li><li> Forward Strand</li><li> Reverse Strand</li></ul> | A junction's strandedness is determined by the BAM file XS tag value for the split read. See the [Splice Junctions](../splice_junctions) page for more details. <ul><li> _Combine Strands_ is default and shows both + and – strand junctions. </li><li> _Forward Strand_ displays only + strand junctions. </li><li> _Reverse Strand_ displays only – strand junctions. </li></ul> |
-| Save Image | Save the Sashimi plot to an image file. Specify the file format by setting the filename extension in the file save dialog to .png, .jpeg, .jpg, or .svg.                                                                                                                                                                                                                            |
+The Sashimi plots were **developed in collaboration** with Yarden Katz and the Burgess Lab at MIT. See [Katz et al., Quantitative visualization of alternative exon expression from RNA-seq data, Bioinformatics (2015)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4542614/). The IGV Sashimi plots are based on their earlier work on the [MISO](http://hollywood.mit.edu/burgelab/miso/) package, which includes a Python tool for generating static Sashimi plots.
+

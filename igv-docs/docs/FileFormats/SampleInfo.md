@@ -4,7 +4,7 @@ The page title should not go in the menu
 -->
 <p class="page-title">File Formats: Sample Info (Attributes)</p>
 
-Sample information files includes Attributes files, Sample Mapping files, Attribute Color files, and files that combine information. These are tab-delimited text files with extension .txt. You load them as you would data files, via the _File m_enu. IGV can load multiple sample information files per session. When loaded into IGV, attributes display in a separate color-coded panel between sample names and tracks (see [Sample Attributes](../UserGuide/sample_attributes.md)). 
+Sample information files includes Attributes files, Sample Mapping files, Attribute Color files, and files that combine information. These are tab-delimited text files with extension .txt. You load them as you would data files, via the _File_ menu. IGV can load multiple sample information files per session. When loaded into IGV, attributes display in a separate color-coded panel between sample names and tracks (see [Sample Attributes](../UserGuide/sample_attributes.md)). 
 
 Attribute, mapping, and color information may be in **separate files,** i.e. in Attributes files, Mapping files, and Color files, **or in a single Sample Information file.**
 
@@ -81,7 +81,7 @@ In the case of different data sets with different sample names from the same ind
 
 ## Sample Mapping
 
-A Sample Mapping section begins with the line #sampleMapping and maps track identifers to sample identifiers.  It is useful in cases where these identifiers might differ.   For example, one might map the track identifier  "foo.bam" to sample identifier  "foo\_sample".     The format is 2 column tab delimited, the first column is the track identifier, second the sample identifier.
+A Sample Mapping section begins with the line #sampleMapping and maps track identifiers to sample identifiers.  It is useful in cases where these identifiers might differ.   For example, one might map the track identifier  "foo.bam" to sample identifier  "foo\_sample".     The format is 2 column tab delimited, the first column is the track identifier, second the sample identifier.
 
 ## Attribute Colors
 

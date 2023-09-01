@@ -44,9 +44,9 @@ The screenshot below shows five different BLAT feature tracks resulting from que
 * A region of interest (ROI) covering an intronic region
 * A region of interest (ROI) spanning the region that covers the other four examples.
 
-The resulting hits are displayed as blue rectangles and lines are used to represent any gaps in the alignment, as can be seen in the results of the BLAT of the RNA-seq read sequence. The alignment score is respresented as opacity resulting in a dark blue to light blue color. The arrowheads represent the directionality relative to the original search sequence.
+The resulting hits are displayed as blue rectangles and lines are used to represent any gaps in the alignment, as can be seen in the results of the BLAT of the RNA-seq read sequence. The alignment score is represented as opacity resulting in a dark blue to light blue color. The arrowheads represent the directionality relative to the original search sequence.
 
-By default, result tracks for BLAT searches of a read squence in an alignment track will be assigned a track name that is the same as the read name. Result tracks for other BLAT searches will be named simply "BLAT". In the example below, the user has renamed all the BLAT output tracks. This is done by right-clicking on a track and selecting _**Rename Track**_ from the popup menu. For example, the track **marked 1** is now named _Blat ROI2_. 
+By default, result tracks for BLAT searches of a read sequence in an alignment track will be assigned a track name that is the same as the read name. Result tracks for other BLAT searches will be named simply "BLAT". In the example below, the user has renamed all the BLAT output tracks. This is done by right-clicking on a track and selecting _**Rename Track**_ from the popup menu. For example, the track **marked 1** is now named _Blat ROI2_. 
 
 !!! note " "
     BLAT result tracks can be manipulated just like any other feature track via the popup menu.

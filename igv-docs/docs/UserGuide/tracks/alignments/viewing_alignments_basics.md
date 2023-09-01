@@ -42,7 +42,7 @@ The default value for the visibility range threshold depends on the *Experiment 
 * *3rd Gen:* 1000 kilobases
 * *Other*: 30 kilobases 
 
-You can adjust the above settings in the *View > Preferences* window. Click on the *RNA* tab to set the default threshold for RNA-seq data; the *Third Gen* for long-read data; and *Alignments* for other sequening types. 
+You can adjust the above settings in the *View > Preferences* window. Click on the *RNA* tab to set the default threshold for RNA-seq data; the *Third Gen* for long-read data; and *Alignments* for other sequencing types. 
 
 !!! tip " "
     If you have low coverage data, you can provide a larger visibility range threshold. Or for deep coverage, you might want to provide a smaller visibility range threshold.
@@ -75,7 +75,7 @@ By default, IGV **dynamically calculates** the coverage for an alignment file an
 !!! note " "
     When the view is larger than the visibility window, the **dynamic coverage track is blank** because the alignments have not been loaded and therefore the coverage cannot be computed. 
 
-Alternatively, you can provide a file containing **pre-computed coverage data**. When this option is used, the track displays coverage at **all zoom levels** including at the whole genome and chromosome view. To generate the extended coverage data file, use the [igvtools](../tools/igvtools_ui.md) **count** command on the alignment file to create a TDF file. The resulting file can be associated with the alignment track by one of the following:
+Alternatively, you can provide a file containing **pre-computed coverage data**. When this option is used, the track displays coverage at **all zoom levels** including at the whole genome and chromosome view. To generate the extended coverage data file, use the [igvtools](../../tools/igvtools_ui.md) **count** command on the alignment file to create a TDF file. The resulting file can be associated with the alignment track by one of the following:
 
 * Right-click on the coverage track and choose _Load pre-computed coverage data..._ from the pop-up menu.
 
@@ -97,7 +97,7 @@ To **override the default threshold** of 20%, do one of the following:
 
 *   To change the default for **all** coverage tracks, set the value _Coverage allele-fraction threshold_ in the _Alignments_ tab of the _View > Preferences_ window. 
 
-To **disable quality weighting**, uncheck the *Quality weight allele fraction* checbox in the *Alignments* tab of the *View > Preferences* window.
+To **disable quality weighting**, uncheck the *Quality weight allele fraction* checkbox in the *Alignments* tab of the *View > Preferences* window.
 
 To **change the base color of the bar chart**, right-click on the coverage track and select *Change Track Color...* from the pop-up menu.
 
@@ -126,7 +126,7 @@ Alignment files include detailed information about each aligned read. To retriev
 * Click on an alignment to **see the details** in a pop-up window. 
 
     !!! tip " "
-        You can change the behaviour of the detail pop-up window by clicking on the yellow balloon icon in the IGV toolbar. <br> ![](../../img/balloon-icon.png){width=40} <br> For example, to quickly see the details for many alignments in succession, change the behavior from *Show Details on Click* (the default) to *Show Details on Hover*.  
+        You can change the behavior of the detail pop-up window by clicking on the yellow balloon icon in the IGV toolbar. <br> ![](../../img/balloon-icon.png){width=40} <br> For example, to quickly see the details for many alignments in succession, change the behavior from *Show Details on Click* (the default) to *Show Details on Hover*.  
 
 * To **copy the details** to the computer's clipboard, right-click on the alignment and select *Copy read details to clipboard* from the pop-up menu.
 
@@ -189,7 +189,7 @@ To **suppress** the display of **small indels** (insertions and deletions):
 Any indels smaller than the threshold number are not displayed. For example to hide all the two-base insertions in the above example, the threshold must be set to 3 or more.  
 
 !!! note " "
-    Controling indel preferences is **different in third gen** alignment tracks. 
+    Controlling indel preferences is **different in third gen** alignment tracks. 
 
     * One-base indels are hidden by default (vs. shown by default for other experiment types). To show all indels or to change the size threshold for hidden indels in third gen alignments, the values must be set in the *Third Gen* tab of *View > Preferences* (not the *Alignments* tab).
     
@@ -230,7 +230,7 @@ In the following example, the alignments are both colored and grouped by read st
 
 ![](../../img/alignments-groupby-readstrand.png)
 
-To **reverse the display of the groups**, click on *Group alignments by* and select *Reverse group order*. In the above example that would have the effect of moving the group of purple (negative strand) alignments to the top, and the group of pink (postive strand) alignments to the bottom.
+To **reverse the display of the groups**, click on *Group alignments by* and select *Reverse group order*. In the above example that would have the effect of moving the group of purple (negative strand) alignments to the top, and the group of pink (positive strand) alignments to the bottom.
 
 To **undo a grouping** command, click on *Group alignments by* and select *none*.
 
@@ -253,7 +253,7 @@ If the alignments are already grouped, the sort is applied to each group separat
 To **reverse the sort order**, click on *Sort alignments by* in the track's pop-up menu and select *reverse sorting* in the sub-menu.
 
 !!! note " "
-    The sort is an action that is **applied once** to the alignments at the center of the view. If you scroll the view or jump to a different locus, the sort is not perfomed again. Pressing `Ctrl-S` is a shortcut for performing the **same sort again** at a new locus.
+    The sort is an action that is **applied once** to the alignments at the center of the view. If you scroll the view or jump to a different locus, the sort is not performed again. Pressing `Ctrl-S` is a shortcut for performing the **same sort again** at a new locus.
 
 To undo the sort and **restore the layout to an optimally packed configuration**, select _Re-pack alignments_ from the track's pop-up menu.
 
@@ -271,7 +271,7 @@ In areas of deep read coverage, by default the **reads are downsampled**, i.e. n
 To change the defaults, set the values in the *Downsampling* section of the *Alignments* tab in the *View > Preferences* window. Note that 3rd gen tracks are not downsampled by default; it can be enabled in the *Third Gen* tab.
 
 !!! tip " "
-    If your file has deep coverage and you want to be able to see more of the reads, try decreasing the [visibilty window](#visibility-window) before you disable or decrease the downsampling. The narrower window will help keep the memory usage down.
+    If your file has deep coverage and you want to be able to see more of the reads, try decreasing the [visibility window](#visibility-window) before you disable or decrease the downsampling. The narrower window will help keep the memory usage down.
 
 Areas where the reads have been downsampled are marked with a black rectangle just under the coverage track, as shown in the example below. 
 

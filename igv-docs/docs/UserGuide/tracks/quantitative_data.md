@@ -5,12 +5,12 @@ The page title should not go in the menu
 
 # File formats
 
-File formats for quantative data include: **wig**, **bigWig**, **bedGraph**, **tdf**. 
+File formats for quantitative data include: **wig**, **bigWig**, **bedGraph**, **tdf**. 
 
 # Graph type
 
 
-Quantative tracks are displayed using one of four graph types (the following example graphs show the same data):
+Quantitative tracks are displayed using one of four graph types (the following example graphs show the same data):
 
 | Graph type | Example |
 |----------|----------|
@@ -29,7 +29,7 @@ A track's **data range** specifies the Y-axis for the track.
 
 To **set a specific data range** for selected tracks:
 
-* Select *Set Data Range...* from the pop-up menu and in the dialog window that pops up enter the minimimum, baseline, and maximum values for the graph. 
+* Select *Set Data Range...* from the pop-up menu and in the dialog window that pops up enter the minimum, baseline, and maximum values for the graph. 
 
 The following examples show the same data in tracks with different data ranges.
 
@@ -52,7 +52,7 @@ By default, the data range uses a **linear scale**. To use a **logarithmic scale
 * Click on the *Log Scale* checkbox in the dialog window when you set the data range values, or
 * select *Log Scale* in the track's right-click pop-up menu.
 
-By default, the minumum and maximum values of the data range are displayed on the left edge of the track. 
+By default, the minimum and maximum values of the data range are displayed on the left edge of the track. 
 
 ![ ](../img/data-range.png){width=200}
 
@@ -70,11 +70,11 @@ To set the **heatmap colors and scale** for tracks displayed as a heatmap:
 
 # Windowing function
 
-When the view is zoome out, each pixel on the screen may represent a genomic region that encompasses multiple numeric values in the data. The **windowing function** specifies which of the multiple values to display. To set the function, select one of the options in the *Windowing Function* section of the track right-click pop-up menu. The available options will depend on the file type, but most include: `Minimum`, `Mean`,`Maximum`, and `None`. By default, the function is set to `Mean`. The `None` option will display all the values, rather than combining them into one value, which can be useful for tracks displayed as **points**.
+When the view is zoomed out, each pixel on the screen may represent a genomic region that encompasses multiple numeric values in the data. The **windowing function** specifies which of the multiple values to display. To set the function, select one of the options in the *Windowing Function* section of the track right-click pop-up menu. The available options will depend on the file type, but most include: `Minimum`, `Mean`, `Maximum`, and `None`. By default, the function is set to `Mean`. The `None` option will display all the values, rather than combining them into one value, which can be useful for tracks displayed as **points**.
 
 # Overlaying tracks
 
-Quantative data tracks can be combined so they are displayed together as overlaid charts in a single track. 
+Quantitative data tracks can be combined so they are displayed together as overlaid charts in a single track. 
 
 For example, the following two tracks:
 
@@ -92,6 +92,6 @@ Each chart is drawn with a default level of translucence so they don't completel
 To separate the charts into the original tracks, select *Separate Tracks* from the combined track's pop-up menu.
 
 !!! tip " "
-    Quantative data tracks can also be [combined using arithmetic operators](../tools/combine_tracks.md) via *Tools > Combine Data Tracks*.
+    Quantitative data tracks can also be [combined using arithmetic operators](../tools/combine_tracks.md) via *Tools > Combine Data Tracks*.
 
 

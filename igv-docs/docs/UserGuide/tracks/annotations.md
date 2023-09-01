@@ -14,7 +14,7 @@ File formats for genome annotations include: **bed**, **bigBed**, **gtf**, **gff
 
 # Display options 
 
-There are three different **display modes** for viewing genome annotation tracks. These allow you to display overlapping features, such as different transcripts of a gene, on one line or multiple lines
+There are three different **display modes** for viewing genome annotation tracks. These allow you to display overlapping features, such as different transcripts of a gene, on one line or multiple lines.
 
 To change the display mode, right-click on the track and select one of the options:
 
@@ -40,7 +40,7 @@ In the following example, a gene track is grouped by strand, the track color is 
 
 To **navigate between features** in a genome annotation track:
 
-*  First select the track by clicking on either the traci name or in the data panael. Then jump from feature to feature:
+*  First select the track by clicking on either the track name or in the data panel. Then jump from feature to feature:
 
     *   Press ```Ctrl+f``` or just ```f``` to jump forward to the next feature.
 
@@ -58,7 +58,7 @@ DISPLAY MODE MUST BE EXPANDED AND A SINGLE FEATURE ROW IS SELECTED - HOW????
 
 # Save feature info
 
-To **export all features currently in view** in a genome annation track: 
+To **export all features currently in view** in a genome annotation track: 
 
 * Right-click on the track and select *Export Features...* from the pop-up menu. All the features currently in view will be saved to a BED file.
 

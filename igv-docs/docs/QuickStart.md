@@ -28,7 +28,7 @@ IGV displays data mapped to the genomic coordinates of a reference genome. The d
 
 Data and genome annotations are loaded via the *File* menu, from the local file system, via URL, or from a hosted IGV server. See the section on [Loading and removing data](UserGuide/loading_data.md) for the details. 
 
-The data files are displayed as horizontal tracks stacked on top of the reference genome. The display attributes of the tracks depend on the data type. IGV determines the data type based on the filename extension of the file that was loaded. See [File Formats](../FileFormats/DataTracks.md) for information about the file formats IGV accepts for data tracks and the ***Tracks and Data Types*** section of the  ***User Guide*** describes the attributes of the various track types.
+The data files are displayed as horizontal tracks stacked on top of the reference genome. The display attributes of the tracks depend on the data type. IGV determines the data type based on the filename extension of the file that was loaded. See [File Formats](FileFormats/DataTracks.md) for information about the file formats IGV accepts for data tracks and the ***Tracks and Data Types*** section of the  ***User Guide*** describes the attributes of the various track types.
 
 !!! note " " 
     Make sure to load only data files that correspond to the current reference genome. In general, a genomic data file does not include information about the particular genome assembly it was aligned to, which means IGV cannot automatically check if they match.

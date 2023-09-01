@@ -23,7 +23,7 @@ To restore a saved session:
 
 To reload a previously loaded session:
 
-* Click _**File  > Reload Sessio**n_.
+* Click _**File  > Reload Session**_.
 
 To clear the current session: 
 
