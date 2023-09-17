@@ -18,8 +18,29 @@ the authorization code flow.  If the port cannot be opened oAuth authorization w
 
 
 Customization
+Configuring an OAuth provider
 
-... some words on customization
+**Required**
+
+* client_id
+* authorization_endpoint
+* token_endpoint
+
+**Optional** - may be required by some providers
+
+* client_secret
+* auth_provider - Used to name a menu to provide a logout option.
+* app_id_uri - Sometimes required by Microsoft Azure.   Passed to the authorization_endpoint as parameter "resource".
+* scope - Scope of the authorization request.
+
+**Optional** - 
+
+* hosts - Array of host strings for this authorization provider.  URLs with these hosts will require authentication.
+
+##Examples
+
+Note all keys, secrets, etc are random strings and presented for illustration only.
+
 
 **Google** 
 ```json
@@ -30,20 +51,6 @@ Customization
 "token_endpoint": "https://accounts.google.com/o/oauth2/token",
 "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
 "hosts": ["www.googleapis.com", "storage.cloud.google.com", "storage.googleapis.com"]
-}
-```
-
-**Microsoft**
-```json
-{
-"client_id": "YOUR_CLIENT_ID",
-"client_secret": "YOUR_CLIENT_SECRET",
-"authorization_endpoint": "https://login.microsoftonline.com/.../oauth2/authorize",
-"token_endpoint": "https://login.microsoftonline.com/.../oauth2/token",
-"auth_provider": "YOUR PROVIDER",
-"app_id_uri": "https://orgtools.onmicrosoft.com/...",
-"scope": "openid"
-"hosts": ["prod_host.myorg.edu", "dev_host.myorg.edu", "int_host.myorg.edu"],
 }
 ```
 
@@ -63,5 +70,21 @@ Customization
 "aws_cognito_fed_pool_id": "ap-southeast-2:15b7bf93-18ca-40d5-99e9-38b4eb69363e",
 "aws_cognito_pool_id": "ap-southeast-2_IYMvlZzmv",
 "aws_cognito_role_arn": "arn:aws:iam::YOUR_AWS_ACCOUNT:role/YOUR_Cognito_igvAuth_Role"
+}
+```
+
+**Microsoft**
+```json
+{
+  "client_id": "hbq82djj-wxky-7iub-j7zq-7i8nv72n48nq",
+  "client_secret": "cVAX64fXRikCLmtLEb/cktrAtaHz/tmB3WegtnbXN2Gq",
+  "authorization_endpoint": "https://login.microsoftonline.com/77nwe2q2-e11k-uq2p-7vdh-9z7px83zmtiv/oauth2/authorize",
+  "token_endpoint": "https://login.microsoftonline.com/77nwe2q2-e53r-lk5z-7vdh-9z7px83zmtiv/oauth2/token",
+  "hosts": ["prod.mayo.edu", "dev.mayo.edu", "int.mayo.edu"],
+  "auth_provider": "Mayo Clinic",
+  "app_id_uri": "https://orgtools.onmicrosoft.com/6q9qk3mr-tw99-eu73-rt3k-nqw2aqidutm9",
+  "scope": "openid",
+  "find_string": "dept",
+  "replace_string": "dept-oauth2"
 }
 ```
