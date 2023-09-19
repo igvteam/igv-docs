@@ -26,6 +26,7 @@ nav:
             - RNA-seq data: UserGuide/tracks/alignments/rna_seq.md
             - Bisulfite sequencing: UserGuide/tracks/alignments/bisulfite_sequencing.md
             - Base modifications:  UserGuide/tracks/alignments/base_modifications.md
+            - SMRT kinetics:  UserGuide/tracks/alignments/smrt.md
         - Variants (VCF): UserGuide/tracks/vcf.md
         - Segmented copy number: UserGuide/tracks/seg.md
         - GWAS: UserGuide/tracks/gwas.md
@@ -44,8 +45,10 @@ nav:
     - Advanced:    
       - IGV from the command line: UserGuide/advanced/command_line.md
       - External control of IGV: UserGuide/advanced/external_control.md
-      - Authentication: UserGuide/advanced/oauth.md
       - Hosting genomes: UserGuide/advanced/hosting_genomes.md
+      - Downloading genomes: UserGuide/advanced/download_genomes.md
+      - Authentication: UserGuide/advanced/oauth.md-
+      - AWS support:  UserGuide/advanced/aws.md
       
 - File Formats: 
     - Data Tracks: FileFormats/DataTracks.md

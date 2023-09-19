@@ -43,11 +43,30 @@ IGV does not currently support multiple track lines in a single BED file  
 
 See the [GFF3 specification, column 9](http://www.sequenceontology.org/gff3.shtml) for more details.
 
-## BedGraph
+## bedGraph
 
-The BedGraph format allows display of continuous-valued data in track format. This display type is useful for probability scores and transcriptome data.  This track type is similar to the wiggle (WIG) format, but unlike the wiggle format, data exported in the bedGraph format are preserved in their original state.  For more information on this file format, see the UCSC Genome Bioinformatics web site description at [http://genome.ucsc.edu/goldenPath/help/bedgraph.html](http://genome.ucsc.edu/goldenPath/help/bedgraph.html).
+The bedGraph format allows display of continuous-valued data in track format. This display type is useful for probability scores and transcriptome data.  This track type is similar to the wiggle (WIG) format, but unlike the wiggle format, data exported in the bedGraph format are preserved in their original state.  For more information on this file format, see the UCSC Genome Bioinformatics web site description at [http://genome.ucsc.edu/goldenPath/help/bedgraph.html](http://genome.ucsc.edu/goldenPath/help/bedgraph.html).
 
 Recognized Extension: .bedgraph
+
+## bedpe
+
+Two primary use cases:
+* Interactions
+* Structural variants
+
+Format variants
+* Original spec: [bedtools](https://bedtools.readthedocs.io/en/latest/content/general-usage.html)
+* [10X](https://support.10xgenomics.com/genome-exome/software/pipelines/latest/output/bedpe) - spec compliant with additional columns
+
+Rendering
+* Arcs
+* Blocks
+
+10X files are recognized by looking for the following header line
+``` 
+#chrom1	start1	stop1	chrom2	start2	stop2	name	qual	strand1	strand2	filters	info 
+```
 
 ## bigBed
 
