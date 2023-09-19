@@ -85,46 +85,16 @@ To view only junctions that **overlap a particular exon**:
 
 Right-clicking in the bar graph area will bring up a **pop-up menu** with the following options to control the display of the junction tracks:
 
-*Set Junction Coverage Min*
-
-* Set the minimum junction depth to include in the display of the clicked track.
-
-*Set Junction Coverage Max*
-
- * The thickness of each junction arc in the clicked track will be proportional to the coverage, up to this value. 
-
-*Show Exon Coverage Data*
-
-* Toggle the display of exon coverage in the clicked track. Exon coverage is initially displayed by default.
-
-*Set Exon Coverage Max*
-
-  * Despite the name, this command is for setting both the min and max values of the exon coverage display in the clicked track.
-  * An option is provided to choose between a log scale and linear (the default).
-
-*Set Color*
-
-  * Change the color of the clicked track.
-
-*Text*, *Circle*, *None* 
-
-  * Set the style for displaying junction depth for the junction arcs in **all** tracks.
-  * *Text* is the default and displays the depth as a number in the center of the arc. 
-  * *Circle* replaces the text with a solid circle amenable to labeling. 
-  * *None* removes all labels.
-
-*Combine Strands*, *Forward Strand*, *Reverse Strand*
-
-  * A junction's strandedness is determined by the alignment file `XS` tag value for the split read. If the tag is missing, strandedness is inferred from the read strand. For paired-end data the strand of the alignment marked `first in pair` is used.
-  * *Combine Strands* is default and shows both + and – strand junctions.
-  * *Forward Strand* displays only + strand junctions.
-  * *Reverse Strand* displays only – strand junctions. 
-  * Applied to **all** tracks.
-
-*Save PNG Image*, *Save SVG Image*
-
-  * Save the whole Sashimi plot to an image file, either PNG or SVG.
-
+| <div style="width:99px">**Menu Option**</div>   | **Description** |
+| ----------------------- | ---------- |
+| *Set Junction Coverage Min* | Set the minimum junction depth to include in the display of the clicked track.
+| *Set Junction Coverage Max* | The thickness of each junction arc in the clicked track will be proportional to the coverage, up to this value. 
+| *Show Exon Coverage Data* | Toggle the display of exon coverage in the clicked track. Exon coverage is initially displayed by default.
+| *Set Exon Coverage Max* | Despite the name, this command is for setting both the minimum and maximum values of the exon coverage display in the clicked track. <br> An option is also provided to choose between a log scale and linear (the default).
+| *Set Color* | Change the color of the clicked track.
+| *Text* <br><br> *Circle* <br><br> *None* | Set the style for displaying junction depth for the junction arcs in **all** tracks. <br><br> * *Text* is the default and displays the depth as a number in the center of the arc. <br> * *Circle* replaces the text with a solid circle amenable to labeling. <br> * *None* removes all labels.
+|<br> *Combine Strands* <br><br> *Forward Strand* <br><br> *Reverse Strand* |  A junction's **strandedness** is determined by the alignment file `XS` tag value for the split read. If the tag is missing, strandedness is inferred from the read strand. For paired-end data the strand of the alignment marked `first in pair` is used. <br> <br> * *Combine Strands* is default and shows both + and – strand junctions. <br> * *Forward Strand* displays only + strand junctions. <br> * *Reverse Strand* displays only – strand junctions. <br><br> Applied to **all** tracks.|
+*Save PNG Image* <br><br> *Save SVG Image*| <br> Save the whole Sashimi plot to an image file, either PNG or SVG
 
 The Sashimi plots were **developed in collaboration** with Yarden Katz and the Burgess Lab at MIT. See [Katz et al., Quantitative visualization of alternative exon expression from RNA-seq data, Bioinformatics (2015)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4542614/). The IGV Sashimi plots are based on their earlier work on the [MISO](http://hollywood.mit.edu/burgelab/miso/) package, which includes a Python tool for generating static Sashimi plots.
 

@@ -160,8 +160,11 @@ To **pan** the view:
 
 - Select a panel by clicking on any data track within the panel, then press the Home and End keys to pan by a whole screen width. Once a panel is selected you can press the keys multiple times. 
 
+<!---
+The following is no longer true (fixed 9/1/23)
 !!! note " "
     Even if you change the view within a panel, the locus label in the panel header is still the locus specified when you entered multi-locus view. Resetting the IGV window to the standard view from a panel will set the view to the locus in the panel header, not the current view in the panel after panning and zooming.
+    -->
 
 ### Sorting tracks by panel
 

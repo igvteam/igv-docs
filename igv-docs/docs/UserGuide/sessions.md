@@ -29,6 +29,27 @@ To clear the current session:
 
 * Click _**File > New Session**_. This removes all data tracks and resets the view, but does not change the reference genome.
 
+# Session autosave
+
+IGV supports the ability to autosave your current session in the `igv/autosave` directory.  These session files can then be loaded through the *File > Autosaved Sessions* menu.  
+
+As of [#1327](https://github.com/igvteam/igv/pull/1327), IGV supports two methods of automatically saving sessions:
+1. Autosave on exit
+2. Timed autosave
+
+## Autosave on exit
+Whenever you exit IGV, a copy of your current session will be saved to the `igv/autosave` directory with the name `exit_session_autosave.xml`.  Each time you exit IGV, that file will be overwritten with a new save of the current session.
+
+**Autosave on exit is enabled by default**.  Autosave on exit can be enabled/disabled via  the *General* tab in *View > Preferences*.
+
+## Timed autosave
+You have the option of enabling a periodic autosave of your current session in IGV.  This works by saving a copy of your current session every x minutes to the `igv/autosave` directory, named in the form `session_autosave[timestamp].xml` where `[timestamp]` is the current date and time at the time of the autosave, in [ISO 8601 UTC date and time format](https://en.wikipedia.org/wiki/ISO_8601).   
+
+**Timed autosave is disabled by default.** There are two options in the *General* tab of the *View > Preferences* window menu for timed autosave.  You can set how often the autosave should be done by setting the value for *How often, in minutes, to autosave the current session*.  You can set how many autosave files created by the timed autosave to keep by setting the value for *How many timed autosave session files to keep*.  Setting this option to 0 (which is the default) disables timed autosave.
+
+## Autoload
+IGV provides the option to automatically load your last autosave on startup.  This can be enabled in the *General* tab of the *View > Preferences* window.  If this is enabled, when you open IGV, the most recent session file in the `igv/autosave` directory will be loaded, if there is one.  This setting will be ignored if running IGV from the command line and specifying a file to open on start.
+
 
 # Session file format
 
