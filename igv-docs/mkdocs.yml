@@ -47,7 +47,7 @@ nav:
       - External control of IGV: UserGuide/advanced/external_control.md
       - Hosting genomes: UserGuide/advanced/hosting_genomes.md
       - Downloading genomes: UserGuide/advanced/download_genomes.md
-      - Authentication: UserGuide/advanced/oauth.md-
+      - Authentication: UserGuide/advanced/oauth.md
       - AWS support:  UserGuide/advanced/aws.md
       
 - File Formats: 

@@ -1,111 +1,30 @@
+<!---
+The page title should not go in the menu
+-->
+<p class="page-title"> Hosting genomes </p>
 
-Some words on genome list file
+The list of hosted reference genomes in the IGV menus is defined by the file specified in the *Genome server URL* field of the *Advanced* tab of the *View > Preferences* window. By default, the *Genome server URL* is set to a file hosted at https://igv.org. You may wish to **replace it with your own customized list of genomes** for a variety of reasons. For example, to limit the list to only those genomes that are of interest to you and your colleagues, or to add a genome that is not included with the default hosted genomes. 
 
+To host your own customized list of genomes:
 
-### Example -- Human GRCh38 with 2 annotation tracks
+1. Create a text file listing all the genomes you wish to include in the hosted genomes menu. The file format is described below.
 
-**Required fields are "id", "name", "fastaURL", and "indexURL".   All other fields are optional.**
+2. Upload the file to your web server.
 
-```json
-{
-  "id": "hg38",
-  "name": "Human (GRCh38/hg38)",
-  "fastaURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg38/hg38.fa",
-  "indexURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg38/hg38.fa.fai",
-  "cytobandURL": "https://s3.amazonaws.com/igv.org.genomes/hg38/annotations/cytoBandIdeo.txt.gz",
-  "aliasURL": "https://s3.amazonaws.com/igv.org.genomes/hg38/hg38_alias.tab",
-  "chromosomeOrder": [
-    "chr1",
-    "chr2",
-    "chr3",
-    "chr4",
-    "chr5",
-    "chr6",
-    "chr7",
-    "chr8",
-    "chr9",
-    "chr10",
-    "chr11",
-    "chr12",
-    "chr13",
-    "chr14",
-    "chr15",
-    "chr16",
-    "chr17",
-    "chr18",
-    "chr19",
-    "chr20",
-    "chr21",
-    "chr22",
-    "chrX",
-    "chrY"
-  ],
-  "tracks": [
-    {
-      "name": "Refseq Genes",
-      "format": "refgene",
-      "url": "https://s3.amazonaws.com/igv.org.genomes/hg38/ncbiRefSeq.sorted.txt.gz",
-      "indexURL": "https://s3.amazonaws.com/igv.org.genomes/hg38/ncbiRefSeq.sorted.txt.gz.tbi"
-    },
-    {
-      "name": "Gencode v24 genes",
-      "format": "gtf",
-      "url": "https://s3.amazonaws.com/igv.org.genomes/hg19/gencode.v24.genes.gtf.gz"
-    }
-  ]
-}
+3. Start IGV. Select *View > Preferences > Advanced* and set the *Genome server URL* to the URL to your genomes file on your server. 
 
-```
-
-### File paths
-
-URL properties (all fields that end with ```url```) can be absolute or relative file paths.  Relative paths are interpreted as relative to the location of the genome json file.   For example, the following definition presumes an annotation file ```chr22.genes.gtf.gz``` in the same directory as the json file.
-
-hg19_local_annotations.json
-```
-{
-  "id": "hg19",
-  "name": "Human (CRCh37/hg19)",
-  "fastaURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta",
-  "indexURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta.fai",
-  "cytobandURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/cytoBand.txt",
-  "aliasURL": "https://s3.amazonaws.com/igv.org.genomes/hg19/hg19_alias.tab",
-  "tracks": [
-    {
-      "name": "Gencode v24 genes",
-      "url": "chr22.genes.gtf.gz"
-    },
-
-  ]
-}
-```
+4. Shut down IGV.  Upon restart your hosted genome list will be used in place of the default list.  
 
 
+The **file format for the reference genome list** defines one genome per line with three tab-delimited columns:  
 
+* The genome **name**, which will appear in the menu. 
 
-### Genome with hidden annotation track
+* A **URL** to a .json or .genome file that specifies the details of the genome. This can point to a file from IGV's default list or your own custom genome file that you have uploaded to a web server.
 
-In the example below an annotation file containing protein coding genes from Gencode is loaded to support searching by Gencode gene identifiers.
+    The .json format for reference genomes is described [here](../../FileFormats/Genomes.md). Use this format to define any custom genomes you wish to add the list. The .genome format is an older format and is supported only for backwards compatibility with existing .genome files.
 
-
-```json
-{
-  "id": "hg19",
-  "name": "Human (CRCh37/hg19)",
-  "fastaURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta",
-  "indexURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/hg19.fasta.fai",
-  "cytobandURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/hg19/cytoBand.txt",
-  "aliasURL": "https://s3.amazonaws.com/igv.org.genomes/hg19/hg19_alias.tab",
-  "tracks": [
-    {
-      "name": "Refseq Genes",
-      "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/ncbiRefSeq.txt.gz"
-    },
-    {
-      "url": "https://s3.amazonaws.com/igv.org.genomes/hg19/gencode.v24.genes.gtf.gz",
-      "hidden": true
-    }
-  ]
-}
-```
-
+* The genome **ID**. The ID is arbitrary, but for genomes from UCSC use their ID. This is important for the BLAT tool, which uses the UCSC BLAT server. 
+    
+!!! tip " "
+        To use IGV's default genome list file as a starting point for your new file, you can download it from [https://igv.org/genomes/genomes.tsv](https://igv.org/genomes/genomes.tsv).

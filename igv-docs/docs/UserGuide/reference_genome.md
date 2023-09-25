@@ -8,22 +8,20 @@ IGV requires a reference genome. It serves as the "coordinate system" for displa
 
 # Loading a reference genome
 
-When you first launch IGV, the human genome GRCh39/hg19 is loaded by default. The genome dropdown list on the left end of the IGV window toolbar displays the current reference genome.
+When you first launch IGV, the human genome GRCh39/hg19 is loaded by default. The genome dropdown menu on the left end of the IGV window toolbar displays the current reference genome.
 
 ![](img/icon_genome_dropdown.png){width=262}
 
 You can switch genomes by loading one of IGV's hosted reference genomes or by loading your own genome files. 
 
-!!! tip " "
+!!! note " "
     When you switch to a different reference genome, IGV will clear the current session. 
-
-When you load a reference genome, it will be added to the genome dropdown menu and it will remain there unless you remove it. IGV uses the folder ```<userhome>/igv/genomes``` to store information about the genomes in the menu.
 
 ### Hosted genomes
 
-First check to see if the genome you want is in the dropdown list in the toolbar. If you find it there, just select it from the list.
+First check to see if the genome you want is in the dropdown menu in the toolbar. If you find it there, just select it from the list.
 
-If the genome you want is not on the list: 
+If the genome you want is not on the dropdown list: 
 
 * Click the ***More...*** entry at the end of the list; or 
 * Select ***Genomes > Select Hosted Genome***
@@ -32,17 +30,23 @@ This will pop up a window with the full list of hosted genomes. If you find your
 
 ![](img/GenomeToAddToListNew.png){width=356}
 
+!!! tip " "
+    See the *Advanced* section of this User Guide for information on how to [host your own customized list of genomes](../advanced/hosting_genomes.md).
+
 ### Other genomes
 
-If you have the FASTA file for the sequence of your reference genome of interest, it can be loaded by clicking on ***Genomes > Load Genome from File*** or ***Genomes > Load Genome from URL***. In this case, the gene annotations will not be loaded automatically, but if you have the gene annotation file, it can be loaded like any other data file via the ***Files > Load from*** menus. To automatically load gene annotations, as well as an optional cytoband file, you can create a genome JSON file as described in the [File Formats: Genomes](../FileFormats/Genomes.md) section. 
+If you have the FASTA file for the sequence of your reference genome of interest, it can be loaded by clicking on ***Genomes > Load Genome from File*** or ***Genomes > Load Genome from URL***. In this case, the gene annotations will not be loaded automatically, but if you have the gene annotation file, it can be loaded like any other data file via the ***Files > Load from*** menus. 
+
+To automatically load gene annotations, as well as an optional cytoband file, you can create a genome JSON file as described in the [File Formats: Genomes](../FileFormats/Genomes.md) section. The genome JSON file is loaded via the *Genomes* menu.
 
 FASTA files can be plain text or block gzipped, and must be indexed with a .fai as defined by the Samtools suite (www.htslib.org). If the file is plain text (not block gzipped) and not indexed, IGV will attempt to index it.  IGV remembers the location of the FASTA file and the file will appear in the genome dropdown menu. 
 
+When you load a reference genome via the *Genomes* menu, it will be added to the genome dropdown menu and from then on you can select it from there. 
 
 # Removing a genome from the menu
-When you have loaded a reference genome, it will remain in the genome dropdown menu unless you remove it. 
+When you have loaded a reference genome, it will remain in the genome dropdown menu unless you remove it. IGV uses the folder ```<userhome>/igv/genomes``` to store information about the genomes in the menu.
 
-To remove a genome from the IGV menu:
+To remove a genome from the dropdown menu:
 
 * Select ***Genomes>Remove Genomes***.
 * Select the genomes you want to remove and click ***Remove***. 
