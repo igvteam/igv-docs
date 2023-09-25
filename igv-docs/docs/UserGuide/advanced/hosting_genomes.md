@@ -22,7 +22,7 @@ The **file format for the reference genome list** defines one genome per line wi
 
 * A **URL** to a .json or .genome file that specifies the details of the genome. This can point to a file from IGV's default list or your own custom genome file that you have uploaded to a web server.
 
-    The .json format for reference genomes is described [here](../../FileFormats/Genomes.md). Use this format to define any custom genomes you wish to add the list. The .genome format is an older format and is supported only for backwards compatibility with existing .genome files.
+    The .json format for reference genomes is [described here](../../../FileFormats/Genomes/#igv-reference-genome-json). Use this format to define any custom genomes you wish to add the list. The .genome format is an older format and is supported only for backwards compatibility with existing .genome files.
 
 * The genome **ID**. The ID is arbitrary, but for genomes from UCSC use their ID. This is important for the BLAT tool, which uses the UCSC BLAT server. 
     
