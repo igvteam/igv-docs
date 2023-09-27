@@ -31,17 +31,26 @@ This will pop up a window with the full list of hosted genomes. If you find your
 ![](img/GenomeToAddToListNew.png){width=356}
 
 !!! tip " "
-    See the *Advanced* section of this User Guide for information on how to [host your own customized list of genomes](./advanced/hosting_genomes.md). 
+    See the *Advanced* section of this User Guide for information on how to [host your own customized list of genomes](../advanced/reference_genomes_adv/#customizing-hosted-genomes). 
+    
+!!! tip " "
+    IGV's hosted genomes require an internet connection. See the *Advanced* section of this User Guide for information on how to [download a hosted genome for offline use of IGV](../advanced/reference_genomes_adv/#using-hosted-genomes-offline). 
     
 ### Other genomes
 
-If you have the FASTA file for the sequence of your reference genome of interest, it can be loaded by clicking on ***Genomes > Load Genome from File*** or ***Genomes > Load Genome from URL***. In this case, the gene annotations will not be loaded automatically, but if you have the gene annotation file, it can be loaded like any other data file via the ***Files > Load from*** menus. 
-
-To automatically load gene annotations, as well as an optional cytoband file, you can create a genome JSON file as described in the [File Formats: Genomes](../FileFormats/Genomes/#igv-reference-genome-json) XXXXXXX section. The genome JSON file is loaded via the *Genomes* menu.
-
-FASTA files can be plain text or block gzipped, and must be indexed with a .fai as defined by the Samtools suite (www.htslib.org). If the file is plain text (not block gzipped) and not indexed, IGV will attempt to index it.  IGV remembers the location of the FASTA file and the file will appear in the genome dropdown menu. 
+To load a reference genome that is not included in IGV's set of hosted genomes, you can load the file the specifies the genome by clicking on ***Genomes > Load Genome from File*** or ***Genomes > Load Genome from URL***.
 
 When you load a reference genome via the *Genomes* menu, it will be added to the genome dropdown menu and from then on you can select it from there. 
+
+#### Sequence only
+
+If you load the FASTA file for the sequence of your reference genome of interest, the gene annotations will not be loaded automatically. If you have the gene annotation file, it can be loaded like any other data file via the ***Files > Load from*** menus. 
+
+FASTA files can be plain text or block gzipped, and must be indexed with a .fai as defined by the Samtools suite (www.htslib.org). If the file is plain text (not block gzipped) and not indexed, IGV will attempt to index it.   
+
+#### Full reference genome
+
+To automatically load gene annotations, as well as an optional cytoband file, along with the genome sequence, you can create and load a genome JSON file, which described in the [File Formats: Genomes](../FileFormats/Genomes/#igv-reference-genome-json) section. 
 
 # Removing a genome from the menu
 When you have loaded a reference genome, it will remain in the genome dropdown menu unless you remove it. IGV uses the folder ```<userhome>/igv/genomes``` to store information about the genomes in the menu.
