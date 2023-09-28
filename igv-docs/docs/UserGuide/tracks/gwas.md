@@ -3,86 +3,63 @@ The page title should not go in the menu
 -->
 <p class="page-title"> GWAS </p>
 
-IGV can display genome-wide association study (GWAS)  data as a "manhattan plot", color-coded by chromosome. Data
-formats are described [here](<?php echo base_path(); ?>GWAS).
+IGV can display genome-wide association study (GWAS)  data as a *Manhattan plot*. Data
+formats are described [here](../../../../FileFormats/DataTracks/#gwas).
+
+## Manhattan plot
 
 ![](../img/igv_gwas.jpg)
 
-The plot represents the significance of the association between a SNP or haplotype and the trait being measured. The
-Y-axis shows -log10 transformed P values, which represent the strength of association.
+The GWAS Manhattan plot represents the significance of the association between a SNP or haplotype and the trait being measured. The Y-axis shows -log10 transformed *P* values, which represent the strength of association.
 
-The size of the data points in the plot and their height on the left-hand side of the data pane relate directly to their
-significance: the larger the point and the higher the point on the scale, the more significant the association with the
-trait. You can see the point size difference in the following screenshot of data on chromosome 1.
+The size of a data point in the plot and its vertical position in the plot relate directly to its
+significance: the larger the point and the higher the point on the Y-axis, the more significant the association with the trait. You can see the point size difference in the following screenshot of data on chromosome 1.
 
 ![](../img/igv_gwas_detail.jpg)
 
-As in other parts of IGV, hovering over a data point allows you to see a pop-up containing the data specifically
-associated with that point. You can see the pop-up for the topmost data point in this image. Note that the point's
-position on the scale on the left is associated with its _P_ value.
+As in other parts of IGV, clicking on a data point (or hovering over it if you have set the info popup text to display on hover rather than click) allows you to see a pop-up containing the data specifically
+associated with that point. You can see the pop-up for the topmost data point in this image. Note that the point's vertical position is associated with its _P_ value.
 
 ![](../img/igv_gwas_popup.jpg)
 
-GWAS Pop-up Menu
-----------------
+## Plot attributes
 
-The following commands appear in the pop-up menu for GWAS tracks:
+**Color scheme**
 
-Command
+The points in the plot are colored by chromosome. Options for the color scheme include:
 
-Description
+* Chromosome color: Each chromosome has a unique color (the default)<br>
+    ![](../img/igv_gwas_chromcol.jpg)
+* Single color: All chromosomes have the same color<br>
+    ![](../img/igv_gwas_singcol.jpg)
+* Alternating color: Uses two colors that alternate through the chromosomes<br>
+    ![](../img/igv_gwas_altcol.jpg)
 
-Rename Track
+To change the **color scheme**:
 
-Renames the track.
+* Right-click on the track and select the color scheme from the pop-up menu
 
-Remove Track
+To change the **colors** used by each scheme:
 
-Removes the selected track from the display.
+* Right-click on the track and select *Set primary color...* to pick the color for the single color scheme and for one of the two colors in the alternating color scheme.
+* Right-click on the track and select *Set alternating color...* to pick the second color for the alternating color scheme.
+* IGV has a predefined color palette for the chromosome color scheme and the colors cannot be changed.
 
-Set Data Range...
+**Point size**
 
-Changes the minimum, baseline, and maximum values of the scale used for the GWAS data.
+The size of a data point in the plot relates directly to its significance. 
 
-Change Track Height...
+To change the size of the data points:
 
-Changes the display height of the track.
+* Right-click on the track and select *Set minimum point size...* or *Set maximumum point size...*
 
-**Color Scheme**  
-Chromosome color  
-Single color  
-Alternating color
+**Data scale**
 
-Changes the display to use different color schemes for the chromosome color-coding. The chromosome color scheme (
-default) uses the colors defined by IGV.
+To define the scale of the plot's Y-axis:
 
-![](../img/igv_gwas_chromcol.jpg)
+* Right-click on the track and select *Set Data Range...* to set the minimum, baseline, and maximum values of the scale used for the GWAS data.
 
-The single color scheme changes all the chromosomes to display in a single color (blue by default).
 
-![](../img/igv_gwas_singcol.jpg)
 
-The alternating color scheme uses two colors (blue and gold by default) that alternate through the chromosomes.
 
-![](../img/igv_gwas_altcol.jpg)
 
-Set primary color...
-
-Set the color for the single color scheme and for one of the colors in the alternating color scheme.
-
-Set alternating color...
-
-Set the alternating color in the alternating color scheme.
-
-Set minimum point size...
-
-Set the minimum data point display size.
-
-Set maximum point size...
-
-Set the maximum data point display size.
-
-Save image...
-
-Save the current display as an image file. Specify the file format by setting the filename extension in the file save
-dialog to .png, .jpeg, .jpg, or .svg.

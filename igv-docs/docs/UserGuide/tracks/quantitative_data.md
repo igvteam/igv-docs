@@ -84,8 +84,8 @@ can be displayed as the following single track by multi-selecting the two tracks
 
 ![ ](../img/overlaytracks-after.png){width=600}
 
-!!! tip " "
-    You may want to set the data ranges to be the same on the tracks before overlaying them.
+!!! note " "
+    You may want to set the data ranges to be the same on the tracks before overlaying them or you can enable autoscale on the combined overlay track to keep the data ranges of the constituate tracks in sync.
 
 Each chart is drawn with a default level of translucence so they don't completely obscure one another. Select *Adjust Transparency* from the combined track's pop-up menu to make the charts more or less opaque.
 

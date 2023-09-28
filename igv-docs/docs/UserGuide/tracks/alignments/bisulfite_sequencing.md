@@ -7,10 +7,12 @@ the following and similar techniques:
 *   BS-Seq, bisulfite sequencing
 *   RRBS-Seq, reduced representation bisulfite sequencing
 *   TAB-Seq, Tet-assisted bisulfite sequncing
-*   [NOMe-Seq](#NOMe-Seq)
+*   NOMe-Seq
+
+### Enabling bisulfite sequencing coloring 
 
 Bisulfite sequence coloring is invoked from the alignment track popup menu by selecting a context under the submenu
-item `Color alignments by > bisulfite mode`.  IGV recognized contexts are described in the table below.
+item *Color alignments by > bisulfite mode*.  IGV recognized contexts are described in the table below.
 
 
 
@@ -18,9 +20,11 @@ item `Color alignments by > bisulfite mode`.  IGV recognized contexts are descri
 |--------- |--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 |  **CG** | CpG                                                                                                                                                    | Canonical methylation target site in eukaryotes                                                                                                                                                                                                                                                                                                                                 |
 | **CHH** and **CHG** | H represents any nucleotide but guanine (H comes after G).<ul><li>CHH = CAA, CAT, CAC; CTT, CTA, CTC; CCC, CCA, CCT </li><li>CHG = CAG, CTG, CCG</li>  | Additional methylation sites: <ul><li>For mammals in a cell-type dependent manner. Pervasive in human embryonic stem cells (Lister 2009). For example, in H1 stem cells comprises almost 25% of all cytosines at which DNA methylation is identified compared to 99.98% mCG in IMR90 cells.</li><li>In plants serve as additional canonical methylation target sites.</li></ul> 
-| **HCG** | ACG, TCG, CCG, inclusive of WCG | see [NOMe-Seq section](#nome-seq-additionally-determines-nucleosome-positioning)                                                                                                                                                                                                                                                                                                                                               |
-| **GCH** | GCA, GCT, GCC | see [NOMe-Seq section](#nome-seq-additionally-determines-nucleosome-positioning)                                                                                                                                                                                                                                                                                                                                               |
-| **WCG** | W represents A or T (Weak).  ACG, TCG | see [NOMe-Seq section](#nome-seq-additionally-determines-nucleosome-positioning)                                                                                                                                                                                                                                                                                                |
+| **HCG** | ACG, TCG, CCG, inclusive of WCG | see [NOMe-Seq section](#nome-seq)                                                                                                                                                                                                                                                                                                                                               |
+| **GCH** | GCA, GCT, GCC | see [NOMe-Seq section](#nome-seq)                                                                                                                                                                                                                                                                                                                                               |
+| **WCG** | W represents A or T (Weak).  ACG, TCG | see [NOMe-Seq section](#nome-seq)                                                                                                                                                                                                                                                                                                |
+
+### Display convention
 
 When bisulfite sequence tracks are initially loaded, default coloring of mismatches against the reference will show 
 red **T**'s and green **A**'s. When coloring is switched to bisulfite mode, two new coloring schema are applied and 
@@ -42,7 +46,9 @@ the tumor sample in the **screenshot** below which visualizes data from Berman _
 
 ![](../../img/BermanNatGenet2011%202015-02-11%2014.31.21.png)
 
-### Bisulfite sequencing (BS-Seq) identifies sites of DNA methylation
+### BS-Seq
+
+**BS-Seq identifies sites of DNA methylation**
 
 Coloring by bisulfite mode in IGV allows for visualization of alignments of BS-Seq reads, a DNA-modification 
 technique used to distinguish sites of DNA methylation and hydroxymethylation in epigenetic studies. Alignments 
@@ -57,7 +63,7 @@ The [IUPAC ambiguity code](http://en.wikipedia.org/wiki/Nucleic_acid_notation) H
 
 Promoter methylation is typically associated with repression, while genic methylation correlates with transcriptional activity.
 
-### BS-Seq exploits the different sensitivities of cytosine and 5-meC to bisulfite
+**BS-Seq exploits the different sensitivities of cytosine and 5-meC to bisulfite**
 
 Bisulfite modification exploits the different sensitivities of cytosine and 5-meC to deamination by bisulfite under 
 acidic conditions. Cytosine undergoes conversion to uracil whereas 5-meC is unmodified and remains intact. The uracil 
@@ -98,7 +104,7 @@ methylation information for cytosines on the top strand (**C** and **T** highlig
 methylation information for the paired complement, that is for guanines paired to the methylatable cytosines 
 (**G** and **A** highlighted).
 
-### NOMe-Seq additionally determines nucleosome positioning
+### NOMe-Seq 
 
 In addition to detecting methylation states, bisulfite conversion is used in footprinting studies. For example to 
 determine nucleosome positioning in yeast and mammalian cells.

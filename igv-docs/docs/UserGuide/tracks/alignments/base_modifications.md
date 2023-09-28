@@ -10,22 +10,20 @@ in an experiment with both `5mC` and `5hmC` modifications the following menu opt
 ![](../../img/basemods/menu.png)
 
 
-**Display Conventions**
+### Display conventions
 
 Display conventions for base modification coloring options are listed below.
 
-1. Alignment blocks are colored by DNA strand.  For 3rd generation reads this is the read strand.  For paired reads, the
-   DNA strand  is assumed to be the strand of the read marked first-in-pair.
+1. Alignment blocks are colored by DNA strand.  For 3rd generation reads this is the read strand.  For paired reads, the DNA strand  is assumed to be the strand of the read marked first-in-pair.
 
-   * Gray for forward read
-   * Sage for reverse read
+    * Grey for forward read
+    * Sage for reverse read <br><br>
 
 2. Alignments are grouped by DNA strand.  This can be disabled from the **Base Mods** tab of the preferences window.
 
-3. Mismatches to reference are flagged by displaying the read base in dark gray.
+3. Mismatches to reference are flagged by displaying the read base in dark grey.
 
-4. Base modifications are indicated by color, with a distinct color assigned to each modification type.  These colors
-   are settable in user preferences
+4. Base modifications are indicated by color, with a distinct color assigned to each modification type.  These colors are settable in user preferences
 
 5. Alpha transparency is used to indicate the likelihood of the modification as reported by the ML tag.
 
@@ -51,20 +49,20 @@ customized for each canonical base (A,C,T, and G).
 
 ![](../../img/basemods/mod_colors.png)
 
-**Example Screenshots**
+### Example screenshots
 
 
-**Mono-color display of reads with 5mC and 5hmC modifications**
+1. Mono-color display of reads with 5mC and 5hmC modifications
 
 ![](../../img/basemods/basemod_mono.png)
 
 
-**2-Color display of reads with 5mC and 5hmC modifications**
+2. Two-color display of reads with 5mC and 5hmC modifications
 
 ![](../../img/basemods/basemod_2color.png)
 
 
-**5mC methylagion**
+3. 5mC methylation
 
 5mC experiment in 2-Color mode (5mC == Red, No modification == Blue, Threshold = 0.5)
 

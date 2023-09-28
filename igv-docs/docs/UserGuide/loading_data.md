@@ -5,7 +5,7 @@ The page title should not go in the menu
 
 # Loading data
 
-Data can be loaded from local files, URLs, or an IGV data server. See [File Formats](../FileFormats/DataTracks.md) for information about the file formats IGV accepts for data tracks.
+Data can be loaded from local files, URLs, or via the IGV hosted data menu. See [File Formats](../FileFormats/DataTracks.md) for information about the file formats IGV accepts for data tracks.
 
 To **load data from the local file system** or other file systems you have mounted:
 
@@ -18,9 +18,9 @@ To **load data that is accessible via URL** on a local intranet or the internet:
 2.  Enter the URL for a data file or sample information file; If the file is indexed, make sure to enter the index file name in the field provided; Click _OK._
 
 !!! note "" 
-    For bam, tdf, and indexed file formats the web server must support HTTP byte-range requests.
+    For BAM, TDF, and indexed file formats the web server must support HTTP byte-range requests.
 
-To **load data from the IGV data server**:
+To **load IGV hosted data**:
 
 1.  Select _File > Load from Server_. The Available Datasets window appears. The Available Datasets are specific to the current reference genome. Not all genomes have corresponding hosted datasets.  
     ![](img/load_from_server.jpg)

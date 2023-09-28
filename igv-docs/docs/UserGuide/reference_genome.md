@@ -38,7 +38,7 @@ This will pop up a window with the full list of hosted genomes. If you find your
     
 ### Other genomes
 
-To load a reference genome that is not included in IGV's set of hosted genomes, you can load the file the specifies the genome by clicking on ***Genomes > Load Genome from File*** or ***Genomes > Load Genome from URL***.
+To load a reference genome that is not included in IGV's set of hosted genomes, you can load a file the specifies the genome by clicking on ***Genomes > Load Genome from File*** or ***Genomes > Load Genome from URL***.
 
 When you load a reference genome via the *Genomes* menu, it will be added to the genome dropdown menu and from then on you can select it from there. 
 
@@ -50,7 +50,7 @@ FASTA files can be plain text or block gzipped, and must be indexed with a .fai 
 
 #### Full reference genome
 
-To automatically load gene annotations, as well as an optional cytoband file, along with the genome sequence, you can create and load a genome JSON file, which described in the [File Formats: Genomes](../FileFormats/Genomes/#igv-reference-genome-json) section. 
+To automatically load gene annotations, as well as an optional cytoband file, along with the genome sequence, you can create and load a genome JSON file, which is described in the [File Formats: Genomes](../FileFormats/Genomes/#igv-reference-genome-json) section. 
 
 # Removing a genome from the menu
 When you have loaded a reference genome, it will remain in the genome dropdown menu unless you remove it. IGV uses the folder ```<userhome>/igv/genomes``` to store information about the genomes in the menu.

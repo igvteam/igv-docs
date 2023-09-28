@@ -28,9 +28,7 @@ nav:
             - Base modifications:  UserGuide/tracks/alignments/base_modifications.md
             - SMRT kinetics:  UserGuide/tracks/alignments/smrt.md
         - Variants (VCF): UserGuide/tracks/vcf.md
-        - Segmented copy number: UserGuide/tracks/seg.md
         - GWAS: UserGuide/tracks/gwas.md
-        - RNA structure: UserGuide/tracks/rna_structure.md
     - Sample attributes: UserGuide/sample_attributes.md
     - Regions: UserGuide/regions.md
     - Sessions: UserGuide/sessions.md

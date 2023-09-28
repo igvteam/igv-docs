@@ -9,7 +9,7 @@ IGV displays attribute names and values in the attributes panel between the name
 
 ## Color-coded attribute values
 
-IGV uses color-coded blocks to represent the attribute values. If two samples have the same color block for a particular attribute, both samples have the same value for that attribute. However, the colors are chosen at random and different sessions of IGV may not use the same colors.
+IGV uses color-coded blocks to represent the attribute values. If two samples have the same color block for a particular attribute, both samples have the same value for that attribute. However, the colors are arbitrary and different sessions of IGV may not use the same colors.
 
 ![](img/attributes.jpg)
 
@@ -29,5 +29,5 @@ To show or hide **all** attributes:
 
 *   Select _View > Show Attribute Display_ to toggle the setting. A check mark next to the menu item indicates that the attribute panel is displayed. No check mark indicates that it is hidden. 
 
-!!! note " "  
-    This is a persistent setting. Toggling the menu item also toggles the corresponding setting on the *General* tab of the _View > Preferences_ window.
+    !!! note " "  
+        This is a persistent setting. Toggling the menu item also toggles the corresponding setting on the *General* tab of the _View > Preferences_ window.

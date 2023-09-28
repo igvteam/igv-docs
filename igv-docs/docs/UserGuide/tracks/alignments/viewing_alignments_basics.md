@@ -6,7 +6,7 @@ The page title should not go in the menu
 
 # File formats
 
-Aligned reads from sequencing can be loaded into IGV in the [BAM](<?php echo base_path(); ?>BAM) format, [SAM](<?php echo base_path(); ?>SAM) format, or [CRAM](http://<?php echo base_path(); ?>CRAM) format.
+Aligned reads from sequencing can be loaded into IGV in the [BAM](../../../../FileFormats/DataTracks/#bam) format, [SAM](../../../../FileFormats/DataTracks/#sam) format, or [CRAM](../../../../FileFormats/DataTracks/#cram) format.
 
 BAM and CRAM files are required to have an **associated index file**.
 

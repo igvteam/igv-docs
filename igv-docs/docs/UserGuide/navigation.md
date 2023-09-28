@@ -6,7 +6,7 @@ The page title should not go in the menu
 
 # Navigation controls
 
-IGV provides several navigation controls for specifying the genomic region to view, which can be the whole genome where all the chromosomes are laid out side by side, a single whole chromosome, or any section of a chromosome all the way down to base-pair resolution. IGV also supports viewing multiple regions side by side, as described in the [section below](#view-multiple-regions).
+IGV provides several navigation controls for specifying the genomic region to view, which can be the whole genome where all the chromosomes are laid out side by side, a single whole chromosome, or any section of a chromosome all the way down to base-pair resolution. IGV also supports viewing multiple regions side by side, as described in the [section below](#viewing-multiple-regions).
 
 To view the **whole genome**
 

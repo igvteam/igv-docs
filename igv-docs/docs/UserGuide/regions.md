@@ -8,7 +8,7 @@ The page title should not go in the menu
 Regions of interest (ROI) are intervals defined by the user using one of the methods described below. ROIs are marked
 in red below the ruler. Hovering the mouse over this red region displays lines that demarcate the ROI down the panels.
 Clicking on the red highlight pops up a menu for options that include sorting by various data-specific metrics and
-copying to the clipboard or BLAT searching the corresponding reference sequence (**Screenshot** 2015.05.05).
+copying to the clipboard or BLAT searching the corresponding reference sequence.
 
 ![](img/SL_IGV_ROI_BLAT2015-05-05%2016.25.58.png)
 
