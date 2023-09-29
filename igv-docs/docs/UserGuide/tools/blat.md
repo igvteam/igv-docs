@@ -48,7 +48,7 @@ The resulting hits are displayed as blue rectangles and lines are used to repres
 
 By default, result tracks for BLAT searches of a read sequence in an alignment track will be assigned a track name that is the same as the read name. Result tracks for other BLAT searches will be named simply "BLAT". In the example below, the user has renamed all the BLAT output tracks. This is done by right-clicking on a track and selecting _**Rename Track**_ from the popup menu. For example, the track **marked 1** is now named _Blat ROI2_. 
 
-!!! note " "
+!!! tip " "
     BLAT result tracks can be manipulated just like any other feature track via the popup menu.
 
 ![](../img/SL_BLAT1b_2015-04-01.png)
@@ -58,7 +58,7 @@ By default, result tracks for BLAT searches of a read sequence in an alignment t
 Each BLAT search presents a separate results panel displayed in a popup window. The query sequence is displayed at the top, and a then row for every hit, including the location of the hit, match score, and other metrics
 as shown in the screenshot below. Hits are listed in descending order of the score. 
 
-!!! note " "
+!!! tip " "
     If you close the results window, you can reopen it by right-clicking on the corresponding feature track in the IGV window and selecting _**Open table view**_ from the popup menu.
 
 ![](../img/Screenshot%202015-04-01%2015.41.18.png)
@@ -84,7 +84,7 @@ https://genome.ucsc.edu/cgi-bin/hgBlat?userSeq=$SEQUENCE&type=DNA&db=$DB&output=
 
 Output from the web service or command line program should be JSON containing a ```blat``` property at the top level, 
 followed by an array of PSL records representing the alignments.   Each PSL record is represented as a JSON array.  An example is given below.
-!!! note " "
+!!! tip " "
     Details of the PSL format is available at [UCSC](http://genome.ucsc.edu/FAQ/FAQformat#format2).   
 
 ```json

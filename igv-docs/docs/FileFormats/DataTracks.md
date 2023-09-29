@@ -8,7 +8,7 @@ The page title should not go in the menu
 
 To load a set of BAM files merged into a single track see [Merged BAM File](#merged-bam-file).
 
-A BAM file (.bam) is the binary version of a SAM file.  A SAM file (.sam) is a tab-delimited text file that contains sequence alignment data.   These formats are described on the SAM Tools web site: [http://samtools.github.io/hts-specs/](http://samtools.github.io/hts-specs/). 
+A BAM file (.bam) is the binary version of a SAM file.  A SAM file (.sam) is a tab-delimited text file that contains sequence alignment data.   These formats are described on the SAM Tools website: [http://samtools.github.io/hts-specs/](http://samtools.github.io/hts-specs/). 
 
 BAM, rather than SAM, is the recommended format for IGV. Starting with IGV 2.0.11, IUPAC ambiguity codes in BAM files are supported.
 
@@ -26,7 +26,7 @@ BAM, rather than SAM, is the recommended format for IGV. Starting with IGV 2.0.1
 
 ## BED
 
-A BED file (.bed) is a tab-delimited text file that defines a feature track. It can have any file extension, but .bed is recommended. The BED file format is described on the UCSC Genome Bioinformatics web site: [http://genome.ucsc.edu/FAQ/FAQformat](http://genome.ucsc.edu/FAQ/FAQformat). Tracks in the UCSC Genome Browser ([http://genome.ucsc.edu/](http://genome.ucsc.edu/)) can be downloaded to BED files and loaded into IGV.
+A BED file (.bed) is a tab-delimited text file that defines a feature track. It can have any file extension, but .bed is recommended. The BED file format is described in detail on the [UCSC website](http://genome.ucsc.edu/FAQ/FAQformat).
 
 **Notes:** 
 
@@ -45,40 +45,41 @@ See the [GFF3 specification, column 9](http://www.sequenceontology.org/gff3.shtm
 
 ## bedGraph
 
-The bedGraph format allows display of continuous-valued data in track format. This display type is useful for probability scores and transcriptome data.  This track type is similar to the wiggle (WIG) format, but unlike the wiggle format, data exported in the bedGraph format are preserved in their original state.  For more information on this file format, see the UCSC Genome Bioinformatics web site description at [http://genome.ucsc.edu/goldenPath/help/bedgraph.html](http://genome.ucsc.edu/goldenPath/help/bedgraph.html).
+The bedGraph format allows display of continuous-valued data in track format. This display type is useful for probability scores and transcriptome data.  This track type is similar to the wiggle (WIG) format, but unlike the wiggle format, data exported in the bedGraph format are preserved in their original state.  For more information on this file format, see the [UCSC website](http://genome.ucsc.edu/goldenPath/help/bedgraph.html).
 
 Recognized Extension: .bedgraph
 
-## bedpe
+## BEDPE
 
-Two primary use cases:
+The BEDPE format supports two primary use cases:
+
 * Interactions
 * Structural variants
 
-Format variants
-* Original spec: [bedtools](https://bedtools.readthedocs.io/en/latest/content/general-usage.html)
-* [10X](https://support.10xgenomics.com/genome-exome/software/pipelines/latest/output/bedpe) - spec compliant with additional columns
+File format variants:
+
+* Original [bedtools](https://bedtools.readthedocs.io/en/latest/content/general-usage.html#bedpe-format) specification
+* Specification for [10X BEDPE files](https://support.10xgenomics.com/genome-exome/software/pipelines/latest/output/bedpe) with additional columns. 10X files are recognized in IGV by looking for the following header line:<br>
+`# chrom1 start1 stop1 chrom2 start2 stop2 name qual strand1 strand2 filters info`
 
 Rendering
+
 * Arcs
 * Blocks
 
-10X files are recognized by looking for the following header line
-``` 
-#chrom1	start1	stop1	chrom2	start2	stop2	name	qual	strand1	strand2	filters	info 
-```
+
 
 ## bigBed
 
-The bigBed format stores annotation items that can either be simple, or a linked collection of exons, much as [BED](#bed) files do. BigBed files are created initially from BED type files, using the UCSC program bedToBigBed. The resulting bigBed files are in an indexed binary format. The main advantage of the bigBed files is that only the portions of the files needed to display a particular region are transferred, so for large data sets bigBed is considerably faster than regular BED files.
+The bigBed format stores annotation items that can either be simple, or a linked collection of exons, much as [BED](#bed) files do. BigBed files are created initially from BED type files, using the UCSC program bedToBigBed. The resulting bigBed files are in an indexed binary format. The main advantage of the bigBed files is that only the portions of the files needed to display a particular region are transferred, so for large data sets bigBed is considerably faster than regular BED files. 
 
-Go [here](http://genome.ucsc.edu/goldenPath/help/bigBed.html) for more information on bigBed format.
+The bigBed format is described in detail on the [UCSC website](http://genome.ucsc.edu/goldenPath/help/bigBed.html).
 
 ## bigWig
 
-The bigWig format is for display of dense, continuous data that will be displayed as a graph. BigWig files are created initially from [WIG](#wig) type files, using the UCSC program wigToBigWig. Alternatively, bigWig files can be created from [bedGraph](#bedgraph) files, using the UCSC program bedGraphToBigWig. In either case, the resulting bigWig files are in an indexed binary format. The main advantage of the bigWig files is that only the portions of the files needed to display a particular region are transferred, so for large data sets bigWig is considerably faster than regular WIG files.
+The bigWig format is for display of dense, continuous data that will be displayed as a graph. BigWig files are created initially from [WIG](#wig) type files, using the UCSC program wigToBigWig. Alternatively, bigWig files can be created from [bedGraph](#bedgraph) files, using the UCSC program bedGraphToBigWig. In either case, the resulting bigWig files are in an indexed binary format. The main advantage of the bigWig files is that only the portions of the files needed to display a particular region are transferred, so for large data sets bigWig is considerably faster than regular WIG files. 
 
-See [here](http://genome.ucsc.edu/goldenPath/help/bigWig.html) for more information on the bigWig format.
+The bigWig format is described in detail on the [UCSC website](http://genome.ucsc.edu/goldenPath/help/bigWig.html).
 
 ## Birdsuite Files
 
@@ -210,7 +211,7 @@ These files are output when Birdsuite is run so there are no additional steps re
 
 ## broadPeak
 
-A broadPeak (.broadPeak) file is used by the ENCODE project to provide called regions of signal enrichment based on pooled, normalized (interpreted) data. It is a BED 6+3 format. See the [UCSC web site for more details](http://genome.ucsc.edu/FAQ/FAQformat.html#format13) on this format.
+A broadPeak (.broadPeak) file is used by the ENCODE project to provide called regions of signal enrichment based on pooled, normalized (interpreted) data. It is a BED 6+3 format. See the [UCSC website for more details](http://genome.ucsc.edu/FAQ/FAQformat.html#format13) on the broadPeak format.
 
 ## CBS
 
@@ -222,7 +223,7 @@ See [SEG](#seg) for details.
 
 IGV supports importing chemical reactivity probing profiles from SHAPE or MAP files. After choosing a file to import, the user will be prompted to select the applicable chromosome and optional strand and starting position. IGV will then create a .wig file ([WIG format](#wig)) and load it.
 
-### SHAPE format
+#### SHAPE format
 
 The SHAPE format (.shape) is a tab-delimited text file with two columns and no header.
 
@@ -249,9 +250,9 @@ The SHAPE format (.shape) is a tab-delimited text file with two columns and no h
 16	0.203813
 ```
 
-### MAP format
+#### MAP format
 
-The MAP format (.map) is output by the SHAPE-MaP software pipeline _[ShapeMapper](http://www.chem.unc.edu/rna/software.html)_. The .map format is identical to the .shape format, with the addition of a third column containing standard error estimates and a fourth column containing the nucleotide sequence. These additional columns are currently ignored by IGV.
+The MAP format (.map) is output by the SHAPE-MaP software pipeline _[ShapeMapper](https://weekslab.com/software/)_. The .map format is identical to the .shape format, with the addition of a third column containing standard error estimates and a fourth column containing the nucleotide sequence. These additional columns are currently ignored by IGV.
 
 **Example file:** 
 ```
@@ -276,7 +277,7 @@ The MAP format (.map) is output by the SHAPE-MaP software pipeline _[ShapeMapper
 
 ## CN
 
-A CN file (.cn) is a tab-delimited text file that contains copy number data. The CN file format is described on the [GenePattern web site](https://www.genepattern.org/file-formats-guide#CN).
+A CN file (.cn) is a tab-delimited text file that contains copy number data. The CN file format is described on the [GenePattern website](https://www.genepattern.org/file-formats-guide#CN).
 
 **Zero-based index:** Physical positions are identified using a zero-based index.
 
@@ -297,13 +298,13 @@ A corresponding index file is required. By convention, the index file name shoul
 
 ## GCT
 
-A GCT file (.gct) is a tab-delimited text file that contains gene expression data. The GCT file format is described on the [GenePattern web site](https://www.genepattern.org/file-formats-guide#GCT).
+A GCT file (.gct) is a tab-delimited text file that contains gene expression data. The GCT file format is described on the [GenePattern website](https://www.genepattern.org/file-formats-guide#GCT).
 
 The GCT format is used for gene expression and RNAi data.
 
 Example: [allaml.dataset.gct](https://www.genepattern.org/tutorial/linkedFiles/allaml.dataset.gct)
 
-### Gene Expression Data 
+#### Gene Expression Data 
 
 Before IGV can display gene expression data, it must map the probes named in the file to genomic locations. 
 
@@ -381,7 +382,7 @@ Gene mapping files map probe identifiers to gene identifiers. Following are link
 
 The probe and gene mapping files are compiled from source files provided by Affymetrix, Agilent, and Illumina. A list of the source files is available at [http://data.broadinstitute.org/igvdata/probes/data\_sources\_for\_mapping.txt](http://data.broadinstitute.org/igvdata/probes/data_sources_for_mapping.txt).
 
-### RNAi Data
+#### RNAi Data
 
 GCT files for RNAi data must use the .rnai.gct extension.
 
@@ -391,7 +392,7 @@ To display the RNAi data, IGV maps the hairpin names to gene names, determines t
 
 The genePred table formats can be used to specify the gene track annotations for an imported genome.
 
-Several variations of the genePred table format are described in the FAQ titled “genePred table format” on the UCSC Genome Browser web site: [http://genome.ucsc.edu/FAQ/FAQformat#format9](http://genome.ucsc.edu/FAQ/FAQformat#format9). Downloading gene information from any of these tables creates a tab-delimited text file where the columns in the file match the columns in the table. Downloaded files may be zipped with a .txt.gz extension. Such a zipped file can be used to specify the gene track annotations for an imported genome. IGV looks for specific string in the filename  (case insensitive) to identify the file format:
+Several variations of the genePred table format are described in the FAQ titled “genePred table format” on the [UCSC website](http://genome.ucsc.edu/FAQ/FAQformat#format9). Downloading gene information from any of these tables creates a tab-delimited text file where the columns in the file match the columns in the table. Downloaded files may be zipped with a .txt.gz extension. Such a zipped file can be used to specify the gene track annotations for an imported genome. IGV looks for specific string in the filename  (case insensitive) to identify the file format:
 <table class="general" width="100%">
 	<thead>
 		<tr>
@@ -429,9 +430,9 @@ Several variations of the genePred table format are described in the FAQ titled 
 
 A General Feature Format (GFF) file is a simple tab-delimited text file for describing genomic features. There are several slightly but significantly different GFF file formats. IGV supports the GFF2, GFF3 and GTF file formats.
 
-*   GFF2 files must have a .gff file extension for IGV. See the Wellcome Trust Sanger Institute web site ([https://ensembl.org/info/website/upload/gff.html](https://ensembl.org/info/website/upload/gff.html)) for a description of the GFF2 file format.
-*   GFF3 files must have a .gff3 file extension for IGV. See the Sequence Ontology Project (SO) web site ([http://www.sequenceontology.org/gff3.shtml](http://www.sequenceontology.org/gff3.shtml)) for a description of the GFF3 file format.
-*   GTF files must have a .gtf file extension for IGV. See the Computational Genomics Laboratory web site ([http://mblab.wustl.edu/GTF2.html](http://mblab.wustl.edu/GTF2.html)) for a description of the GTF file format.
+*   GFF2 files must have a .gff file extension for IGV. See the Wellcome Trust Sanger Institute website ([https://ensembl.org/info/website/upload/gff.html](https://ensembl.org/info/website/upload/gff.html)) for a description of the GFF2 file format.
+*   GFF3 files must have a .gff3 file extension for IGV. See the Sequence Ontology Project (SO) website ([http://www.sequenceontology.org/gff3.shtml](http://www.sequenceontology.org/gff3.shtml)) for a description of the GFF3 file format.
+*   GTF files must have a .gtf file extension for IGV. See the Computational Genomics Laboratory website ([http://mblab.wustl.edu/GTF2.html](http://mblab.wustl.edu/GTF2.html)) for a description of the GTF file format.
 
 **One-based index:** Start and end positions are identified using a one-based index. The end position is included. For example, setting start-end to 1-2 describes two bases, the first and second in the sequence.
 
@@ -602,7 +603,7 @@ Display settings**:** IGV displays IGV file data using default display settings.
 *   Include a [type line](#type-lines) in the file to make IGV use the display settings for a different data type.
 *   Include a [track line](#track-lines) in the file.
 
-### Custom columns
+**Custom columns**
 
 IGV supports custom specification of columns for the ".igv" file format. To use this, include a column specifier directive at the head of the file. The column directive line starts with #columns, followed by one or more column specifiers of the form _key=value_. Valid keys are listed in the following table.  Columns are tab delimited.
 
@@ -649,9 +650,10 @@ IGV supports custom specification of columns for the ".igv" file format. To use 
 	</tbody>
 </table>
 
-**Note:** If a single value is entered for the data column, it is interpreted as the "first" data column. All columns starting with this value are assumed to contain data. To specify exactly one column, use a range (e.g., 5-5) to specify the 5th column.
+!!! note " "
+    If a single value is entered for the data column, it is interpreted as the "first" data column. All columns starting with this value are assumed to contain data. To specify exactly one column, use a range (e.g., 5-5) to specify the 5th column.
 
-Example:
+**Example:**
 
 ```
 #columns chr=7 start=8 probe=2 data=4-5 #coords=1  
@@ -674,9 +676,9 @@ Numbers that fall between these values represent the probability of LOH. IGV tre
 
 ## MAF (Multiple Alignment Format)
 
-The Multiple Alignment Format stores a series of multiple alignments.   See the [UCSC web site](https://genome.ucsc.edu/FAQ/FAQformat.html#format5) for more details.  The extension must be ".maf".  
+The Multiple Alignment Format stores a series of multiple alignments.   See the [UCSC website](https://genome.ucsc.edu/FAQ/FAQformat.html#format5) for more details.  The extension must be ".maf".  
 
-**NOTE:** .maf files must be in plain text (not gzipped). The alignment blocks in the file must be sorted by start position, and the file requires an accompanying index. If no index file is detected, IGV will create the index when the file is first loaded, which may result in a delay in loading, depending on the size of the file. Do not close IGV while indexing is in progress.
+.maf files must be in plain text (not gzipped). The alignment blocks in the file must be sorted by start position, and the file requires an accompanying index. If no index file is detected, IGV will create the index when the file is first loaded, which may result in a delay in loading, depending on the size of the file. Do not close IGV while indexing is in progress.
 
 ## MAF (Mutation Annotation Format)
 
@@ -698,19 +700,19 @@ gs://genomics-public-data/platinum-genomes/bam/NA12878\_S1.bam
 
 ## narrowPeak
 
-A narrowPeak (.narrowPeak) file is used by the ENCODE project to provide called peaks of signal enrichment based on pooled, normalized (interpreted) data. It is a BED 6+4 format. See the [UCSC web site for more detail](http://genome.ucsc.edu/FAQ/FAQformat.html#format12) on this format.
+A narrowPeak (.narrowPeak) file is used by the ENCODE project to provide called peaks of signal enrichment based on pooled, normalized (interpreted) data. It is a BED 6+4 format. See the [UCSC website for more detail](http://genome.ucsc.edu/FAQ/FAQformat.html#format12) on this format.
 
 ## PSL
 
-A PSL file (.psl) is a tab-delimited text file that represents alignments, and are typically taken from files generated by BLAT or psLayout. The PSL file format is described on the UCSC Genome Bioinformatics web site: [http://genome.ucsc.edu/FAQ/FAQformat](http://genome.ucsc.edu/FAQ/FAQformat).
+A PSL file (.psl) is a tab-delimited text file that represents alignments, and are typically taken from files generated by BLAT or psLayout. The PSL file format is described on the [UCSC website](http://genome.ucsc.edu/FAQ/FAQformat).
 
 ## RES
 
-A RES file (.res) is a tab-delimited text file that contains gene expression data. The GCT and RES files are the same, except that the RES file format contains labels for each gene's absent (A) versus present (P) calls as generated by Affymetrix's GeneChip software. The RES file format is described on the [GenePattern web site](https://www.genepattern.org/file-formats-guide#RES). See GCT File Format for a discussion of how IGV determines the loci for the gene expression data.
+A RES file (.res) is a tab-delimited text file that contains gene expression data. The GCT and RES files are the same, except that the RES file format contains labels for each gene's absent (A) versus present (P) calls as generated by Affymetrix's GeneChip software. The RES file format is described on the [GenePattern website](https://www.genepattern.org/file-formats-guide#RES). See GCT File Format for a discussion of how IGV determines the loci for the gene expression data.
 
 ## RNA Secondary Structure Formats
 
-### BP (RNA base pairing)
+#### BP (RNA base pairing)
 
 A BP file (.bp) is text file format that describes connections between ranges of nucleotides, and is primarily used to indicate base pairing interactions or estimated pairing probabilities for RNA structures. BP files are rendered in IGV using colored semicircular arcs.
 
@@ -722,9 +724,9 @@ _Example header line:_  color: 51 114 38 High-probability base pairs
 
 **Example BP file**: [example.bp](ExampleFiles/example.bp)
 
-The following RNA secondary structure formats can be imported into IGV and converted to the .bp format. After choosing a file to import, the user will be prompted to select the applicable chromosome and optional strand and starting position. IGV will then create a .bp file and load it.
+<br>Additional RNA secondary structure formats can be imported into IGV and converted to the BP format. They include the DB, CT, and DP formats, which are described below. After choosing a file to import, the user will be prompted to select the applicable chromosome and optional strand and starting position. IGV will then create a .bp file and load it.
 
-### DB (dot bracket)
+#### DB (dot bracket)
 
 DB (dot bracket) format (.db, .dbn) is a plain text format that can encode secondary structure. Lines beginning with **\>** or **#** are currently ignored. Nucleotide sequence is currently ignored.
 
@@ -740,7 +742,7 @@ Files containing multiple sequences or structures are currently not supported.
 
 `GGUGCAUGCCGAGGGGCGGUUGGCCUCGUAAAAAGCCGCAAAAAAUAGCAUGUAGUACC ((((((((((((((.[[[[[[..))))).....]]]]]]........)))))...))))`
 
-### CT (connectivity table)  
+#### CT (connectivity table)  
 
 The CT format (.ct) is used by software packages such as _[RNAstructure](http://rna.urmc.rochester.edu/Text/index.html)._ See the [_CT File Format_](http://rna.urmc.rochester.edu/Text/File_Formats.html#CT) on the Mathews Lab web page.
 
@@ -748,7 +750,7 @@ Only the first structure in a CT file will be imported by IGV. CT files with add
 
 **Example CT file:** [example.ct](ExampleFiles/example.ct)
 
-### DP (dot plot or pairing probability) 
+#### DP (dot plot or pairing probability) 
 
 The DP file format (.dp) can be generated using the _[RNAstructure](http://rna.urmc.rochester.edu/Text/index.html)_ software package by running _partition_ followed by _ProbabilityPlot_ on the resulting .pfs file with the _\-t_ option for text file output. For modeling the structures of large mRNAs, the program _[Superfold](http://www.chem.unc.edu/rna/software.html)_ runs _partition_ on multiple overlapping windows, then heuristically merges the windows. _Superfold_ outputs a merged .dp file by default.
 
@@ -762,9 +764,28 @@ The DP file format (.dp) can be generated using the _[RNAstructure](http://rna.u
 
 Upon import, IGV colors pairs above 80% probability dark green. Pairs between 30 and 80% probability are colored blue. Pairs between 10 and 30% probability are colored light yellow.
 
-### Other
+<br>
 
-IGV also supports [viewing RNA secondary structures in BED](../UserGuide/tracks/rna_structure.md) format.
+#### BED
+
+IGV also supports viewing RNA secondary structures in BED format. The file must include a [track line](#track-lines) which species `graphType=arc`. Each record line must contain the first three columns of a bed file: chrom, start and end, where the start and end represent the base pair. Note that the start position follows standard BED file convention and is zero-based (first base on asequence is position 0). 
+
+The following small example represent a hypothetical stem loop:</p>
+
+```
+    track graphType=arc
+    chr1 10 25 stemloop1
+    chr1 11 24 stemloop1
+    chr1 12 23 stemloop1
+    chr1 13 22 stemloop1
+    chr1 14 21 stemloop1
+    chr1 15 20 stemloop1
+```
+
+Additional examples can be found in the supplement of the following paper
+
+[Lu Z, Zhang QC, Lee B, Flynn RA, Smith MA, Robinson JT, Davidovich C, Gooding AR, Goodrich KJ, Mattick JS, Mesirov JP, Cech TR, Chang HY. RNA Duplex Map in Living Cells Reveals Higher-Order Transcriptome Structure. Cell. 2016 May 12](https://www.cell.com/cell/abstract/S0092-8674(16)30422-6).
+
 
 ## SAM
 
@@ -794,16 +815,18 @@ Generate TDF files by using the [igvtools](../UserGuide/tools/igvtools_ui.md) **
 
 ## Track Lines
 
-When IGV loads a data file, it uses the file extension to determine the file format, the file format to determine the data type, and the data type to determine the default display options (see [Default Display](<?php echo base_path(); ?>DefaultDisplay)). Adding a track line to a data file modifies IGV's default display options. This can be particularly useful for file formats not associated with any particular type of data, such as the IGV file format.
+When IGV loads a data file, it uses the file extension to determine the file format, the file format to determine the data type, and the data type to determine the default display options. Adding a track line to a data file modifies IGV's default display options. This can be particularly useful for file formats not associated with any particular type of data, such as the IGV file format.
 
 The following file formats allow track lines:
 
 *   BED, WIG, PSL
 *   IGV, CN, SNP, GFF, LOH, GFF3, SEG -- in these file formats, the track line must begin with a # symbol; i.e. #track
 
-IGV track lines are based on WIG track lines. See the UCSC site for the WIG track line syntax: [https://genome.ucsc.edu/goldenPath/help/wiggle.html](https://genome.ucsc.edu/goldenPath/help/wiggle.html). The following table describes the track line specifiers that IGV supports. IGV includes a few options that are not part of the UCSC specification.
+IGV track lines are based on WIG track lines. See the [UCSC website](https://genome.ucsc.edu/goldenPath/help/wiggle.html) for the WIG track line syntax. The following table describes the track line specifiers that IGV supports. IGV includes a few options that are not part of the UCSC specification.
 
-_**Note: IGV does not currently support multiple track lines in a single file.**_
+!!! note " "
+    IGV does not support multiple track lines in a single file.
+    
 <table class="general" width="100%">
 	<thead>
 		<tr>
@@ -1011,13 +1034,16 @@ _**Note: IGV does not currently support multiple track lines in a single file.
 
 When IGV loads a data file, it uses the file extension to determine the file format, the file format to determine the data type, and the data type to determine the default display options. In the IGV and segmented (SEG, CBS) file formats, you can use a #type line to override the default data type and thus the default display options. For example, the IGV file format has a default data type of 'Other' and, therefore, the data in file is displayed using a blue bar chart with an autoscaled data range. By adding a #type line to the IGV file, you can indicate that the file contains gene expression data; in which case, the data will be displayed using a blue-to-red heatmap with the data range set from -1.5 to 1.5.
 
-The ```#type``` must be the first line in the file. It has the following format:
+The type line must be the first line in the file. It has the following format: `#type=<data-type>`
 
-```
-#type=_data-type_
-```
-
-where _data-type_ is one of the following (these values are case-sensitive): COPY\_NUMBER, GENE\_EXPRESSION, CHIP, DNA\_METHYLATION, ALLELE\_SPECIFIC\_COPY\_NUMBER, LOH, RNAI
+where `<data-type>` is one of the following (these values are case-sensitive): <br>
+<BR> COPY\_NUMBER 
+<BR> GENE\_EXPRESSION
+<br> CHIP
+<br> DNA\_METHYLATION
+<br> ALLELE\_SPECIFIC\_COPY\_NUMBER
+<br> LOH
+<br> RNAI
 
 The selected data type determines the display settings.
 
@@ -1077,13 +1103,14 @@ Genotype data are given for three samples, two of which are phased and the third
 
 ## WIG
 
-A WIG file (.wig) is a text file that defines either a feature or data track. It must have a .wig file extension for IGV to read it as a wiggle file. The WIG file format is described on the UCSC Genome Bioinformatics web site: [http://genome.ucsc.edu/FAQ/FAQformat](http://genome.ucsc.edu/FAQ/FAQformat).
+A WIG file (.wig) is a text file that defines either a feature or data track. The WIG file format is described on the [UCSC website](http://genome.ucsc.edu/FAQ/FAQformat).
+
+Required extension .wig
 
 For faster loading, convert WIG files to [bigWig format](#bigwig). Alternatively, convert to [TDF format](#tdf) using [igvtools](../UserGuide/tools/igvtools_ui.md).
 
-**Notes;**
-
-IGV does not currently support multiple track lines in a single WIG file 
+!!! note " "
+    IGV does not currently support multiple track lines in a single WIG file 
 
 **One-based index:** Start and end positions (for "fixedStep" and "variableStep" formats) are identified using a one-based index. The end position is excluded. For example, setting start-end to 1-2 describes exactly one base, the first base in the sequence.
 

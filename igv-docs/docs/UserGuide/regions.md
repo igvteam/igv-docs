@@ -12,16 +12,6 @@ copying to the clipboard or BLAT searching the corresponding reference sequence.
 
 ![](img/SL_IGV_ROI_BLAT2015-05-05%2016.25.58.png)
 
-* View a session's ROIs in the _Region Navigator_ under the _Regions_ menu. The _Region Navigator_'s list is editable,
-  sortable and as the name indicates, navigable.
-    * Navigate to a single locus or view multiple loci in split
-      panes by selecting them and clicking _View_.
-    * Distinguish overlapping ROIs using the _Region Navigator_.
-    * Enter a short description for each ROI viewable in the _Region Navigator_.
-* Defined ROIs persist within an IGV session. 
-* Import and export ROIs as [BED](../FileFormats/DataTracks.md) files using _Regions_\>_Import
-  Regions_ and _Regions_\>_Export Regions_.
-
 ## Defining an ROI
 
 **1. By mouse:** 

@@ -43,7 +43,6 @@ nav:
     - Advanced:    
       - IGV from the command line: UserGuide/advanced/command_line.md
       - External control of IGV: UserGuide/advanced/external_control.md
-      - Reference genomes: UserGuide/advanced/reference_genomes_adv.md
       - Authentication: UserGuide/advanced/oauth.md
       - AWS support:  UserGuide/advanced/aws.md
       

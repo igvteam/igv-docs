@@ -256,7 +256,7 @@ igvtools toTDF [options] [inputFile] [outputFile] [genome]
 
 * **genome**
 
-    * A genome id or path to a [.chrom.sizes](http://www.broadinstitute.org/software/igv/chromSizes) or .genome file.
+    * A genome id or path to a [.chrom.sizes](../../../FileFormats/Genomes/#chromsizes) or .genome file.
 
     * Default is hg18.
 

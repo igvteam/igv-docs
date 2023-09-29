@@ -16,7 +16,7 @@ The motif finder searches for a specified nucleotide sequence in the reference g
 
     * A **sequence of nucleotides**.
 
-    * A sequence of nucleotides with **[IUPAC](http://www.chem.qmul.ac.uk/iubmb/misc/naseq.html) ambiguity codes**.
+    * A sequence of nucleotides with **[IUPAC ambiguity codes](https://en.wikipedia.org/wiki/Nucleic_acid_notation)**.
 
         * For example, let's say you want to find bacterial promoter upstream elements consisting of 6 adenines (A), followed by a purine (A or G), then any nucleotide (A, C, G, or T), and finally another purine (A or G). You would enter the sequence "AAAAAARNR".
 
@@ -38,7 +38,7 @@ The motif finder searches for a specified nucleotide sequence in the reference g
 Since we entered a short sequence, it gets a large number of hits. Looking at the results directly upstream of the gene
 GBP4, we see a match on the positive strand and two on the negative strand. 
 
-!!! note " " 
+!!! tip " " 
     By default, the search result tracks are displayed in _Expanded_ mode, so you can see overlapping matches.
 
 ![](../img/MotifResults.png)

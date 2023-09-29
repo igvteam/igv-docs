@@ -11,7 +11,12 @@ accommodated.
 
 To visualize the structures, the base pairing information should be stored in a bed format file, which is quite
     similar to the commonly used &#39;connect format&rsquo; described by the mfold program (Zuker 2003, PMID: 12824337).
-    The file must include a track line which species graphType=arc, e.g. &quot;track graphType=arc&rdquo;. Each record
+    
+<!---
+THE FOLLOWING IS ALREADY IN THE DATAFORMATS PAGE:
+-->
+    
+The file must include a track line which species graphType=arc, e.g. &quot;track graphType=arc&rdquo;. Each record
     line must contain the first three columns of a bed file: chrom, start and end, where the start and end represent the
     base pair. Note that the start position follows standard BED file convention and is zero-based (first base on a
     sequence is position 0). The following small example represent a hypothetical stem loop:</p>
