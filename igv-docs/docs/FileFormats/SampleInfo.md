@@ -4,193 +4,72 @@ The page title should not go in the menu
 -->
 <p class="page-title">File Formats: Sample Info (Attributes)</p>
 
-Sample information files includes Attributes files, Sample Mapping files, Attribute Color files, and files that combine information. These are tab-delimited text files with extension .txt. You load them as you would data files, via the _File_ menu. IGV can load multiple sample information files per session. When loaded into IGV, attributes display in a separate color-coded panel between sample names and tracks (see [Sample Attributes](../UserGuide/sample_attributes.md)). 
+Sample information includes three types of information: 
 
-Attribute, mapping, and color information may be in **separate files,** i.e. in Attributes files, Mapping files, and Color files, **or in a single Sample Information file.**
+* The **attributes** and their values for each sample - Required.
+* **Sample mapping** information - Needed only if the sample names in the attribute information do not match the sample names in the data files.
+* **Colors** to use in the attribute display - Needed only if the you wish to specify colors that are not the same as the defaults.
 
-*   To save all three types of information in a single file, list attributes first, then mapping, and then color.
-    *   Between the information types, separate sections with row headers _#sampleMapping_ and _#colors_.
-    *   Empty rows are not necessary and are ignored.
+Attribute, mapping, and color information may be provided in **separate files** or together in a **single file**. These are tab-delimited text files with extension .txt. The required formats for the three different types of information are described below. Lines starting with `#` are ignored (except for the special section headers) and can be used for comments in the file.
 
-When loading attributes for datasets where sample names are identical across file types, no mapping information is necessary for the attributes to apply to the multiple data type tracks. However, to apply the same attribute information across datasets where sample names differ, you can use either of two different types of Sample Information sets as indicated by (b) and (c) in the table.
+You load sample information files as you would data files, via the _File_ menu. IGV can load multiple sample information files per session. When loaded into IGV, attributes display in a separate color-coded panel between sample names and tracks (see [Sample Attributes](../UserGuide/sample_attributes.md) in the User Guide). 
 
-<table align="center" border="1" cellpadding="1" cellspacing="1" height="198" width="700">
-	<tbody>
-		<tr>
-			<td class="rtecenter" colspan="4" style="background-color: rgb(255, 255, 153);">
-				<strong>Multiple data track types?</strong></td>
-		</tr>
-		<tr>
-			<td class="rtecenter" colspan="2" rowspan="1" style="width: 345px;">
-				No</td>
-			<td class="rtecenter" colspan="2" rowspan="1" style="width: 347px;">
-				Yes</td>
-		</tr>
-		<tr>
-			<td class="rtecenter" colspan="4" style="width: 345px; background-color: rgb(255, 255, 153);">
-				<strong>Do attributes sample labels match data track sample names?</strong></td>
-		</tr>
-		<tr>
-			<td style="width: 171px;">
-				<p>No.</p>
-				<p>(a) Edit Attributes file to include the matching data track sample names in the first column.</p>
-				<p>(b) Load Attributes and Sample Mapping information.</p>
-			</td>
-			<td style="width: 171px;">
-				<p>Yes.</p>
-				<p>Attributes apply to data tracks.</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-			</td>
-			<td style="width: 178px;">
-				<p>No.</p>
-				<p>(b) Load Attributes and Sample Mapping information.</p>
-				<p>&nbsp;</p>
-			</td>
-			<td style="width: 172px;">
-				<p>Yes.</p>
-				<p>Attributes apply to data tracks.</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-			</td>
-		</tr>
-	</tbody>
-</table>
+*   The attributes are applied to data tracks with names that match the sample identifiers in the attribute information. 
+    *   Attribute rows without matching data tracks are ignored. 
+    *   For data tracks without a matching attribute row, the corresponding IGV attributes panel rows remain blank.
+*   Because you can load multiple sample information files per IGV session, you do not need to include the attributes for all the samples of interest in the same file.
 
 ## Attributes
 
-An Attributes file lists track identifiers in the first column and attributes in subsequent columns with a single header row. IGV matches the track identifiers in a data file with the track identifiers in the Attributes file.
+The attributes file (or section in a combined file) lists sample identifiers in the first column and attributes in subsequent columns with a single header row that defines the names of the attributes. If an attributes section is not at the top of a file, the section should begin with the line `#sampleTable`
 
-*   Example 1: [example_sampleinfo.txt](ExampleFiles/example_sampleinfo.txt)
+```
+#sampleTable
+ID	Subtype	sil_width	GENDER	KarnScore	Censured	MGMT_methylated	% Tumor Nuclei	% Necrosis
+TCGA-02-0001	Classical	-0.135526414	FEMALE	80	0		97.5	0
+TCGA-02-0002	Neural	-0.069669747	MALE	NA	NA	No	NA	DEAD	0		97.5	5
+```
 
-**Acceptable variations to the Attributes file:**
+Example attributes file: [example_sampleinfo.txt](ExampleFiles/example_sampleinfo.txt)
 
-So long as the first row contains attribute labels and the first column sample names, the remaining rows may contain information pertaining to samples in any data type and be organized in any way.
+## Sample mapping
 
-*   Because IGV can load multiple Attributes files per session, it is not necessary to merge attributes into a single file.
-*   Attributes only apply to data tracks with matching names. Attribute rows without matching data tracks do not display. So the information within the Attributes file need not overlap exclusively to the data tracks.
-*   For data tracks without a matching attribute row, corresponding IGV attributes panel rows remain blank.
+The sample mapping file (or section in a combined file) begins with the line `#sampleMapping` and maps sample identifiers in the data files to sample identifiers in the attribute information.   The format is two-column tab delimited. The first column is the sample name in the data file; the second column is the sample identifier in the attributes information.
 
-In the case of different data sets with different sample names from the same individual, e.g. copy number and RNA expression, you may wish to apply the information within a single attributes file in duplicate to the different data types. In this case, you may (b) additionally load a Sample Mapping file as outlined in the next section or **(c) modify your Attributes file** as outlined below.
+```
+#sampleMapping
+TRIBE_p_TCGAaffx_B1_2_GBM_Nsp_GenomeWideSNP_6_A01_155716	TCGA-02-0001TRIBE_p_TCGAaffx_B1_2_GBM_Nsp_GenomeWideSNP_6_A03_155748	TCGA-02-0002
+```
 
-* For a single attributes file, duplicate the attributes by copy-pasting into empty rows, then modify sample names in the first column as needed for the differentially named datasets.
- 	
-* For multiple attributes files, duplicate the entire file and open each to modify sample names for the differentially named datasets as needed.
+## Attribute colors
 
-## Sample Mapping
+By default, IGV randomly assigns colors to the attribute values. You can optionally specify the colors for attribute values in RGB format for a specific attribute name, a specific value, or as a heatmap scale for numeric columns in monocolor or in two-color heatmap for specified ranges. 
 
-A Sample Mapping section begins with the line #sampleMapping and maps track identifiers to sample identifiers.  It is useful in cases where these identifiers might differ.   For example, one might map the track identifier  "foo.bam" to sample identifier  "foo\_sample".     The format is 2 column tab delimited, the first column is the track identifier, second the sample identifier.
+The attribute colors file (or section in a combined file) begins with the line `#colors`. The file is tab delimited with three or four columns:
 
-## Attribute Colors
+* 1: Attribute name. An asterisk `*` indicates the color specification applies to all attributes.
+* 2: Attribute value or range of two values separated by a colon `:`. An asterisk `*` indicates the color specification applies to all attribute values.
+* 3: Color in RGB format. If a color is also specified in column 4, this is the first color of a two color heatmap.
+* 4: (Optional) Second color (RGB format) of a two-color heatmap.
 
-By default, IGV randomly assigns colors to the attribute values. You can optionally specify the colors for attribute values in RGB format for a specific label, a specific value, or as a heatmap scale for numeric columns in monocolor or in two-color heatmap for specified ranges. Customize colors using either a separate Attribute Colors file or by adding a colors section to the end of a Sample Information file. Colors information is tab-delimited with three or four columns as shown in the example below.
-<table align="center" border="1" cellpadding="1" cellspacing="1" height="38" width="700">
-	<tbody>
-		<tr>
-			<td style="width: 68px;">
-				<strong>column 1</strong></td>
-			<td style="width: 98px;">
-				<strong>column 2</strong></td>
-			<td style="width: 148px;">
-				<strong>column 3</strong></td>
-			<td style="width: 137px;">
-				<strong>column 4 (optional)</strong></td>
-			<td colspan="1" rowspan="2" style="width: 233px;">
-				&nbsp;</td>
-		</tr>
-		<tr>
-			<td style="width: 68px;">
-				Indicates attribute name</td>
-			<td style="width: 98px;">
-				Indicates attribute value or attribute range separated by a colon (:)</td>
-			<td style="width: 148px;">
-				Indicates color in RGB format. If used with column 4, then is the first color of a two-color heatmap</td>
-			<td style="width: 137px;">
-				Specifies the second color in RGB format in a two-color heatmap for attribute ranges</td>
-		</tr>
-		<tr>
-			<td class="rtecenter" colspan="4" style="width: 460px; background-color: rgb(204, 204, 204);">
-				<strong>Example</strong></td>
-			<td class="rtecenter" colspan="4" style="width: 460px; background-color: rgb(204, 204, 204);">
-				<strong>Explanation</strong></td>
-		</tr>
-		<tr>
-			<td style="width: 68px;">
-				#colors</td>
-			<td style="width: 68px;">
-				&nbsp;</td>
-			<td style="width: 68px;">
-				&nbsp;</td>
-			<td style="width: 68px;">
-				&nbsp;</td>
-			<td style="width: 233px; background-color: rgb(204, 204, 204);">
-				&nbsp;</td>
-		</tr>
-		<tr>
-			<td style="width: 68px;">
-				GENDER</td>
-			<td style="width: 68px;">
-				MALE</td>
-			<td style="width: 68px;">
-				0,0,155</td>
-			<td style="width: 68px;">
-				&nbsp;</td>
-			<td style="width: 233px; background-color: rgb(204, 204, 204);">
-				<em>a value of&nbsp; &quot;MALE&quot; for the &quot;GENDER&quot; column gets the color (0,0,155)</em></td>
-		</tr>
-		<tr>
-			<td style="width: 68px;">
-				*</td>
-			<td style="width: 68px;">
-				Classical</td>
-			<td style="width: 68px;">
-				80,180,80</td>
-			<td style="width: 68px;">
-				&nbsp;</td>
-			<td style="width: 233px; background-color: rgb(204, 204, 204);">
-				<em>a value of &quot;Classical&quot;&nbsp; in any column gets the color&nbsp; (80,180,80)</em></td>
-		</tr>
-		<tr>
-			<td style="width: 68px;">
-				KarnScore</td>
-			<td style="width: 68px;">
-				*</td>
-			<td style="width: 68px;">
-				0,0,255</td>
-			<td style="width: 68px;">
-				&nbsp;</td>
-			<td style="width: 233px; background-color: rgb(204, 204, 204);">
-				<em>numeric column example, monocolor heatmap</em></td>
-		</tr>
-		<tr>
-			<td style="width: 68px;">
-				% Tumor Nuclei</td>
-			<td style="width: 68px;">
-				90:100</td>
-			<td style="width: 68px;">
-				0,0,255</td>
-			<td style="width: 68px;">
-				&nbsp;</td>
-			<td style="width: 233px; background-color: rgb(204, 204, 204);">
-				<em>another monocolor heatmap, this time with the range specified</em></td>
-		</tr>
-		<tr>
-			<td style="width: 68px;">
-				sil_width</td>
-			<td style="width: 68px;">
-				-0.1:0.5</td>
-			<td style="width: 68px;">
-				0,0,255</td>
-			<td style="width: 68px;">
-				255,0,0</td>
-			<td style="width: 233px; background-color: rgb(204, 204, 204);">
-				<em>a two-color heatmap with the range specified</em></td>
-		</tr>
-	</tbody>
-</table>
+```
+#colors 	
+  	  	  	 
+# A value of  "MALE" for the "GENDER" column gets the color (0,0,155)
+GENDER 	MALE 	0,0,155 
+	  	
+# A value of "Classical"  in any column gets the color  (80,180,80)
+* 	Classical 	80,180,80 	
+  	
+# Numeric column example, monocolor heatmap
+KarnScore 	* 	0,0,255 	
+  	
+# Another monocolor heatmap, this time with the range specified
+% Tumor Nuclei 	90:100 	0,0,255 
+	  	
+# A two-color heatmap with the range specified
+sil_width 	-0.1:0.5 	0,0,255 	255,0,0 	
+```
 
-*   Colors information, either file or section, must be headed by a row with _#colors_.
-*   An asterisk (\*) in either of the first two columns indicates a wildcard. 
-*   RGB values are separated by commas (,) without spaces and may be listed inside double quotations, e.g. _0,0,155_ or _"0,0,155"_.
+![](img/SampleAttributeCorner.png){height=300}
+ 

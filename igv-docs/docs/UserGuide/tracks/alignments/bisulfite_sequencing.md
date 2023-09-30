@@ -96,8 +96,7 @@ reads in one direction, and for the given direction reads from the opposite stra
 reverse complement. Therefore, OT and CTOT reads are displayed in the reference-forward direction (gray) while OB and 
 CTOB reads are displayed in the reverse direction (sage) and are differentially colored as indicated.
 
-To sort reads by strand, use the [right-click pop-up menu](http://www.broadinstitute.org/software/igv/PopupMenus#Alignmenttrack) 
-on the alignment track.
+To sort reads by strand, use the right-click pop-up menu on the alignment track.
 
 You can also infer the read-strand by the specific nucleotides that are highlighted by the mode.  OT and CTOT yield 
 methylation information for cytosines on the top strand (**C** and **T** highlighted), while OB and CTOB will give 

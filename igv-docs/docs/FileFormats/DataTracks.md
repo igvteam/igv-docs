@@ -67,13 +67,23 @@ Rendering
 * Arcs
 * Blocks
 
-
-
 ## bigBed
 
 The bigBed format stores annotation items that can either be simple, or a linked collection of exons, much as [BED](#bed) files do. BigBed files are created initially from BED type files, using the UCSC program bedToBigBed. The resulting bigBed files are in an indexed binary format. The main advantage of the bigBed files is that only the portions of the files needed to display a particular region are transferred, so for large data sets bigBed is considerably faster than regular BED files. 
 
 The bigBed format is described in detail on the [UCSC website](http://genome.ucsc.edu/goldenPath/help/bigBed.html).
+
+## bigGenePred
+
+The bigGenePred format stores positional annotations for collections of exons in a compressed format. bigGenePred files can be created using the UCSC program bedToBigBed.
+
+The bigGenePred format is described in detail on the [UCSC website](http://genome.ucsc.edu/goldenPath/help/bigGenePred.html).
+
+## bigNarrowPeak
+
+The bigNarrowPeak format stores called peaks of signal enrichment based on pooled, normalized (interpreted) data. bigNarrowPeak files can be created using the UCSC program bedToBigBed.
+
+The bigNarrowPeak format is described in detail on the [UCSC website](http://genome.ucsc.edu/goldenPath/help/bigNarrowPeak.html). 
 
 ## bigWig
 
@@ -281,7 +291,7 @@ A CN file (.cn) is a tab-delimited text file that contains copy number data. The
 
 **Zero-based index:** Physical positions are identified using a zero-based index.
 
-**Display settings:** To modify IGV's default display settings for the CN data, include a [track line](<?php echo base_path(); ?>TrackLine) in the file.
+**Display settings:** To modify IGV's default display settings for the CN data, include a [track line](#track-lines) in the file.
 
 Example: [mynah.sorted.cn](https://www.genepattern.org/tutorial/linkedFiles/mynah.sorted.cn)
 
@@ -1114,4 +1124,4 @@ For faster loading, convert WIG files to [bigWig format](#bigwig). Alternatively
 
 **One-based index:** Start and end positions (for "fixedStep" and "variableStep" formats) are identified using a one-based index. The end position is excluded. For example, setting start-end to 1-2 describes exactly one base, the first base in the sequence.
 
-**Display settings:** To modify IGV's default display settings for the WIG file data, include a [track line](<?php echo base_path(); ?>TrackLine) in the file.
+**Display settings:** To modify IGV's default display settings for the WIG file data, include a [track line](#track-lines) in the file.

@@ -4,7 +4,7 @@ The page title should not go in the menu
 -->
 <p class="page-title"> Getting Help </p>
 
-1) If you have **questions about using IGV** or want to **report a bug or suggest a feature request**: 
+1) If you have **questions about using IGV** or want to **report a bug** or **suggest a new feature**: 
 
 *   post to the **[igv-help](https://groups.google.com/group/igv-help)** forum, or
 *   create an [issue in our **GitHub repository**](https://github.com/igvteam/igv/issues).

@@ -1,7 +1,7 @@
 <!---
 The page title should not go in the menu
 -->
-<p class="page-title"> Download </p>
+<p class="page-title"> Download IGV</p>
 
 !!! tip " "
     Did you know that there is also an **IGV web application** that runs only in a web browser, does not use Java, and requires no downloads? See **[https://igv.org/app](https://igv.org/app)**. Click on the Help link in the app for more information about using IGV-Web.
@@ -18,10 +18,7 @@ The page title should not go in the menu
 
 **What's New:** See the [Release Notes](ReleaseNotes/2.15.x.md) for what's new in each IGV release.  
 
-
-[![MacApp with java](img/DownloadYMacWithJava.png){height=90}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_MacApp_2.16.2_WithJava.zip) [![MacApp no java](img/DownloadYMacNoJava.png){height=90}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_MacApp_2.16.0.zip) 
-
-[![Windows with java](img/DownloadYWindowsWithJava.png){height=90}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Win_2.16.2-WithJava-installer.exe) [![Windows no java](img/DownloadYWindowsNoJava.png){height=90}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Win_2.16.0-installer.exe) 
+[![Windows snapshot with java](img/DownloadYWindowsWithJava.png){height=90}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Win_2.16.2-WithJava-installer.exe) [![Windows no java](img/DownloadYWindowsNoJava.png){height=90}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Win_2.16.0-installer.exe) 
 
 [![Linux with Java](img/DownloadYLinuxWithJava.png){height=90}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Linux_2.16.2_WithJava.zip)
 
@@ -33,7 +30,7 @@ The page title should not go in the menu
 
 # Other releases of IGV Desktop
 
-**[Development snapshot build.](https://software.broadinstitute.org/software/igv/download_snapshot)** Latest development snapshot; built at least nightly
+**[Development snapshot build.](DownloadSnapshot.md)** Latest development snapshot; built at least nightly
  
 **[Archived releases.](https://data.broadinstitute.org/igv/projects/downloads/)** Old releases going back to IGV 2.0
 

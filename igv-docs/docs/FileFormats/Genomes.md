@@ -19,11 +19,7 @@ The Cytoband file format is used to
 * define the chromosome ideograms for a reference genome, or 
 * create a cytoband track (as of version 2.11.0).
 
-A cytoband file is a five-column tab-delimited text file. Each row of the file describes the position of a cytogenetic band. The columns in the file match the columns of the [cytoBand table](http://genome.ucsc.edu/cgi-bin/hgTables?db=hg38&hgta_group=map&hgta_track=cytoBand&hgta_table=cytoBand&hgta_doSchema=describe+table+schema) in the database underlying the UCSC Genome Browser.  These files are downloadable from the UCSC website as "cytoBandIdeo.txt.gz" for many genome assemblies, for example https://hgdownload.cse.ucsc.edu/goldenPath/hg38/database/cytoBandIdeo.txt.gz
-
-The Cytoband file format is used to define the chromosome ideograms for a reference genome, and/or as of version 2.11.0 to create a cytoband track.
-
-A cytoband file is a five-column tab-delimited text file. Each row of the file describes the position of a cytogenetic band. The columns in the file match the columns of the [cytoBand table](http://genome.ucsc.edu/cgi-bin/hgTables?db=hg38&hgta_group=map&hgta_track=cytoBand&hgta_table=cytoBand&hgta_doSchema=describe+table+schema) in the database underlying the UCSC Genome Browser.  These files are downloadable from the UCSC website as "cytoBandIdeo.txt.gz" for many genome assemblies, for example https://hgdownload.cse.ucsc.edu/goldenPath/hg38/database/cytoBandIdeo.txt.gz
+A cytoband file is a five-column tab-delimited text file. Each row of the file describes the position of a cytogenetic band. The columns in the file match the columns of the [cytoBand table](http://genome.ucsc.edu/cgi-bin/hgTables?db=hg38&hgta_group=map&hgta_track=cytoBand&hgta_table=cytoBand&hgta_doSchema=describe+table+schema) in the UCSC Genome Browser database.  These files are downloadable from the UCSC website as "cytoBandIdeo.txt.gz" for many genome assemblies, for example [https://hgdownload.cse.ucsc.edu/goldenPath/hg38/database/cytoBandIdeo.txt.gz](https://hgdownload.cse.ucsc.edu/goldenPath/hg38/database/cytoBandIdeo.txt.gz)
 
 <table class="general" width="100%">
 	<tbody>
@@ -93,11 +89,11 @@ A cytoband file is a five-column tab-delimited text file. Each row of the file d
 
 ## FASTA
 
-The FASTA file format (.fasta or .fa) is used to specify the reference sequence for an imported genome. Each sequence in the FASTA file represents the sequence for a chromosome. The sequence name in the FASTA file is the chromosome name that appears in the chromosome drop-down list in the IGV tool bar. IGV orders the chromosomes based on their names, not their order in the FASTA file.
+The [FASTA](https://en.wikipedia.org/wiki/FASTA_format) file format (.fasta or .fa) is used to specify the reference sequence for an imported genome. Each sequence in the FASTA file represents the sequence for a chromosome. The sequence name in the FASTA file is the chromosome name that appears in the chromosome drop-down list in the IGV tool bar. IGV orders the chromosomes based on their names, not their order in the FASTA file.
 
-A FASTA file is a text file. Each sequence begins with a single-line description, followed by lines of sequence data. The single-line description contains a greater-than (>) symbol in the first column, followed by the sequence name. For a complete description of the FASTA file format, see [http://www.ncbi.nlm.nih.gov/blast/fasta.shtml](http://www.ncbi.nlm.nih.gov/blast/fasta.shtml).
+A FASTA file is a text file. Each sequence begins with a single-line description, followed by lines of sequence data. The single-line description contains a greater-than (>) symbol in the first column, followed by the sequence name. 
 
-FASTA files can be loaded directly from the **_Genome_** menu or can be referred to in a JSON file that contains a reference genome specification.
+FASTA files can be loaded directly from the **_Genome_** menu or can be referred to in a [JSON](#igv-reference-genome-json) file that contains a reference genome specification.
 
 ## IGV reference genome (JSON)
 
