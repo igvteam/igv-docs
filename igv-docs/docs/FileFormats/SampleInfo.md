@@ -30,8 +30,6 @@ TCGA-02-0001	Classical	-0.135526414	FEMALE	80	0		97.5	0
 TCGA-02-0002	Neural	-0.069669747	MALE	NA	NA	No	NA	DEAD	0		97.5	5
 ```
 
-Example attributes file: [example_sampleinfo.txt](ExampleFiles/example_sampleinfo.txt)
-
 ## Sample mapping
 
 The sample mapping file (or section in a combined file) begins with the line `#sampleMapping` and maps sample identifiers in the data files to sample identifiers in the attribute information.   The format is two-column tab delimited. The first column is the sample name in the data file; the second column is the sample identifier in the attributes information.
@@ -71,5 +69,8 @@ KarnScore 	* 	0,0,255
 sil_width 	-0.1:0.5 	0,0,255 	255,0,0 	
 ```
 
+<br>
+The above example snippets are from all from [this sample info file](ExampleFiles/example_sampleinfo.txt), which has also been used in IGV in the following screenshot.
+<br>
 ![](img/SampleAttributeCorner.png){height=300}
  
