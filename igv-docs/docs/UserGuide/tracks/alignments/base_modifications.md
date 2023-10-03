@@ -1,8 +1,7 @@
 <p class="page-title">  Base modifications </p>
 
 Options for coloring alignments by base modifications are enabled for alignments with  `MM` and optionally `ML` tags, 
-denoting modification type and likelihood respectively.  
-[(_see SAM/BAM format tag specifications_)](https://samtools.github.io/hts-specs/SAMtags.pdf).
+denoting modification type and likelihood respectively  [(_see SAM/BAM format tag specifications_)](https://samtools.github.io/hts-specs/SAMtags.pdf).
 When these tags are present  options appear in the `Color by` section of the alignment track menu to color 
 all modifications present, or a specific modification, using  either a mono-color (default) or 2-color scheme.  For example,
 in an experiment with both `5mC` and `5hmC` modifications the following menu options are available.
@@ -38,7 +37,7 @@ no modification is taken as 1 - (sum of all modification likelhoods).  For examp
 modified and unmodified bases. 
 
 Note that visualization of 5-Methylcytosine (5mC) modifications in 2-color mode, which assigns `red` to 5mC modification
-and `'blue` to a likely unmodified base, is consistent 
+and `blue` to a likely unmodified base, is consistent 
 with visualization of methylation from [bisulfite sequencing](./bisulfite_sequencing.md), making experiments from the 
 two technologies comparable.
 

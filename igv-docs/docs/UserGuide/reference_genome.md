@@ -31,10 +31,10 @@ This will pop up a window with the full list of hosted genomes. If you find your
 ![](img/GenomeToAddToListNew.png){width=356}
 
 !!! tip " "
-    See the *Advanced* section below for information on how to [host your own customized list of genomes](#customizing-hosted-genomes). 
+    See the *Advanced* section below for information on how to [host your own customized list of genomes](#hosting-genomes). 
     
 !!! tip " "
-    IGV's hosted genomes require an internet connection. See the *Advanced* section below for information on how to [download a hosted genome for offline use of IGV](#using-hosted-genomes-offline). 
+    IGV's hosted genomes require an internet connection. See the *Advanced* section below for information on how to [download a hosted genome for offline use of IGV](#using-igvs-hosted-genomes-offline). 
     
 ### Other genomes
 
