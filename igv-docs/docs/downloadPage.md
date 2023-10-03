@@ -16,7 +16,7 @@ The page title should not go in the menu
 !!! note "About log4j:" 
     IGV versions 2.4.1 - 2.11.6 used log4j2 code that is subject to the log4jShell vulnerability. We recommend using version 2.11.9 (or later), which removed all dependencies on log4j.
 
-**What's New:** See the [Release Notes](ReleaseNotes/2.15.x.md) for what's new in each IGV release.  
+**What's New:** See the [Release Notes](ReleaseNotes/2.16.x.md) for what's new in each IGV release.  
 
 [![Windows snapshot with java](img/DownloadYWindowsWithJava.png){height=90}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Win_2.16.2-WithJava-installer.exe) [![Windows no java](img/DownloadYWindowsNoJava.png){height=90}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Win_2.16.0-installer.exe) 
 
