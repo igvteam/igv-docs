@@ -139,10 +139,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
 <footer class="container-fluid wm-page-content">
 {%- block footer %}
+  <!--
   {%- block repo %}
-    {%- if page and page.edit_url %}
-      <p>
-        <a href="{{ page.edit_url }}">{% include 'repo-icon.html' %}Edit on {{ config.repo_name }}</a>
+   {%- if page and page.edit_url %}
+     <p>
+       <a href="{{ page.edit_url }}">{% include 'repo-icon.html' %}Edit on {{ config.repo_name }}</a>
       </p>
     {%- elif config.repo_url %}
       <p>
@@ -150,6 +151,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
       </p>
     {%- endif %}
   {%- endblock %}
+  -->
 
   {%- if config.copyright %}<p>{{ config.copyright }}</p>{%- endif %}
   <!-- <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p> -->

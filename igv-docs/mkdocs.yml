@@ -1,5 +1,7 @@
 site_name: 'IGV Desktop Application'
 
+repo_url: https://github.com/igvteam/igv-docs-website
+
 theme: 
   name: 'windmill'
   custom_dir: custom
