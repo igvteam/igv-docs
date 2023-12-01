@@ -1,4 +1,4 @@
-# Chimeric Read display features
+<p class="page-title">Chimeric Reads</p>
 
 This page describes features introduced with the 3.0 release for displaying chimeric reads.
 
