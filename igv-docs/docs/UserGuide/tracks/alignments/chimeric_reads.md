@@ -1,7 +1,12 @@
 # Chimeric Read display features
 
-There are several features specific to displaying chimeric reads.  These are aligned as a primary read with clipping
-and one or more supplementary reads indicaing the alignment of the clipped regions.  
+This page describes features introduced with the 3.0 release for displaying chimeric reads.
+
+Chimeric reads, also called split reads, are sequence reads that are split during the alignment step with each portion
+aligning to a distinct region of the genome.   In the BAM format one of the split reads will be designated "primary",
+the remaining are designated "supplementary".  The sequence for each split read will be annotated as "clipped" relative
+to the original read sequence.
+
 
 * *These features rely on reads including properly formatted **SA** tags.*
 <img width="1350" alt="Screenshot 2023-10-23 at 1 19 46 AM" src="https://github.com/igvteam/igv-docs-website/assets/4700332/4cec267e-7bc6-42c3-be13-f08071eea5cf">
