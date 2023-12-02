@@ -34,14 +34,18 @@ For some genome assemblies IGV provides access to remotely hosted track files th
 
 To **load UCSC Track Hubs**:
 
-Genome assemblies and associated tracks hosted at the [UCSC GenArk](https://hgdownload.soe.ucsc.edu/hubs/) site can be loaded directly into IGV from the 
-"Load Track Hub..." menu item. Input can be either a url to the "hub.txt" file describing the hub, or a 
-NCBI RefSeq or GenBank identifier.
+Genome assemblies and associated tracks hosted at the [UCSC GenArk](https://hgdownload.soe.ucsc.edu/hubs/) site can be 
+loaded directly into IGV from the "Load Track Hub..." menu item. Input can be either a url to the "hub.txt" file 
+describing the hub, or a NCBI RefSeq or GenBank identifier.
 Track Hubs always define the reference sequence, and typically include a set of annotation tracks.  For more information
 on the GenArk resource see 
 
 `Clawson, H., Lee, B.T., Raney, B.J. et al. GenArk: towards a million UCSC genome browsers. Genome Biol 24, 217 (2023).`
 [https://doi.org/10.1186/s13059-023-03057-x](https://doi.org/10.1186/s13059-023-03057-x)
+
+_Note: Track hub support is not limited to the GenArk site, but includes any hub in the ("useOneFile") format
+(see [track hub settings](https://genome.ucsc.edu/goldenPath/help/hgTracksHelp.html#UseOneFile))_
+
 
 1.  Select _File > Load Track Hub..._.  
 
