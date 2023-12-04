@@ -16,7 +16,7 @@ The page title should not go in the menu
 <BR>
 [![Linux snapshot with Java](img/DownloadSnapshotLinux.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/snapshot/IGV_Linux_snapshot_WithJava.zip)
 <BR>
-[![Command line snapshot no java](img/DownloadSnapshotCmdLine.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/snapshot/IGV_snapshot.zip)
+[![Command line snapshot no java](img/DownloadSnapshotCmdLineNeedsJava17.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/snapshot/IGV_snapshot.zip)
 
 
 !!! note " " 
