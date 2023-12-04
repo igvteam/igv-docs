@@ -16,11 +16,12 @@ nav:
 
 - User Guide:    
     - Reference genome: UserGuide/reference_genome.md  
-    - Loading and removing data: UserGuide/loading_data.md
+    - Loading and removing tracks: UserGuide/loading_data.md
     - Navigating the view: UserGuide/navigation.md
     - Tracks and Data Types:
         - Track attributes: UserGuide/tracks/track_attributes.md
         - Genome annotations: UserGuide/tracks/annotations.md
+        - Reference sequence: UserGuide/tracks/sequence.md
         - Quantitative data: UserGuide/tracks/quantitative_data.md
         - Alignments:
             - Alignments basics: UserGuide/tracks/alignments/viewing_alignments_basics.md
