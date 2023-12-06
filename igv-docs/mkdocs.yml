@@ -61,7 +61,7 @@ nav:
 - Download IGV: DownloadPage.md
 
 - Release Notes:
-    - 3.0: ReleaseNotes/3.0.md
+    - 3.0.x: ReleaseNotes/3.0.md
     - 2.16.x: ReleaseNotes/2.16.x.md 
     - 2.15.x: ReleaseNotes/2.15.x.md
     - 2.14.x: ReleaseNotes/2.14.x.md

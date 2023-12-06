@@ -29,10 +29,10 @@ To clear the current session:
 
 * Click _**File > New Session**_. This removes all data tracks and resets the view, but does not change the reference genome.
 
-<!---
-TBD Uncomment this out when session autosave is released
 
 # Session autosave
+
+*[IGV 3.0 Beta only]*
 
 IGV supports the ability to autosave your current session in the `igv/autosave` directory.  These session files can then be loaded through the *File > Autosaved Sessions* menu.  
 
@@ -52,7 +52,7 @@ You have the option of enabling a periodic autosave of your current session in I
 
 ## Autoload
 IGV provides the option to automatically load your last autosave on startup.  This can be enabled in the *General* tab of the *View > Preferences* window.  If this is enabled, when you open IGV, the most recent session file in the `igv/autosave` directory will be loaded, if there is one.  This setting will be ignored if running IGV from the command line and specifying a file to open on start.
--->
+
 
 # Session file format
 
