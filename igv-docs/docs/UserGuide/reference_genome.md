@@ -38,7 +38,7 @@ from the full list, it will remain in the genome dropdown menu in the toolbar.
 
 ### Load a track hub
 
-*[IGV 3.0 Beta only]*
+*[Available in IGV 3.0 Preview]*
 
 Genome assemblies and associated tracks hosted at the [UCSC GenArk](https://hgdownload.soe.ucsc.edu/hubs/) site can be
 loaded directly into IGV from the *Load Track Hub* menu item. Input can be either a URL to the *hub.txt* file

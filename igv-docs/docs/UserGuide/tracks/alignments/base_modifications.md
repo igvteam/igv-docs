@@ -1,5 +1,7 @@
 <p class="page-title">  Base modifications </p>
 
+*[This page describes the base modifations features in IGV 3.0 Preview]*
+
 Options for coloring alignments by base modifications are enabled for alignments with  `MM` and optionally `ML` tags, 
 denoting modification type and likelihood respectively  [(_see SAM/BAM format tag specifications_)](https://samtools.github.io/hts-specs/SAMtags.pdf).
 When these tags are present  options appear in the `Color by` section of the alignment track menu to color 

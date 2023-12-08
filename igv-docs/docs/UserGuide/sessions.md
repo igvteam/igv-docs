@@ -32,13 +32,14 @@ To clear the current session:
 
 # Session autosave
 
-*[IGV 3.0 Beta only]*
+*[Available in IGV 3.0 Preview]*
 
 IGV supports the ability to autosave your current session in the `igv/autosave` directory.  These session files can then be loaded through the *File > Autosaved Sessions* menu.  
 
-As of [#1327](https://github.com/igvteam/igv/pull/1327), IGV supports two methods of automatically saving sessions:
-1. Autosave on exit
-2. Timed autosave
+Two autosave methods are supported:
+
+* Autosave on exit
+* Timed autosave
 
 ## Autosave on exit
 Whenever you exit IGV, a copy of your current session will be saved to the `igv/autosave` directory with the name `exit_session_autosave.xml`.  Each time you exit IGV, that file will be overwritten with a new save of the current session.

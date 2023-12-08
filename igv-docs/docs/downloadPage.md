@@ -6,6 +6,10 @@ The page title should not go in the menu
 !!! tip " "
     Did you know that there is also an **IGV web application** that runs only in a web browser, does not use Java, and requires no downloads? See **[https://igv.org/app](https://igv.org/app)**. Click on the Help link in the app for more information about using IGV-Web.
 
+<div style = "font-size: 25px; font-weight: 500"> <br>IGV 3.0 Preview is now available. </div> 
+
+As a preview, this is still work in progress. We appreciate any feedback before the final release. See [here](IGV3.0Preview.md) for more details.
+
 # Latest release of IGV Desktop: 2.16.2
 !!! note "M1/M2 Mac Users:" 
     Apple's Rosetta software is required to run the IGV MacOS App that includes Java. If you run IGV with your own Java installation, Rosetta may not be required if your version of Java runs natively on M1/M2.
