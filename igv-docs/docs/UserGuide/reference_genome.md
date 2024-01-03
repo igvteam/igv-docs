@@ -12,8 +12,8 @@ toolbar displays the current reference genome, and contains a selection list of 
 ![](img/icon_genome_dropdown.png){width=300}
 
 Options for changing loading a genome not yet on the selection list are described below
-and include(1) selecting a predefined genome from the "hosted genome" list, (2) loading a custom genome
-`json` or sequence file, and (3) loading UCSC track hub. These options are available under the *Genomes* menu.
+and include selecting a predefined genome from the "hosted genome" list, or loading a custom genome
+`json` or sequence file. 
 
 !!! note " "
     When you switch to a different reference genome, IGV will clear the current session.
@@ -35,32 +35,6 @@ from the full list, it will remain in the genome dropdown menu in the toolbar.
 
 !!! tip " "
     IGV's hosted genomes require an internet connection. See the *Advanced* section below for information on how to [download a hosted genome for offline use of IGV](#using-igvs-hosted-genomes-offline).
-
-### Load a track hub
-
-*[Available in IGV 3.0 Preview]*
-
-Genome assemblies and associated tracks hosted at the [UCSC GenArk](https://hgdownload.soe.ucsc.edu/hubs/) site can be
-loaded directly into IGV from the *Load Track Hub* menu item. Input can be either a URL to the *hub.txt* file
-describing the hub, or a NCBI RefSeq or GenBank identifier. Track Hubs always define the reference sequence, and
-typically include a set of annotation tracks. To load a hub:
-
-1. Select *Genomes > Load Track Hub*
-
-2. Enter **one** of the following:
-    * RefSeq assembly identifier (e.g. GCF_003597395.1)
-    * GenBack assembly identifier (e.g. GCF_003597395.1)
-    * URL to a *hub.txt* file (e.g. https://hgdownload.soe.ucsc.edu/hubs/GCF/003/597/395/GCF_003597395.1/hub.txt)
-
-When loading a hub for the first time, a menu will be displayed for selecting from a set of tracks associated with the genome assembly. This selection can be changed at any time from the menu *Genomes > Select Hub Tracks*.
-Track selection is remembered for future loads of the hub.
-
-For more information on the GenArk resource see
-`Clawson, H., Lee, B.T., Raney, B.J. et al. GenArk: towards a million UCSC genome browsers. Genome Biol 24, 217 (2023).`
-[https://doi.org/10.1186/s13059-023-03057-x](https://doi.org/10.1186/s13059-023-03057-x)
-
-!!! tip " "
-    Track hub support is not limited to the GenArk site, but includes any hub in the `useOneFile` format (see the documentation on [track hub settings](https://genome.ucsc.edu/goldenPath/help/hgTracksHelp.html#UseOneFile)) at the UCSC site.
 
 ### Define a custom genome
 

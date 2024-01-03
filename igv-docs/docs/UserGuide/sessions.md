@@ -32,8 +32,6 @@ To clear the current session:
 
 # Session autosave
 
-*[Available in IGV 3.0 Preview]*
-
 IGV supports the ability to autosave your current session in the `igv/autosave` directory.  These session files can then be loaded through the *File > Autosaved Sessions* menu.  
 
 Two autosave methods are supported:
