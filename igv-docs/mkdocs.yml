@@ -31,6 +31,7 @@ nav:
             - Base modifications:  UserGuide/tracks/alignments/base_modifications.md
             - SMRT kinetics:  UserGuide/tracks/alignments/smrt.md
             - Chimeric reads: UserGuide/tracks/alignments/chimeric_reads.md
+            - Ultima indel coloring: UserGuide/tracks/alignments/ultima/ultima.md
         - Variants (VCF): UserGuide/tracks/vcf.md
         - GWAS: UserGuide/tracks/gwas.md
     - Sample attributes: UserGuide/sample_attributes.md
