@@ -16,15 +16,15 @@ The page title should not go in the menu
 !!! note "About log4j:" 
     IGV versions 2.4.1 - 2.11.6 used log4j2 code that is subject to the log4jShell vulnerability. We recommend using version 2.11.9 (or later), which removed all dependencies on log4j.
 
-**What's New:** See the [Release Notes](ReleaseNotes/2.16.x.md) for what's new in each IGV release.  
-[![MacApp with java](img/DownloadYMacWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_MacApp_2.16.2_WithJava.zip) 
-[![MacApp no java](img/DownloadYMacNoJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_MacApp_2.16.2.zip)
+**What's New:** See the [Release Notes](ReleaseNotes/2.17.x.md) for what's new in each IGV release.  
+[![MacApp with java](img/DownloadYMacWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_MacApp_2.17.0_WithJava.zip) 
+[![MacApp no java](img/DownloadYMacNoJava17.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_MacApp_2.17.0.zip)
 <br>
-[![Windows snapshot with java](img/DownloadYWindowsWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Win_2.16.2-WithJava-installer.exe) [![Windows no java](img/DownloadYWindowsNoJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Win_2.16.2-installer.exe) 
+[![Windows snapshot with java](img/DownloadYWindowsWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_Win_2.17.0-WithJava-installer.exe) [![Windows no java](img/DownloadYWindowsNoJava17.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_Win_2.17.0-installer.exe) 
 <br>
-[![Linux with Java](img/DownloadYLinuxWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Linux_2.16.2_WithJava.zip)
+[![Linux with Java](img/DownloadYLinuxWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_Linux_2.17.0_WithJava.zip)
 <br>
-[![Command line no java](img/DownloadYCommandLineNoJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_2.16.2.zip)
+[![Command line no java](img/DownloadYCommandLineNoJava17.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_2.17.0.zip)
 
 
 # Other releases of IGV Desktop

@@ -1,7 +1,5 @@
 <p class="page-title">Chimeric reads</p>
 
-*[Available in IGV 3.0 Preview]*
-
 Chimeric reads, also called split reads, are sequence reads that are split into two or more portions, where each
 portion aligns to a different region of the genome. The sequence for each split read will be annotated as "clipped"
 relative to the original read sequence. In the BAM format one of alignments will be designated "primary",
