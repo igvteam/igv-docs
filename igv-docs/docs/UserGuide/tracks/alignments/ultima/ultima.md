@@ -1,4 +1,7 @@
-# UG CRAM representation
+<p class="page-title">Ultima indel coloring</p>
+
+This page describes indel coloring of Ultima Genomics (UG) flow-based reads. 
+
 In flow sequencing, each base is representing a homopolymer with length > 0. Each homopolymer is assigned with quality that represents the probability of calculating the length correctly. UG IGV view of variant calling includes additional graphical and information boxes on top of what is already available in IGV. These graphical indications provide information about the quality of the base and variant. 
 
 For more information about flow sequencing, please see [this preprint](https://www.biorxiv.org/content/10.1101/2022.05.29.493900). 
@@ -10,7 +13,7 @@ For more information about flow sequencing, please see [this preprint](https://w
 2. Feature description: Insertion or Deletion, count of bases in event, Quality, and direction  
 
 ## Insertion graphic features
-![Zoomed in data](img/Picture2.png).
+![Zoomed in data](img/Picture2.png){width=320}.
 
 Base insertions are marked with a color range of red to blue boxes. 
 
@@ -42,7 +45,7 @@ Direction value (TP) – Positive: Probability for insertion of additional base(
 
 **Example:** 
 
-![Insertion examples](img/Picture11.png)
+![Insertion examples](img/Picture11.png){width=320}
 
 Insertions with different probabilities and different directions 
 
