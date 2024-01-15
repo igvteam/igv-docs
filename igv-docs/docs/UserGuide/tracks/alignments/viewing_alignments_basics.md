@@ -22,9 +22,9 @@ BAM and CRAM files are required to have an **associated index file**.
 
 If you receive a .bam file from a sequencing facility, you will usually also get the corresponding index file. If you
 need to create the index yourself, there are multiple tools available for indexing BAM files,
-including[igvtools](../../tools/igvtools_ui.md), the[samtools](http://www.htslib.org)package, and
-the[Picard.SortSam](http://www.broadinstitute.org/cancer/software/genepattern/modules/docs/Picard.SortSam/4)module
-in[GenePattern](http://www.broadinstitute.org/cancer/software/genepattern/).
+including [igvtools](../../tools/igvtools_ui.md), the [samtools](http://www.htslib.org) package, and
+the [Picard.SortSam](http://www.broadinstitute.org/cancer/software/genepattern/modules/docs/Picard.SortSam/4) module
+in [GenePattern](http://www.broadinstitute.org/cancer/software/genepattern/).
 
 # Experiment type
 
