@@ -26,13 +26,3 @@ Mac apps are not provided for the IGV 3.0 Preview build. To **run the IGV 3.0 Pr
 
 # What's in IGV 3.0 Preview
 
-##Track hubs
-
-UCSC track hubs in the [useOneFile](https://genome.ucsc.edu/goldenPath/help/hgTracksHelp.html#UseOneFile) format can now
-be loaded directly into IGV to define a reference genome and associated tracks. Notably this includes the more than
-3,600 genome assemblies and associated tracks hosted at the [UCSC GenArk](https://hgdownload.soe.ucsc.edu/hubs/) site.
-See the [Reference genome](/UserGuide/reference_genome/#load-a-track-hub) section for more details on how to use a track hub for IGV's reference genome.
-
-For more information on the GenArk resource see `Clawson, H., Lee, B.T., Raney, B.J. et al. GenArk: towards a million UCSC genome browsers. Genome Biol 24, 217 (2023).`
-[https://doi.org/10.1186/s13059-023-03057-x](https://doi.org/10.1186/s13059-023-03057-x)
-

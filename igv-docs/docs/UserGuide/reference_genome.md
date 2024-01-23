@@ -12,11 +12,43 @@ toolbar displays the current reference genome, and contains a selection list of 
 ![](img/icon_genome_dropdown.png){width=300}
 
 Options for changing loading a genome not yet on the selection list are described below
-and include selecting a predefined genome from the "hosted genome" list, or loading a custom genome
-`json` or sequence file. 
+and include
+
+* selecting a predefined genome from the "hosted genome" list,
+* loading a UCSC track hub.
+* loading a custom genome `json` or sequence file,
+
+These options are available under the *Genomes* menu
 
 !!! note " "
-    When you switch to a different reference genome, IGV will clear the current session.
+When you switch to a different reference genome, IGV will clear the current session.
+
+### Load a track hub
+
+Genome assemblies and associated tracks hosted at the [UCSC GenArk](https://hgdownload.soe.ucsc.edu/hubs/) site can be
+loaded directly into IGV from the *Genomes > Load Track Hub ...* menu item. Input can be either a URL to the *hub.txt* file
+describing the hub, or a NCBI RefSeq or GenBank identifier. Track Hubs always define the reference sequence, and
+typically include a set of annotation tracks. To load a hub:
+
+1. Select *Genomes > Load Track Hub*
+
+2. Enter **one** of the following:
+    * RefSeq assembly identifier (e.g. GCF_003597395.1)
+    * GenBack assembly identifier (e.g. GCF_003597395.1)
+    * URL to a *hub.txt* file (e.g. https://hgdownload.soe.ucsc.edu/hubs/GCF/003/597/395/GCF_003597395.1/hub.txt)
+
+When loading a hub for the first time, a menu will be displayed for selecting from a set of tracks associated with the
+genome assembly. Track selection is remembered for future loads of the hub. This selection can be changed
+from the *Genomes > Select Hub Tracks...* menu.
+
+For more information on the GenArk resource see
+`Clawson, H., Lee, B.T., Raney, B.J. et al. GenArk: towards a million UCSC genome browsers. Genome Biol 24, 217 (2023).`
+[https://doi.org/10.1186/s13059-023-03057-x](https://doi.org/10.1186/s13059-023-03057-x)
+
+!!! tip " "
+Track hub support is not limited to the GenArk site, but includes any hub in the `useOneFile` format (see the
+documentation on [track hub settings](https://genome.ucsc.edu/goldenPath/help/hgTracksHelp.html#UseOneFile)) at the UCSC
+site.
 
 ### Select a hosted genome
 
@@ -31,17 +63,18 @@ from the full list, it will remain in the genome dropdown menu in the toolbar.
 ![](img/GenomeToAddToListNew.png){width=356}
 
 !!! tip " "
-    See the *Advanced* section below for information on how to [host your own customized list of genomes](#hosting-genomes).
+See the *Advanced* section below for information on how to [host your own customized list of genomes](#hosting-genomes).
 
 !!! tip " "
-    IGV's hosted genomes require an internet connection. See the *Advanced* section below for information on how to [download a hosted genome for offline use of IGV](#using-igvs-hosted-genomes-offline).
+IGV's hosted genomes require an internet connection. See the *Advanced* section below for information on how
+to [download a hosted genome for offline use of IGV](#using-igvs-hosted-genomes-offline).
 
 ### Define a custom genome
 
 To load a reference genome that is not included in IGV's set of hosted genomes, you can load a file the specifies the
 genome by clicking on *Genomes > Load Genome from File** or *Genomes > Load Genome from URL*. The following
 file types are supported for defining a custom genome (1) Fasta and .2bit sequence files, (2) IGV ***genome json***
-files, and (3) NBCI genbank (.gbk) files.  
+files, and (3) NBCI genbank (.gbk) files.
 
 #### Sequence only
 
@@ -68,7 +101,7 @@ To remove a genome from the dropdown menu:
 * Select the genomes you want to remove and click *Remove*.
 
 !!! Note " "
-    You cannot remove the genome that is currently being used in the IGV window.
+You cannot remove the genome that is currently being used in the IGV window.
 
 # Viewing the reference genome tracks
 
@@ -176,15 +209,18 @@ to download **individual components** and prepare them for offline use:
 
    In the above ce11 example, the files are:
 
-    https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/ce11/ce11.fa
-    https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/ce11/ce11.fa.fai
-    https://s3.amazonaws.com/igv.org.genomes/ce11/cytoBandIdeo.txt.gz
-    https://s3.amazonaws.com/igv.org.genomes/ce11/refGene.sorted.txt.gz
-    https://s3.amazonaws.com/igv.org.genomes/ce11/refGene.sorted.txt.gz.tbi
-    https://s3.amazonaws.com/igv.org.genomes/locations/geneLocations_ce11.bed.gz
+   https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/ce11/ce11.fa
+   https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/ce11/ce11.fa.fai
+   https://s3.amazonaws.com/igv.org.genomes/ce11/cytoBandIdeo.txt.gz
+   https://s3.amazonaws.com/igv.org.genomes/ce11/refGene.sorted.txt.gz
+   https://s3.amazonaws.com/igv.org.genomes/ce11/refGene.sorted.txt.gz.tbi
+   https://s3.amazonaws.com/igv.org.genomes/locations/geneLocations_ce11.bed.gz
 
 !!! Danger "Important:"  
-    Some genome JSON files contain multiple formats for genome sequence to support multiple versions of IGV. It is not neccessary to download all versions of the sequence data.  In particular, if the JSON defines the property `twoBitURL` it is not neccessary to download the referenced `fastaURL` or `indexURL`.  In that case the fasta and index properties should be removed from your local JSON file.
+Some genome JSON files contain multiple formats for genome sequence to support multiple versions of IGV. It is not
+neccessary to download all versions of the sequence data. In particular, if the JSON defines the property `twoBitURL` it
+is not neccessary to download the referenced `fastaURL` or `indexURL`. In that case the fasta and index properties
+should be removed from your local JSON file.
 
 4. Edit your local copy of the genome specification file
 
@@ -257,4 +293,5 @@ The **file format for the reference genome list** defines one genome per line wi
   which uses the UCSC BLAT server.
 
 !!! tip " "
-    To use IGV's default genome list file as a starting point for your new file, you can download it from [https://igv.org/genomes/genomes.tsv](https://igv.org/genomes/genomes.tsv).
+To use IGV's default genome list file as a starting point for your new file, you can download it
+from [https://igv.org/genomes/genomes.tsv](https://igv.org/genomes/genomes.tsv).
