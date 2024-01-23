@@ -8,7 +8,7 @@ Did you know that there is also an **IGV web application** that runs only in a w
 requires no downloads? See **[https://igv.org/app](https://igv.org/app)**. Click on the Help link in the app for more
 information about using IGV-Web.
 
-# Latest release of IGV Desktop: 2.17.0
+# Latest release of IGV Desktop: 2.71.1
 
 !!! note "M1/M2 Mac Users:"
 Apple's Rosetta software is required to run the IGV MacOS App that includes Java. If you run IGV with your own Java
@@ -22,14 +22,14 @@ it with your own Java installation.
 
 
 **What's New:** See the [Release Notes](ReleaseNotes/2.17.x.md) for what's new in each IGV release.  
-[![MacApp with java](img/DownloadYMacWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_MacApp_2.17.0_WithJava.zip)
-[![MacApp no java](img/DownloadYMacNoJava17.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_MacApp_2.17.0.zip)
+[![MacApp with java](img/DownloadYMacWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_MacApp_2.71.1_WithJava.zip)
+[![MacApp no java](img/DownloadYMacNoJava17.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_MacApp_2.71.1.zip)
 <br>
-[![Windows snapshot with java](img/DownloadYWindowsWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_Win_2.17.0-WithJava-installer.exe) [![Windows no java](img/DownloadYWindowsNoJava17.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_Win_2.17.0-installer.exe)
+[![Windows snapshot with java](img/DownloadYWindowsWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_Win_2.71.1-WithJava-installer.exe) [![Windows no java](img/DownloadYWindowsNoJava17.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_Win_2.71.1-installer.exe)
 <br>
-[![Linux with Java](img/DownloadYLinuxWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_Linux_2.17.0_WithJava.zip)
+[![Linux with Java](img/DownloadYLinuxWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_Linux_2.71.1_WithJava.zip)
 <br>
-[![Command line no java](img/DownloadYCommandLineNoJava17.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_2.17.0.zip)
+[![Command line no java](img/DownloadYCommandLineNoJava17.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_2.71.1.zip)
 
 # Other releases of IGV Desktop
 
