@@ -8,7 +8,7 @@ Did you know that there is also an **IGV web application** that runs only in a w
 requires no downloads? See **[https://igv.org/app](https://igv.org/app)**. Click on the Help link in the app for more
 information about using IGV-Web.
 
-# Latest release of IGV Desktop: 2.71.1
+# Latest release of IGV Desktop: 2.17.1
 
 !!! Danger "As of version 2.17.0, IGV requires **Java 17 or greater**. If you download one of the IGV versions that does not include Java, make sure you have Java 17 installed and in your path."
 
