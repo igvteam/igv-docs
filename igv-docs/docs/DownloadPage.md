@@ -10,6 +10,8 @@ information about using IGV-Web.
 
 # Latest release of IGV Desktop: 2.71.1
 
+!!! Danger "As of version 2.17.0, IGV requires **Java 17 or greater**. If you download one of the IGV versions that does not include Java, make sure you have Java 17 installed and in your path."
+
 !!! note "M1/M2 Mac Users:"
 Apple's Rosetta software is required to run the IGV MacOS App that includes Java. If you run IGV with your own Java
 installation, Rosetta may not be required if your version of Java runs natively on M1/M2.
@@ -19,7 +21,6 @@ The 'IGV for Linux' download includes AdoptOpenJDK (now Eclipse Temurin) version
 supported platforms [here](https://adoptium.net/supported-platforms/). If your platform is not on the "x64 Linux" list,
 or the packaged Java does not work on your version of Linux, download the 'Command line IGV for all platforms' and use
 it with your own Java installation.
-
 
 **What's New:** See the [Release Notes](ReleaseNotes/2.17.x.md) for what's new in each IGV release.  
 [![MacApp with java](img/DownloadYMacWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.17/IGV_MacApp_2.71.1_WithJava.zip)
