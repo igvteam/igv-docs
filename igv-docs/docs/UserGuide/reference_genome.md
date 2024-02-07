@@ -20,8 +20,26 @@ and include
 
 These options are available under the *Genomes* menu
 
-!!! note " "
-When you switch to a different reference genome, IGV will clear the current session.
+!!! note " " 
+    When you switch to a different reference genome, IGV will clear the current session.
+
+### Select a hosted genome
+
+IGV provides a limited selection of predefined genome definitions. The list can be accessed from the *Genomes* menu
+
+* Select *Genomes > Select Hosted Genome*
+
+This will pop up a window with the full list of hosted genomes. If you find your genome of interest there, select it and
+click ok. Your selected genome will replace the reference genome in the main IGV window. Once you have selected a genome
+from the full list, it will remain in the genome dropdown menu in the toolbar.
+
+![](img/GenomeToAddToListNew.png){width=356}
+
+!!! tip " "
+    See the *Advanced* section below for information on how to [host your own customized list of genomes](#hosting-genomes).
+
+!!! tip " "
+    IGV's hosted genomes require an internet connection. See the *Advanced* section below for information on how to [download a hosted genome for offline use of IGV](#using-igvs-hosted-genomes-offline).
 
 ### Load a track hub
 
@@ -46,28 +64,7 @@ For more information on the GenArk resource see
 [https://doi.org/10.1186/s13059-023-03057-x](https://doi.org/10.1186/s13059-023-03057-x)
 
 !!! tip " "
-Track hub support is not limited to the GenArk site, but includes any hub in the `useOneFile` format (see the
-documentation on [track hub settings](https://genome.ucsc.edu/goldenPath/help/hgTracksHelp.html#UseOneFile)) at the UCSC
-site.
-
-### Select a hosted genome
-
-IGV provides a limited selection of predefined genome definitions. The list can be accessed from the *Genomes* menu
-
-* Select *Genomes > Select Hosted Genome*
-
-This will pop up a window with the full list of hosted genomes. If you find your genome of interest there, select it and
-click ok. Your selected genome will replace the reference genome in the main IGV window. Once you have selected a genome
-from the full list, it will remain in the genome dropdown menu in the toolbar.
-
-![](img/GenomeToAddToListNew.png){width=356}
-
-!!! tip " "
-See the *Advanced* section below for information on how to [host your own customized list of genomes](#hosting-genomes).
-
-!!! tip " "
-IGV's hosted genomes require an internet connection. See the *Advanced* section below for information on how
-to [download a hosted genome for offline use of IGV](#using-igvs-hosted-genomes-offline).
+    Track hub support is not limited to the GenArk site, but includes any hub in the `useOneFile` format (see the documentation on [track hub settings](https://genome.ucsc.edu/goldenPath/help/hgTracksHelp.html#UseOneFile)) at the UCSC site.
 
 ### Define a custom genome
 
@@ -101,7 +98,7 @@ To remove a genome from the dropdown menu:
 * Select the genomes you want to remove and click *Remove*.
 
 !!! Note " "
-You cannot remove the genome that is currently being used in the IGV window.
+    You cannot remove the genome that is currently being used in the IGV window.
 
 # Viewing the reference genome tracks
 
@@ -217,10 +214,7 @@ to download **individual components** and prepare them for offline use:
    https://s3.amazonaws.com/igv.org.genomes/locations/geneLocations_ce11.bed.gz
 
 !!! Danger "Important:"  
-Some genome JSON files contain multiple formats for genome sequence to support multiple versions of IGV. It is not
-neccessary to download all versions of the sequence data. In particular, if the JSON defines the property `twoBitURL` it
-is not neccessary to download the referenced `fastaURL` or `indexURL`. In that case the fasta and index properties
-should be removed from your local JSON file.
+    Some genome JSON files contain multiple formats for genome sequence to support multiple versions of IGV. It is not neccessary to download all versions of the sequence data. In particular, if the JSON defines the property `twoBitURL` it is not neccessary to download the referenced `fastaURL` or `indexURL`. In that case the fasta and index properties should be removed from your local JSON file.
 
 4. Edit your local copy of the genome specification file
 
@@ -293,5 +287,4 @@ The **file format for the reference genome list** defines one genome per line wi
   which uses the UCSC BLAT server.
 
 !!! tip " "
-To use IGV's default genome list file as a starting point for your new file, you can download it
-from [https://igv.org/genomes/genomes.tsv](https://igv.org/genomes/genomes.tsv).
+    To use IGV's default genome list file as a starting point for your new file, you can download it from [https://igv.org/genomes/genomes.tsv](https://igv.org/genomes/genomes.tsv).

@@ -59,8 +59,7 @@ You can adjust the above settings in the *View > Preferences* window. Click on t
 threshold for RNA-seq data; the *Third Gen* for long-read data; and *Alignments* for other sequencing types.
 
 !!! tip " "
-If you have low coverage data, you can provide a larger visibility range threshold. Or for deep coverage, you might want
-to provide a smaller visibility range threshold.
+	If you have low coverage data, you can provide a larger visibility range threshold. Or for deep coverage, you might want to provide a smaller visibility range threshold.
 
 # Track types
 
@@ -93,8 +92,7 @@ at each locus as a bar chart.
 ![](../../img/coverage-barchart-grey.png)
 
 !!! note " "
-When the view is larger than the visibility window, the **dynamic coverage track is blank** because the alignments have
-not been loaded and therefore the coverage cannot be computed.
+	When the view is larger than the visibility window, the **dynamic coverage track is blank** because the alignments have not been loaded and therefore the coverage cannot be computed.
 
 Alternatively, you can provide a file containing **pre-computed coverage data**. When this option is used, the track
 displays coverage at **all zoom levels** including at the whole genome and chromosome view. To generate the extended
@@ -166,10 +164,8 @@ Alignment files include detailed information about each aligned read. To retriev
 
 * Click on an alignment to **see the details** in a pop-up window.
 
-  !!! tip " "
-  You can change the behavior of the detail pop-up window by clicking on the yellow balloon icon in the IGV
-  toolbar. <br> ![](../../img/balloon-icon.png){width=40} <br> For example, to quickly see the details for many
-  alignments in succession, change the behavior from *Show Details on Click* (the default) to *Show Details on Hover*.
+    !!! tip " "
+        You can change the behavior of the detail pop-up window by clicking on the yellow balloon icon in the IGV toolbar.  <br> ![](../../img/balloon-icon.png){width=36} <br> For example, to quickly see the details for many alignments in succession, change the behavior from *Show Details on Click* (the default) to *Show Details on Hover*.
 
 * To **copy the details** to the computer's clipboard, right-click on the alignment and select *Copy read details to
   clipboard* from the pop-up menu.
@@ -257,11 +253,11 @@ Any indels smaller than the threshold number are not displayed. For example to h
 above example, the threshold must be set to 3 or more.
 
 !!! note " "
-Controlling indel preferences is **different in third gen** alignment tracks.
+    Controlling indel preferences is **different in third gen** alignment tracks.
 
-    * One-base indels are hidden by default (vs. shown by default for other experiment types). To show all indels or to change the size threshold for hidden indels in third gen alignments, the values must be set in the *Third Gen* tab of *View > Preferences* (not the *Alignments* tab).
+* One-base indels are hidden by default (vs. shown by default for other experiment types). To show all indels or to change the size threshold for hidden indels in third gen alignments, the values must be set in the *Third Gen* tab of *View > Preferences* (not the *Alignments* tab).
     
-    * Indels larger than one base are labeled by default, which is the same as for other experiment types, but changing the values must be done in the *Third Gen* tab of *View > Preferences* (not the *Alignments* tab).
+* Indels larger than one base are labeled by default, which is the same as for other experiment types, but changing the values must be done in the *Third Gen* tab of *View > Preferences* (not the *Alignments* tab).
 
 ## Read mapping quality
 
@@ -296,8 +292,7 @@ alignments by* option is not applicable for a particular alignment, it is assign
 alignment track color is grey. To change it, select *Change Track Color...* from the track's pop-up menu.
 
 !!! note " "
-If the coverage track has not been assigned a specific track color, changing the alignment track color will also change
-the coverage track color to a darker shade of the new alignment track color.
+    If the coverage track has not been assigned a specific track color, changing the alignment track color will also change the coverage track color to a darker shade of the new alignment track color.
 
 ## Grouping and sorting alignments
 
@@ -351,9 +346,7 @@ To **reverse the sort order**, click on *Sort alignments by* in the track's pop-
 the sub-menu.
 
 !!! note " "
-The sort is an action that is **applied once** to the alignments at the center of the view. If you scroll the view or
-jump to a different locus, the sort is not performed again. Pressing `Ctrl-S` is a shortcut for performing the **same
-sort again** at a new locus.
+    The sort is an action that is **applied once** to the alignments at the center of the view. If you scroll the view or jump to a different locus, the sort is not performed again. Pressing `Ctrl-S` is a shortcut for performing the **same sort again** at a new locus.
 
 To undo the sort and **restore the layout to an optimally packed configuration**, select _Re-pack alignments_ from the
 track's pop-up menu.
@@ -374,15 +367,13 @@ To change the defaults, set the values in the *Downsampling* section of the *Ali
 window. Note that 3rd gen tracks are not downsampled by default; it can be enabled in the *Third Gen* tab.
 
 !!! tip " "
-If your file has deep coverage and you want to be able to see more of the reads, try decreasing
-the [visibility window](#visibility-window) before you disable or decrease the downsampling. The narrower window will
-help keep the memory usage down.
+    If your file has deep coverage and you want to be able to see more of the reads, try decreasing the [visibility window](#visibility-window) before you disable or decrease the downsampling. The narrower window will help keep the memory usage down.
 
 Areas where the reads have been downsampled are marked with a black rectangle just under the coverage track, as shown in
 the example below.
 
 !!! tip " "
-The coverage track shows the coverage for **all** the reads, even when only a subset of the reads are displayed.
+    The coverage track shows the coverage for **all** the reads, even when only a subset of the reads are displayed.
 
 ![](../../img/downsampled4_0.png){width=500}
 
