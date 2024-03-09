@@ -47,7 +47,7 @@ Reference genome assemblies and associated tracks can be loaded directly from th
 Select `Genomes > Load Genome from UCSC GenArk…` to bring up a table of all available assemblies.  The table can
 be filtered by typing space separated terms in filter box.   
 
-After selecting an assembling. You will be prompted to select from the available annotation tracks. Once you've 
+After selecting an assembly you will be prompted to select from the available annotation tracks. Once you've 
 made your selections, the genome will be added to the genome dropdown menu and the anntation tracks will be displayed 
 whenever you select the genome from the menu. You can change the selection of annotation tracks via `Genomes > Select GenArk Tracks`.
 
