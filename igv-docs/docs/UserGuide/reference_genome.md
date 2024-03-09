@@ -41,23 +41,15 @@ from the full list, it will remain in the genome dropdown menu in the toolbar.
 !!! tip " "
     IGV's hosted genomes require an internet connection. See the *Advanced* section below for information on how to [download a hosted genome for offline use of IGV](#using-igvs-hosted-genomes-offline).
 
-### Load a track hub
+### Load a UCSC GenArk track hub
 
-Genome assemblies and associated tracks hosted at the [UCSC GenArk](https://hgdownload.soe.ucsc.edu/hubs/) site can be
-loaded directly into IGV from the *Genomes > Load Track Hub ...* menu item. Input can be either a URL to the *hub.txt* file
-describing the hub, or a NCBI RefSeq or GenBank identifier. Track Hubs always define the reference sequence, and
-typically include a set of annotation tracks. To load a hub:
+Reference genome assemblies and associated tracks can be loaded directly from the [UCSC GenArk](https://hgdownload.soe.ucsc.edu/hubs/) archive.
+Select `Genomes > Load Genome from UCSC GenArk…` to bring up a table of all available assemblies.  The table can
+be filtered by typing space separated terms in filter box.   
 
-1. Select *Genomes > Load Track Hub*
-
-2. Enter **one** of the following:
-    * RefSeq assembly identifier (e.g. GCF_003597395.1)
-    * GenBack assembly identifier (e.g. GCF_003597395.1)
-    * URL to a *hub.txt* file (e.g. https://hgdownload.soe.ucsc.edu/hubs/GCF/003/597/395/GCF_003597395.1/hub.txt)
-
-When loading a hub for the first time, a menu will be displayed for selecting from a set of tracks associated with the
-genome assembly. Track selection is remembered for future loads of the hub. This selection can be changed
-from the *Genomes > Select Hub Tracks...* menu.
+After selecting an assembling. You will be prompted to select from the available annotation tracks. Once you've 
+made your selections, the genome will be added to the genome dropdown menu and the anntation tracks will be displayed 
+whenever you select the genome from the menu. You can change the selection of annotation tracks via `Genomes > Select GenArk Tracks`.
 
 For more information on the GenArk resource see
 `Clawson, H., Lee, B.T., Raney, B.J. et al. GenArk: towards a million UCSC genome browsers. Genome Biol 24, 217 (2023).`
