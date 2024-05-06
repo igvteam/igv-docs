@@ -207,10 +207,13 @@ All the values for the display of base mismatches are **user-settable**:
   at base quality* (default is base quality = 5) and *No transparency above base quality* (default is base quality =
   20).
 
-* To **change the base color of the alignments** from the default grey color, right-click in the alignment track and
+* To **change the background color of the alignments** from the default grey color, right-click in the alignment track and
   select *Change Track Color...* from the pop-up menu.
 
-* To change the **nucleotide coloring scheme** for reads, see the [User preferences](../../preferences.md) section.
+<!---
+* To change the **nucleotide coloring scheme** for reads, 
+TBD the only way to do this right now is to edit the prefs.properties file. However we are planning on doing a UI. See end of issue https://github.com/igvteam/igv/issues/862 
+* -->
 
 ## Indels
 

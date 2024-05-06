@@ -78,7 +78,7 @@ suite (www.htslib.org). If the file is plain text (not block gzipped) and not in
 
 To automatically load gene annotations, as well as an optional cytoband file, along with the genome sequence, you can
 create and load a genome JSON file, which is described in
-the [File Formats: Genomes](../FileFormats/Genomes/#igv-reference-genome-json) section.
+the [File Formats: Genomes](../../FileFormats/Genomes/#igv-reference-genome-json) section.
 
 # Removing a genome from the menu
 
@@ -271,7 +271,7 @@ The **file format for the reference genome list** defines one genome per line wi
 * A **URL** to a .json or .genome file that specifies the details of the genome. This can point to a file from IGV's
   default list or your own custom genome file that you have uploaded to a web server.
 
-  The .json format for reference genomes is [described here](../../../FileFormats/Genomes/#igv-reference-genome-json).
+  The .json format for reference genomes is [described here](../../FileFormats/Genomes/#igv-reference-genome-json).
   Use this format to define any custom genomes you wish to add the list. The .genome format is an older format and is
   supported only for backwards compatibility with existing .genome files.
 

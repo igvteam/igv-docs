@@ -6,9 +6,8 @@ The page title should not go in the menu
 When zoomed in sufficiently, the reference genome _**Sequence**_ track appears. The sequence is represented by
 colored bars or colored letters, depending on zoom level, with adenine (A) in green, cytosine (C) in blue, guanine (G)
 in yellow, and thymine (T) in red.
-<!---
-TBD describe how to change the default colors
--->
+
+* You can **change the nucleotide colors** by selecting *View Preferences > General* and clicking on the color swatches in the *Nucleotide Colors* section.
 
 IGV displays the sequence of bases as they appear in the FASTA file for the reference genome. In addition to the upper
 case letters A, C, G, and T, you may see lower case letters for these bases, and also N/n. Lower case letters often
