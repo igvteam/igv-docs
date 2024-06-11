@@ -4,24 +4,23 @@ The page title should not go in the menu
 -->
 <p class="page-title">File Formats: Sample Info (Attributes)</p>
 
-Sample information includes three types of information: 
+Sample information files are tab-delimited text files used to associate attributes with sample names.  The attributes
+are displayed in the "Sample Information" panel and can be used to sort, group, and filter sample rows.
 
-* The **attributes** and their values for each sample - Required.
-* **Sample mapping** information - Needed only if the sample names in the attribute information do not match the sample names in the data files.
-* **Colors** to use in the attribute display - Needed only if the you wish to specify colors that are not the same as the defaults.
+The file consists of up to three sections
 
-Attribute, mapping, and color information may be provided in **separate files** or together in a **single file**. These are tab-delimited text files with extension .txt. The required formats for the three different types of information are described below. Lines starting with `#` are ignored (except for the special section headers) and can be used for comments in the file.
+* A tab delimited table specifying **attributes** and their values for each sample - Required.
+* **Sample mapping** information - Optional, needed only if the sample names in the attribute information do not match the sample names in the data files.
+* **Colors** Optional, used to explicitly specify colors.
 
-You load sample information files as you would data files, via the _File_ menu. IGV can load multiple sample information files per session. When loaded into IGV, attributes display in a separate color-coded panel between sample names and tracks (see [Sample Attributes](../UserGuide/sample_attributes.md) in the User Guide). 
-
-*   The attributes are applied to data tracks with names that match the sample identifiers in the attribute information. 
-    *   Attribute rows without matching data tracks are ignored. 
-    *   For data tracks without a matching attribute row, the corresponding IGV attributes panel rows remain blank.
-*   Because you can load multiple sample information files per IGV session, you do not need to include the attributes for all the samples of interest in the same file.
 
 ## Attributes
 
-The attributes file (or section in a combined file) lists sample identifiers in the first column and attributes in subsequent columns with a single header row that defines the names of the attributes. If an attributes section is not at the top of a file, the section should begin with the line `#sampleTable`
+The attributes section is denoted by the line `#sampleTable`.  It consists of a tab delimited header row defining the 
+attribute names, followed by one row per sample containing attribute values.  The first column contains the sample names.  
+If the attribute section is the first or only section in the file the `#sampleTable` line can be omitted.
+
+An example attribute section for 2 samples follows.
 
 ```
 #sampleTable
@@ -32,18 +31,26 @@ TCGA-02-0002	Neural	-0.069669747	MALE	NA	NA	No	NA	DEAD	0		97.5	5
 
 ## Sample mapping
 
-The sample mapping file (or section in a combined file) begins with the line `#sampleMapping` and maps sample identifiers in the data files to sample identifiers in the attribute information.   The format is two-column tab delimited. The first column is the sample name in the data file; the second column is the sample identifier in the attributes information.
+The sample mapping section begins with the line `#sampleMapping`.  It is used to map sample names in the sample 
+information file to corresponding names in the data files.  If the names match this section can be omitted.  
+The format is two-column tab delimited. The first column is 
+the sample name in the data file; the second column is the sample identifier in the attributes information.
 
+Example: 
 ```
 #sampleMapping
-TRIBE_p_TCGAaffx_B1_2_GBM_Nsp_GenomeWideSNP_6_A01_155716	TCGA-02-0001TRIBE_p_TCGAaffx_B1_2_GBM_Nsp_GenomeWideSNP_6_A03_155748	TCGA-02-0002
+TRIBE_p_TCGAaffx_B1_2_GBM_Nsp_GenomeWideSNP_6_A01_155716	TCGA-02-0001
+TRIBE_p_TCGAaffx_B1_2_GBM_Nsp_GenomeWideSNP_6_A03_155748	TCGA-02-0002
 ```
 
 ## Attribute colors
 
-By default, IGV randomly assigns colors to the attribute values. You can optionally specify the colors for attribute values in RGB format for a specific attribute name, a specific value, or as a heatmap scale for numeric columns in monocolor or in two-color heatmap for specified ranges. 
+By default, IGV randomly assigns colors to the attribute values. You can optionally specify the colors for attribute 
+values in RGB format for a specific attribute name, a specific value, or as a heatmap scale for numeric columns in 
+monocolor or in two-color heatmap for specified ranges. 
 
-The attribute colors file (or section in a combined file) begins with the line `#colors`. The file is tab delimited with three or four columns:
+The attribute colors file (or section in a combined file) begins with the line `#colors`. The file is tab delimited 
+with three or four columns:
 
 * 1: Attribute name. An asterisk `*` indicates the color specification applies to all attributes.
 * 2: Attribute value or range of two values separated by a colon `:`. An asterisk `*` indicates the color specification applies to all attribute values.
@@ -70,7 +77,8 @@ sil_width 	-0.1:0.5 	0,0,255 	255,0,0
 ```
 
 <br>
-The above example snippets are from all from [this sample info file](ExampleFiles/example_sampleinfo.txt), which has also been used in IGV in the following screenshot.
+The above example snippets are from all from [this sample info file](ExampleFiles/example_sampleinfo.txt), which has 
+also been used in IGV in the following screenshot.
 <br>
 ![](img/SampleAttributeCorner.png){height=300}
  
