@@ -2,10 +2,10 @@
 <!---
 The page title should not go in the menu
 -->
-<p class="page-title">File Formats: Sample Info (Attributes)</p>
+<p class="page-title">Sample Information</p>
 
 Sample information files are tab-delimited text files used to associate attributes with sample names.  The attributes
-are displayed in the "Sample Information" panel and can be used to sort, group, and filter sample rows.
+are displayed in the "Sample Information" panel and can be used to sort, group, and filter tracks.
 
 The file consists of up to three sections
 
