@@ -131,35 +131,35 @@ to download **individual components** and prepare them for offline use:
    available. For the most up to date list, see all the entries that contain a .json file in
    the [master hosted genome list](https://igv.org/genomes/genomes.tsv).
 
-| Genome                             | JSON configuration file                                               |
-|------------------------------------|-----------------------------------------------------------------------|
-| A. thaliana (TAIR 10)              | https://s3.amazonaws.com/igv.org.genomes/tair10/tair10.json           |
-| C. elegans (ce11)                  | https://s3.amazonaws.com/igv.org.genomes/ce11/ce11.json               |
-| Chicken (GRCg6a / galGal6)         | https://s3.amazonaws.com/igv.org.genomes/galGal6/galGal6.json         |
-| Chimp (panTro4)                    | https://s3.amazonaws.com/igv.org.genomes/panTro4/panTro4.json         |
-| Cow (bosTau8)                      | https://s3.amazonaws.com/igv.org.genomes/bosTau8/bosTau8.json         |
-| Cow (bosTau9)                      | https://s3.amazonaws.com/igv.org.genomes/bosTau9/bosTau9.json         |
-| D. melanogaster (dm6)              | https://s3.amazonaws.com/igv.org.genomes/dm6/dm6.json                 |
-| D. melanogaster (dm3)              | https://s3.amazonaws.com/igv.org.genomes/dm3/dm3.json                 |
-| D. melanogaster (r5.9)             | https://s3.amazonaws.com/igv.org.genomes/dmel_r5.9/dmel_r5.9.json     |
-| Dog (canFam3)                      | https://s3.amazonaws.com/igv.org.genomes/canFam3/canFam3.json         |
-| Dog (canFam5)                      | https://s3.amazonaws.com/igv.org.genomes/canFam5/canFam5.json         |
-| Human hg18                         | https://s3.amazonaws.com/igv.org.genomes/hg18/hg18.json               |
-| Human (GRCh37/hg19)                | https://s3.amazonaws.com/igv.org.genomes/hg19/hg19.json               |
-| Human (GRCh38/hg38)                | https://s3.amazonaws.com/igv.org.genomes/hg38/hg38.json               |
-| Human hg38 (1kg/GATK)              | https://s3.amazonaws.com/igv.org.genomes/hg38_1kg/hg38_1kg.json       |
-| Macaca fascicularis (macFas5)      | https://s3.amazonaws.com/igv.org.genomes/macFas5/macFas5.json         |
-| Mouse mm10                         | https://s3.amazonaws.com/igv.org.genomes/mm10/mm10.json               |
-| Mouse mm9                          | https://s3.amazonaws.com/igv.org.genomes/mm9/mm9.json                 |
-| Rat (rn6)                          | https://s3.amazonaws.com/igv.org.genomes/rn6/rn6.json                 |
-| S. cerevisiae (sacCer3)            | https://s3.amazonaws.com/igv.org.genomes/sacCer3/sacCer3.json         |
-| Zebrafish (GRCz10/danRer10)        | https://s3.amazonaws.com/igv.org.genomes/danRer10/danRer10.json       |
-| Zebrafish (GRCz11/danRer11)        | https://s3.amazonaws.com/igv.org.genomes/danRer11/danRer11.json       |
-| SARS-CoV-2                         | https://s3.amazonaws.com/igv.org.genomes/ASM985889v3/ASM985889v3.json |
-| S. pombe (ASM294v2)                | https://s3.amazonaws.com/igv.org.genomes/ASM294v2/ASM294v2.json       |
-| Gorilla (gorGor4)                  | https://s3.amazonaws.com/igv.org.genomes/gorGor4/gorGor4.json         |
-| Gorilla (gorGor6)                  | https://s3.amazonaws.com/igv.org.genomes/gorGor6/gorGor6.json         |
-| Bonobo (MPI-EVA panpan1.1/panPan2) | https://s3.amazonaws.com/igv.org.genomes/panPan2/panPan2.json         |
+| Genome                             | JSON configuration file                       |
+|------------------------------------|-----------------------------------------------|
+| A. thaliana (TAIR 10)              | https://igv.org/genomes/json/tair10.json      |
+| C. elegans (ce11)                  | https://igv.org/genomes/json/ce11.json        |
+| Chicken (GRCg6a / galGal6)         | https://igv.org/genomes/json/galGal6.json     |
+| Chimp (panTro4)                    | https://igv.org/genomes/json/panTro4.json     |
+| Cow (bosTau8)                      | https://igv.org/genomes/json/bosTau8.json     |
+| Cow (bosTau9)                      | https://igv.org/genomes/json/bosTau9.json     |
+| D. melanogaster (dm6)              | https://igv.org/genomes/json/dm6.json         |
+| D. melanogaster (dm3)              | https://igv.org/genomes/json/dm3.json         |
+| D. melanogaster (r5.9)             | https://igv.org/genomes/json/dmel_r5.9.json   |
+| Dog (canFam3)                      | https://igv.org/genomes/json/canFam3.json     |
+| Dog (canFam5)                      | https://igv.org/genomes/json/canFam5.json     |
+| Human hg18                         | https://igv.org/genomes/json/hg18.json        |
+| Human (GRCh37/hg19)                | https://igv.org/genomes/json/hg19.json        |
+| Human (GRCh38/hg38)                | https://igv.org/genomes/json/hg38.json        |
+| Human hg38 (1kg/GATK)              | https://igv.org/genomes/json/hg38_1kg.json    |
+| Macaca fascicularis (macFas5)      | https://igv.org/genomes/json/macFas5.json     |
+| Mouse mm10                         | https://igv.org/genomes/json/mm10.json        |
+| Mouse mm9                          | https://igv.org/genomes/json/mm9.json         |
+| Rat (rn6)                          | https://igv.org/genomes/json/rn6.json         |
+| S. cerevisiae (sacCer3)            | https://igv.org/genomes/json/sacCer3.json     |
+| Zebrafish (GRCz10/danRer10)        | https://igv.org/genomes/json/danRer10.json    |
+| Zebrafish (GRCz11/danRer11)        | https://igv.org/genomes/json/danRer11.json    |
+| SARS-CoV-2                         | https://igv.org/genomes/json/ASM985889v3.json |
+| S. pombe (ASM294v2)                | https://igv.org/genomes/json/ASM294v2.json    |
+| Gorilla (gorGor4)                  | https://igv.org/genomes/json/gorGor4.json     |
+| Gorilla (gorGor6)                  | https://igv.org/genomes/json/gorGor6.json     |
+| Bonobo (MPI-EVA panpan1.1/panPan2) | https://igv.org/genomes/json/panPan2.json     |
 
 2. Download and view the .json genome specification file.
 
