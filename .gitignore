@@ -4,3 +4,4 @@
 /.idea/
 **/.DS_Store
 igv-docs/custom/.DS_Store
+deploy.sh
