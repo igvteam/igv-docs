@@ -65,7 +65,7 @@ genome by clicking on *Genomes > Load Genome from File** or *Genomes > Load Geno
 file types are supported for defining a custom genome (1) Fasta and .2bit sequence files, (2) IGV ***genome json***
 files, and (3) NBCI genbank (.gbk) files.
 
-#### Sequence only
+#### Sequence file
 
 A reference genome can be defined by loading a FASTA or .2bit file for the genome sequence. With this option the gene
 annotations will not be loaded automatically. However, annotation files can be loaded from the **Files > Load from*
@@ -74,7 +74,7 @@ menus.
 FASTA files can be plain text or block gzipped, and must be indexed with a .fai as defined by the Samtools
 suite (www.htslib.org). If the file is plain text (not block gzipped) and not indexed, IGV will attempt to index it.
 
-#### Full reference genome
+#### Genome json file
 
 To automatically load gene annotations, as well as an optional cytoband file, along with the genome sequence, you can
 create and load a genome JSON file, which is described in
@@ -101,148 +101,6 @@ the following sections for more infomation on reference and annotation track con
 * [Annotation track](tracks/annotations.md)
 
 # Advanced
-
-## Using IGV's hosted genomes offline
-
-When an IGV hosted genome is loaded as the reference genome, the application downloads a file that specifies the details
-of where to find the dependent files that contain the sequence, gene annotations, etc. However, the dependent files
-themselves are not downloaded to the user's computer, rather they are accessed on demand as the user nagivates to
-different regions of the genome. Therefore, an internet connection is required throughout the user session. This section
-describes how to download a hosted genome and configure it for use in IGV without an internet connection.
-
-Some of the most frequently used genomes have been **packaged for easy download**.
-
-1. Check our [public Google drive](https://drive.google.com/drive/folders/16EEDgjwVZ6hPA0sLzatQ_s301HRS6M-F?usp=sharing)
-   to see if your genome of interest is there.
-
-2. Download the zip file corresponding to your genome of interest. Each package contains a .json genome specification
-   file and a folder containing all the necessary dependent files.
-
-4. Load the genome into IGV by clicking on *Genomes > Load Genome from File* and selecting your local version of the
-   .json file. If you previously loaded the same genome into IGV using the regular hosted options, you may need to
-   delete its .json file to prevent conflicts with the local version. The hosted-based files can be found in the
-   folder ```<userhome>/igv/genomes```.
-
-If your genome of interest is not available as a package, you will need to replace step 2 above with a series of steps
-to download **individual components** and prepare them for offline use:
-
-1. Locate the .json genome specification file for your hosted genome of interest. Not all IGV genomes have a
-   corresponding .json file that can be downloaded for local use. As of March 29, 2022, the following files are
-   available. For the most up to date list, see all the entries that contain a .json file in
-   the [master hosted genome list](https://igv.org/genomes/genomes.tsv).
-
-| Genome                             | JSON configuration file                       |
-|------------------------------------|-----------------------------------------------|
-| A. thaliana (TAIR 10)              | https://igv.org/genomes/json/tair10.json      |
-| C. elegans (ce11)                  | https://igv.org/genomes/json/ce11.json        |
-| Chicken (GRCg6a / galGal6)         | https://igv.org/genomes/json/galGal6.json     |
-| Chimp (panTro4)                    | https://igv.org/genomes/json/panTro4.json     |
-| Cow (bosTau8)                      | https://igv.org/genomes/json/bosTau8.json     |
-| Cow (bosTau9)                      | https://igv.org/genomes/json/bosTau9.json     |
-| D. melanogaster (dm6)              | https://igv.org/genomes/json/dm6.json         |
-| D. melanogaster (dm3)              | https://igv.org/genomes/json/dm3.json         |
-| D. melanogaster (r5.9)             | https://igv.org/genomes/json/dmel_r5.9.json   |
-| Dog (canFam3)                      | https://igv.org/genomes/json/canFam3.json     |
-| Dog (canFam5)                      | https://igv.org/genomes/json/canFam5.json     |
-| Human hg18                         | https://igv.org/genomes/json/hg18.json        |
-| Human (GRCh37/hg19)                | https://igv.org/genomes/json/hg19.json        |
-| Human (GRCh38/hg38)                | https://igv.org/genomes/json/hg38.json        |
-| Human hg38 (1kg/GATK)              | https://igv.org/genomes/json/hg38_1kg.json    |
-| Macaca fascicularis (macFas5)      | https://igv.org/genomes/json/macFas5.json     |
-| Mouse mm10                         | https://igv.org/genomes/json/mm10.json        |
-| Mouse mm9                          | https://igv.org/genomes/json/mm9.json         |
-| Rat (rn6)                          | https://igv.org/genomes/json/rn6.json         |
-| S. cerevisiae (sacCer3)            | https://igv.org/genomes/json/sacCer3.json     |
-| Zebrafish (GRCz10/danRer10)        | https://igv.org/genomes/json/danRer10.json    |
-| Zebrafish (GRCz11/danRer11)        | https://igv.org/genomes/json/danRer11.json    |
-| SARS-CoV-2                         | https://igv.org/genomes/json/ASM985889v3.json |
-| S. pombe (ASM294v2)                | https://igv.org/genomes/json/ASM294v2.json    |
-| Gorilla (gorGor4)                  | https://igv.org/genomes/json/gorGor4.json     |
-| Gorilla (gorGor6)                  | https://igv.org/genomes/json/gorGor6.json     |
-| Bonobo (MPI-EVA panpan1.1/panPan2) | https://igv.org/genomes/json/panPan2.json     |
-
-2. Download and view the .json genome specification file.
-
-   For example: ```curl -O https://s3.amazonaws.com/igv.org.genomes/ce11/ce11.json```
-
-```
-{
-  "id": "ce11",
-  "name": "C. elegans (ce11)",
-  "fastaURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/ce11/ce11.fa",
-  "indexURL": "https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/ce11/ce11.fa.fai",
-  "cytobandURL": "https://s3.amazonaws.com/igv.org.genomes/ce11/cytoBandIdeo.txt.gz",
-  "tracks": [
-    {
-      "name": "Refseq Genes",
-      "format": "refgene",
-      "url": "https://s3.amazonaws.com/igv.org.genomes/ce11/refGene.sorted.txt.gz",
-      "indexURL": "https://s3.amazonaws.com/igv.org.genomes/ce11/refGene.sorted.txt.gz.tbi",
-      "indexed": false,
-      "order": 1000000,
-      "removable": false,
-      "visibilityWindow": -1
-    },
-    {
-      "name": "Genes",
-      "format": "bed",
-      "url": "https://s3.amazonaws.com/igv.org.genomes/locations/geneLocations_ce11.bed.gz",
-      "hidden" : true,
-      "searchable": true
-    }
-  ]
-}
-```
-
-3. Download the files referenced in the genome specification.
-
-   In the above ce11 example, the files are:
-
-   https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/ce11/ce11.fa
-   https://s3.amazonaws.com/igv.broadinstitute.org/genomes/seq/ce11/ce11.fa.fai
-   https://s3.amazonaws.com/igv.org.genomes/ce11/cytoBandIdeo.txt.gz
-   https://s3.amazonaws.com/igv.org.genomes/ce11/refGene.sorted.txt.gz
-   https://s3.amazonaws.com/igv.org.genomes/ce11/refGene.sorted.txt.gz.tbi
-   https://s3.amazonaws.com/igv.org.genomes/locations/geneLocations_ce11.bed.gz
-
-!!! Danger "Important:"  
-    Some genome JSON files contain multiple formats for genome sequence to support multiple versions of IGV. It is not neccessary to download all versions of the sequence data. In particular, if the JSON defines the property `twoBitURL` it is not neccessary to download the referenced `fastaURL` or `indexURL`. In that case the fasta and index properties should be removed from your local JSON file.
-
-4. Edit your local copy of the genome specification file
-
-   Your local copy of the .json file should reference the downloaded files. Reference can be by URL to a file on your
-   local network, or by file path, which can be relative to the location of the .json file. For example if the
-   downloaded data files are in the same directory as the .json file, your local ```ce11.json``` file will look like
-   this:
-
-```
-{
-  "id": "ce11",
-  "name": "C. elegans (ce11)",
-  "fastaURL": "ce11.fa",
-  "indexURL": "ce11.fa.fai",
-  "cytobandURL": "cytoBandIdeo.txt.gz",
-  "tracks": [
-    {
-      "name": "Refseq Genes",
-      "format": "refgene",
-      "url": "refGene.sorted.txt.gz",
-      "indexURL": "refGene.sorted.txt.gz.tbi",
-      "indexed": false,
-      "order": 1000000,
-      "removable": false,
-      "visibilityWindow": -1
-    },
-    {
-      "name": "Genes",
-      "format": "bed",
-      "url": "geneLocations_ce11.bed.gz",
-      "hidden" : true,
-      "searchable": true
-    }
-  ]
-}
-```
 
 ## Hosting genomes
 
