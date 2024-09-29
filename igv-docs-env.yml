@@ -3,10 +3,11 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.8.6
-  - mkdocs=1.1.2
-  - mkdocs-markdownextradata-plugin=0.2.0
-  - pandoc
-  - pip=20.3.3
+  - python=3.11.3
+  - jinja=3.1.2
+  - mkdocs=1.4.3
+  - mkdocs-markdownextradata-plugin=0.2.5
+  - pandoc=2.12
+  - pip=23.0.1
   - pip:
-    - mkdocs-windmill==1.0.4
+    - mkdocs-windmill==1.0.5
