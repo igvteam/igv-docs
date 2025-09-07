@@ -1,10 +1,12 @@
 <p class="page-title">SBX alignment options</p>
 
-This page describes additional options for viewing SBX read alignments.
+This page describes additional options for viewing [SBX](https://sequencing.roche.com/us/en/article-listing/sequencing-platform-technologies.html)
+read alignments.
 
 ## Enabling SBX options
 
-SBX alignment options are enabled from the *Alignments* tab of the user preferences window.  
+SBX alignment options are enabled from the *Alignments* tab of the user preferences window.  These options are applied
+to alignment tracks with experiment type "SBX".
 
 ![SBX alignment options menu](../../img/sbxoptionsmenuscreenshot.png)
 

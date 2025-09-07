@@ -29,8 +29,9 @@ nav:
             - RNA-seq data: UserGuide/tracks/alignments/rna_seq.md
             - Bisulfite sequencing: UserGuide/tracks/alignments/bisulfite_sequencing.md
             - Base modifications:  UserGuide/tracks/alignments/base_modifications.md
-            - SMRT kinetics:  UserGuide/tracks/alignments/smrt.md
             - Chimeric reads: UserGuide/tracks/alignments/chimeric_reads.md
+            - SMRT kinetics:  UserGuide/tracks/alignments/smrt.md
+            - SBX alignments: UserGuide/tracks/alignments/sbx.md
             - Ultima indel coloring: UserGuide/tracks/alignments/ultima/ultima.md
         - Variants (VCF): UserGuide/tracks/vcf.md
         - GWAS: UserGuide/tracks/gwas.md
