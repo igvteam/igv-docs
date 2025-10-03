@@ -66,6 +66,10 @@ document.addEventListener("DOMContentLoaded", function os() {
 
 <p class="page-title"> Download IGV </p>
 
+!!! Danger "IGV 3.0 Early Access is now available" 
+    See [what's new](ReleaseNotes/3.0.x.md).<br> Go to [the Download page](Download3.0Page.md).
+<br>
+
 ### IGV version 2.19.6
 
 <div id="download_container"></div>
@@ -99,7 +103,8 @@ document.addEventListener("DOMContentLoaded", function os() {
 
 # Other releases of IGV Desktop
 
-**[Development snapshot build.](DownloadSnapshot.md)** Latest development snapshot; built at least nightly
+
+**[Development snapshot build.](DownloadSnapshot.md)** Download page for the latest development snapshot; built at least nightly
 
 **[Archived releases.](https://data.broadinstitute.org/igv/projects/downloads/)** Old releases going back to IGV 2.0
 
