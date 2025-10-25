@@ -5,7 +5,7 @@ of the [Integrative Genomics Viewer (IGV)](https://igv.org/) via MCP-compatible 
 
 ## Installation
 
-1. Download 'igv.mcpb' from []()
+1. Download 'igv.mcpb' from [here](https://data.broadinstitute.org/igv/projects/downloads/mcp/igv.mcpb).
 2. Install the package in your MCP client (e.g., Claude Desktop) following the client's instructions for installing MCP
    packages. Instructions for Claude Desktop can be
    found [here](https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop).
