@@ -51,6 +51,7 @@ nav:
       - External control of IGV: UserGuide/advanced/external_control.md
       - Authentication: UserGuide/advanced/oauth.md
       - AWS support:  UserGuide/advanced/aws.md
+      - MCP support: UserGuide/advanced/mcp.md
       
 - File Formats: 
     - Data Tracks: FileFormats/DataTracks.md
