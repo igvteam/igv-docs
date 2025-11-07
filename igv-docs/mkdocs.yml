@@ -63,6 +63,7 @@ nav:
 - Download IGV: DownloadPage.md
 
 - Release Notes:
+    - 3.0 Early Access: ReleaseNotes/3.0.x.md
     - 2.19.x: ReleaseNotes/2.19.x.md
     - 2.18.x: ReleaseNotes/2.18.x.md
     - 2.17.x: ReleaseNotes/2.17.x.md
