@@ -7,9 +7,9 @@ The data from two quantitative data tracks can be combined into one track using 
 
 # How to combine tracks
 
-1. Select two tracks by using the normal multi-select mouse actions (e.g. `Ctrl-click` on Windows; `Cmd-click` on MacOS).
+1. Select two tracks by using the normal multi-select mouse actions in the track name panel (e.g. `Ctrl-click` on Windows; `Cmd-click` on MacOS).
  
-2. Select *Tools > Combine Data Tracks...*. 
+2. Select *Tools > Combine Data Tracks*. 
 
 3. In the dialog window that pops up:
 

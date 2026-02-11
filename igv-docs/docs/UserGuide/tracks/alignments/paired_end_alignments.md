@@ -7,19 +7,19 @@ The page title should not go in the menu
 
 ## View as pairs
 
-By default, IGV displays paired-end alignments individually because they pack compactly. Select _View as pairs_ from the right-click menu to display pairs together with a line joining the ends. 
+By default, IGV displays paired-end alignments individually because they pack compactly. Select _View as pairs_ from the right-click menu to display pairs together with a line joining the ends. To display alignments as pairs by default, check the box for *Display reads as paired by default* in the *Alignments* tab of *View > Preferences*.
 
-In the following two screenshots, the alignments of one pair are shown in pink. The upper screenshot displays the track in the default packed mode; in the lower screen shot the alignments are displayed as connected pairs. 
+In the following two screenshots, the alignments of one pair have been highlighted in pink. The upper screenshot displays the track in the default packed mode; in the lower screenshot the alignments are displayed as connected pairs. 
     
 ![](../../img/paired-packed.png) 
 
 ![](../../img/paired-aspairs.png)
 
 !!! tip " "
-    To highlight an alignment and its paired mate in the same color, `Ctrl-click` on one of the alignments (`Cmd-click` on MacOS). The colors are arbitrary but unique to each pair. Repeating the click on either alignment will clear the color. Or select *Clear selections* from the track's pop-up menu to clear the highlight color from all alignments in the track.
+    To highlight an alignment and its paired mate in the same color as we did for these screenshots, `Ctrl-click` on one of the alignments (`Cmd-click` on MacOS). The colors are arbitrary but unique to each pair. Repeating the click on either alignment will clear the color. Or select *Clear selections* from the track's pop-up menu to clear the highlight color from all alignments in the track.
 
 
-When viewed as pairs, clicking on an alignment (or hovering over it if the pop-text behavior has been set to *On hover*) will display the read details for both the alignment and its mate.  
+When viewed as pairs, clicking on an alignment (or hovering over it if the pop-up text behavior has been set to *On hover*) will display the read details for both the alignment and its mate.  
 
 ![](../../img/pair-info-paired.png)
 
@@ -34,7 +34,7 @@ You can select this option again for additional alignments and view multiple pan
 
 # Detecting structural variants
 
-Paired-end sequencing can yield evidence of structural variants such as insertions, duplications, translocations, and inversions. IGV can **detect anomalies found in the alignment of the paired reads** that might indicate putative structural variants. In particular, the expected distance between the two aligned reads of a pair and their relative orientation is known. When the actual values differ from the expected values, color is used to call out the anomalies. This is the default color mode for alignments, but you can choose to color alignments by a number of different attributes via the right-click pop-up menu.
+Paired-end sequencing can yield evidence of structural variants such as insertions, duplications, translocations, and inversions. IGV can **detect anomalies found in the alignment of the paired reads** that might indicate putative structural variants. In particular, the expected distance between the two aligned reads of a pair is known, and so is their relative orientation. When the actual values differ from the expected values, color is used to call out the anomalies. This is the default color mode for alignments, but you can choose to color alignments by a number of different attributes via the right-click pop-up menu.
 
 !!! note " "
     If you see a pattern of many alignments colored the same way, it may be evidence of a structural variant. Seeing just a small sampling of colored alignments, with no systematic pattern, is less likely to indicate a variant.
@@ -45,7 +45,7 @@ TBD Add a description of insert size and pair orientation, e.g. from our worksho
 
 ## Insert size
 
-The expected (or *inferred*) insert size can be computed on the fly from the size distribution found in the loaded file (the default), or it can be specified as a specific size range in base pairs. The default insert size options can be changed for **all** tracks in the *Alignments* and *RNA* tabs of *View > Preferences*. To change the options for **one** track, select *Set insert size options* from the track's right-click pop-up menu.
+IGV can compute the expected insert size on the fly from the size distribution found in the loaded file (the default), or you can provide a specific size range in base pairs. The insert size options can be set for **all** tracks in the *Alignments* and *RNA* tabs of *View > Preferences*. To change the options for **one** track, select *Set insert size options* from the track's right-click pop-up menu.
 
 The insert size color scheme is:
 

@@ -41,27 +41,26 @@ Click the red bar under the ruler to display the region of interest (ROI) contex
 
 **Menu option**    |    **Description**
 ----------- | ----------
-**Sort** | Sort based on data values within the ROI. Sort options vary with data type and may not be available for regions of interest for certain file types, e.g. alignment or VCF tracks, for which sort options are available via feature pop-up menu. <br><br> * For *copy number variation data*, sort by amplification, deletion, breakpoint amplitudes, and value. <br> * For *mutation data*, sort by mutation count or value. <br> * For *expression data*, sort by expression or value.
-**Scatter Plot** | Available for continuous value data, e.g. gene expression, copy number, and methylation data. 
+**Sort** | Sort based on data values within the ROI. Sort options vary with data type and may not be available for regions of interest for certain file types, e.g. alignment or VCF tracks, for which sort options are available via feature pop-up menu. <br> * For _copy number variation data_, sort by amplification, deletion, breakpoint amplitudes, and value.<br>  * For *mutation data*, sort by mutation count or value. <br>  * For *expression data*, sort by expression or value.
 **Zoom** | Center and zoom the display to the ROI.
-**Edit description**| Input a short description for the ROI.
-**Copy sequence** | Copy the reference sequence to the clipboard. If the region is too large for the clipboard, nothing will be copied.
-**BLAT sequence** | BLAT search the section of the reference sequence against the entire reference genome. See the [BLAT tool](tools/blat.md) page for details.
-**Delete** | Remove the region of interest.
+**Edit description**| Input a short description for the ROI. Useful for identifying ROIs in the [Region Navigator](#roi-navigator), below.
+**Copy sequence** | Copy the reference sequence to the clipboard. If the region is too large for the clipboard, this item will be greyed out.
+**BLAT sequence** | BLAT search the section of the reference sequence against the entire reference genome. See the [BLAT tool](tools/blat.md) page for details. If the region is too large for BLAT, this item will be greyed out.
+**Delete** | Remove the region of interest. This will remove the red highlight under the ruler and remove the ROI from the [Region Navigator](#roi-navigator), below.
 
 ## ROI navigator
 
-The Region Navigator lists all current regions and allows you to provide a description for each, add new regions, and delete selected regions. To open the Region Navigator select _Regions>Region Navigator_ from the menu bar. 
+The Region Navigator lists all current regions and allows you to provide a description for each, add new regions, and delete selected regions. To open the Region Navigator select _Regions > Region Navigator_ from the menu bar. 
 
 ![](img/SL_IGV_ROI_RN_2015-05-06%2011.17.36.png){width=494}
 
-The Description field is initially blank. To input a description, either right-click on the ROI and select _Edit description_ from the menu or double-click the field in the _Region Navigator_.
+The Description field is initially blank. To input a description for an ROI, either right-click on the red ROI bar below the ruler and select _Edit description_ from the menu, OR double-click the *Description* field in the _Region Navigator_.
 
 The following table summarizes the features available from the _Region Navigator_.
 
 To select an ROI from the list, click on it. Select multiple ROIs from the list by holding down a keyboard key and
 clicking by mouse, e.g. _Shift_ \+ _mouse-click_ for consecutive rows or \[Mac/PC\] _Command/Control_ + _mouse-click_ to
-select individual rows.
+select multiple individual rows.
 
 <table border="1" cellpadding="1" cellspacing="1" height="337" width="600">
 	<tbody>
@@ -79,13 +78,13 @@ select individual rows.
 			<td style="width: 164px;">
 				<em>Add</em></td>
 			<td style="width: 353px;">
-				Add the currently displayed region in its entirety to the list.</td>
+				Create an ROI for the genomic locus that is currently displayed in the IGV view, and add to the list.</td>
 		</tr>
 		<tr>
 			<td style="width: 164px;">
 				<em>Delete</em></td>
 			<td style="width: 353px;">
-				Remove the selected ROI from the list.</td>
+				Remove the selected ROI(s) from the list.</td>
 		</tr>
 		<tr>
 			<td style="width: 164px;">
@@ -95,7 +94,7 @@ select individual rows.
 		</tr>
 		<tr>
 			<td colspan="1" rowspan="3">
-				<strong>Sort list</strong></td>
+				<strong>Sort and filter the list of ROIs</strong></td>
 			<td style="width: 164px;">
 				<em>Show All Chrs</em></td>
 			<td style="width: 353px;">
@@ -119,20 +118,20 @@ select individual rows.
 			<td style="width: 164px;">
 				<em>View</em></td>
 			<td style="width: 353px;">
-				Navigate the display to the selected ROI. If multiple ROIs are selected in the navigator, the loci display in split panes.</td>
+				Navigate the display to the selected ROI. If multiple ROIs are selected in the navigator, they will be displayed side-by-side in a multi-locus view.</td>
 		</tr>
 		<tr>
 			<td style="width: 164px;">
 				<em>Zoom to Region</em></td>
 			<td style="width: 353px;">
-				Uncheck to keep the current zoom level when navigating to a new ROI. Check to ensure IGV adjusts the zoom level to display the entire ROI when navigating to the new ROI.</td>
+				If checked, IGV adjusts the zoom level to display the entire ROI locus. Uncheck to keep the current zoom level when navigating to an ROI. </td>
 		</tr>
 	</tbody>
 </table>
 
 ## Importing/exporting regions
 
-In the menu bar, select _Regions > Export Regions..._ to saves all currently defined regions of interest to a BED file. If no regions of interest are defined, no BED file is created.
+In the menu bar, select _Regions > Export Regions..._ to save all currently defined regions of interest to a BED file. If no regions of interest are defined, no BED file is created.
 
 Select _Regions > Import Regions..._ to select a BED file of regions to add to the set of regions of interest.
 

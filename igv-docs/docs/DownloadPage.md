@@ -66,16 +66,11 @@ document.addEventListener("DOMContentLoaded", function os() {
 
 <p class="page-title"> Download IGV </p>
 
-<!--!!! Danger "IGV 3.0 Early Access is now available"
-    See [what's new](ReleaseNotes/3.0.x.md).<br> Go to the [3.0 Early Access download page](Download3.0Page.md).
-<br>
--->
-
-### IGV version 2.19.7
+### IGV version 3.0
 
 <div id="download_container"></div>
 
-**What's New:** See the [Release Notes](ReleaseNotes/2.19.x.md) for what's new in each IGV release.
+**What's New:** See the [Release Notes](ReleaseNotes/3.0.x.md) for what's new in each IGV release.
 
 
 # All platforms

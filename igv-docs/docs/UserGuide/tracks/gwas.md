@@ -42,16 +42,16 @@ To change the **color scheme**:
 To change the **colors** used by each scheme:
 
 * Right-click on the track and select *Set primary color...* to pick the color for the single color scheme and for one of the two colors in the alternating color scheme.
-* Right-click on the track and select *Set alternating color...* to pick the second color for the alternating color scheme.
+* AlRight-click on the track and select *Set alternating color...* to pick the second color for the alternating color scheme.
 * IGV has a predefined color palette for the chromosome color scheme and the colors cannot be changed.
 
 **Point size**
 
 The size of a data point in the plot relates directly to its significance. 
 
-To change the size of the data points:
+To change the size range of the data points:
 
-* Right-click on the track and select *Set minimum point size...* or *Set maximumum point size...*
+* Right-click on the track and select *Set minimum point size...* or *Set maximum point size...*
 
 **Data scale**
 

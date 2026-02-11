@@ -4,10 +4,10 @@ This page describes a special alignment base coloring mode for visualization of 
 libraries that have undergone bisulfite conversion and sequencing. The mode supports visualization of alignments from
 the following and similar techniques:
 
-*   BS-Seq, bisulfite sequencing
+*   [BS-Seq](#bs-seq), bisulfite sequencing
 *   RRBS-Seq, reduced representation bisulfite sequencing
-*   TAB-Seq, Tet-assisted bisulfite sequncing
-*   NOMe-Seq
+*   TAB-Seq, Tet-assisted bisulfite sequencing
+*   [NOMe-Seq](#nome-seq), nucleosome occupancy and methylome sequencing
 
 ### Enabling bisulfite sequencing coloring 
 
@@ -19,7 +19,7 @@ item *Color alignments by > bisulfite mode*.  IGV recognized contexts are descri
 | **IGV Bisulfite mode** | **description**                                                                                                                                        | **relevance**                                                                                                                                                                                                                                                                                                                                                                   |
 |--------- |--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 |  **CG** | CpG                                                                                                                                                    | Canonical methylation target site in eukaryotes                                                                                                                                                                                                                                                                                                                                 |
-| **CHH** and **CHG** | H represents any nucleotide but guanine (H comes after G).<ul><li>CHH = CAA, CAT, CAC; CTT, CTA, CTC; CCC, CCA, CCT </li><li>CHG = CAG, CTG, CCG</li>  | Additional methylation sites: <ul><li>For mammals in a cell-type dependent manner. Pervasive in human embryonic stem cells (Lister 2009). For example, in H1 stem cells comprises almost 25% of all cytosines at which DNA methylation is identified compared to 99.98% mCG in IMR90 cells.</li><li>In plants serve as additional canonical methylation target sites.</li></ul> 
+| **CHH** and **CHG** | H represents any nucleotide but guanine (H comes after G).<ul><li>CHH = CAA, CAT, CAC; CTT, CTA, CTC; CCC, CCA, CCT </li><li>CHG = CAG, CTG, CCG</li>  | Additional methylation sites: <ul><li>For mammals in a cell-type dependent manner. Pervasive in human embryonic stem cells [Lister, 2009]. For example, in H1 stem cells comprises almost 25% of all cytosines at which DNA methylation is identified compared to 99.98% mCG in IMR90 cells.</li><li>In plants serve as additional canonical methylation target sites.</li></ul> 
 | **HCG** | ACG, TCG, CCG, inclusive of WCG | see [NOMe-Seq section](#nome-seq)                                                                                                                                                                                                                                                                                                                                               |
 | **GCH** | GCA, GCT, GCC | see [NOMe-Seq section](#nome-seq)                                                                                                                                                                                                                                                                                                                                               |
 | **WCG** | W represents A or T (Weak).  ACG, TCG | see [NOMe-Seq section](#nome-seq)                                                                                                                                                                                                                                                                                                |
@@ -42,11 +42,11 @@ Because not all mode matching sites are biologically relevant in the context of 
 compare changes in methylation between a control sample and the variable. When comparing two samples, a change in 
 methylation status will be marked by a difference in color for a given site. Red to blue indicates loss of methylation, 
 or hypomethylation; blue to red indicates increased protection by methylation, or hypermethylation, as shown for 
-the tumor sample in the **screenshot** below which visualizes data from Berman _et al_ (2012).
+the tumor sample in the **screenshot** below which visualizes data from [Berman, 2012].
 
 ![](../../img/BermanNatGenet2011%202015-02-11%2014.31.21.png)
 
-### BS-Seq
+## BS-Seq
 
 **BS-Seq identifies sites of DNA methylation**
 
@@ -74,16 +74,16 @@ that in addition sequence the bisulfite converted DNA, such as by Illumina high-
 whole-genome bisulfite sequencing (WGBS) and reduced-representation-bisulfite sequencing (RRBS), both of which provide 
 single-nucleotide resolution.
 
-RRBS targets bisulfite sequencing to an enriched population of the genome while WGBS porportedly determines the 
+RRBS targets bisulfite sequencing to an enriched population of the genome while WGBS purportedly determines the 
 methylation state of every cytosine in the target sequence. However, as with any technique 
 [limitations](http://en.wikipedia.org/wiki/Bisulfite_sequencing#Limitations) exist, including the inability to 
 discriminate 5-meC from 5-hydroxymethylcytosine (5-hmeC) modifications, which was discovered to be pervasive in 
-mammalian DNA in 2009 (Yu, _Cell_ 2012).
+mammalian DNA in 2009 [Yu, Cell 2012].
 
 Multiple techniques are used to distinguish 5-hmeC from 5-meC. Of relevance to coloring by bisulfite mode in IGV is 
 TAB-Seq (Tet-assisted bisulfite sequencing), in which 5-hmeC sites are protected by glucosylation prior to bisulfite 
 conversion. Because 5-meC sites remain unprotected from mTet1 oxidation to 5-carboxylcytosine (5-caC), and subsequent 
-bisulfite conversion, only 5-hmeC site cytosines remain unchanged in reads (Yu, _Nature Protocols_ 2012).
+bisulfite conversion, only 5-hmeC site cytosines remain unchanged in reads [Yu, _Nat Protoc 2012].
 
 The following **figure** diagrams the nucleotide conversions that occur for a methylated versus unmethylated locus 
 during bisulfite conversion and PCR, and IGV's corresponding coloring of these sites in CG bisulfite mode.
@@ -109,7 +109,7 @@ In addition to detecting methylation states, bisulfite conversion is used in foo
 determine nucleosome positioning in yeast and mammalian cells.
 
 The additional IGV color modes--**HCG**, **GCH**, and **WCG** (**diagram**)--are relevant to NOMe-Seq, a genome-wide 
-nucleosome footprinting and methylome sequencing method (Kelly 2012). This method obtains nucleosome positioning 
+nucleosome footprinting and methylome sequencing method [Kelly, 2012]. This method obtains nucleosome positioning 
 information based on the GpC methyltransferase _M.CviPI_ accessibility to GpC sites, and at the same time obtains 
 endogenous DNA methylation information from CpG sites.
 
@@ -123,25 +123,25 @@ endogenous DNA methylation information from CpG sites.
 
 ### References
 
-Berman, Benjamin P, Daniel J Weisenberger, Joseph F Aman, Toshinori Hinoue, Zachary Ramjan, Yaping Liu, Houtan Noushmehr, 
+**[Berman, 2012]** Berman, Benjamin P, Daniel J Weisenberger, Joseph F Aman, Toshinori Hinoue, Zachary Ramjan, Yaping Liu, Houtan Noushmehr, 
 et al. 2012. “Regions of Focal DNA Hypermethylation and Long-Range Hypomethylation in Colorectal Cancer Coincide with 
 Nuclear Lamina-Associated Domains.” Nature Genetics 44 (1): 40–46. doi:10.1038/ng.969.
 
-Kelly, Theresa K, Yaping Liu, Fides D Lay, Gangning Liang, Benjamin P Berman, and Peter a Jones. 2012. “Genome-Wide 
+**[Kelly, 2012]** Kelly, Theresa K, Yaping Liu, Fides D Lay, Gangning Liang, Benjamin P Berman, and Peter a Jones. 2012. “Genome-Wide 
 Mapping of Nucleosome Positioning and DNA Methylation within Individual DNA Molecules Genome-Wide Mapping of Nucleosome 
 Positioning and DNA Methylation within Individual DNA Molecules,” 2497–2506. doi:10.1101/gr.143008.112.
 
-Lister, Ryan, Mattia Pelizzola, Robert H Dowen, R David Hawkins, Gary Hon, Julian Tonti-Filippini, Joseph R Nery, 
+**[Lister, 2009]** Lister, Ryan, Mattia Pelizzola, Robert H Dowen, R David Hawkins, Gary Hon, Julian Tonti-Filippini, Joseph R Nery, 
 et al. 2009. “Human DNA Methylomes at Base Resolution Show Widespread Epigenomic Differences.” Nature 462 (7271). 
 Nature Publishing Group: 315–22. doi:10.1038/nature08514.
 
-Stirzaker, Clare, Phillippa C. Taberlay, Aaron L. Statham, and Susan J. Clark. 2014. “Mining Cancer Methylomes: 
+**[Stirzaker, 2014]** Stirzaker, Clare, Phillippa C. Taberlay, Aaron L. Statham, and Susan J. Clark. 2014. “Mining Cancer Methylomes: 
 Prospects and Challenges.” Trends in Genetics 30 (2). Elsevier Ltd: 75–84. doi:10.1016/j.tig.2013.11.004.
 
-Yu, Miao, Gary C Hon, Keith E Szulwach, Chun-Xiao Song, Peng Jin, Bing Ren, and Chuan He. 2012. “Tet-Assisted Bisulfite 
+**[Yu, Nat Protoc 2012]** Yu, Miao, Gary C Hon, Keith E Szulwach, Chun-Xiao Song, Peng Jin, Bing Ren, and Chuan He. 2012. “Tet-Assisted Bisulfite 
 Sequencing of 5-Hydroxymethylcytosine.” Nature Protocols 7 (12): 2159–70. doi:10.1038/nprot.2012.137.
 
-Yu, Miao, Gary C Hon, Keith E Szulwach, Chun-Xiao Song, Liang Zhang, Audrey Kim, Xuekun Li, et al. 2012. “Base-Resolution 
+**[Yu, Cell 2012]** Yu, Miao, Gary C Hon, Keith E Szulwach, Chun-Xiao Song, Liang Zhang, Audrey Kim, Xuekun Li, et al. 2012. “Base-Resolution 
 Analysis of 5-Hydroxymethylcytosine in the Mammalian Genome.” Cell 149 (6): 1368–80. doi:10.1016/j.cell.2012.04.027.
 
 

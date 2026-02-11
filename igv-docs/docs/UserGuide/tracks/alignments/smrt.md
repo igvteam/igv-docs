@@ -1,11 +1,11 @@
-<p class="page-title">SMRT kinetics color options</p>
+<p class="page-title">SMRT kinetics</p>
 
-This page describes  coloring options for PacBio SMRT kinetics.
+This page describes coloring options for PacBio SMRT kinetics.
 
 ## Enabling SMRT kinetics coloring
 
-SMRT kinetics coloring is enabled from the *Third Gen* tab of the user preferences window.  When enabled, SMRT kinetics 
-options appear in the *Color By* list of the alignment track menu
+SMRT kinetics coloring is enabled from the *Third Gen* tab of the _View > Preferences_ window.  When enabled, SMRT kinetics 
+options appear in the *Color alignments by* section of the track menu for alignment tracks with third gen sequencing data.
 
 ![](../../img/smrKineticsMenuOptions.png)
 
@@ -62,7 +62,7 @@ the color is adjusted from red to yellow. From 600 to 6000 frames the color is a
 - IPD – interpulse duration – the number of camera frames between pulse signals
 - PW – pulse width – the number of camera frames comprising a pulse signal
 
-**Bam format documentation**
+**BAM format documentation**
 
 Description of SMRT kinetics tags in subread BAM files:
 <br>

@@ -20,10 +20,10 @@ There are several options for running a BLAT query depending on the source of th
     * Right-click on a feature in a feature track and select _BLAT sequence_ from the popup menu. The BLAT input sequence is the section of the reference genome defined by the feature start and end bounds.
 * **Reference sequence defined by a region of interest (ROI)**
     * After [creating a region of interest](../../regions), click on the
-  region's red bar and select _BLAT sequence_ from the popup menu. The BLAT input sequence is the section of the
+  region's red bar and select _BLAT sequence_ from the menu that pops up. The BLAT input sequence is the section of the
   reference genome defined by the region bounds.
 
-The sequence query is sent to an external BLAT search engine. The default search engine is the BLAT server hosted at 
+The sequence query is sent to an **external BLAT search engine**. The default search engine is the BLAT server hosted at 
 the [UCSC Genome Browser](https://genome.ucsc.edu/cgi-bin/hgBlat). UCSC's BLAT search supports most UCSC
 derived genomes including human and mouse genomes.  See below for instructions on specifying a custom BLAT server,
 or configuring a command-line BLAT tool.

@@ -32,6 +32,7 @@ When an alignment file is loaded, the details of the file are examined to determ
 
 * *RNA* (RNA sequencing)
 * *3rd Gen* (third generation / long read sequencing, e.g. from PacBio and Oxford Nanopore Technologies)
+* *SBX* (Roche Sequencing by Expansion)
 * *Other* (e.g. Illumina short read DNA sequencing)
 
 The experiment type can also be set directly for a loaded file by right-clicking on the track and selecting one of the
@@ -40,7 +41,7 @@ above values from the *Experiment Type* section of the pop-up menu.
 Some track defaults and available options in the track pop-up menu are determined by the experiment type. The *View >
 Preferences* window has three tabs of alignment preferences. The *Alignments* tab is for all general preferences and the
 *RNA* and *Third Gen* tabs are for attributes that are unique to those experiment types and general preferences that
-have different default values for those experiment types.
+have different default values for those experiment types. The *General* tab also has a few options for SBX data.
 
 # Visibility window
 
@@ -70,15 +71,15 @@ Loading an alignment file creates up to three associated tracks:
 * **Alignment Track** to view individual aligned reads
 
 * **Splice Junction Track** which provides an alternative view of **RNA-seq** reads spanning splice junctions (see the
-  section on [RNA-seq data](rna_seq.md))
+  section on [RNA-seq alignments](rna_seq.md))
 
-By default, the Alignment and Coverage tracks are initially displayed for experiment type *Other* and *3rd Gen*. For
-RNA-seq data, the *Splice Junction Track* is also displayed by default.
+By default, the _Alignment_ and _Coverage_ tracks are displayed for all experiment types. For
+RNA-seq alignments, the *Splice Junction Track* is also displayed by default.
 
 To **hide (or show) selected** tracks, right-click on the track to bring up the pop-up menu and uncheck (or check) *Show
 Alignment Track* / *Show Coverage Track* / *Show Splice Junction Track*.
 
-To **change the default setting for all tracks**, select the *Alignments* tab (or the *RNA* tab for RNA-seq data tracks)
+To **change the default setting for all tracks**, select the *Alignments* tab (or the *RNA* tab for RNA-seq alignment tracks)
 of the *View > Preferences* window, and uncheck or check the boxes for *Show alignment track* / *Show coverage track* /
 *Show junction track*.
 
@@ -95,7 +96,7 @@ at each locus as a bar chart.
 	When the view is larger than the visibility window, the **dynamic coverage track is blank** because the alignments have not been loaded and therefore the coverage cannot be computed.
 
 Alternatively, you can provide a file containing **pre-computed coverage data**. When this option is used, the track
-displays coverage at **all zoom levels** including at the whole genome and chromosome view. To generate the extended
+displays coverage at **all zoom levels** including at the whole genome and chromosome view. To generate this
 coverage data file, use the [igvtools](../../tools/igvtools_ui.md) **count** command on the alignment file to create a
 TDF file. The resulting file can be associated with the alignment track by one of the following:
 
@@ -130,15 +131,14 @@ To **override the default threshold** of 20%, do one of the following:
 To **disable quality weighting**, uncheck the *Quality weight allele fraction* checkbox in the *Alignments* tab of the
 *View > Preferences* window.
 
-To **change the base color of the bar chart**, right-click on the coverage track and select *Change Track Color...* from
+To **change the base color of the bar chart** from the default grey, right-click on the coverage track and select *Change Track Color...* from
 the pop-up menu.
 
 To **view the read count details** at a locus, click on a coverage bar (or hover over the bar if you have set the info
 popup text to display on hover rather than click). To **copy** the count details to your computer's clipboard,
 right-click on the bar and select *Copy Details to Clipboard*.
 
-In the following example, you can see the details include the locus, the counts for each nucleotide, and the split
-between reads on the negative and positive strand.
+In the following example, you can see the details include the locus; the total read count at that locus; and for each nucleotide: the count, the percentage of total reads, the number of reads on the positive(+) and negative (-)strand. 
 
 ![](../../img/coverage-barchart-hover.png){width=400}
 
@@ -151,7 +151,7 @@ the [visibility window](#visibility-window) threshold. When the region in view i
 blank except for a message informing you to zoom in to a smaller region to see the alignments.
 
 At the default threshold, the view can provide a good overview of the alignments but individual aligned reads are not
-easily discernable.
+easily discernible.
 
 ![](../../img/alignments-zoomed-out.png)
 
@@ -167,19 +167,17 @@ Alignment files include detailed information about each aligned read. To retriev
     !!! tip " "
         You can change the behavior of the detail pop-up window by clicking on the yellow balloon icon in the IGV toolbar.  <br> ![](../../img/balloon-icon.png){width=36} <br> For example, to quickly see the details for many alignments in succession, change the behavior from *Show Details on Click* (the default) to *Show Details on Hover*.
 
-* To **copy the details** to the computer's clipboard, right-click on the alignment and select *Copy read details to
-  clipboard* from the pop-up menu.
+* To **copy the read details** to the computer's clipboard, right-click on the alignment and select *Copy read details* from the pop-up menu.
 
-* To **copy the read sequence** to the computer's clipboard, right-click on the alignment and select *Copy read
-  sequence* from the pop-up menu.
+* To **copy the read sequence** to the computer's clipboard, right-click on the alignment and select *Copy read sequence* from the pop-up menu.
 
 The IGV display of the aligned reads uses **color, transparency, and symbols** to highlight some of the information
-details, as described in the sections below. You can also sort and group the alignments based on various attributes,
+details, as described in the sections below. You can also sort and group the alignments based on various read attributes,
 which may help highlight patterns and anomalies in the data.
 
 ## Base mismatches
 
-By default, read bases that match the reference sequence are displayed in gray (or whatever the current setting is for
+By default, read bases that match the reference sequence are displayed in grey (or whatever the current setting is for
 the alignment track color). Read bases that do not match the reference are displayed in **color**. By default, adenine (
 A) is green, cytosine (C) is blue, guanine (G) is yellow, and thymine (T) is red.
 
@@ -196,14 +194,14 @@ All the values for the display of base mismatches are **user-settable**:
   Preferences > Alignments*.
 
 * To **color code none of the bases** in a track, regardless of whether they are mismatched, right-click the track and
-  click on _Show mismatched bases_ in the pop-up menu. To change it in all tracks, uncheck the box with the same name in
+  deselect _Show mismatched bases_ in the pop-up menu. To change it in all tracks, uncheck the box with the same name in
   *View > Preferences > Alignments*.
 
 * To  **disable the transparency shading of quality** in a track, click on *Shade base by quality* in the track's pop-up
   menu. To disable it for all tracks, uncheck the box named *Shade mismatched bases by quality* in *View > Preferences >
   Alignments*.
 
-  The preferences window also allows you to control the **transparency range** via the parameters *Maximum transparency
+* The preferences window also allows you to control the **transparency range** via the parameters *Maximum transparency
   at base quality* (default is base quality = 5) and *No transparency above base quality* (default is base quality =
   20).
 
@@ -322,19 +320,18 @@ of pink (positive strand) alignments to the bottom.
 To **undo a grouping** command, click on *Group alignments by* and select *none*.
 
 A shortcut for applying the **same grouping to all alignment tracks** is provided via the *Group all tracks* option in
-the *Group alignments by* sub-menu. Selecting *Group all tracks* will affect all subsequent grouping commands, not any
+the *Group alignments by* sub-menu. Selecting *Group all tracks* will affect all subsequent grouping commands, not only the
 current groupings.
 
 #### Sorting
 
 To **sort the alignments in a track**, click on *Sort alignments by* in the track's pop-up menu and select one of the
-options in the sub-menu. Options include attributes such as start location, read strand, base, mapping quality. Not all
+options in the sub-menu. Options include attributes such as base, start location, read strand, mapping quality. Not all
 options are applicable to all alignment tracks. For example, some options are specific
 to [paired-end alignments](paired_end_alignments.md).
 
 The sort is performed based on the values of the selected attribute of the alignments that intersect the **locus at the
-center of the view**, no matter where the cursor was located for the right-click. To display a line down the center of
-the track, set the_Show center line_property in *View > Preferences > Alignments*.
+center of the view**, no matter where the cursor was located for the right-click. By default, a pair of lines are displayed to indicate the center of the track. The display of the lines is controlled by the _Show center line_ property in *View > Preferences > Alignments*.
 
 In the following example, the alignments are sorted by base. The putative SNP site was first centered in the view.
 
@@ -349,7 +346,7 @@ To **reverse the sort order**, click on *Sort alignments by* in the track's pop-
 the sub-menu.
 
 !!! note " "
-    The sort is an action that is **applied once** to the alignments at the center of the view. If you scroll the view or jump to a different locus, the sort is not performed again. Pressing `Ctrl-S` is a shortcut for performing the **same sort again** at a new locus.
+    New in IGV 3.0. If you **jump** to a new locus, the same sort is performed again based on the values at the center of the new view.  However, if you **pan** the view using the mouse, the alignments will stay in the same order. If you wish to sort the alignments again after panning the view, pressing `Ctrl-S` is a shortcut for performing the same sort again.
 
 To undo the sort and **restore the layout to an optimally packed configuration**, select _Re-pack alignments_ from the
 track's pop-up menu.
@@ -382,9 +379,7 @@ the example below.
 
 # Consensus sequence
 
-The menu item "Copy consensus sequence" calculates the consensus sequence for the region in view and copies the
-information to the clipboard. The method for calculating the consensus is taken from Cavener, Nucleic Acids Res. 15,
-1353-1361, 1987.
+The menu item _Copy consensus sequence_ in the track's pop-up menu calculates the consensus sequence for the region in view and copies the information to the clipboard. The method for calculating the consensus is taken from _Cavener, Nucleic Acids Research, 15, 1353-1361, 1987_.
 
 1. If the frequency of a single nucleotide at a specific position is greater than 50% and greater than twice the number
    of the second most frequent nucleotide it is assigned as the consensus nucleotide.

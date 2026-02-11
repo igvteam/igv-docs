@@ -1,6 +1,4 @@
-<!---
-The page title should not go in the menu
--->
+
 <p class="page-title"> External control of IGV </p>
 
 

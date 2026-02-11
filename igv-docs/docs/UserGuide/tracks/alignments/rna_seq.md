@@ -1,7 +1,7 @@
 <!---
 The page title should not go in the menu
 -->
-<p class="page-title"> RNA-seq data </p>
+<p class="page-title"> RNA-seq alignments </p>
 
 This section covers unique features of RNA-seq alignment tracks. See [Alignments basics](viewing_alignments_basics.md) for general features that also apply to RNA-seq tracks.
 
@@ -34,7 +34,7 @@ The following example shows the splice junction track created from the alignment
 
 ![](../../img/splicejunctions-liver.png)
 
-To **see the details of a junction**, click on the junction (or hovering over it if the popup text behavior has been changed).
+To **see the details of a junction**, click on the junction (or hover over it if the popup text behavior has been changed).
 
 By default, all junctions are displayed together in *Collapsed* mode. To get a **better view of overlapping junctions**, change the display mode to *Expanded* in the right-click pop-up menu.
 
@@ -62,13 +62,12 @@ Sashimi plots provide an alternate visualization of splice junctions from RNA-se
 
 To **view a Sashimi plot**:
 
-1. First zoom out the view to contain the entire region of interest, as scrolling and zooming in the Sashimi plot will be limited to this initial region.
 
-2.  Right click on the alignment track to bring up the pop-up menu, and select _Sashimi Plot_.
+1. Right click on the alignment track to bring up the pop-up menu, and select _Sashimi Plot_.
 
-3.  Select a genome annotation track to serve as the reference annotation in the Sashimi plot. If there is only one possible track, e.g., the default RefSeq Genes track loaded with the reference genome, then it is automatically selected for the plot. If multiple feature tracks have been loaded into the IGV view, you will be presented with a dialog to select one.
+2. Select a genome annotation track to serve as the reference annotation in the Sashimi plot. If there is only one possible track, e.g., the default RefSeq Genes track loaded with the reference genome, then it is automatically selected for the plot. If multiple feature tracks have been loaded into the IGV view, you will be presented with a dialog to select one.
 
-4. Select one or more RNA-seq alignment tracks to include in the Sashimi plot. If there is only in the IGV view, it is automatically selected for the plot, otherwise you will be presented with a dialog to select one or more.
+3. Select one or more RNA-seq alignment tracks to include in the Sashimi plot. If there is only in the IGV view, it is automatically selected for the plot, otherwise you will be presented with a dialog to select one or more.
 
 The coverage for each alignment track is plotted as a bar graph. Arcs representing splice junctions connect exons. Arcs display the number of reads split across the junction (junction depth). Genomic coordinates and the genome annotation track are shown below the bar graphs.
 

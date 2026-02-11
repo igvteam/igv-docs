@@ -38,7 +38,7 @@ Right-clicking **on a genotype column** will enable more entries in the pop-menu
 
 Selecting the same sort option again will **reverse the sort order**.
 
-Loading a [**sample attribute file**](../../FileFormats/SampleInfo.md) alongside the VCF file, provides further options to sort and group the sample rows:
+Loading a [**sample information file**](../../FileFormats/SampleInfo.md) alongside the VCF file, provides further options to sort and group the sample rows:
 
 * Clicking on an attribute name at the top of the attribute panel (displayed between the sample names and the data panel) will sort the sample rows by that attribute. For example, clicking on `pop` in the IGV view displayed below, will sort all the sample rows based on the *population* attribute.
 
@@ -47,6 +47,8 @@ Loading a [**sample attribute file**](../../FileFormats/SampleInfo.md) alongside
 * When a sample attribute file is loaded, the VCF track's pop-up menu includes a *Group By...* option. Clicking on it will bring up dialog window where you can select the attribute to group by in a dropdown menu.
 
     ![](../img/vcf-groupby-options.png){width=280}
+
+* The sample rows can also be sorted, grouped, or filtered using the options in the top-level *Sample Info* menu, as described in the [Sample attributes](../../sample_attributes) section.
 
 # Display mode
 

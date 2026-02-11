@@ -10,15 +10,19 @@ Each track has a set of attributes that varies depending on the track type. For 
 # Setting track attributes
 Many of the track attributes are also user settable: 
 
-To **set a attribute value for a specific track**, right-click on the track (either in the data panel or the track name) to bring up a pop-up menu that is specific to the track type.
+To set an attribute value for a **single track**: 
 
-!!! tip " "
-    Some attributes can be set on multiple tracks at the same time. First, select all the tracks of interest and then right click on one of them to bring up the pop-up menu. You can select multiple tracks either by using the normal multi-select mouse actions (e.g. `Ctrl-click` on Windows; `Cmd-click` on MacOS) or by clicking an attribute in the [sample attribute panel](../sample_attributes.md) to select all tracks tagged with that attribute value.
+* Right-click on the track (either in the data panel or the track name) to bring up a pop-up menu that is specific to the track type.
+
+To set an attribute value for **multiple tracks** at the same time: 
+
+* First, select all the tracks of interest by clicking in the track name panel and then right-click on one of the selected track names to bring up the pop-up menu. 
+
+* You can select multiple tracks either by using the normal multi-select mouse actions (e.g. Ctrl-click on Windows; Cmd-click on MacOS) or by clicking an attribute in the [sample attribute panel](../sample_attributes.md) to select all tracks tagged with that attribute value.
    
-Select *View > Preferences* to **change the default value for an attribute** for a particular track type. Not all default values are user settable.
+To **change the default value** for an attribute for a particular track type:
 
-In some cases, attribute values can be set via actions in the main IGV menu.
-
+* Select *View > Preferences*. Not all default values are user settable.
 
 # Common track attributes
 
@@ -38,31 +42,30 @@ To change the height of **selected** tracks:
 
 *   Select _Change Track Height..._ from the track pop-up menu.
 
-To change the height of **all** tracks:
-
-*   Select _Tracks > Set Track Height..._ in the main IGV menu.
-
 To change the **default height** of tracks:
 
 * The *Tracks* tab in *View > Preferences* has fields to set the default height for numeric/quantitative tracks and for feature/genome annotation tracks.
 
 ## Track name
 
-Tracks are assigned default names, typically based on the file name or the names of samples contained in the file.
-
-If you have loaded [sample attributes](../sample_attributes.md), you can specify an attribute to define the **default track name**:
-
-*   Enter the sample attribute name in the field *Sample attribute key for track names* in *View > Preferences > Tracks*.
+Tracks are assigned default names, typically based on the file name. The track names are displayed in a panel to the left the track data, and to the left of the sample attribute panel if it is displayed. For tracks that contain multiple samples (e.g., **seg** copy number data tracks and **vcf** variant tracks) the sample names are presented in the track panel.
 
 To set a track name to a **specific string**:
 
-*   Right-click the track, then select _Rename Track..._ in the pop-up menu. You can only rename one track at a time.
+*   Right-click the track, then select _Rename Track..._ in the pop-up menu. You can only rename one track at a time this way, and you cannot rename samples within a multi-sample track using this method.
 
-The track names are displayed in a panel to the left the track data, and to the left of the sample attribute panel if it is displayed.
+If you have loaded [sample attributes](../sample_attributes.md), you can specify an attribute to set the name for tracks and samples:
+
+* To set which attribute to use **by default**, enter the attribute name into the field *Sample attribute key for track names* in *View > Preferences > Tracks*. 
+
+* To **rename** tracks and samples based on an attribute, select *Sample Info > Rename Samples by Attribute*.
+
+Controlling the name panel display:
 
 * To **hide the name panel**, unselect *View > Show Name Panel*.
 
 * To **resize the name panel**, select *View > Set Name Panel Width...*
+
 
 
 

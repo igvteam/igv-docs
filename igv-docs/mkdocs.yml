@@ -26,15 +26,17 @@ nav:
         - Alignments:
             - Alignments basics: UserGuide/tracks/alignments/viewing_alignments_basics.md
             - Paired-end alignments: UserGuide/tracks/alignments/paired_end_alignments.md
-            - RNA-seq data: UserGuide/tracks/alignments/rna_seq.md
+            - RNA-seq alignments: UserGuide/tracks/alignments/rna_seq.md
+            - Chimeric reads: UserGuide/tracks/alignments/chimeric_reads.md
+            - SBX alignments: UserGuide/tracks/alignments/sbx.md
+            - UG alignments: UserGuide/tracks/alignments/ultima/ultima.md
             - Bisulfite sequencing: UserGuide/tracks/alignments/bisulfite_sequencing.md
             - Base modifications:  UserGuide/tracks/alignments/base_modifications.md
-            - Chimeric reads: UserGuide/tracks/alignments/chimeric_reads.md
             - SMRT kinetics:  UserGuide/tracks/alignments/smrt.md
-            - SBX alignments: UserGuide/tracks/alignments/sbx.md
-            - Ultima indel coloring: UserGuide/tracks/alignments/ultima/ultima.md
         - Variants (VCF): UserGuide/tracks/vcf.md
+        - Hi-C contact maps: UserGuide/tracks/hic.md
         - GWAS: UserGuide/tracks/gwas.md
+    - Track hubs: UserGuide/track_hubs.md
     - Sample attributes: UserGuide/sample_attributes.md
     - Regions: UserGuide/regions.md
     - Sessions: UserGuide/sessions.md
@@ -49,8 +51,9 @@ nav:
     - Advanced:    
       - IGV from the command line: UserGuide/advanced/command_line.md
       - External control of IGV: UserGuide/advanced/external_control.md
-      - Authentication: UserGuide/advanced/oauth.md
+      - Authentication with oAuth2: UserGuide/advanced/oauth.md
       - AWS support:  UserGuide/advanced/aws.md
+      - IGV MCP server: UserGuide/advanced/mcp.md
       
 - File Formats: 
     - Data Tracks: FileFormats/DataTracks.md
@@ -62,6 +65,7 @@ nav:
 - Download IGV: DownloadPage.md
 
 - Release Notes:
+    - 3.0.x: ReleaseNotes/3.0.x.md
     - 2.19.x: ReleaseNotes/2.19.x.md
     - 2.18.x: ReleaseNotes/2.18.x.md
     - 2.17.x: ReleaseNotes/2.17.x.md

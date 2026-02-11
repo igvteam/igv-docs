@@ -19,6 +19,8 @@ Quantitative tracks are displayed using one of four graph types (the following e
 | Points (Scatter plot)| ![](../img/scatterplot.jpg) |
 | Line plot | ![](../img/linechart.jpg) |
 
+A _DynSeq_ graph type is also available for tracks containing per-base quantitative data.The data is rendered as nucleotide-shaped glyphs at high zoom levels and falls back to bar chart rendering at lower zoom levels.
+
 To change the graph type of selected tracks:
 
 *   Right-click a track and select a graph type from the pop-up menu.
@@ -29,7 +31,7 @@ A track's **data range** specifies the Y-axis for the track.
 
 To **set a specific data range** for selected tracks:
 
-* Select *Set Data Range...* from the pop-up menu and in the dialog window that pops up enter the minimum, baseline, and maximum values for the graph. 
+* Select *Set Data Range...* from the track's pop-up menu and enter the minimum, baseline, and maximum values for the graph. 
 
 The following examples show the same data in tracks with different data ranges.
 
@@ -45,7 +47,7 @@ To **dynamically change the data range** as you pan across the genome to maximiz
  
 Similarly, to keep the data range of **multiple tracks** dynamically in sync: 
 
-* Multi-select the tracks and then right-click on one of them and click on *Group Autoscale* in the pop-up menu.
+* Multi-select the tracks by clicking in the name panel, and then right-click on one of the names and select *Group Autoscale* in the pop-up menu.
 
 By default, the data range uses a **linear scale**. To use a **logarithmic scale**, you can either:
 
@@ -70,7 +72,7 @@ To set the **heatmap colors and scale** for tracks displayed as a heatmap:
 
 # Windowing function
 
-When the view is zoomed out, each pixel on the screen may represent a genomic region that encompasses multiple numeric values in the data. The **windowing function** specifies which of the multiple values to display. To set the function, select one of the options in the *Windowing Function* section of the track right-click pop-up menu. The available options will depend on the file type, but most include: `Minimum`, `Mean`, `Maximum`, and `None`. By default, the function is set to `Mean`. The `None` option will display all the values, rather than combining them into one value, which can be useful for tracks displayed as **points**.
+When the view is zoomed out, each pixel on the screen may represent a genomic region that encompasses multiple numeric values in the data. The **windowing function** specifies which of the multiple values to display. To set the function, select one of the options in the *Windowing Function* section of the track's right-click pop-up menu. The available options will depend on the file type, but most include: `Minimum`, `Mean`, `Maximum`, and `None`. By default, the function is set to `Mean`. The `None` option will display all the values, rather than combining them into one value, which can be useful for tracks displayed as **points**.
 
 # Overlaying tracks
 
@@ -85,7 +87,7 @@ can be displayed as the following single track by multi-selecting the two tracks
 ![ ](../img/overlaytracks-after.png){width=600}
 
 !!! note " "
-    You may want to set the data ranges to be the same on the tracks before overlaying them or you can enable autoscale on the combined overlay track to keep the data ranges of the constituate tracks in sync.
+    You may want to set the data ranges to be the same on the tracks before overlaying them, or you can enable autoscale on the combined overlay track to keep the data ranges of the component tracks in sync.
 
 Each chart is drawn with a default level of translucence so they don't completely obscure one another. Select *Adjust Transparency* from the combined track's pop-up menu to make the charts more or less opaque.
 
