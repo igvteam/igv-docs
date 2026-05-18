@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function os() {
 </script>
 
 
-<p class="page-title" style="color: DarkRed;"> IGV 3.0 Early Access </p>
+<p class="page-title" style="color: DarkRed;"> IGV 3.0 Beta </p>
 
 <div id="download_container"></div>
 
