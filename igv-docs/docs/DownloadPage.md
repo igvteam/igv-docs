@@ -66,7 +66,11 @@ document.addEventListener("DOMContentLoaded", function os() {
 
 <p class="page-title"> Download IGV </p>
 
-!!! Danger "IGV 3.0 Beta is now available"
+
+!!! Danger "Java4Shell and IGV"
+    Java4Shell (CVE-2026-114938) is a vulnerability in Java 17 and later. While the risk for IGV is low, it can affect the current and recent IGV releases that include a bundled Java. We will update IGV as soon as a patched Java version is available (IGV uses [Eclipse Temurin OpenJDK](https://adoptium.net/temurin)). In the meantime, or if you need to use an older version of IGV, the instructions [here]( https://github.com/igvteam/igv/tree/main/notes/java4shell) describe a workaround that bypasses the problem. NOTE: The vulnerability only affects computers with certain Intel and AMD processors; Macs with Apple Silicon (M1 and later) are not affected and do not need the workaround.
+
+!!! tip "IGV 3.0 Beta is now available"
     See [what's new](ReleaseNotes/3.0.x.md).<br> Go to the [3.0 Beta download page](Download3.0Page.md).
 
 ### IGV version 2.19.8
@@ -74,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function os() {
 <div id="download_container"></div>
 
 **What's New:** See the [Release Notes](ReleaseNotes/2.19.x.md) for what's new in each IGV release.
-
 
 # All platforms
 
