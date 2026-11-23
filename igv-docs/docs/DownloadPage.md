@@ -24,23 +24,23 @@ document.addEventListener("DOMContentLoaded", function os() {
         const g = d && w.getParameter(d.UNMASKED_RENDERER_WEBGL) || ""
         if (g.match(/Apple/)) {
             console.log("Apple Silicon")
-            href = 'https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_MacApp_2.19.8_WithJava.zip'
+            href = 'https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_MacApp_2.19.9_WithJava.zip'
             imgAlt = 'MacApp Apple with java'
             imgSrc = '../img/DownloadYMacWithJavaApple.png'
         } else {
             console.log("Apple Intel")
-            href = "https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_MacAppIntel_2.19.8_WithJava.zip"
+            href = "https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_MacAppIntel_2.19.9_WithJava.zip"
             imgAlt = "MacApp Intel with java"
             imgSrc = "../img/DownloadYMacWithJavaIntel.png"
         }
     } else if (osName.indexOf('Windows') !== -1 || cpu === 'amd64') {
         console.log("Windows")
-        href = "https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_Win_2.19.8-WithJava-installer.exe"
+        href = "https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_Win_2.19.9-WithJava-installer.exe"
         imgAlt = "Windows snapshot with java"
         imgSrc = "../img/DownloadYWindowsWithJava.png"
     } else if (osName.indexOf('Linux') !== -1 || osName.indexOf('Ubuntu') !== -1) {
         console.log("Linux")
-        href = "https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_Linux_2.19.8_WithJava.zip"
+        href = "https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_Linux_2.19.9_WithJava.zip"
         imgAlt = "Linux with Java"
         imgSrc = "../img/DownloadYLinuxWithJava.png"
     }
@@ -67,13 +67,14 @@ document.addEventListener("DOMContentLoaded", function os() {
 <p class="page-title"> Download IGV </p>
 
 
-!!! Danger "Java4Shell and IGV"
-    Java4Shell (CVE-2026-114938) is a vulnerability in Java 17 and later. While the risk for IGV is low, it can affect the current and recent IGV releases that include a bundled Java. We will update IGV as soon as a patched Java version is available (IGV uses [Eclipse Temurin OpenJDK](https://adoptium.net/temurin)). In the meantime, or if you need to use an older version of IGV, the instructions [here]( https://github.com/igvteam/igv/tree/main/notes/java4shell) describe a workaround that bypasses the problem. NOTE: The vulnerability only affects computers with certain Intel and AMD processors; Macs with Apple Silicon (M1 and later) are not affected and do not need the workaround.
+!!! note "Java4Shell and IGV"
+
+    While the risk for IGV is low, we have updated IGV 2.19.9 to bundle a patched version of Java 21 that addresses the Java4Shell (CVE-2026-114938) vulnerability found in Java 17 and later. If you need to use an older version of IGV, the instructions [here]( https://github.com/igvteam/igv/tree/main/notes/java4shell) describe a workaround that bypasses the Java4Shell problem. NOTE: The vulnerability only affects computers with certain Intel and AMD processors; Macs with Apple Silicon (M1 and later) are not affected and do not need the workaround.
 
 !!! tip "IGV 3.0 Beta is now available"
     See [what's new](ReleaseNotes/3.0.x.md).<br> Go to the [3.0 Beta download page](Download3.0Page.md).
 
-### IGV version 2.19.8
+### IGV version 2.19.9
 
 <div id="download_container"></div>
 
@@ -92,16 +93,16 @@ document.addEventListener("DOMContentLoaded", function os() {
 **Linux users:** The *IGV for Linux* download includes AdoptOpenJDK (now Eclipse Temurin) version 21 for x64 Linux. See their list of supported platforms [here](https://adoptium.net/supported-platforms/). If your platform is not on the "x64 Linux" list, or the packaged Java does not work on your version of Linux, download the *"Command line IGV for all platforms"* and use it with your own Java installation.
 <br> 
 
-[![MacApp Apple with java](img/DownloadYMacWithJavaApple.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_MacApp_2.19.8_WithJava.zip)
-[![MacApp Intel with java](img/DownloadYMacWithJavaIntel.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_MacAppIntel_2.19.8_WithJava.zip)
-[![MacApp no java](img/DownloadYMacNeedsJava21.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_MacApp_2.19.8.zip)
+[![MacApp Apple with java](img/DownloadYMacWithJavaApple.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_MacApp_2.19.9_WithJava.zip)
+[![MacApp Intel with java](img/DownloadYMacWithJavaIntel.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_MacAppIntel_2.19.9_WithJava.zip)
+[![MacApp no java](img/DownloadYMacNeedsJava21.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_MacApp_2.19.9.zip)
 <br>
-[![Windows snapshot with java](img/DownloadYWindowsWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_Win_2.19.8-WithJava-installer.exe)
-[![Windows no java](img/DownloadYWindowsNoJava21.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_Win_2.19.8-installer.exe)
+[![Windows snapshot with java](img/DownloadYWindowsWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_Win_2.19.9-WithJava-installer.exe)
+[![Windows no java](img/DownloadYWindowsNoJava21.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_Win_2.19.9-installer.exe)
 <br>
-[![Linux with Java](img/DownloadYLinuxWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_Linux_2.19.8_WithJava.zip)
+[![Linux with Java](img/DownloadYLinuxWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_Linux_2.19.9_WithJava.zip)
 <br>
-[![Command line no java](img/DownloadYCommandLineNoJava21.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_2.19.8.zip)
+[![Command line no java](img/DownloadYCommandLineNoJava21.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/2.19/IGV_2.19.9.zip)
 
 # Other releases of IGV Desktop
 
