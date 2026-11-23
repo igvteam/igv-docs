@@ -13,7 +13,7 @@
 [![MacApp Intel with java](img/DownloadYMacWithJavaIntel.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/3.0/IGV_MacAppIntel_3.0.0-beta.8_WithJava.zip)
 [![MacApp no java](img/DownloadYMacNeedsJava21.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/3.0/IGV_MacApp_3.0.0-beta.8.zip)
 <br>
-[![Windows snapshot with java](img/DownloadYWindowsWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/3.0/IGV_Win_3.0.0-beta 8-WithJava-installer.exe)
+[![Windows snapshot with java](img/DownloadYWindowsWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/3.0/IGV_Win_3.0.0-beta.8-WithJava-installer.exe)
 [![Windows no java](img/DownloadYWindowsNoJava21.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/3.0/IGV_Win_3.0.0-beta.8-installer.exe)
 <br>
 [![Linux with Java](img/DownloadYLinuxWithJava.png){height=80}](https://data.broadinstitute.org/igv/projects/downloads/3.0/IGV_Linux_3.0.0-beta.8_WithJava.zip)
