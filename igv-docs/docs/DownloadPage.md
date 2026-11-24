@@ -68,8 +68,7 @@ document.addEventListener("DOMContentLoaded", function os() {
 
 
 !!! note "Java4Shell and IGV"
-
-    While the risk for IGV is low, we have updated IGV 2.19.9 to bundle a patched version of Java 21 that addresses the Java4Shell (CVE-2026-114938) vulnerability found in Java 17 and later. If you need to use an older version of IGV, the instructions [here]( https://github.com/igvteam/igv/tree/main/notes/java4shell) describe a workaround that bypasses the Java4Shell problem. NOTE: The vulnerability only affects computers with certain Intel and AMD processors; Macs with Apple Silicon (M1 and later) are not affected and do not need the workaround.
+    As of release 2.19.9, IGV bundles a version of Java that addresses the Java4Shell (CVE-2026-114938) vulnerability found in Java 17 and later. If you need to use an older version of IGV, the instructions [here]( https://github.com/igvteam/igv/tree/main/notes/java4shell) describe a workaround that bypasses the Java4Shell problem. NOTE: The risk for IGV is in general low. Also, the vulnerability only affects computers with certain Intel and AMD processors; Macs with Apple Silicon (M1 and later) are not affected and do not need the workaround.
 
 !!! tip "IGV 3.0 Beta is now available"
     See [what's new](ReleaseNotes/3.0.x.md).<br> Go to the [3.0 Beta download page](Download3.0Page.md).
